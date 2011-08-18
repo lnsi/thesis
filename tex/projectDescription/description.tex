@@ -1,0 +1,66 @@
+\section{PROJECT TITLE}
+
+Device composition on tabletop computers.
+
+\section{PROBLEM FORMULATION}
+
+Tabletop computers are cutting-edge devices that merge input and output spaces into one single interactive surface.
+Researchers have investigated the use of interactive tables in a number of different ways: support for meetings, canvas for architectural design, media for document navigation, mediator for sharing files, etc.
+Due to their size and embedded nature, tabletops seem to naturally fit in public spaces such as shops, bars and work places.
+Common scenarios include catalog browsing, drink ordering and product configuration.
+Moreover, tabletops can support multiple and simultaneous users, with applications allowing them to share pictures between smartphones, collaborate on a design, or simply take notes during a meeting.
+
+Another interesting property of interactive surfaces is their ability to integrate with physical objects, both passive and electronic, for the purpose of augmenting them with digital information, or controlling the application state.
+For example, SurfaceWare \cite{surfaceware} allows the Microsoft Surface to sense the fluid level in a slightly enhanced drinking glass.
+Another example is the software developed by Amnesia Razorfish \cite{amnesia}, that allows the sharing of data between multiple handheld devices using the actual devices, as well as gestures, on the Microsoft Surface.
+Finally, researchers at ITU have developed the Rabbit \cite{rabbit}, a device that integrates small RFID-tagged objects and tabletops.
+
+The specificity of tabletops raises the question of how to interact with them on an everyday basis.
+Recent development initiatives tend to answer this question by regarding tabletops as yet another computational platform, requiring its own software.
+With this project, we explore a different approach to integrating tabletops in our environment, namely by using them only as UI peripheral, providing touch-based input and graphical output to the devices that we already have.
+Exploring this path is supported by three important factors.
+First, most users already own computing devices, such as laptops or smart phones, with tailor-made applications and local storage, and might be less prone to use an additional device if it requires management (updates, backups, synchronizations, etc) and the purchase of applications.
+Second, tabletops are embedded in the environment and as such can be expected to be shared devices.
+Using them as simple graphic peripheral would allow to avoid the traditional desktop/laptop issues related to user profiles, privacy and data integrity.
+Finally, as embedded devices, it is reasonable to expect tabletops to have good networking capabilities.
+
+This project explores device composition for UI integration between tabletops and other devices, focusing on implicit/physical interaction and seamless user experience.
+We address the following cases of device composition: 1) mobile device to tabletop and 2) laptop to tabletop.
+UI integration can happen in several different ways:
+\begin{itemize}
+\item{\emph{UI transfer} (mirror): the tabletop `takes over' and displays the UI of the connected device.}
+\item{\emph{Dual view}: the tabletop display becomes secondary screen space for the connected device.}
+\item{\emph{UI nesting}: the connected device is physically located on the tabletop, and its UI is extended to the additional screen space around it.}
+\end{itemize}
+
+Following is an open list of problems that we will address in order to achieve device composition by means of implicit interaction.
+\begin{enumerate}
+\item{\emph{Setup}: How is a device enabled for integrating with a tabletop?
+The setup should be simple, to be performed only once by non-technical users.
+An initial survey of possible solutions points towards the use of tagging mechanisms and/or camera-based object recognition.}
+\item{\emph{Discovery}: How do the tabletop and the device discover and communicate with each other?
+How do we solve the issues of discovery, handshake, network connectivity, and encryption mechanisms to ensure privacy?}
+\item{\emph{UI transfer}: Given the computational constraints of mobile devices, how can the UI transfer be efficiently implemented so as to support native applications and guarantee a seamless user experience?}
+\item{\emph{Input}: How can the users interact with their applications on the tabletop (touch and other peripherals)?}
+\item{\emph{Interaction Design}: What means of interaction are best-fitted for the tabletop-based systems that we propose to develop?
+How can we best adapt to public/private uses and single/multiple users?
+How can we take advantage of the larger interaction surface?}
+\end{enumerate}
+
+\section{METHOD}
+
+We will accomplish this project thesis by performing the following steps:
+\begin{itemize}
+\item{Literary review of related work}
+\item{Definition of research background}
+\item{Interaction design}
+\item{Implementation}
+\item{Evaluation based on quantitative and qualitative data}
+\end{itemize}
+
+\section{WHAT WILL BE HANDED IN}
+
+\begin{itemize}
+\item{Code for the developed applications.}
+\item{Thesis report: research, design, experiment(s), evaluation results.}
+\end{itemize}
