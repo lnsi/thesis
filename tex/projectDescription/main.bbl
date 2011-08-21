@@ -3,15 +3,37 @@
 \bibitem{amnesia}
 http://www.amnesiarazorfish.com.au/2011/01/amnesia-razorfish-announces-gesture-sharing-for-smartphones-and-tablets-using-microsoft-surface-press-release.
 
-\bibitem{surfaceware}
+\bibitem{Dietz:2001:diamondtouch}
+P.~Dietz and D.~Leigh.
+\newblock Diamondtouch: a multi-user touch technology.
+\newblock In {\em Proceedings of the 14th annual ACM symposium on User
+  interface software and technology}, UIST '01, pages 219--226, New York, NY,
+  USA, 2001. ACM.
+
+\bibitem{Dietz:2009:surfaceware}
 P.~H. Dietz and B.~D. Eidelson.
-\newblock Surfaceware: Dynamic tagging for microsoft surface.
-\newblock {\em Tangible and Embedded Interaction}, 2009.
+\newblock Surfaceware: dynamic tagging for microsoft surface.
+\newblock In {\em Proceedings of the 3rd International Conference on Tangible
+  and Embedded Interaction}, TEI '09, pages 249--254, New York, NY, USA, 2009.
+  ACM.
 
 \bibitem{rabbit}
 J.~D. Hincapi{\'e}-Ramos, A.~Tabard, and J.~E. Bardram.
 \newblock Mediated tabletop interaction in the biology lab - exploring the
   design space of the rabbit.
 \newblock {\em Ubicomp}, 2011.
+
+\bibitem{implicitHCI}
+A.~Schmidt.
+\newblock Implicit human computer interaction through context.
+\newblock {\em Personal Technologies}, 2000.
+
+\bibitem{Schmidt:2010:handsdown}
+D.~Schmidt, M.~K. Chong, and H.~Gellersen.
+\newblock Handsdown: hand-contour-based user identification for interactive
+  surfaces.
+\newblock In {\em Proceedings of the 6th Nordic Conference on Human-Computer
+  Interaction: Extending Boundaries}, NordiCHI '10, pages 432--441, New York,
+  NY, USA, 2010. ACM.
 
 \end{thebibliography}

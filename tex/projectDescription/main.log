@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  18 AUG 2011 22:34
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  21 AUG 2011 23:23
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -506,14 +506,13 @@ Non-PDF special ignored!
 
 ]) (./main.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 15.
-Extra height:0.0pt when 170.2825pt
-(2)Left:170.2825pt Right:170.56494pt Output:170.2825pt
-(2)Left:170.56494pt Right:170.56494pt Output:170.56494pt
+Extra height:0.0pt when 337.85501pt
+(2)Left:337.85501pt Right:321.40997pt Output:337.85501pt
 - LAST -
 Extra skip:0.0pt
-Left:170.56494pt
-Right:170.56494pt
-Output:170.56494pt
+Left:337.85501pt
+Right:321.40997pt
+Output:337.85501pt
  [2
 
 ]
@@ -522,13 +521,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 15.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 15.
  ) 
 Here is how much of TeX's memory you used:
- 6178 strings out of 493747
- 90097 string characters out of 3143546
- 170671 words of memory out of 3000000
- 9332 multiletter control sequences out of 15000+200000
+ 6181 strings out of 493747
+ 90170 string characters out of 3143546
+ 170804 words of memory out of 3000000
+ 9335 multiletter control sequences out of 15000+200000
  22925 words of font info for 49 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 41i,11n,26p,315b,446s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,11n,26p,316b,468s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2010/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2010/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2
@@ -536,7 +535,7 @@ xlive/2010/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2010/texmf-dist/fonts
 /type1/urw/times/utmr8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/urw
 /times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 65195 bytes).
+Output written on main.pdf (2 pages, 70105 bytes).
 PDF statistics:
  36 PDF objects out of 1000 (max. 8388607)
  25 compressed objects within 1 object stream

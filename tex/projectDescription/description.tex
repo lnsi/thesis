@@ -8,10 +8,11 @@ Tabletop computers are cutting-edge devices that merge input and output spaces i
 Researchers have investigated the use of interactive tables in a number of different ways: support for meetings, canvas for architectural design, media for document navigation, mediator for sharing files, etc.
 Due to their size and embedded nature, tabletops seem to naturally fit in public spaces such as shops, bars and work places.
 Common scenarios include catalog browsing, drink ordering and product configuration.
-Moreover, tabletops can support multiple and simultaneous users, with applications allowing them to share pictures between smartphones, collaborate on a design, or simply take notes during a meeting.
+Technologies such as DiamondTouch \cite{Dietz:2001:diamondtouch} allow tabletops to support multiple and simultaneous users. Example of applications include sharing data between smartphones, collaborating on a design, or simply taking notes during a meeting.
+In the case of multiple individualized users, solutions are needed to identify each user, as seen in \cite{Schmidt:2010:handsdown}, where the simple action of placing one's hand on the surface enables a person to identify and start interacting with the device.
 
-Another interesting property of interactive surfaces is their ability to integrate with physical objects, both passive and electronic, for the purpose of augmenting them with digital information, or controlling the application state.
-For example, SurfaceWare \cite{surfaceware} allows the Microsoft Surface to sense the fluid level in a slightly enhanced drinking glass.
+Another interesting property of interactive surfaces is their ability to integrate with physical objects, both passive and dynamic, for the purpose of augmenting them with digital information, or controlling the application state.
+For example, SurfaceWare \cite{Dietz:2009:surfaceware} allows the Microsoft Surface to sense the fluid level in a slightly enhanced drinking glass.
 Another example is the software developed by Amnesia Razorfish \cite{amnesia}, that allows the sharing of data between multiple handheld devices using the actual devices, as well as gestures, on the Microsoft Surface.
 Finally, researchers at ITU have developed the Rabbit \cite{rabbit}, a device that integrates small RFID-tagged objects and tabletops.
 
@@ -24,8 +25,8 @@ Second, tabletops are embedded in the environment and as such can be expected to
 Using them as simple graphic peripheral would allow to avoid the traditional desktop/laptop issues related to user profiles, privacy and data integrity.
 Finally, as embedded devices, it is reasonable to expect tabletops to have good networking capabilities.
 
-This project explores device composition for UI integration between tabletops and other devices, focusing on implicit/physical interaction and seamless user experience.
-We address the following cases of device composition: 1) mobile device to tabletop and 2) laptop to tabletop.
+This project explores device composition for UI integration between tabletops and other devices, focusing on seamless user experience and implicit human computer interaction as defined by Schmidt in \cite{implicitHCI}.
+We address two cases of device composition: 1) mobile device to tabletop and 2) laptop to tabletop.
 UI integration can happen in several different ways:
 \begin{itemize}
 \item{\emph{UI transfer} (mirror): the tabletop `takes over' and displays the UI of the connected device.}
@@ -51,16 +52,13 @@ How can we take advantage of the larger interaction surface?}
 
 We will accomplish this project thesis by performing the following steps:
 \begin{itemize}
-\item{Literary review of related work}
-\item{Definition of research background}
-\item{Interaction design}
-\item{Implementation}
-\item{Evaluation based on quantitative and qualitative data}
+\item{Literary review of related work within the fields of implicit human computer interaction, interactive surface application development, device composition.}
+\item{Definition of research background: what are the intellectual motivations for our research, and which theoretical goals do we propose to achieve?}
+\item{Interaction design: how can we develop applications that provide an instinctive and seamless user experience?}
+\item{Implementation: we will develop one or more prototypes for the purpose of demonstration and evaluation.}
+\item{Evaluation: we will run quantitative experiments in order to show that the applications are functioning. We will evaluate the usability of the applications by running experiments with volunteers, gathering and analysing qualitative data.}
 \end{itemize}
 
 \section{WHAT WILL BE HANDED IN}
 
-\begin{itemize}
-\item{Code for the developed applications.}
-\item{Thesis report: research, design, experiment(s), evaluation results.}
-\end{itemize}
+The code for the developed applications, as well as a report containing the following: research, design, experiment(s) and evaluation results.
