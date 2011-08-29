@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2010)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: abbrv.bst
+Database file #1: references.bib
+Warning--entry type for "amnesia" isn't style-file defined
+--line 207 of file references.bib
+Warning--to sort, need author or key in amnesia
+You've used 10 entries,
+            2118 wiz_defined-function locations,
+            564 strings with 5914 characters,
+and the built_in function-call counts, 4015 in all, are:
+= -- 432
+> -- 151
+< -- 6
++ -- 60
+- -- 50
+* -- 251
+:= -- 609
+add.period$ -- 34
+call.type$ -- 10
+change.case$ -- 55
+chr.to.int$ -- 0
+cite$ -- 11
+duplicate$ -- 178
+empty$ -- 319
+format.name$ -- 50
+if$ -- 904
+int.to.chr$ -- 0
+int.to.str$ -- 10
+missing$ -- 9
+newline$ -- 51
+num.names$ -- 18
+pop$ -- 58
+preamble$ -- 1
+purify$ -- 45
+quote$ -- 0
+skip$ -- 149
+stack$ -- 0
+substring$ -- 269
+swap$ -- 66
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 40
+warning$ -- 1
+while$ -- 38
+width$ -- 12
+write$ -- 122
+(There were 2 warnings)

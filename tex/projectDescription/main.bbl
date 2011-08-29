@@ -1,7 +1,20 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{amnesia}
 http://www.amnesiarazorfish.com.au/2011/01/amnesia-razorfish-announces-gesture-sharing-for-smartphones-and-tablets-using-microsoft-surface-press-release.
+
+\bibitem{Bardram:2010:compute}
+J.~E. Bardram, C.~Fuglsang, and S.~C. Pedersen.
+\newblock Compute: a runtime infrastructure for device composition.
+\newblock In {\em Proceedings of the International Conference on Advanced
+  Visual Interfaces}, AVI '10, pages 111--118, New York, NY, USA, 2010. ACM.
+
+\bibitem{Clifton:2010:sketchtop}
+P.~Clifton, A.~Mazalek, J.~Sanford, C.~R\'{e}bola, S.~Lee, and N.~Powell.
+\newblock Sketchtop: design collaboration on a multi-touch tabletop.
+\newblock In {\em Proceedings of the fifth international conference on
+  Tangible, embedded, and embodied interaction}, TEI '11, pages 333--336, New
+  York, NY, USA, 2011. ACM.
 
 \bibitem{Dietz:2001:diamondtouch}
 P.~Dietz and D.~Leigh.
@@ -23,6 +36,13 @@ J.~D. Hincapi{\'e}-Ramos, A.~Tabard, and J.~E. Bardram.
   design space of the rabbit.
 \newblock {\em Ubicomp}, 2011.
 
+\bibitem{Hunter:2011:memtable}
+S.~Hunter, P.~Maes, S.~Scott, and H.~Kaufman.
+\newblock Memtable: an integrated system for capture and recall of shared
+  histories in group workspaces.
+\newblock In {\em Proceedings of the 2011 annual conference on Human factors in
+  computing systems}, CHI '11, pages 3305--3314, New York, NY, USA, 2011. ACM.
+
 \bibitem{implicitHCI}
 A.~Schmidt.
 \newblock Implicit human computer interaction through context.
@@ -35,5 +55,10 @@ D.~Schmidt, M.~K. Chong, and H.~Gellersen.
 \newblock In {\em Proceedings of the 6th Nordic Conference on Human-Computer
   Interaction: Extending Boundaries}, NordiCHI '10, pages 432--441, New York,
   NY, USA, 2010. ACM.
+
+\bibitem{Wellner:1993:digitaldesk}
+P.~Wellner.
+\newblock Interacting with paper on the digitaldesk.
+\newblock {\em Commun. ACM}, 36:87--96, July 1993.
 
 \end{thebibliography}
