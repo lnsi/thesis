@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{1}
 
 \bibitem{amnesia}
 http://www.amnesiarazorfish.com.au/2011/01/amnesia-razorfish-announces-gesture-sharing-for-smartphones-and-tablets-using-microsoft-surface-press-release.
@@ -30,23 +30,12 @@ P.~H. Dietz and B.~D. Eidelson.
   and Embedded Interaction}, TEI '09, pages 249--254, New York, NY, USA, 2009.
   ACM.
 
-\bibitem{rabbit}
-J.~D. Hincapi{\'e}-Ramos, A.~Tabard, and J.~E. Bardram.
-\newblock Mediated tabletop interaction in the biology lab - exploring the
-  design space of the rabbit.
-\newblock {\em Ubicomp}, 2011.
-
 \bibitem{Hunter:2011:memtable}
 S.~Hunter, P.~Maes, S.~Scott, and H.~Kaufman.
 \newblock Memtable: an integrated system for capture and recall of shared
   histories in group workspaces.
 \newblock In {\em Proceedings of the 2011 annual conference on Human factors in
   computing systems}, CHI '11, pages 3305--3314, New York, NY, USA, 2011. ACM.
-
-\bibitem{implicitHCI}
-A.~Schmidt.
-\newblock Implicit human computer interaction through context.
-\newblock {\em Personal Technologies}, 2000.
 
 \bibitem{Schmidt:2010:handsdown}
 D.~Schmidt, M.~K. Chong, and H.~Gellersen.
