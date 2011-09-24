@@ -1,0 +1,14 @@
+﻿<Window x:Class="VNCClient.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vnc="clr-namespace:VncSharp;assembly=VncSharp"
+    Title="Window1" Height="300" Width="300" Loaded="Window_Loaded">
+	<Grid Name="gContent" Background="Black">
+    <vnc:RemoteDesktopWPF x:Name="rdfWPF" VncPort="5900" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+			<vnc:RemoteDesktopWPF.RenderTransform>
+				<RotateTransform Angle="0" />
+			</vnc:RemoteDesktopWPF.RenderTransform>
+		</vnc:RemoteDesktopWPF>
+    <!--<Image x:Name="iWITest" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseUp="iWITest_MouseUp"/>-->
+	</Grid>
+</Window>
