@@ -1,0 +1,10 @@
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharpExampleCS\bin\Debug\VncSharpExampleCS.exe
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharpExampleCS\bin\Debug\VncSharpExampleCS.pdb
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharpExampleCS\bin\Debug\VncSharp.dll
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharpExampleCS\obj\Debug\ResolveAssemblyReference.cache
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharpExampleCS\obj\Debug\VncSharp.ConnectDialog.resources
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharpExampleCS\obj\Debug\VncSharpExampleCS.form.resources
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharpExampleCS\obj\Debug\VncSharpExampleCS.Properties.Resources.resources
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharpExampleCS\obj\Debug\VncSharpExampleCS.csproj.GenerateResource.Cache
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharpExampleCS\obj\Debug\VncSharpExampleCS.exe
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharpExampleCS\obj\Debug\VncSharpExampleCS.pdb

@@ -1,0 +1,25 @@
+﻿<s:SurfaceWindow x:Class="JuanTestApp.SWCapture"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    xmlns:converters="clr-namespace:SurfaceRabbit.Controls.Converters;assembly=SurfaceRabbit"
+    xmlns:rabbit="clr-namespace:SurfaceRabbit.Controls;assembly=SurfaceRabbit"
+    xmlns:settings="clr-namespace:SurfaceRabbitApp.Properties"
+    Title="JuanTestApp">
+  <s:SurfaceWindow.Resources>
+    <ImageBrush x:Key="WindowBackground" Stretch="None" Opacity="0.6" ImageSource="pack://application:,,,/Resources/SurfaceWindowBackground.jpg"/>
+  </s:SurfaceWindow.Resources>
+
+  
+  <Grid Background="{StaticResource WindowBackground}" >
+    <Rectangle x:Name="iCapturedFrameBorder" Width="388" Height="292" Stroke="White" StrokeThickness="2"
+               HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+    <Image x:Name="iCapturedFrame" Width="384" Margin="2"
+           HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+    <Button x:Name="bCapture" Content="Capture Image" Click="bCapture_Click"
+            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,2,2,294"/>
+    <Button x:Name="bCaptureVideo" Content="Capture Video (10s)" Click="bCaptureVideo_Click"
+            HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,2,90,294"/>
+  </Grid>
+
+</s:SurfaceWindow>

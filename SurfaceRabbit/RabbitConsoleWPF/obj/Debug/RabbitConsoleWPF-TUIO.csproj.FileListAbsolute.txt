@@ -1,0 +1,15 @@
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleWPF\bin\Debug\RabbitConsoleWPF.exe
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleWPF\bin\Debug\RabbitConsoleWPF.pdb
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleWPF\bin\Debug\libTUIO.dll
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleWPF\bin\Debug\RabbitTestApp.exe
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleWPF\bin\Debug\RabbitTestApp.pdb
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleWPF\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleWPF\obj\Debug\Window1.baml
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleWPF\obj\Debug\Window1.g.cs
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleWPF\obj\Debug\App.g.cs
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleWPF\obj\Debug\RabbitConsoleWPF_MarkupCompile.cache
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleWPF\obj\Debug\RabbitConsoleWPF.g.resources
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleWPF\obj\Debug\RabbitConsoleWPF.Properties.Resources.resources
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleWPF\obj\Debug\RabbitConsoleWPF-TUIO.csproj.GenerateResource.Cache
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleWPF\obj\Debug\RabbitConsoleWPF.exe
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleWPF\obj\Debug\RabbitConsoleWPF.pdb

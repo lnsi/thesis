@@ -40,7 +40,7 @@ namespace PhoneVortex
     private void InitializeDefinitions()
     {
       ByteTagVisualizationDefinition def = new ByteTagVisualizationDefinition();
-      def.Value = 0x0E;
+      def.Value = 0xCF;
       def.Source = new Uri("PhoneVortexVisualization.xaml", UriKind.Relative);
       def.MaxCount = 1;
       def.LostTagTimeout = 500;
@@ -50,7 +50,7 @@ namespace PhoneVortex
       def.UsesTagOrientation = true;
       tVisualizer.Definitions.Add(def);
 
-      vncAddress.Add(0x0E, Settings.Default.PhoneIP);
+      vncAddress.Add(0xCF, Settings.Default.PhoneIP);
     }
 
     /// <summary>

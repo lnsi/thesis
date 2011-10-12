@@ -1,0 +1,21 @@
+﻿<UserControl x:Name="rShadow" x:Class="RabbitTestApp.Controls.RabbitShadow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="400" Width="280">
+  
+  <UserControl.Resources>
+    <BooleanToVisibilityConverter x:Key="bvConverter" />
+  </UserControl.Resources>
+  
+  <Grid>
+    <Rectangle Fill="Black" Stroke="Blue" StrokeThickness="5" RadiusX="10" RadiusY="10"/>
+    
+    <Ellipse Stroke="Red" Fill="Crimson" StrokeThickness="5" Margin="50" Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+    <Ellipse Stroke="Transparent" Fill="LightGreen" StrokeThickness="10" Margin="50" Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top"
+             Visibility="{Binding Path=StateBitA, Converter={StaticResource bvConverter}}"/>
+    
+    <Ellipse Stroke="Red" Fill="Crimson" StrokeThickness="5" Margin="50" Width="50" Height="50" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+    <Ellipse Stroke="Transparent" Fill="LightGreen" StrokeThickness="10" Margin="50" Width="50" Height="50" HorizontalAlignment="Right" VerticalAlignment="Top"
+             Visibility="{Binding Path=StateBitB, Converter={StaticResource bvConverter}}"/>
+  </Grid>
+</UserControl>

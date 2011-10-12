@@ -1,0 +1,15 @@
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharp\bin\Release\Resources\vnccursor.cur
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharp\bin\Release\Resources\vncviewer.ico
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharp\bin\Release\VncSharp.dll
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharp\bin\Release\VncSharp.pdb
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharp\obj\Release\ResolveAssemblyReference.cache
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharp\obj\Release\RemoteDesktopWPF.baml
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharp\obj\Release\RemoteDesktopWPF.g.cs
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharp\obj\Release\VncSharp_MarkupCompile.cache
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharp\obj\Release\VncSharp.g.resources
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharp\obj\Release\VncSharp.PasswordDialog.resources
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharp\obj\Release\VncSharp.RemoteDesktop.resources
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharp\obj\Release\VncSharp.Resources.Objects.resources
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharp\obj\Release\VncSharp.csproj.GenerateResource.Cache
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharp\obj\Release\VncSharp.dll
+C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharp\obj\Release\VncSharp.pdb

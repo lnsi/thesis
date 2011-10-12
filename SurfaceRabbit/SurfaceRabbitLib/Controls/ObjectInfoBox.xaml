@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="SurfaceRabbit.Controls.ObjectInfoBox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:surface="http://schemas.microsoft.com/surface/2008"
+    Width="300">
+  
+  <UserControl.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Styles\GlassButton.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </UserControl.Resources>
+  
+  <Grid>
+    <Rectangle Fill="White" Stroke="Red" StrokeThickness="5" RadiusX="10" RadiusY="10"/>
+    <surface:SurfaceButton Style="{StaticResource GlassButton}" Width="50" Height="50" Background="#FFFF0000" 
+            HorizontalAlignment="Right" VerticalAlignment="Top" Margin="-15" Foreground="White"
+            FontSize="24" FontWeight="Bold" Click="SurfaceButton_Click">X</surface:SurfaceButton>
+    
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top"
+                Margin="15">
+      <TextBlock><TextBlock FontWeight="Bold">Name</TextBlock>: <TextBlock x:Name="tbkName">TX-DNA32</TextBlock></TextBlock>
+      <TextBlock><TextBlock FontWeight="Bold">Created</TextBlock>: <TextBlock x:Name="tbkCreated" FontStyle="Italic">TX-DNA32</TextBlock></TextBlock>
+      <TextBlock><TextBlock FontWeight="Bold">Description</TextBlock>: <LineBreak />
+        <TextBlock x:Name="tbkDescription" FontStyle="Italic" TextWrapping="Wrap">This is mock content to help the design of this UI control, as part of the rabbit project.</TextBlock></TextBlock>
+    </StackPanel>
+    
+  </Grid>
+  
+  
+</UserControl>

@@ -1,0 +1,6 @@
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleApp\bin\Release\RabbitConsoleApp.exe
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleApp\bin\Release\RabbitConsoleApp.pdb
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleApp\bin\Release\libTUIO.dll
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleApp\obj\Release\ResolveAssemblyReference.cache
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleApp\obj\Release\RabbitConsoleApp.exe
+C:\Users\PITlab\Desktop\SurfaceRabbit\RabbitConsoleApp\obj\Release\RabbitConsoleApp.pdb

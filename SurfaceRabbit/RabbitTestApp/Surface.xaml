@@ -1,0 +1,133 @@
+﻿<Window x:Class="RabbitTestApp.Surface" x:Name="wSurface"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:rabbit="clr-namespace:RabbitTestApp.Controls"
+    xmlns:entities="clr-namespace:RabbitTestApp.Entities"
+    xmlns:converters="clr-namespace:RabbitTestApp.Controls.Converters"
+    Closing="Window_Closing" Loaded="wSurface_Loaded"
+    Title="Tabletop Surface" Height="600" Width="800" WindowStyle="None" SizeToContent="Manual" ResizeMode="CanResize" 
+    WindowStartupLocation="CenterScreen" WindowState="Maximized" BorderThickness="0" Visibility="Collapsed">
+
+  <Window.Resources>
+    <Style x:Key="{x:Type ListBox}" TargetType="{x:Type ListBox}">
+      <Setter Property="Template">
+        <Setter.Value>
+          <ControlTemplate>
+            <Border>
+              <ScrollViewer>
+                <ItemsPresenter />
+              </ScrollViewer>
+            </Border>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+
+    <Style x:Key="{x:Type ListBoxItem}" TargetType="{x:Type ListBoxItem}">
+      <Setter Property="Template">
+        <Setter.Value>
+          <ControlTemplate TargetType="{x:Type ListBoxItem}">
+            <ContentPresenter />
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+
+    <converters:MarginConverter x:Key="marginConverter" />
+    <converters:CoordConverter x:Key="coordConverter" />
+    <BooleanToVisibilityConverter x:Key="bvConverter" />
+    <converters:AngleConverter x:Key="angleConverter"/>
+  </Window.Resources>
+
+  <Grid>
+    <Grid.Background>
+      <RadialGradientBrush GradientOrigin="0.7,0.3" Center="0.7,0.4" 
+                                 RadiusX="0.8" RadiusY="0.8">
+        <GradientStop Color="Black" Offset="0"/>
+        <GradientStop Color="Black" Offset="0.9"/>
+      </RadialGradientBrush>
+    </Grid.Background>
+
+    <Rectangle Stroke="White" StrokeThickness="1" Margin="15" HorizontalAlignment="Stretch"
+               VerticalAlignment="Stretch"/>
+
+    <ListBox ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+      <ListBox.ItemsPanel>
+        <ItemsPanelTemplate>
+          <Canvas VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+        </ItemsPanelTemplate>
+      </ListBox.ItemsPanel>
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <rabbit:ObjectIcon DataContext="{Binding}" RenderTransformOrigin="0.5, 0.5">
+            <rabbit:ObjectIcon.Margin>
+              <MultiBinding Converter="{StaticResource marginConverter}">
+                <Binding Path="Path" />
+                <Binding Path="X" Mode="OneWay"/>
+                <Binding Path="Y" Mode="OneWay"/>
+              </MultiBinding>
+            </rabbit:ObjectIcon.Margin>
+            <rabbit:ObjectIcon.RenderTransform>
+              <RotateTransform Angle="0"/>
+            </rabbit:ObjectIcon.RenderTransform>
+          </rabbit:ObjectIcon>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+
+    <ListBox x:Name="lCursors"
+           ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+      <ListBox.ItemsPanel>
+        <ItemsPanelTemplate>
+          <Canvas VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+        </ItemsPanelTemplate>
+      </ListBox.ItemsPanel>
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <Ellipse Stroke="Gray" StrokeThickness="10" Height="50" Width="50">
+            <Ellipse.Margin>
+              <MultiBinding Converter="{StaticResource marginConverter}">
+                <Binding Path="Path" />
+                <Binding Path="X" Mode="OneWay"/>
+                <Binding Path="Y" Mode="OneWay"/>
+              </MultiBinding>
+            </Ellipse.Margin>
+          </Ellipse>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+
+    <rabbit:RabbitShadow x:Name="rabbit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="280" Height="400"
+                         Visibility="{Binding ElementName=rabbit, Path=IsBound, Converter={StaticResource bvConverter}}">
+      <rabbit:RabbitShadow.RenderTransform>
+        <TransformGroup>
+          <RotateTransform Angle="{Binding Path=AngleDegrees, Converter={StaticResource angleConverter}}" CenterX="140" CenterY="300"/>
+          <TranslateTransform X="-140" Y="-300" />
+          <TranslateTransform>
+            <TranslateTransform.X>
+              <MultiBinding Converter="{StaticResource coordConverter}">
+                <Binding Path="Path" />
+                <Binding ElementName="rabbit" Path="BindingHelpX" />
+                <Binding Path="X" />
+              </MultiBinding>
+            </TranslateTransform.X>
+            <TranslateTransform.Y>
+              <MultiBinding Converter="{StaticResource coordConverter}">
+                <Binding Path="Path" />
+                <Binding ElementName="rabbit" Path="BindingHelpY" />
+                <Binding Path="Y" />
+              </MultiBinding>
+            </TranslateTransform.Y>
+          </TranslateTransform>
+        </TransformGroup>
+      </rabbit:RabbitShadow.RenderTransform>
+    </rabbit:RabbitShadow>
+
+    <Button x:Name="bConnect" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="25" Content="Listen TUIO"
+            Width="150" Click="bConnect_Click" Background="Black" Foreground="White" BorderBrush="White"/>
+    <Label Background="Black" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="White"
+           Margin="0,0,30,3">Rabbit Test Application - jdhr@itu.dk - 2010</Label>
+
+  </Grid>
+
+</Window>

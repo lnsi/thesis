@@ -1,0 +1,89 @@
+﻿<s:SurfaceWindow x:Class="JuanTestApp.SWLive" x:Name="swLive"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    xmlns:converters="clr-namespace:SurfaceRabbit.Controls.Converters;assembly=SurfaceRabbit"
+    xmlns:rabbit="clr-namespace:SurfaceRabbit.Controls;assembly=SurfaceRabbit"
+    xmlns:settings="clr-namespace:SurfaceRabbitApp.Properties"
+    Title="Microsoft Surface - Rabbit Test Application">
+  <s:SurfaceWindow.Resources>
+    <ImageBrush x:Key="WindowBackground" Stretch="None" Opacity="0.6" ImageSource="pack://application:,,,/Resources/SurfaceWindowBackground.jpg"/>
+
+    <Style x:Key="{x:Type ListBox}" TargetType="{x:Type ListBox}">
+      <Setter Property="Template">
+        <Setter.Value>
+          <ControlTemplate>
+            <Border>
+              <ScrollViewer>
+                <ItemsPresenter />
+              </ScrollViewer>
+            </Border>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+
+    <Style x:Key="{x:Type ListBoxItem}" TargetType="{x:Type ListBoxItem}">
+      <Setter Property="Template">
+        <Setter.Value>
+          <ControlTemplate TargetType="{x:Type ListBoxItem}">
+            <ContentPresenter />
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+
+    <converters:CoordConverter x:Key="coordConverter" />
+    <BooleanToVisibilityConverter x:Key="bvConverter" />
+    <converters:AngleConverter x:Key="angleConverter"/>
+    <settings:Settings x:Key="settingsObj"/>
+  </s:SurfaceWindow.Resources>
+
+  <Grid Background="{StaticResource WindowBackground}">
+    <Rectangle Stroke="White" StrokeThickness="1" Margin="15" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+    <ListBox x:Name="lRabbits" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+      <ListBox.ItemsPanel>
+        <ItemsPanelTemplate>
+          <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+        </ItemsPanelTemplate>
+      </ListBox.ItemsPanel>
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <rabbit:RabbitShadow HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="0.5">
+            <rabbit:RabbitShadow.RenderTransform>
+              <TransformGroup>
+                <RotateTransform CenterX="82" CenterY="100">
+                  <RotateTransform.Angle>
+                    <MultiBinding Converter="{StaticResource angleConverter}">
+                      <Binding Path="AngleDegrees" />
+                      <Binding Source="{StaticResource settingsObj}" Path="AngleMultiplier"/>
+                    </MultiBinding>
+                  </RotateTransform.Angle>
+                </RotateTransform>
+                <TranslateTransform X="-82" Y="-100" />
+                <TranslateTransform>
+                  <TranslateTransform.X>
+                    <MultiBinding Converter="{StaticResource coordConverter}">
+                      <Binding Path="ProportionalX" />
+                      <Binding ElementName="swLive" Path="ActualWidth" />
+                    </MultiBinding>
+                  </TranslateTransform.X>
+                  <TranslateTransform.Y>
+                    <MultiBinding Converter="{StaticResource coordConverter}">
+                      <Binding Path="ProportionalY" />
+                      <Binding ElementName="swLive" Path="ActualHeight" />
+                    </MultiBinding>
+                  </TranslateTransform.Y>
+                </TranslateTransform>
+              </TransformGroup>
+            </rabbit:RabbitShadow.RenderTransform>
+          </rabbit:RabbitShadow>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+
+    <Label Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="White"
+           Margin="0,0,20,15">Surface Rabbit Test Application - jdhr@itu.dk - 2010</Label>
+  </Grid>
+</s:SurfaceWindow>

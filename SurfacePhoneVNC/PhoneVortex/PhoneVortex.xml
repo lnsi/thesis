@@ -28,7 +28,7 @@ instructions.
       2. Replace "C0" below with the value of your Byte Tag (in hexadecimal format). Repeat this section (this element and its children) for other Byte Tags
       3. Please remove the Launch element if you do not want to register the tag with Object Routing.
       -->
-      <ByteTag Value="0E">
+      <ByteTag Value="CF">
         <Actions>
           <Launch />
         </Actions>
