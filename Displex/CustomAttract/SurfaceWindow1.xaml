@@ -1,0 +1,19 @@
+﻿<s:SurfaceWindow x:Class="CustomAttract.SurfaceWindow1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    Background="DarkTurquoise"
+    Title="CustomAttract"
+    >
+  <!--<s:SurfaceWindow.Resources>
+    <ImageBrush x:Key="WindowBackground" Stretch="None" Opacity="0.6" ImageSource="pack://application:,,,/Resources/WindowBackground.jpg"/>
+  </s:SurfaceWindow.Resources>
+
+  <Grid Background="{StaticResource WindowBackground}" >
+
+  </Grid>-->
+    <Grid>
+        <TextBlock Foreground="Black" FontSize="24" Text="Custom Attract Application" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Foreground="Black" FontSize="24" Text="Questions: contact lnsi@itu.dk" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="31.923" Margin="342,0,342,288" />
+    </Grid>
+</s:SurfaceWindow>

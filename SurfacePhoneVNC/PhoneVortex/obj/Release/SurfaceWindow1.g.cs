@@ -13,7 +13,6 @@ using Microsoft.Surface.Presentation;
 using Microsoft.Surface.Presentation.Controls;
 using Microsoft.Surface.Presentation.Controls.ContactVisualizations;
 using Microsoft.Surface.Presentation.Controls.Primitives;
-using PhoneVortex;
 using System;
 using System.Diagnostics;
 using System.Windows;

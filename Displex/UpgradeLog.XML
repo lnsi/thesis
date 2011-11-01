@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="OpenTable">
+</Property><Property Name="Solution File" Value="C:\LeoThesis\thesis\OpenTable\OpenTable.sln">
+</Property><Property Name="Date" Value="Monday, October 31, 2011">
+</Property><Property Name="Time" Value="11:03:36 AM">
+</Property></Properties><Event ErrorLevel="0" Project="VncSharpExampleCS" Source="VncSharpExampleCS\VncSharpExampleCS.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="VncSharpExampleCS" Source="VncSharpExampleCS\VncSharpExampleCS.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="VncSharpExampleCS" Source="VncSharpExampleCS\VncSharpExampleCS.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

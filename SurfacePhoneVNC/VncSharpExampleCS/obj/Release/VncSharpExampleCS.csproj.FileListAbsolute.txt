@@ -8,3 +8,13 @@ C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharpExampleCS\obj\Release\
 C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharpExampleCS\obj\Release\VncSharpExampleCS.csproj.GenerateResource.Cache
 C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharpExampleCS\obj\Release\VncSharpExampleCS.exe
 C:\SurfaceApplications\Leo\thesis\SurfacePhoneVNC\VncSharpExampleCS\obj\Release\VncSharpExampleCS.pdb
+C:\LeoThesis\thesis\SurfacePhoneVNC\VncSharpExampleCS\bin\Release\VncSharpExampleCS.exe
+C:\LeoThesis\thesis\SurfacePhoneVNC\VncSharpExampleCS\bin\Release\VncSharpExampleCS.pdb
+C:\LeoThesis\thesis\SurfacePhoneVNC\VncSharpExampleCS\bin\Release\VncSharp.dll
+C:\LeoThesis\thesis\SurfacePhoneVNC\VncSharpExampleCS\obj\Release\ResolveAssemblyReference.cache
+C:\LeoThesis\thesis\SurfacePhoneVNC\VncSharpExampleCS\obj\Release\VncSharp.ConnectDialog.resources
+C:\LeoThesis\thesis\SurfacePhoneVNC\VncSharpExampleCS\obj\Release\VncSharpExampleCS.form.resources
+C:\LeoThesis\thesis\SurfacePhoneVNC\VncSharpExampleCS\obj\Release\VncSharpExampleCS.Properties.Resources.resources
+C:\LeoThesis\thesis\SurfacePhoneVNC\VncSharpExampleCS\obj\Release\VncSharpExampleCS.csproj.GenerateResource.Cache
+C:\LeoThesis\thesis\SurfacePhoneVNC\VncSharpExampleCS\obj\Release\VncSharpExampleCS.exe
+C:\LeoThesis\thesis\SurfacePhoneVNC\VncSharpExampleCS\obj\Release\VncSharpExampleCS.pdb

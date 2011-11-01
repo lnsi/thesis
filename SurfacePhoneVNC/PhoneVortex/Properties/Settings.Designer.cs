@@ -25,7 +25,7 @@ namespace PhoneVortex.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("10.1.1.199")]
+        [global::System.Configuration.DefaultSettingValueAttribute("10.1.1.200")]
         public string PhoneIP {
             get {
                 return ((string)(this["PhoneIP"]));

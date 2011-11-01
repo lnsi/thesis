@@ -1,0 +1,28 @@
+﻿<s:SurfaceWindow x:Class="Displex.SurfaceWindow1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    xmlns:vnc="clr-namespace:VncSharp;assembly=VncSharp"
+    Title="Displex"
+    >
+  <s:SurfaceWindow.Resources>
+    <ImageBrush x:Key="WindowBackground" Stretch="None" Opacity="0.6" ImageSource="pack://application:,,,/Resources/WindowBackground.jpg"/>
+  </s:SurfaceWindow.Resources>
+
+  <!--<Grid Background="{StaticResource WindowBackground}" >
+      <TextBlock Foreground="Black" FontSize="24" Text="Welcome To Displex" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+      <vnc:RemoteDesktopWPF x:Name="rdfWPF" Margin="0,0,0,0" Height="480" Width="320" />
+  </Grid>-->
+    
+    <s:ScatterView Name="Displex">
+        <s:ScatterViewItem Orientation="0" Center="50,50">
+            <Label Content="Welcome to Displex"></Label>
+        </s:ScatterViewItem>
+        <s:ScatterViewItem Name="DisplayExtension" Background="Transparent"
+                           Height="500" Width="340" Orientation="0" Center="500,350">
+            <vnc:RemoteDesktopWPF x:Name="rdfWPF" Margin="0,0,0,0" Height="480" Width="320" />     
+        </s:ScatterViewItem>
+    </s:ScatterView>
+    
+    
+</s:SurfaceWindow>
