@@ -281,6 +281,7 @@ namespace VncSharp
       vnc.ConnectionLost += new EventHandler(VncClientConnectionLost);
       vnc.ServerCutText += new EventHandler(VncServerCutText);
 
+      Console.WriteLine("Connecting...");
       passwordPending = vnc.Connect(host, display, VncPort, viewOnly);
 
       if (passwordPending)
@@ -344,6 +345,7 @@ namespace VncSharp
     /// <exception cref="System.InvalidOperationException">Thrown if the RemoteDesktop control is already in the Connected state.  See <see cref="VncSharp.RemoteDesktop.IsConnected" />.</exception>		
     protected void Initialize()
     {
+        Console.WriteLine("Initializing..");
       // Finish protocol handshake with host now that authentication is done.
       InsureConnection(false);
       vnc.Initialize();
@@ -446,7 +448,6 @@ namespace VncSharp
     /// <param name="e">An empty EventArgs object.</param>
     protected void VncClientConnectionLost(object sender, EventArgs e)
     {
-        Console.WriteLine("LOSt");
       // If the remote host dies, and there are attempts to write
       // keyboard/mouse/update notifications, this may get called 
       // many times, and from main or worker thread.

@@ -36,6 +36,7 @@ namespace Displex
         private byte[] normalizedImage;
         private ImageMetrics imageMetrics;
         private bool imageAvailable;
+        private iPhoneTracker tracker;
 
         /// <summary>
         /// Default constructor.
@@ -54,6 +55,7 @@ namespace Displex
             hwnd = new System.Windows.Interop.WindowInteropHelper(this).Handle;
             contactTarget = new Microsoft.Surface.Core.ContactTarget(hwnd);
             contactTarget.EnableInput();
+            tracker = new iPhoneTracker(this);
             EnableRawImage();
         }
 
@@ -174,7 +176,7 @@ namespace Displex
                                   System.Drawing.Imaging.PixelFormat.Format8bppIndexed,
                                   ptr);
             
-            DeviceTracker tracker = new DeviceTracker(this);
+            
             tracker.ProcessImage(bitmap);
 
             imageAvailable = false;

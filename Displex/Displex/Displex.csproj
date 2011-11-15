@@ -88,7 +88,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DeviceTracker.cs" />
+    <Compile Include="iPhoneTracker.cs" />
+    <Compile Include="iPhone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

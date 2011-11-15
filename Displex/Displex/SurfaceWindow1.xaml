@@ -15,12 +15,12 @@
   </Grid>-->
     
     <s:ScatterView Name="Displex">
-        <s:ScatterViewItem Orientation="0" Center="50,50">
+        <s:ScatterViewItem Orientation="0" Center="100,50">
             <Label Content="Welcome to Displex"></Label>
         </s:ScatterViewItem>
         <s:ScatterViewItem Name="DisplayExtension" Background="Transparent"
                            Height="500" Width="340" Orientation="0" Center="500,350">
-            <vnc:RemoteDesktopWPF x:Name="rdfWPF" Margin="0,0,0,0" Height="480" Width="320" />     
+            <vnc:RemoteDesktopWPF x:Name="rdfWPF" Margin="0,0,0,0" Height="360" Width="265" />     
         </s:ScatterViewItem>
     </s:ScatterView>
     

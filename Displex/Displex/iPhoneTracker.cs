@@ -7,23 +7,26 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using Emgu.CV;
 using Emgu.CV.Structure;
+using System.Collections.ObjectModel;
 
 namespace Displex
 {
-    class DeviceTracker
+    class iPhoneTracker
     {       
         private SurfaceWindow1 mainWindow;
+        private ObservableCollection<iPhone> potentialiPhones;
+        private ObservableCollection<iPhone> currentiPhones;
+        private ColorPalette pal;
+        private bool isConnected;
+        private int counter = 0;
 
-        public DeviceTracker(SurfaceWindow1 window)
+        public iPhoneTracker(SurfaceWindow1 window)
         {
             mainWindow = window;
         }
-
-        private ColorPalette pal;
-        private bool isDevice;
-
+        
         public void ProcessImage(Bitmap bitmap)
-        {   
+        {
             Convert8bppBMPToGrayscale(bitmap);
             PerformDetection(new Image<Gray, byte>(bitmap));     
         }
@@ -101,7 +104,7 @@ namespace Displex
                             double dist = Euclidean(apple.Center,camera.Center);
                             if (dist >= 35 && dist <= 40)
                             {
-                                TrackDevice(apple, camera);
+                                TrackDevice(new iPhone(apple, camera));
                             }
                         }
                         if (contours.HNext == null) break;
@@ -111,17 +114,46 @@ namespace Displex
             }
         }
 
-        private void TrackDevice(CircleF apple, CircleF camera)
+        private void RegisteriPhone(CircleF apple, CircleF camera)
         {
-            Console.WriteLine("distance: " + Euclidean(apple.Center, camera.Center));
+            iPhone current = new iPhone(apple, camera);
+            if (current.IsInList(currentiPhones))
+            {
+                // iPhoneUpdated()
+            }
+            else if (current.IsInList(potentialiPhones))
+            {
+                counter++;
+                if (counter >= 5)
+                {
+                    currentiPhones.Add(current); // iPhoneAdded()
+                    potentialiPhones.Clear();
+                    counter = 0;
+                }
+                else
+                {
+                    potentialiPhones.Add(current);
+                }
+            }
+            else
+            {
+                potentialiPhones.Clear();
+                counter = 0;
+            }
+        }      
+
+        private void TrackDevice(iPhone device)
+        {
+            Console.WriteLine("hypothenuse: " + device.Hypothenuse);
+            Console.WriteLine("orientation: " + device.Orientation);
             
             // connect only once
-            if (!isDevice)
-            {
-                Console.WriteLine("attempting connection..");
-                mainWindow.Connect("10.1.1.200");
-                isDevice = true;
-            }
+            //if (!isConnected)
+            //{
+            //    Console.WriteLine("attempting connection..");
+            //    mainWindow.Connect("10.1.1.198");
+            //    isConnected = true;
+            //}
         }
 
         private void ResetContoursNavigation(ref Contour<Point> contours)
