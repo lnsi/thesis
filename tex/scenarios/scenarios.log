@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  12 SEP 2011 11:41
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  12 SEP 2011 15:17
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -303,7 +303,7 @@ sfonts/cm/cmcsc10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmr10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmr8.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmr9.pfb>
-Output written on scenarios.pdf (2 pages, 63429 bytes).
+Output written on scenarios.pdf (2 pages, 62898 bytes).
 PDF statistics:
  31 PDF objects out of 1000 (max. 8388607)
  21 compressed objects within 1 object stream
