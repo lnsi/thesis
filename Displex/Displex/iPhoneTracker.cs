@@ -143,8 +143,7 @@ namespace Displex
         }      
 
         private void TrackDevice(iPhone device)
-        {
-            Console.WriteLine("hypothenuse: " + device.Hypothenuse);
+        {       
             Console.WriteLine("orientation: " + device.Orientation);
             
             // connect only once
