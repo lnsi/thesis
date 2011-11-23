@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-//using System.Windows;
+using System.Windows;
 //using System.Windows.Controls;
 //using System.Windows.Data;
 //using System.Windows.Documents;
@@ -23,6 +23,7 @@ using Emgu.Util;
 using Emgu.CV.Structure;
 using System.Diagnostics;
 using VncSharp;
+using Displex.Detection;
 
 namespace Displex
 {
@@ -36,7 +37,7 @@ namespace Displex
         private byte[] normalizedImage;
         private ImageMetrics imageMetrics;
         private bool imageAvailable;
-        private iPhoneTracker tracker;
+        private Tracker tracker;
 
         /// <summary>
         /// Default constructor.
@@ -55,7 +56,7 @@ namespace Displex
             hwnd = new System.Windows.Interop.WindowInteropHelper(this).Handle;
             contactTarget = new Microsoft.Surface.Core.ContactTarget(hwnd);
             contactTarget.EnableInput();
-            tracker = new iPhoneTracker(this);
+            tracker = new Tracker(this);
             EnableRawImage();
         }
 
@@ -182,10 +183,25 @@ namespace Displex
             imageAvailable = false;
             EnableRawImage();
         }
+        
+        public void showDisplex(Device device)
+        {
+            //DisplayExtension.Center = new System.Windows.Point(iphone.Center.X, iphone.Center.Y);
+            //Console.WriteLine("center placed at: " + DisplayExtension.Center.X + ", " + DisplayExtension.Center.Y);
+            //DisplayExtension.Orientation = iphone.Orientation;
+            //DisplayExtension.Visibility = Visibility.Visible;
+            //phoneShadow.Center = DisplayExtension.ActualCenter;
+            //phoneShadow.Orientation = DisplayExtension.ActualOrientation;
+        }
 
         public void Connect(String ip)
         {
-            rdfWPF.Connect(ip);
+            //rdfWPF.Connect(ip);
+        }
+
+        private void SurfaceWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

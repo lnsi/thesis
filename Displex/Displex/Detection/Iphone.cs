@@ -3,80 +3,94 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Emgu.CV.Structure;
-using System.Collections.ObjectModel;
 using System.Drawing;
+using System.Collections.ObjectModel;
 
-namespace Displex
+namespace Displex.Detection
 {
-    class iPhone
+    public class Iphone : Device
     {
-        // class members
-        private CircleF apple, camera;
-        public CircleF Apple
+        #region IDeviceTrackable<iPhone> Members
+
+        private PointF iphoneCenter;
+        public override System.Drawing.Point Center()
         {
-            get { return apple; } 
-        }
-        public CircleF Camera 
-        {
-            get { return camera; }
-        }
-        private PointF iPhoneCenter;
-        public PointF DeviceCenter
-        {
-            get { return iPhoneCenter; }
+            return Point.Round(iphoneCenter);
         }
 
-        private float[] cameraStandCoord;
-        private int quadrant;
         private double orientation;
-        private double beta;
-        public double hypothenuse;
-        private double alpha = 0.805;
-
-        //private double zeta;
-        private double distFromAppleToCenter = 35;
-        public double delta = 10;
-
-        // Constructors
-        public iPhone() { }
-
-        public iPhone(CircleF apple, CircleF camera)
+        public override int Orientation()
         {
-            this.updatePosition(apple, camera);
+            return Convert.ToInt32(ToDegree(orientation));
         }
 
-        // Methods
-        public void updatePosition(CircleF apple, CircleF camera)
+        private int width = 97;
+        public override int Width()
         {
-            this.apple = apple;
-            this.camera = camera;
+            return width;
+        }
+
+        private int height = 193;
+        public override int Height()
+        {
+            return height;
+        }
+
+        public override bool IsSameDevice(Device obj)
+        {
+            if (obj == null) return false;
+
+            if (Euclidean(Center(),obj.Center()) < deltaCenter 
+                && Math.Abs(Orientation() - obj.Orientation()) < deltaOrientation)
+                return true;
+            
+            return false;
+        }
+
+        private int framesMissingNr;
+        public override bool AttemptRemove()
+        {
+            if (++framesMissingNr >= 3)
+                return true;
+            else return false;
+        }
+
+        public override void UpdatePosition()
+        {       
             // converting the coordinates of the camera point to standard coordinates on a x,y plane
-            // where the apple point is at the center (0,0)
-            cameraStandCoord = new float[2] { (camera.Center.X - apple.Center.X), (apple.Center.Y - camera.Center.Y) };
+            // where the apple center is at coord (0,0)
+            cameraStandCoord = new float[2] { (Camera.Center.X - Apple.Center.X), (Apple.Center.Y - Camera.Center.Y) };
             this.hypothenuse = Math.Sqrt(Math.Pow(cameraStandCoord[0], 2) + Math.Pow(cameraStandCoord[1], 2));
             Console.WriteLine("hypothenuse: " + hypothenuse);
             CalculatePosition();
         }
 
-        public bool IsInList(ObservableCollection<iPhone> list)
+        #endregion
+
+        // class members
+        public CircleF Apple { get; private set; }
+        public CircleF Camera  { get; private set; }
+
+        private const double alpha = 0.805;
+        private const double distFromAppleToCenter = 35;
+        public const double deltaCenter = 10;
+        public const double deltaOrientation = 30;
+
+        private float[] cameraStandCoord;
+        private int quadrant;
+        private double beta;
+        public double hypothenuse;
+
+        // Constructor
+        public Iphone(CircleF apple, CircleF camera)
         {
-            if (list == null) return false;
-            foreach (iPhone device in list)
-            {
-                if (Euclidean(this.Apple.Center, device.Apple.Center) < delta
-                    && Euclidean(this.Camera.Center, device.Camera.Center) < delta)
-                {
-                    return true;
-                }
-            }
-            return false;
+            framesMissingNr = 0;
+            Apple = apple;
+            Camera = camera;
+            UpdatePosition();
         }
 
-        public int Orientation
-        {
-            get { return Convert.ToInt32(ToDegree(orientation)); }
-        }
-
+        // Methods
         private void CalculatePosition()
         {
             double cosTheta = cameraStandCoord[0] / hypothenuse;
@@ -131,29 +145,37 @@ namespace Displex
                 }
             }
 
+            double distX=0,distY=0;
+
             switch (quadrant)
             {
                 case 1:
                     orientation = (Math.PI / 2) - beta;
+                    distX = Math.Cos(Math.PI - beta) * distFromAppleToCenter;
+                    distY = Math.Sin(-beta) * distFromAppleToCenter;
                     break;
                 case 2:
                     orientation = (Math.PI / 2) + beta;
+                    distX = Math.Cos(Math.PI - beta) * distFromAppleToCenter;
+                    distY = Math.Sin(beta) * distFromAppleToCenter;
                     break;
                 case 3:
                     orientation = ((3 * Math.PI) / 2) - beta;
+                    distX = Math.Cos(beta) * distFromAppleToCenter;
+                    distY = Math.Sin(beta) * distFromAppleToCenter;
                     break;
                 case 4:
                     orientation = ((3 * Math.PI) / 2) + beta;
+                    distX = Math.Cos(beta) * distFromAppleToCenter;
+                    distY = Math.Sin(-beta) * distFromAppleToCenter;
                     break;
                 default:
                     break;
             }
 
-            double distX = Math.Cos(Math.PI - Math.Acos(cosTheta)) * distFromAppleToCenter;
-            double distY = Math.Sin(Math.Asin(sinTheta)) * distFromAppleToCenter;
-            iPhoneCenter = new PointF((apple.Center.X + (float)distX),(apple.Center.Y - (float)distY));
-            Console.WriteLine("center x: " + iPhoneCenter.X + ", y: " + iPhoneCenter.Y);
-
+            iphoneCenter = new PointF((Apple.Center.X + (float)distX), (Apple.Center.Y - (float)distY));
+            Console.WriteLine("apple center x: " + Apple.Center.X + ", y: " + Apple.Center.Y);
+            Console.WriteLine("devicecenter x: " + iphoneCenter.X + ", y: " + iphoneCenter.Y);
         }
 
         //private double OrientationDouble()
