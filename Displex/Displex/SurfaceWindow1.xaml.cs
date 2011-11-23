@@ -56,8 +56,35 @@ namespace Displex
             hwnd = new System.Windows.Interop.WindowInteropHelper(this).Handle;
             contactTarget = new Microsoft.Surface.Core.ContactTarget(hwnd);
             contactTarget.EnableInput();
-            tracker = new Tracker(this);
+
+            tracker = new Tracker();
+            tracker.DeviceAdded += new DeviceAdded(tracker_DeviceAdded);
+            tracker.DeviceRemoved += new DeviceRemoved(tracker_DeviceRemoved);
+            tracker.DeviceUpdated += new DeviceUpdated(tracker_DeviceUpdated);
+
             EnableRawImage();
+        }
+
+        void tracker_DeviceAdded(object sender, TrackerEventArgs e)
+        {
+            Status.Content = "Device added!";
+            DisplayExtension.Center = new System.Windows.Point(e.Device.Center().X, e.Device.Center().Y);
+            DisplayExtension.Orientation = e.Device.Orientation();
+            DisplayExtension.Visibility = Visibility.Visible;
+
+        }
+
+        void tracker_DeviceRemoved(object sender, TrackerEventArgs e)
+        {
+            Status.Content = "Device Removed!";
+            DisplayExtension.Visibility = Visibility.Hidden;
+        }
+
+        void tracker_DeviceUpdated(object sender, TrackerEventArgs e)
+        {
+            Status.Content = "Device Updated!";
+            DisplayExtension.Center = new System.Windows.Point(e.Device.Center().X, e.Device.Center().Y);
+            DisplayExtension.Orientation = e.Device.Orientation();
         }
 
         /// <summary>

@@ -17,14 +17,13 @@ namespace Displex.Detection
         public virtual event DeviceUpdated DeviceUpdated;
         public virtual event DeviceRemoved DeviceRemoved;
 
-        private SurfaceWindow1 mainWindow;
-        private ObservableCollection<Device> currentDevices;
+        private ObservableCollection<Iphone> currentDevices;
         private ColorPalette pal;
         //private bool isConnected;
 
-        public Tracker(SurfaceWindow1 window)
+        public Tracker() 
         {
-            mainWindow = window;
+            currentDevices = new ObservableCollection<Iphone>();
         }
 
         private void OnDeviceAdded(Device device)
@@ -71,14 +70,17 @@ namespace Displex.Detection
             Contour<System.Drawing.Point> contours = gray.FindContours(Emgu.CV.CvEnum.CHAIN_APPROX_METHOD.CV_CHAIN_APPROX_SIMPLE,
               Emgu.CV.CvEnum.RETR_TYPE.CV_RETR_LIST);
 
-            IList<Device> foundDevices = new IphoneTracker().FindIphones(contours) as IList<Device>;
-            IList<Device> devicesToBeAdded = null, devicesToBeRemoved = new List<Device>(currentDevices);
+            //IList<Device> foundDevices = new IphoneTracker().FindIphones(contours) as List<Device>;
+            IList<Iphone> foundDevices = new IphoneTracker().FindIphones(contours);
+            IList<Iphone> devicesToBeAdded = new List<Iphone>(), devicesToBeRemoved = new List<Iphone>(currentDevices);
 
-            foreach (Device fD in foundDevices)
+            if (foundDevices == null) return;
+
+            foreach (Iphone fD in foundDevices)
             {
-                foreach (Device cD in currentDevices)
-                {
-                    bool isNew = true;
+                bool isNew = true;
+                foreach (Iphone cD in currentDevices)
+                {        
                     // a found device is identified as a current device
                     if (fD.IsSameDevice(cD))
                     {
@@ -89,27 +91,33 @@ namespace Displex.Detection
 
                         cD.UpdatePosition();
                         OnDeviceUpdated(cD);
-                    }
-                    // a found device is identified as a new device
-                    if (isNew)
-                    {
-                        devicesToBeAdded.Add(fD);
-                    }
+                    }          
+                }
+                // a found device is identified as a new device
+                if (isNew)
+                {
+                    devicesToBeAdded.Add(fD);
                 }
             }
             // add new devices
-            foreach (Device d in devicesToBeAdded)
+            if (devicesToBeAdded != null)
             {
-                currentDevices.Add(d);
-                OnDeviceAdded(d);
+                foreach (Iphone d in devicesToBeAdded)
+                {
+                    currentDevices.Add(d);
+                    OnDeviceAdded(d);
+                }
             }
             // attempt removing lost devices
-            foreach (Device d in devicesToBeRemoved)
+            if (devicesToBeRemoved != null)
             {
-                if (d.AttemptRemove())
+                foreach (Iphone d in devicesToBeRemoved)
                 {
-                    currentDevices.Remove(d);
-                    OnDeviceRemoved(d);
+                    if (d.AttemptRemove())
+                    {
+                        currentDevices.Remove(d);
+                        OnDeviceRemoved(d);
+                    }
                 }
             }
         }
@@ -117,7 +125,7 @@ namespace Displex.Detection
         private void TrackDevice(Device device)
         {       
 //            Console.WriteLine("orientation: " + device.Orientation);
-            mainWindow.showDisplex(device);
+            //mainWindow.showDisplex(device);
             
             // connect only once
             //if (!isConnected)

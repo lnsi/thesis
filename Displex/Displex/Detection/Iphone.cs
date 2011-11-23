@@ -57,12 +57,15 @@ namespace Displex.Detection
 
         public override void UpdatePosition()
         {       
-            // converting the coordinates of the camera point to standard coordinates on a x,y plane
-            // where the apple center is at coord (0,0)
-            cameraStandCoord = new float[2] { (Camera.Center.X - Apple.Center.X), (Apple.Center.Y - Camera.Center.Y) };
-            this.hypothenuse = Math.Sqrt(Math.Pow(cameraStandCoord[0], 2) + Math.Pow(cameraStandCoord[1], 2));
-            Console.WriteLine("hypothenuse: " + hypothenuse);
             CalculatePosition();
+            Console.WriteLine("Before adjust");
+            Console.WriteLine("center: " + Center().X + "," + Center().Y);
+            Console.WriteLine("orientation: " + Orientation());
+            AdjustPosition();
+            Console.WriteLine("After adjust");
+            Console.WriteLine("center: " + Center().X + "," + Center().Y);
+            Console.WriteLine("orientation: " + Orientation());
+            Console.WriteLine("**************************");
         }
 
         #endregion
@@ -81,23 +84,36 @@ namespace Displex.Detection
         private double beta;
         public double hypothenuse;
 
+        private CircularList<PointF> centersAvg;
+        private CircularList<double> orientationsAvg;
+        private const int centersNr = 3, orientationsNr = 3;
+
         // Constructor
         public Iphone(CircleF apple, CircleF camera)
         {
             framesMissingNr = 0;
             Apple = apple;
             Camera = camera;
-            UpdatePosition();
+            CalculatePosition();
+
+            centersAvg = new CircularList<PointF>(centersNr);
+            orientationsAvg = new CircularList<double>(orientationsNr);
         }
 
         // Methods
         private void CalculatePosition()
         {
+            // converting the coordinates of the camera point to standard coordinates on a x,y plane
+            // where the apple center is at coord (0,0)
+            cameraStandCoord = new float[2] { (Camera.Center.X - Apple.Center.X), (Apple.Center.Y - Camera.Center.Y) };
+            this.hypothenuse = Math.Sqrt(Math.Pow(cameraStandCoord[0], 2) + Math.Pow(cameraStandCoord[1], 2));
+            //Console.WriteLine("hypothenuse: " + hypothenuse);
+
             double cosTheta = cameraStandCoord[0] / hypothenuse;
             double sinTheta = cameraStandCoord[1] / hypothenuse;
             // the absolute value in radians of the angle between the AC axis and the X plane
             double theta = Math.Abs(Math.Asin(sinTheta));
-            Console.WriteLine("theta: " + theta);
+            //Console.WriteLine("theta: " + theta);
 
             // First quadrant
             if (cosTheta >= 0 && sinTheta >= 0)
@@ -174,9 +190,39 @@ namespace Displex.Detection
             }
 
             iphoneCenter = new PointF((Apple.Center.X + (float)distX), (Apple.Center.Y - (float)distY));
-            Console.WriteLine("apple center x: " + Apple.Center.X + ", y: " + Apple.Center.Y);
-            Console.WriteLine("devicecenter x: " + iphoneCenter.X + ", y: " + iphoneCenter.Y);
+            //Console.WriteLine("apple center x: " + Apple.Center.X + ", y: " + Apple.Center.Y);
+            //Console.WriteLine("devicecenter x: " + iphoneCenter.X + ", y: " + iphoneCenter.Y);
         }
+
+        public void AdjustPosition()
+        {
+            // register last reading and advances to next item in list
+            centersAvg.Value = iphoneCenter;
+            centersAvg.Next();
+            // calculate average
+            float newX = 0, newY = 0;
+            int centersCount = centersAvg.Count;
+            for (int i = 0; i <= centersCount; i++)
+            {
+                newX += centersAvg.Value.X;
+                newY += centersAvg.Value.Y;
+            }
+            iphoneCenter = new PointF(newX / centersCount, newY / centersCount);
+
+            // register last reading and advances to next item in list
+            orientationsAvg.Value = orientation;
+            orientationsAvg.Next();
+            // calculate average
+            double newO = 0;
+            int orientationsCount = orientationsAvg.Count;
+            for (int i = 0; i <= orientationsCount; i++)
+            {
+                newO += orientationsAvg.Value;
+            }
+            orientation = newO / orientationsCount;
+        }
+
+
 
         //private double OrientationDouble()
         //{
