@@ -1,0 +1,166 @@
+Macintosh-2:~/Prog/iOS/svnSaurik/veency$ make
+g++ -dynamiclib -g0 -O2 -Wall -Werror -o Veency.dylib Tweak.mm -lobjc -I../tweaks/../mobilesubstrate -framework CoreFoundation -framework Foundation -F/System/Library/PrivateFrameworks -L../tweaks/../mobilesubstrate -lsubstrate -lvncserver -framework IOMobileFramebuffer -framework CoreSurface -framework IOKit -framework GraphicsServices -I/apl/inc/iPhoneOS-2.0 -framework QuartzCore -weak_reference_mismatches weak -framework UIKit -framework GraphicsServices
+Tweak.mm:45:28: error: CydiaSubstrate.h: No such file or directory
+Tweak.mm:47:21: error: rfb/rfb.h: No such file or directory
+Tweak.mm:48:24: error: rfb/keysym.h: No such file or directory
+Tweak.mm:54:38: error: QuartzCore/CAWindowServer.h: No such file or directory
+Tweak.mm:55:45: error: QuartzCore/CAWindowServerDisplay.h: No such file or directory
+Tweak.mm:57:36: error: CoreGraphics/CGGeometry.h: No such file or directory
+Tweak.mm:58:46: error: GraphicsServices/GraphicsServices.h: No such file or directory
+Tweak.mm:60:52: error: IOMobileFramebuffer/IOMobileFramebuffer.h: No such file or directory
+Tweak.mm:62:24: error: UIKit/UIKit.h: No such file or directory
+Tweak.mm:64:47: error: SpringBoard/SBAlertItemsController.h: No such file or directory
+Tweak.mm:65:47: error: SpringBoard/SBDismissOnlyAlertItem.h: No such file or directory
+Tweak.mm:66:46: error: SpringBoard/SBStatusBarController.h: No such file or directory
+cc1objplus: warnings being treated as errors
+Tweak.mm:68: warning: ‘CoreSurfaceBufferFlushProcessorCaches’ initialized and declared ‘extern’
+Tweak.mm:68: error: variable or field ‘CoreSurfaceBufferFlushProcessorCaches’ declared void
+Tweak.mm:68: error: ‘CoreSurfaceBufferRef’ was not declared in this scope
+Tweak.mm:77: error: ‘CoreSurfaceAcceleratorRef’ does not name a type
+Tweak.mm:78: error: ‘CoreSurfaceBufferRef’ does not name a type
+Tweak.mm:82: error: ‘rfbScreenInfoPtr’ does not name a type
+Tweak.mm:92: error: expected initializer before ‘*’ token
+Tweak.mm: In function ‘void VNCBlack()’:
+Tweak.mm:95: error: ‘black_’ was not declared in this scope
+Tweak.mm:96: error: expected type-specifier before ‘rfbPixel’
+Tweak.mm:96: error: expected `>' before ‘rfbPixel’
+Tweak.mm:96: error: expected `(' before ‘rfbPixel’
+Tweak.mm:96: error: ‘rfbPixel’ was not declared in this scope
+Tweak.mm:96: error: expected primary-expression before ‘>’ token
+Tweak.mm:96: error: expected `)' before ‘;’ token
+Tweak.mm:97: error: ‘screen_’ was not declared in this scope
+Tweak.mm:97: error: ‘black_’ was not declared in this scope
+Tweak.mm: At global scope:
+Tweak.mm:149: error: expected constructor, destructor, or type conversion before ‘(’ token
+Tweak.mm:155: error: ‘rfbNewClientAction’ does not name a type
+Tweak.mm:159: error: ‘rfbClientPtr’ does not name a type
+Tweak.mm: In function ‘void +[VNCBridge askForConnection](objc_object*, objc_selector*)’:
+Tweak.mm:176: error: ‘$SBAlertItemsController’ was not declared in this scope
+Tweak.mm: In function ‘void +[VNCBridge removeStatusBarItem](objc_object*, objc_selector*)’:
+Tweak.mm:181: error: ‘$SBStatusBarController’ was not declared in this scope
+Tweak.mm: In function ‘void +[VNCBridge registerClient](objc_object*, objc_selector*)’:
+Tweak.mm:187: error: ‘UIScreen’ was not declared in this scope
+Tweak.mm:187: error: ‘screen’ was not declared in this scope
+Tweak.mm:196: error: ‘$SBStatusBarController’ was not declared in this scope
+Tweak.mm: At global scope:
+Tweak.mm:209: error: ‘VNCAlertItem’ has not been declared
+Tweak.mm:209: error: ‘alertSheet’ has not been declared
+Tweak.mm:209: error: ‘buttonClicked’ has not been declared
+Tweak.mm:209: error: ‘sheet’ has not been declared
+Tweak.mm:209: error: ‘button’ has not been declared
+Tweak.mm:209: error: ISO C++ forbids declaration of ‘MSInstanceMessage2’ with no type
+Tweak.mm:209: error: ‘<anonymous>’ has incomplete type
+Tweak.mm:209: error: invalid use of ‘void’
+Tweak.mm: In function ‘int MSInstanceMessage2(<type error>, int, int, int, objc_object*, int, int, int)’:
+Tweak.mm:212: error: ‘button’ was not declared in this scope
+Tweak.mm:214: error: ‘action_’ was not declared in this scope
+Tweak.mm:214: error: ‘RFB_CLIENT_ACCEPT’ was not declared in this scope
+Tweak.mm:222: error: ‘RFB_CLIENT_REFUSE’ was not declared in this scope
+Tweak.mm:228: error: ‘self’ was not declared in this scope
+Tweak.mm:229: warning: no return statement in function returning non-void
+Tweak.mm: At global scope:
+Tweak.mm:231: error: ‘VNCAlertItem’ has not been declared
+Tweak.mm:231: error: ‘configure’ has not been declared
+Tweak.mm:231: error: ‘requirePasscodeForActions’ has not been declared
+Tweak.mm:231: error: ‘configure’ has not been declared
+Tweak.mm:231: error: ‘require’ has not been declared
+Tweak.mm:231: error: ISO C++ forbids declaration of ‘MSInstanceMessage2’ with no type
+Tweak.mm:231: error: ‘<anonymous>’ has incomplete type
+Tweak.mm:231: error: invalid use of ‘void’
+Tweak.mm: In function ‘int MSInstanceMessage2(<type error>, int, int, int, BOOL, int, BOOL, int)’:
+Tweak.mm:232: error: ‘UIModalView’ was not declared in this scope
+Tweak.mm:232: error: ‘self’ was not declared in this scope
+Tweak.mm:232: error: ‘sheet’ was not declared in this scope
+Tweak.mm:235: error: ‘client_’ was not declared in this scope
+Tweak.mm:238: warning: no return statement in function returning non-void
+Tweak.mm: At global scope:
+Tweak.mm:240: error: ‘VNCAlertItem’ has not been declared
+Tweak.mm:240: error: ‘performUnlockAction’ has not been declared
+Tweak.mm:240: error: ISO C++ forbids declaration of ‘MSInstanceMessage0’ with no type
+Tweak.mm:240: error: ‘<anonymous>’ has incomplete type
+Tweak.mm:240: error: invalid use of ‘void’
+Tweak.mm: In function ‘int MSInstanceMessage0(<type error>, int, int)’:
+Tweak.mm:241: error: ‘$SBAlertItemsController’ was not declared in this scope
+Tweak.mm:241: error: ‘self’ was not declared in this scope
+Tweak.mm:242: warning: no return statement in function returning non-void
+Tweak.mm: At global scope:
+Tweak.mm:248: error: variable or field ‘FixRecord’ declared void
+Tweak.mm:248: error: ‘GSEventRecord’ was not declared in this scope
+Tweak.mm:248: error: ‘record’ was not declared in this scope
+Tweak.mm: In function ‘void VNCSettings()’:
+Tweak.mm:258: error: expected type-specifier before ‘rfbSecurityHandler’
+Tweak.mm:258: error: expected `>' before ‘rfbSecurityHandler’
+Tweak.mm:258: error: expected `(' before ‘rfbSecurityHandler’
+Tweak.mm:258: error: ‘rfbSecurityHandler’ was not declared in this scope
+Tweak.mm:258: error: expected primary-expression before ‘>’ token
+Tweak.mm:263: error: ‘screen_’ was not declared in this scope
+Tweak.mm:266: error: ‘screen_’ was not declared in this scope
+Tweak.mm: At global scope:
+Tweak.mm:292: error: ‘rfbBool’ does not name a type
+Tweak.mm:306: error: ‘rfbClientPtr’ has not been declared
+Tweak.mm: In function ‘void VNCPointer(int, int, int, int)’:
+Tweak.mm:332: error: ‘rfbDefaultPtrAddEvent’ was not declared in this scope
+Tweak.mm:342: error: aggregate ‘GSEventRecord record’ has incomplete type and cannot be defined
+Tweak.mm:347: error: ‘GSEventTypeHeadsetButtonDown’ was not declared in this scope
+Tweak.mm:348: error: ‘GSEventTypeHeadsetButtonUp’ was not declared in this scope
+Tweak.mm:350: error: ‘GSCurrentEventTimestamp’ was not declared in this scope
+Tweak.mm:352: error: ‘FixRecord’ was not declared in this scope
+Tweak.mm:353: error: ‘GSSendSystemEvent’ was not declared in this scope
+Tweak.mm:357: error: aggregate ‘GSEventRecord record’ has incomplete type and cannot be defined
+Tweak.mm:362: error: ‘GSEventTypeMenuButtonDown’ was not declared in this scope
+Tweak.mm:363: error: ‘GSEventTypeMenuButtonUp’ was not declared in this scope
+Tweak.mm:365: error: ‘GSCurrentEventTimestamp’ was not declared in this scope
+Tweak.mm:367: error: ‘FixRecord’ was not declared in this scope
+Tweak.mm:368: error: ‘GSSendSystemEvent’ was not declared in this scope
+Tweak.mm:372: error: aggregate ‘GSEventRecord record’ has incomplete type and cannot be defined
+Tweak.mm:377: error: ‘GSEventTypeLockButtonDown’ was not declared in this scope
+Tweak.mm:378: error: ‘GSEventTypeLockButtonUp’ was not declared in this scope
+Tweak.mm:380: error: ‘GSCurrentEventTimestamp’ was not declared in this scope
+Tweak.mm:382: error: ‘FixRecord’ was not declared in this scope
+Tweak.mm:383: error: ‘GSSendSystemEvent’ was not declared in this scope
+Tweak.mm:388: error: field ‘record’ has incomplete type
+Tweak.mm:390: error: field ‘info’ has incomplete type
+Tweak.mm:391: error: field ‘path’ has incomplete type
+Tweak.mm:397: error: ‘struct VNCPointer(int, int, int, int)::<anonymous>’ has no member named ‘record’
+Tweak.mm:397: error: ‘GSEventTypeMouse’ was not declared in this scope
+Tweak.mm:398: error: ‘struct VNCPointer(int, int, int, int)::<anonymous>’ has no member named ‘record’
+Tweak.mm:399: error: ‘struct VNCPointer(int, int, int, int)::<anonymous>’ has no member named ‘record’
+Tweak.mm:400: error: ‘struct VNCPointer(int, int, int, int)::<anonymous>’ has no member named ‘record’
+Tweak.mm:400: error: ‘GSCurrentEventTimestamp’ was not declared in this scope
+Tweak.mm:401: error: ‘struct VNCPointer(int, int, int, int)::<anonymous>’ has no member named ‘record’
+Tweak.mm:403: error: ‘struct VNCPointer(int, int, int, int)::<anonymous struct>::<anonymous>’ has no member named ‘info’
+Tweak.mm:404: error: ‘GSMouseEventTypeDragged’ was not declared in this scope
+Tweak.mm:406: error: ‘GSMouseEventTypeDown’ was not declared in this scope
+Tweak.mm:407: error: ‘GSMouseEventTypeUp’ was not declared in this scope
+Tweak.mm:409: error: ‘struct VNCPointer(int, int, int, int)::<anonymous struct>::<anonymous>’ has no member named ‘info’
+Tweak.mm:410: error: ‘struct VNCPointer(int, int, int, int)::<anonymous struct>::<anonymous>’ has no member named ‘info’
+Tweak.mm:412: error: ‘struct VNCPointer(int, int, int, int)::<anonymous struct>::<anonymous>’ has no member named ‘info’
+Tweak.mm:414: error: ‘struct VNCPointer(int, int, int, int)::<anonymous struct>::<anonymous>’ has no member named ‘path’
+Tweak.mm:415: error: ‘struct VNCPointer(int, int, int, int)::<anonymous struct>::<anonymous>’ has no member named ‘path’
+Tweak.mm:416: error: ‘struct VNCPointer(int, int, int, int)::<anonymous struct>::<anonymous>’ has no member named ‘path’
+Tweak.mm:417: error: ‘struct VNCPointer(int, int, int, int)::<anonymous struct>::<anonymous>’ has no member named ‘path’
+Tweak.mm:417: error: ‘struct VNCPointer(int, int, int, int)::<anonymous>’ has no member named ‘record’
+Tweak.mm:421: error: ‘CAWindowServer’ was not declared in this scope
+Tweak.mm:421: error: ‘server’ was not declared in this scope
+Tweak.mm:424: error: ‘CAWindowServerDisplay’ was not declared in this scope
+Tweak.mm:424: error: ‘display’ was not declared in this scope
+Tweak.mm:434: error: ‘struct VNCPointer(int, int, int, int)::<anonymous>’ has no member named ‘record’
+Tweak.mm:434: error: ‘FixRecord’ was not declared in this scope
+Tweak.mm:435: error: ‘struct VNCPointer(int, int, int, int)::<anonymous>’ has no member named ‘record’
+Tweak.mm:435: error: ‘GSSendEvent’ was not declared in this scope
+Tweak.mm: At global scope:
+Tweak.mm:442: error: expected constructor, destructor, or type conversion before ‘(’ token
+Tweak.mm:443: error: expected constructor, destructor, or type conversion before ‘(’ token
+Tweak.mm:445: error: variable or field ‘VNCKeyboard’ declared void
+Tweak.mm:445: error: ‘rfbBool’ was not declared in this scope
+Tweak.mm:445: error: ‘rfbKeySym’ was not declared in this scope
+Tweak.mm:445: error: ‘rfbClientPtr’ was not declared in this scope
+Tweak.mm:79: warning: ‘options_’ defined but not used
+Tweak.mm:83: warning: ‘running_’ defined but not used
+Tweak.mm:94: warning: ‘void VNCBlack()’ defined but not used
+Tweak.mm:161: warning: ‘void VNCSetup()’ declared ‘static’ but never defined
+Tweak.mm:162: warning: ‘void VNCEnabled()’ declared ‘static’ but never defined
+Tweak.mm:246: warning: ‘Level_’ defined but not used
+Tweak.mm:288: warning: ‘void VNCNotifySettings(__CFNotificationCenter*, void*, const __CFString*, const void*, const __CFDictionary*)’ defined but not used
+Tweak.mm:306: warning: ‘void VNCPointer(int, int, int, int)’ defined but not used
+make: *** [Veency.dylib] Error 1

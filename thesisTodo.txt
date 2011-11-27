@@ -1,0 +1,10 @@
+thesis todo:
+
+missing papers:
+- barry brown draft?
+
+iPhone:
+- jailbreak
+- install cydia
+- install VNC
+- run VNC from macbook

@@ -1,0 +1,47 @@
+DEVICE COMPOSITION ON TABLETOPS
+
+Smartphones: the only personal computer that we need.
+computing power, data storage, network connectivity + small size:
+	carry personal data and applications anywhere.
+However, limited UI.
+
+On the other hand, tabletop computers
+- cutting-edge technology
+- UI potential
+- new possibilities HCI
+
+Many research projects:
+- research oriented: interaction techniques (physical device integration)
+- domain specific: museum, bar, shop
+- game oriented
+
+Currently, tabletops are rare devices (expensive, cumbersome, lack of software)
+BUT they will become mainstream, our focus:
+	facilitating their adoption by everyday citizens in everyday context.
+
+Approach: UI peripheral only
+Reasons:
+- avoid rewriting applications for a new platform
+- avoid confusing the user with new applications
+- tabletops are public: personalized use + data privacy
+
+Solution: integration between smartphone and tabletop by way of UI transfer (mirror / nesting) + focus on seamless user experience and implicit HCI.
+
+5 Challenges:
+- Setup: enable communication between devices
+- Discovery: connect devices
+- Output via UI transfer: project the phone's UI on the tabletop
+- Input: send input from device to table
+- Interaction Design: application design and interaction techniques?
+
+Software components:
+- iPhone daemon: VNC server
+- iPhone daemon: detect onTable event, UDP broadcast
+- MS application: VNC client, OpenCV, UI application
+
+Current status + show prototypes
+
+Tim's possible contributions:
+- related work (papers, people)
+- 5 challenges (suggestions)
+- research themes

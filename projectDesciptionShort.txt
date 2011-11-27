@@ -1,0 +1,20 @@
+Device Composition on Tabletops
+
+MSc Thesis Project by Leo Sicard.
+Supervised by Jakob E. Bardram and Juan David Hincapie Ramos.
+
+Tabletop computers are cutting-edge devices that merge input and output spaces into one single interactive surface.
+They offer a set of unique features that have led researchers to investigate new interaction models, such as shared simultaneous use and the ability to integrate with other devices or physical objects 
+Some application examples are catalog browsing, drink ordering, collaborative design, data sharing between smartphones, etc.
+
+This project investigates the use of tabletops exclusively as UI peripherals for other computing devices, as opposed to being standalone computers.
+Thus, we explore device composition for UI integration between tabletops and mobile devices, focusing on seamless user experience and implicit human computer interaction.
+
+We consider different types of UI integration.
+- UI transfer (mirror): the tabletop displays the UI of the connected device.
+- Dual View: the tabletop becomes a secondary display for the connected device.
+- UI nesting: the connected device is physically located on the tabletop, and its UI is extended to the additional screen space around it.
+
+This project includes reviewing current research in the field of tabletop interaction, designing and implementing a prototype application, as well as evaluating it by way of a usability study.
+
+This work is based on the PhoneVortex, developed by PhD student (and co-supervisor) Juan David Hincapié Ramos.
