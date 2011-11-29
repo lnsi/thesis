@@ -82,7 +82,7 @@ namespace Displex
 
         void tracker_DeviceUpdated(object sender, TrackerEventArgs e)
         {
-            Status.Content = "Device Updated!";
+            //Status.Content = "Device Updated!";
             DisplayExtension.Center = new System.Windows.Point(e.Device.Center().X, e.Device.Center().Y);
             DisplayExtension.Orientation = e.Device.Orientation();
         }
@@ -211,7 +211,7 @@ namespace Displex
             EnableRawImage();
         }
         
-        public void showDisplex(Device device)
+        public void showDisplex(IDevice device)
         {
             //DisplayExtension.Center = new System.Windows.Point(iphone.Center.X, iphone.Center.Y);
             //Console.WriteLine("center placed at: " + DisplayExtension.Center.X + ", " + DisplayExtension.Center.Y);

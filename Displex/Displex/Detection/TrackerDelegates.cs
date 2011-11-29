@@ -12,10 +12,10 @@ namespace Displex.Detection
 
     public class TrackerEventArgs : EventArgs
     {
-        public ITrackable<Device> Device { get; set; }
+        public IDevice Device { get; set; }
         public TrackerEventType EventType { get; set; }
 
-        public TrackerEventArgs(ITrackable<Device> d, TrackerEventType t)
+        public TrackerEventArgs(IDevice d, TrackerEventType t)
         {
             Device = d;
             EventType = t;

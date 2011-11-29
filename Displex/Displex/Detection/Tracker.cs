@@ -17,28 +17,30 @@ namespace Displex.Detection
         public virtual event DeviceUpdated DeviceUpdated;
         public virtual event DeviceRemoved DeviceRemoved;
 
-        private ObservableCollection<Iphone> currentDevices;
+        private ObservableCollection<IDevice> currentDevices;
+        private IphoneTracker iphoneTracker;
         private ColorPalette pal;
         //private bool isConnected;
 
         public Tracker() 
         {
-            currentDevices = new ObservableCollection<Iphone>();
+            currentDevices = new ObservableCollection<IDevice>();
+            iphoneTracker = new IphoneTracker();
         }
 
-        private void OnDeviceAdded(Device device)
+        private void OnDeviceAdded(IDevice device)
         {
             if (DeviceAdded != null)
                 DeviceAdded(this, new TrackerEventArgs(device, TrackerEventType.Added));
         }
 
-        private void OnDeviceUpdated(Device device)
+        private void OnDeviceUpdated(IDevice device)
         {
             if (DeviceUpdated != null)
                 DeviceUpdated(this, new TrackerEventArgs(device, TrackerEventType.Updated));
         }
 
-        private void OnDeviceRemoved(Device device)
+        private void OnDeviceRemoved(IDevice device)
         {
             if (DeviceRemoved != null)
                 DeviceRemoved(this, new TrackerEventArgs(device, TrackerEventType.Removed));
@@ -70,16 +72,26 @@ namespace Displex.Detection
             Contour<System.Drawing.Point> contours = gray.FindContours(Emgu.CV.CvEnum.CHAIN_APPROX_METHOD.CV_CHAIN_APPROX_SIMPLE,
               Emgu.CV.CvEnum.RETR_TYPE.CV_RETR_LIST);
 
-            //IList<Device> foundDevices = new IphoneTracker().FindIphones(contours) as List<Device>;
-            IList<Iphone> foundDevices = new IphoneTracker().FindIphones(contours);
-            IList<Iphone> devicesToBeAdded = new List<Iphone>(), devicesToBeRemoved = new List<Iphone>(currentDevices);
+            IList<IDevice> foundDevices = new List<IDevice>();
+
+            // each specific type of device must be tracked independently with specific implementation
+            List<Iphone> foundIphones = iphoneTracker.FindIphones(contours);
+            if (foundIphones != null)
+            {
+                foreach (Iphone i in foundIphones)
+                    foundDevices.Add(i);
+            }
+
+            IList<IDevice> devicesToBeAdded = new List<IDevice>();
+            // keeping track of indexes of current devices and whether they have disappeared or not
+            bool[] notToBeRemoved = new bool[currentDevices.Count];
 
             if (foundDevices == null) return;
 
-            foreach (Iphone fD in foundDevices)
+            foreach (IDevice fD in foundDevices)
             {
                 bool isNew = true;
-                foreach (Iphone cD in currentDevices)
+                foreach (IDevice cD in currentDevices)
                 {        
                     // a found device is identified as a current device
                     if (fD.IsSameDevice(cD))
@@ -87,10 +99,11 @@ namespace Displex.Detection
                         // the device is not new
                         isNew = false;
                         // the device should not be removed
-                        devicesToBeRemoved.Remove(cD);
+                        notToBeRemoved[currentDevices.IndexOf(cD)] = true;
 
                         cD.UpdatePosition();
                         OnDeviceUpdated(cD);
+                        Console.WriteLine("device updated");
                     }          
                 }
                 // a found device is identified as a new device
@@ -98,31 +111,33 @@ namespace Displex.Detection
                 {
                     devicesToBeAdded.Add(fD);
                 }
+            }    
+            // attempt removing lost devices
+            for (int i = 0; i < notToBeRemoved.Length; i++)
+            {
+                if (!notToBeRemoved[i])
+                {
+                    IDevice d = currentDevices.ElementAt(i);
+                    if (d.CanBeRemoved())
+                    {
+                        currentDevices.Remove(d);
+                        OnDeviceRemoved(d);
+                    }
+                    Console.WriteLine("attempted removal");
+                }
             }
             // add new devices
             if (devicesToBeAdded != null)
             {
-                foreach (Iphone d in devicesToBeAdded)
+                foreach (IDevice d in devicesToBeAdded)
                 {
                     currentDevices.Add(d);
                     OnDeviceAdded(d);
                 }
             }
-            // attempt removing lost devices
-            if (devicesToBeRemoved != null)
-            {
-                foreach (Iphone d in devicesToBeRemoved)
-                {
-                    if (d.AttemptRemove())
-                    {
-                        currentDevices.Remove(d);
-                        OnDeviceRemoved(d);
-                    }
-                }
-            }
         }
 
-        private void TrackDevice(Device device)
+        private void TrackDevice(IDevice device)
         {       
 //            Console.WriteLine("orientation: " + device.Orientation);
             //mainWindow.showDisplex(device);

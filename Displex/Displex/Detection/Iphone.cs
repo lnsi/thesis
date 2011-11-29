@@ -8,54 +8,54 @@ using System.Collections.ObjectModel;
 
 namespace Displex.Detection
 {
-    public class Iphone : Device
+    public class Iphone : IDevice
     {
-        #region IDeviceTrackable<iPhone> Members
+        #region IDevice Members
 
         private PointF iphoneCenter;
-        public override System.Drawing.Point Center()
+        public System.Drawing.Point Center()
         {
             return Point.Round(iphoneCenter);
         }
 
         private double orientation;
-        public override int Orientation()
+        public int Orientation()
         {
             return Convert.ToInt32(ToDegree(orientation));
         }
 
         private int width = 97;
-        public override int Width()
+        public int Width()
         {
             return width;
         }
 
         private int height = 193;
-        public override int Height()
+        public int Height()
         {
             return height;
         }
 
-        public override bool IsSameDevice(Device obj)
+        public bool IsSameDevice(IDevice device)
         {
-            if (obj == null) return false;
+            if (device == null) return false;
 
-            if (Euclidean(Center(),obj.Center()) < deltaCenter 
-                && Math.Abs(Orientation() - obj.Orientation()) < deltaOrientation)
+            if (Euclidean(Center(),device.Center()) < deltaCenter 
+                && Math.Abs(Orientation() - device.Orientation()) < deltaOrientation)
                 return true;
             
             return false;
         }
 
         private int framesMissingNr;
-        public override bool AttemptRemove()
+        public bool CanBeRemoved()
         {
-            if (++framesMissingNr >= 3)
+            if (++framesMissingNr >= 10)
                 return true;
             else return false;
         }
 
-        public override void UpdatePosition()
+        public void UpdatePosition()
         {       
             CalculatePosition();
             Console.WriteLine("Before adjust");
@@ -66,6 +66,7 @@ namespace Displex.Detection
             Console.WriteLine("center: " + Center().X + "," + Center().Y);
             Console.WriteLine("orientation: " + Orientation());
             Console.WriteLine("**************************");
+            framesMissingNr = 0;
         }
 
         #endregion
@@ -76,8 +77,8 @@ namespace Displex.Detection
 
         private const double alpha = 0.805;
         private const double distFromAppleToCenter = 35;
-        public const double deltaCenter = 10;
-        public const double deltaOrientation = 30;
+        public const double deltaCenter = 30;
+        public const double deltaOrientation = 60;
 
         private float[] cameraStandCoord;
         private int quadrant;
@@ -86,7 +87,7 @@ namespace Displex.Detection
 
         private CircularList<PointF> centersAvg;
         private CircularList<double> orientationsAvg;
-        private const int centersNr = 3, orientationsNr = 3;
+        private const int centersNr = 10, orientationsNr = 10;
 
         // Constructor
         public Iphone(CircleF apple, CircleF camera)
@@ -202,10 +203,10 @@ namespace Displex.Detection
             // calculate average
             float newX = 0, newY = 0;
             int centersCount = centersAvg.Count;
-            for (int i = 0; i <= centersCount; i++)
+            for (int i = 0; i < centersCount; i++)
             {
-                newX += centersAvg.Value.X;
-                newY += centersAvg.Value.Y;
+                newX += centersAvg[i].X;
+                newY += centersAvg[i].Y;
             }
             iphoneCenter = new PointF(newX / centersCount, newY / centersCount);
 
@@ -215,9 +216,9 @@ namespace Displex.Detection
             // calculate average
             double newO = 0;
             int orientationsCount = orientationsAvg.Count;
-            for (int i = 0; i <= orientationsCount; i++)
+            for (int i = 0; i < orientationsCount; i++)
             {
-                newO += orientationsAvg.Value;
+                newO += orientationsAvg[i];
             }
             orientation = newO / orientationsCount;
         }

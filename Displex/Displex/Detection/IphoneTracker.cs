@@ -10,9 +10,9 @@ namespace Displex.Detection
 {
      public class IphoneTracker
      {
-         public IList<Iphone> FindIphones(Contour<Point> contours)
+         public List<Iphone> FindIphones(Contour<Point> contours)
          {
-            IList<Iphone> FoundiPhones = new List<Iphone>();
+            List<Iphone> FoundiPhones = new List<Iphone>();
 
             if (contours == null)
                 return null;
@@ -36,7 +36,7 @@ namespace Displex.Detection
                     for (; contours != null; contours = contours.HNext)
                     {
                         // look for the camera lens
-                        if (contours.Area >= 20 && contours.Area <= 40)
+                        if (contours.Area >= 35 && contours.Area <= 45)
                         {
                             camera = new CircleF(
                                 new PointF(contours.BoundingRectangle.Left + contours.BoundingRectangle.Width / 2,

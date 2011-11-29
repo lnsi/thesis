@@ -91,8 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Detection\CircularList.cs" />
-    <Compile Include="Detection\Device.cs" />
-    <Compile Include="Detection\ITrackable.cs" />
+    <Compile Include="Detection\IDevice.cs" />
     <Compile Include="Detection\Iphone.cs" />
     <Compile Include="Detection\IphoneTracker.cs" />
     <Compile Include="Detection\Tracker.cs" />
