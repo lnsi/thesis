@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  30 NOV 2011 17:58
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  30 NOV 2011 17:39
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**earlyStudy2.tex
-(./earlyStudy2.tex
+**earlyStudyCommon.tex
+(./earlyStudyCommon.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
@@ -17,7 +17,6 @@ iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
 ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
 ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
 .
-(./earlyStudyCommon.tex
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amscls/amsart.cls
 Document Class: amsart 2009/07/02 v2.20.1
 \linespacing=\dimen102
@@ -225,8 +224,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 )))
-(./earlyStudy2.aux)
-\openout1 = `earlyStudy2.aux'.
+(./earlyStudyCommon.aux)
+\openout1 = `earlyStudyCommon.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
@@ -298,121 +297,41 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 \makeMPintoPDFobject=\count108
 \everyMPtoPDFconversion=\toks28
 )
-Underfull \hbox (badness 10000) in paragraph at lines 39--56
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--56
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 55--66
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--56
-
- []
-
-[1{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 60--73
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--73
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--73
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--84
+Underfull \hbox (badness 10000) in paragraph at lines 55--66
 
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 7--14
+*
+! Emergency stop.
+<*> earlyStudyCommon.tex
+                        
+End of file on the terminal!
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--14
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 24--31
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--31
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--48
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--48
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--67
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--67
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--84
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--84
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 94--101
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--101
-
- []
-
-[4] (./earlyStudy2.aux) ) 
+ 
 Here is how much of TeX's memory you used:
- 3292 strings out of 493633
- 43084 string characters out of 3143378
- 107197 words of memory out of 3000000
- 6390 multiletter control sequences out of 15000+200000
+ 3286 strings out of 493633
+ 43023 string characters out of 3143378
+ 105148 words of memory out of 3000000
+ 6389 multiletter control sequences out of 15000+200000
  11433 words of font info for 44 fonts, out of 3000000 for 9000
  992 hyphenation exceptions out of 8191
- 44i,5n,31p,416b,241s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmti10.pfb>
-Output written on earlyStudy2.pdf (4 pages, 91003 bytes).
-PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 42i,4n,31p,396b,192s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
+ of 3000000 for 9000
+ 992 hyphenation exceptions out of 8191
+ 42i,4n,31p,396b,192s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
