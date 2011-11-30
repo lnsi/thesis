@@ -6,14 +6,14 @@ using System.Drawing;
 
 namespace Displex.Detection
 {
-    public interface ITrackable<T>
+    public interface IDevice
     {
         Point Center();
         int Orientation();
         int Width();
         int Height();
-        bool IsSameDevice(T obj);
-        bool AttemptRemove();
+        bool IsSameDevice(IDevice device);
+        bool CanBeRemoved();
         void UpdatePosition();
     }
 }
