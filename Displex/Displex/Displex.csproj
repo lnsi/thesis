@@ -96,6 +96,9 @@
     <Compile Include="Detection\IphoneTracker.cs" />
     <Compile Include="Detection\Tracker.cs" />
     <Compile Include="Detection\TrackerDelegates.cs" />
+    <Compile Include="DisplexControl.xaml.cs">
+      <DependentUpon>DisplexControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -134,6 +137,10 @@
     <Resource Include="Resources\WindowBackground.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="DisplexControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SurfaceWindow1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

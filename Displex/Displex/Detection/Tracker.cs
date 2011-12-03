@@ -67,7 +67,7 @@ namespace Displex.Detection
 
         private void PerformDetection(Image<Gray, Byte> gray)
         {
-            gray = gray.ThresholdBinary(new Gray(10), new Gray(400));
+            gray = gray.ThresholdBinary(new Gray(30), new Gray(255));
 
             Contour<System.Drawing.Point> contours = gray.FindContours(Emgu.CV.CvEnum.CHAIN_APPROX_METHOD.CV_CHAIN_APPROX_SIMPLE,
               Emgu.CV.CvEnum.RETR_TYPE.CV_RETR_LIST);

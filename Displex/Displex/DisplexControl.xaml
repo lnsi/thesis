@@ -1,0 +1,28 @@
+﻿<s:SurfaceUserControl x:Class="Displex.DisplexControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    xmlns:vnc="clr-namespace:VncSharp;assembly=VncSharp"
+    xmlns:local="clr-namespace:Displex">
+    <s:SurfaceUserControl.Resources>
+        <local:PercentageConverter x:Key="PercentageConverter"/>
+    </s:SurfaceUserControl.Resources>
+    <Grid>
+        <s:ScatterView>
+        <s:ScatterViewItem x:Name="DisplayExtension" Background="DarkSlateGray"  Visibility="Visible" BorderBrush="Transparent"
+                           Height="400" Width="280" Center="500,350" Orientation="0" ShowsActivationEffects="False">
+            
+        <!--VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></vnc:RemoteDesktopWPF-->
+        <vnc:RemoteDesktopWPF x:Name="rdfWPF" Margin="0,0,0,0" 
+                                  Height="{Binding
+                       Converter={StaticResource PercentageConverter}, 
+                       ElementName=DisplayExtension, 
+                       Path=ActualHeight, ConverterParameter=0.8}" 
+                                  Width="{Binding
+                       Converter={StaticResource PercentageConverter}, 
+                       ElementName=DisplayExtension, 
+                       Path=ActualWidth, ConverterParameter=0.8}" />
+            </s:ScatterViewItem>
+            </s:ScatterView>
+    </Grid>
+</s:SurfaceUserControl>

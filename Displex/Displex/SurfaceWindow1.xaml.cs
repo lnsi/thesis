@@ -24,6 +24,7 @@ using Emgu.CV.Structure;
 using System.Diagnostics;
 using VncSharp;
 using Displex.Detection;
+using System.Windows.Data;
 
 namespace Displex
 {
@@ -38,17 +39,19 @@ namespace Displex
         private ImageMetrics imageMetrics;
         private bool imageAvailable;
         private Tracker tracker;
-
+        
         /// <summary>
         /// Default constructor.
         /// </summary>
         public SurfaceWindow1()
         {
             InitializeComponent();
-            InitializeSurfaceInput();
-
+            //InitializeSurfaceInput();
+            
             // Add handlers for Application activation events
             AddActivationHandlers();
+
+            DisplexWindow.Connect();
         }
 
         private void InitializeSurfaceInput()
@@ -67,24 +70,24 @@ namespace Displex
 
         void tracker_DeviceAdded(object sender, TrackerEventArgs e)
         {
-            Status.Content = "Device added!";
-            DisplayExtension.Center = new System.Windows.Point(e.Device.Center().X, e.Device.Center().Y);
-            DisplayExtension.Orientation = e.Device.Orientation();
-            DisplayExtension.Visibility = Visibility.Visible;
+            //Status.Content = "Device added!";
+            //DisplayExtension.Center = new System.Windows.Point(e.Device.Center().X, e.Device.Center().Y);
+            //DisplayExtension.Orientation = e.Device.Orientation();
+            //DisplayExtension.Visibility = Visibility.Visible;
 
         }
 
         void tracker_DeviceRemoved(object sender, TrackerEventArgs e)
         {
-            Status.Content = "Device Removed!";
-            DisplayExtension.Visibility = Visibility.Hidden;
+            //Status.Content = "Device Removed!";
+            //DisplayExtension.Visibility = Visibility.Hidden;
         }
 
         void tracker_DeviceUpdated(object sender, TrackerEventArgs e)
         {
             //Status.Content = "Device Updated!";
-            DisplayExtension.Center = new System.Windows.Point(e.Device.Center().X, e.Device.Center().Y);
-            DisplayExtension.Orientation = e.Device.Orientation();
+            //DisplayExtension.Center = new System.Windows.Point(e.Device.Center().X, e.Device.Center().Y);
+            //DisplayExtension.Orientation = e.Device.Orientation();
         }
 
         /// <summary>
@@ -221,14 +224,49 @@ namespace Displex
             //phoneShadow.Orientation = DisplayExtension.ActualOrientation;
         }
 
-        public void Connect(String ip)
-        {
-            //rdfWPF.Connect(ip);
-        }
-
         private void SurfaceWindow_Loaded(object sender, RoutedEventArgs e)
         {
 
         }
+
+        //protected override void OnContactDown(Microsoft.Surface.Presentation.ContactEventArgs e)
+        //{
+        //    //Console.WriteLine("contact down");
+        //    //base.OnContactDown(e);
+        //    if (!e.Contact.IsFingerRecognized)
+        //        return;
+        //    if (e.Contact.DirectlyOver != rdfWPF.ImageRDF)
+        //        return;
+
+        //    //Point touchPoint = e.GetPosition(rdfWPF.ImageRDF);
+        //    //rdfWPF.ContactDown(touchPoint);
+        //    //Console.Write("ContactDown({0:00.00}, {1:00.00})", touchPoint.X, touchPoint.Y);
+        //}
+
+        //protected override void OnContactUp(Microsoft.Surface.Presentation.ContactEventArgs e)
+        //{
+        //    base.OnContactUp(e);
+        //    if (!e.Contact.IsFingerRecognized)
+        //        return;
+        //    if (e.Contact.DirectlyOver != rdfWPF.ImageRDF)
+        //        return;
+
+        //    //Point touchPoint = e.GetPosition(rdfWPF.ImageRDF);
+        //    //rdfWPF.ContactUp(touchPoint);
+        //    //Console.Write("ContactUp({0:00.00}, {1:00.00})\n", touchPoint.X, touchPoint.Y);
+        //}
+
+        //protected override void OnContactChanged(Microsoft.Surface.Presentation.ContactEventArgs e)
+        //{
+        //    base.OnContactChanged(e);
+        //    if (!e.Contact.IsFingerRecognized)
+        //        return;
+        //    if (e.Contact.DirectlyOver != rdfWPF.ImageRDF)
+        //        return;
+
+        //    //Point touchPoint = e.GetPosition(rdfWPF.ImageRDF);
+        //    //rdfWPF.ContactChange(touchPoint);
+        //    //Console.Write(".");
+        //}
     }
 }

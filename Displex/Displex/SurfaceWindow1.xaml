@@ -3,42 +3,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:s="http://schemas.microsoft.com/surface/2008"
     xmlns:vnc="clr-namespace:VncSharp;assembly=VncSharp"
+    xmlns:local="clr-namespace:Displex"
     Title="Displex" Loaded="SurfaceWindow_Loaded">
-  <s:SurfaceWindow.Resources>
+    <s:SurfaceWindow.Resources>
     <ImageBrush x:Key="WindowBackground" Stretch="None" Opacity="0.6" ImageSource="pack://application:,,,/Resources/WindowBackground.jpg"/>
-  </s:SurfaceWindow.Resources>
-
-  <!--<Grid Background="{StaticResource WindowBackground}" >
-        <Grid Background="DarkBlue" Height="193" Width="97">
-            <TextBlock Foreground="Black" FontSize="24" Text="Welcome To Displex" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        </Grid>
-            <Control Name="DisplayExtension" Background="AliceBlue" Height="500" Width="340">
-            <vnc:RemoteDesktopWPF x:Name="rdfWPF" Margin="0,0,0,0" Height="480" Width="320" />
-        </Control>
-    </Grid>-->
+    </s:SurfaceWindow.Resources>
     
-    <s:ScatterView Name="Displex">
-        
-        <!--<s:ScatterViewItem Name="DisplayExtension" Background="Transparent"  Visibility="Hidden" BorderBrush="Transparent"
-                           Height="350" Width="250" Center="500,300" Orientation="0" ShowsActivationEffects="False">
-            <vnc:RemoteDesktopWPF x:Name="rdfWPF" Margin="0,0,0,0" Height="360" Width="265" />
-            <s:ScatterViewItem Name="phoneShadow" Background="Transparent" BorderBrush="Transparent" 
-                           CanMove="False" CanRotate="False" CanScale="False" Height="250" Width="150" ZIndex="999999" ShowsActivationEffects="False"></s:ScatterViewItem>
-        </s:ScatterViewItem>-->
-        
-        <s:ScatterViewItem Name="DisplayExtension" Background="Transparent"  Visibility="Hidden" BorderBrush="Transparent"
-                           Height="350" Width="250" Center="500,300" Orientation="0" ShowsActivationEffects="False">
-
-            <!--<vnc:RemoteDesktopWPF x:Name="rdfWPF" Margin="0,0,0,0" Height="360" Width="265" />
-            <s:ScatterViewItem Name="phoneShadow" Background="Transparent" BorderBrush="Transparent" 
-                           CanMove="False" CanRotate="False" CanScale="False" Height="250" Width="150" ZIndex="999999" ShowsActivationEffects="False"></s:ScatterViewItem>-->
-                
-        </s:ScatterViewItem>
-        <s:ScatterViewItem Name="DeviceStatus" CanMove="False" CanRotate="False" Width="150" CanScale="False" Center="100,50">
-            <Label Name="Status"></Label>
-        </s:ScatterViewItem>
-        
-    </s:ScatterView>
-
+    <local:DisplexControl x:Name="DisplexWindow" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></local:DisplexControl>
 
 </s:SurfaceWindow>

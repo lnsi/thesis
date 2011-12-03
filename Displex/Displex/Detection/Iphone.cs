@@ -50,7 +50,7 @@ namespace Displex.Detection
         private int framesMissingNr;
         public bool CanBeRemoved()
         {
-            if (++framesMissingNr >= 10)
+            if (++framesMissingNr >= 5)
                 return true;
             else return false;
         }
@@ -62,9 +62,9 @@ namespace Displex.Detection
             Console.WriteLine("center: " + Center().X + "," + Center().Y);
             Console.WriteLine("orientation: " + Orientation());
             AdjustPosition();
-            Console.WriteLine("After adjust");
-            Console.WriteLine("center: " + Center().X + "," + Center().Y);
-            Console.WriteLine("orientation: " + Orientation());
+            //Console.WriteLine("After adjust");
+            //Console.WriteLine("center: " + Center().X + "," + Center().Y);
+            //Console.WriteLine("orientation: " + Orientation());
             Console.WriteLine("**************************");
             framesMissingNr = 0;
         }
@@ -76,9 +76,9 @@ namespace Displex.Detection
         public CircleF Camera  { get; private set; }
 
         private const double alpha = 0.805;
-        private const double distFromAppleToCenter = 35;
+        private const double distFromAppleToCenter = 15;
         public const double deltaCenter = 30;
-        public const double deltaOrientation = 60;
+        public const double deltaOrientation = 30;
 
         private float[] cameraStandCoord;
         private int quadrant;
@@ -87,7 +87,7 @@ namespace Displex.Detection
 
         private CircularList<PointF> centersAvg;
         private CircularList<double> orientationsAvg;
-        private const int centersNr = 10, orientationsNr = 10;
+        private const int centersNr = 5, orientationsNr = 5;
 
         // Constructor
         public Iphone(CircleF apple, CircleF camera)
