@@ -46,5 +46,7 @@ C:\LeoThesis\thesis\Displex\Displex\obj\Debug\Displex.exe
 C:\LeoThesis\thesis\Displex\Displex\obj\Debug\Displex.pdb
 C:\LeoThesis\thesis\Displex\Displex\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\LeoThesis\thesis\Displex\Displex\obj\Debug\Displex_MarkupCompile.lref
-C:\LeoThesis\thesis\Displex\Displex\obj\Debug\DisplexControl.baml
-C:\LeoThesis\thesis\Displex\Displex\obj\Debug\DisplexControl.g.cs
+C:\LeoThesis\thesis\Displex\Displex\obj\Debug\DeviceControl.g.cs
+C:\LeoThesis\thesis\Displex\Displex\obj\Debug\DeviceControl.baml
+C:\LeoThesis\thesis\Displex\Displex\obj\Debug\DebugDeviceControl.g.cs
+C:\LeoThesis\thesis\Displex\Displex\obj\Debug\DebugDeviceControl.baml

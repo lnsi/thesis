@@ -10,6 +10,7 @@ namespace Displex.Detection
 {
     public class Iphone : IDevice
     {
+
         #region IDevice Members
 
         private PointF iphoneCenter;
@@ -69,6 +70,8 @@ namespace Displex.Detection
             framesMissingNr = 0;
         }
 
+        public DeviceControl Control { get; set; }
+
         #endregion
 
         // class members
@@ -92,6 +95,8 @@ namespace Displex.Detection
         // Constructor
         public Iphone(CircleF apple, CircleF camera)
         {
+            Control = new DeviceControl();
+
             framesMissingNr = 0;
             Apple = apple;
             Camera = camera;

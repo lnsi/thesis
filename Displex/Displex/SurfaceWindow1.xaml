@@ -9,6 +9,7 @@
     <ImageBrush x:Key="WindowBackground" Stretch="None" Opacity="0.6" ImageSource="pack://application:,,,/Resources/WindowBackground.jpg"/>
     </s:SurfaceWindow.Resources>
     
-    <local:DisplexControl x:Name="DisplexWindow" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></local:DisplexControl>
+    <!--<local:DisplexControl x:Name="DisplexWindow" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></local:DisplexControl>-->
+    <!--<local:DebugDisplexControl x:Name="DebugDisplexWindow" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></local:DebugDisplexControl>-->
 
 </s:SurfaceWindow>

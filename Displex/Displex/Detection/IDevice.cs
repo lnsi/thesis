@@ -15,5 +15,6 @@ namespace Displex.Detection
         bool IsSameDevice(IDevice device);
         bool CanBeRemoved();
         void UpdatePosition();
+        DeviceControl Control { get; set; }
     }
 }

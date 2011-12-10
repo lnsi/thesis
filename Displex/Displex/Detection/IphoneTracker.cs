@@ -38,7 +38,7 @@ namespace Displex.Detection
                     {
                         Console.WriteLine("potential camera: {0}", contours.Area);
                         // look for the camera lens
-                        if (contours.Area >= 25 && contours.Area <= 35)
+                        if (contours.Area >= 20 && contours.Area <= 35)
                         {
                             camera = new CircleF(
                                 new PointF(contours.BoundingRectangle.Left + contours.BoundingRectangle.Width / 2,
@@ -50,6 +50,7 @@ namespace Displex.Detection
                             if (dist >= 35 && dist <= 40)
                             {
                                 FoundiPhones.Add(new Iphone(apple, camera));
+                                Console.WriteLine("found iphone");
                             }
                         }
                         if (contours.HNext == null) break;

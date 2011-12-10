@@ -46,13 +46,21 @@ namespace Displex
         public SurfaceWindow1()
         {
             InitializeComponent();
-            //InitializeSurfaceInput();
+            InitializeSurfaceInput();
             
             // Add handlers for Application activation events
             AddActivationHandlers();
-
-            DisplexWindow.Connect();
         }
+
+        //public void Disconnect()
+        //{
+        //    if (control != null) 
+        //    {
+        //        this.RemoveLogicalChild(control);
+        //        control = null;
+        //    }
+        //}
+
 
         private void InitializeSurfaceInput()
         {
@@ -70,11 +78,14 @@ namespace Displex
 
         void tracker_DeviceAdded(object sender, TrackerEventArgs e)
         {
-            //Status.Content = "Device added!";
-            //DisplayExtension.Center = new System.Windows.Point(e.Device.Center().X, e.Device.Center().Y);
-            //DisplayExtension.Orientation = e.Device.Orientation();
-            //DisplayExtension.Visibility = Visibility.Visible;
+            this.AddChild(e.Device.Control);
+            e.Device.Control.Disconnected += new DeviceControl.DCEventHandler(Control_Disconnected);
+        }
 
+        void Control_Disconnected(object sender)
+        {
+            this.RemoveLogicalChild(sender);
+            this.UpdateLayout();
         }
 
         void tracker_DeviceRemoved(object sender, TrackerEventArgs e)
@@ -213,60 +224,10 @@ namespace Displex
             imageAvailable = false;
             EnableRawImage();
         }
-        
-        public void showDisplex(IDevice device)
-        {
-            //DisplayExtension.Center = new System.Windows.Point(iphone.Center.X, iphone.Center.Y);
-            //Console.WriteLine("center placed at: " + DisplayExtension.Center.X + ", " + DisplayExtension.Center.Y);
-            //DisplayExtension.Orientation = iphone.Orientation;
-            //DisplayExtension.Visibility = Visibility.Visible;
-            //phoneShadow.Center = DisplayExtension.ActualCenter;
-            //phoneShadow.Orientation = DisplayExtension.ActualOrientation;
-        }
 
         private void SurfaceWindow_Loaded(object sender, RoutedEventArgs e)
         {
 
         }
-
-        //protected override void OnContactDown(Microsoft.Surface.Presentation.ContactEventArgs e)
-        //{
-        //    //Console.WriteLine("contact down");
-        //    //base.OnContactDown(e);
-        //    if (!e.Contact.IsFingerRecognized)
-        //        return;
-        //    if (e.Contact.DirectlyOver != rdfWPF.ImageRDF)
-        //        return;
-
-        //    //Point touchPoint = e.GetPosition(rdfWPF.ImageRDF);
-        //    //rdfWPF.ContactDown(touchPoint);
-        //    //Console.Write("ContactDown({0:00.00}, {1:00.00})", touchPoint.X, touchPoint.Y);
-        //}
-
-        //protected override void OnContactUp(Microsoft.Surface.Presentation.ContactEventArgs e)
-        //{
-        //    base.OnContactUp(e);
-        //    if (!e.Contact.IsFingerRecognized)
-        //        return;
-        //    if (e.Contact.DirectlyOver != rdfWPF.ImageRDF)
-        //        return;
-
-        //    //Point touchPoint = e.GetPosition(rdfWPF.ImageRDF);
-        //    //rdfWPF.ContactUp(touchPoint);
-        //    //Console.Write("ContactUp({0:00.00}, {1:00.00})\n", touchPoint.X, touchPoint.Y);
-        //}
-
-        //protected override void OnContactChanged(Microsoft.Surface.Presentation.ContactEventArgs e)
-        //{
-        //    base.OnContactChanged(e);
-        //    if (!e.Contact.IsFingerRecognized)
-        //        return;
-        //    if (e.Contact.DirectlyOver != rdfWPF.ImageRDF)
-        //        return;
-
-        //    //Point touchPoint = e.GetPosition(rdfWPF.ImageRDF);
-        //    //rdfWPF.ContactChange(touchPoint);
-        //    //Console.Write(".");
-        //}
     }
 }

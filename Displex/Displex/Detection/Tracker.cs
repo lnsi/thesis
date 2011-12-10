@@ -20,12 +20,13 @@ namespace Displex.Detection
         private ObservableCollection<IDevice> currentDevices;
         private IphoneTracker iphoneTracker;
         private ColorPalette pal;
-        //private bool isConnected;
+        public bool TrackingDisabled;
 
         public Tracker() 
         {
             currentDevices = new ObservableCollection<IDevice>();
             iphoneTracker = new IphoneTracker();
+            Console.WriteLine("tracker instantiated");
         }
 
         private void OnDeviceAdded(IDevice device)
@@ -49,7 +50,8 @@ namespace Displex.Detection
         public void ProcessImage(Bitmap bitmap)
         {
             Convert8bppBMPToGrayscale(bitmap);
-            PerformDetection(new Image<Gray, byte>(bitmap));     
+            //PerformDetection(new Image<Gray, byte>(bitmap));
+            PerformOneTimeDetection(new Image<Gray, byte>(bitmap));
         }
 
         private void Convert8bppBMPToGrayscale(Bitmap bmp)
@@ -65,6 +67,50 @@ namespace Displex.Detection
             bmp.Palette = pal;
         }
 
+        /// <summary>
+        /// process image to find all present devices and disable tracking
+        /// if any devices are found
+        /// </summary>
+        /// <param name="gray"></param>
+        private void PerformOneTimeDetection(Image<Gray, Byte> gray)
+        {
+            if (TrackingDisabled) return;
+
+            gray = gray.ThresholdBinary(new Gray(30), new Gray(255));
+
+            Contour<System.Drawing.Point> contours = gray.FindContours(Emgu.CV.CvEnum.CHAIN_APPROX_METHOD.CV_CHAIN_APPROX_SIMPLE,
+              Emgu.CV.CvEnum.RETR_TYPE.CV_RETR_LIST);
+
+            IList<IDevice> foundDevices = new List<IDevice>();
+
+            // each specific type of device must be tracked independently with specific implementation
+            List<Iphone> foundIphones = iphoneTracker.FindIphones(contours);
+            if (foundIphones != null)
+            {
+                foreach (Iphone i in foundIphones)
+                    foundDevices.Add(i);
+            }
+
+            if (foundDevices.Count == 0)
+            {
+                TrackingDisabled = false;
+                Console.WriteLine("empty");
+                return;
+            }
+            else
+            {
+                foreach (IDevice device in foundDevices)
+                {
+                    OnDeviceAdded(device); 
+                }
+            TrackingDisabled = true;
+            }
+        }
+
+        /// <summary>
+        /// process image to continuously track all present devices
+        /// </summary>
+        /// <param name="gray"></param>
         private void PerformDetection(Image<Gray, Byte> gray)
         {
             gray = gray.ThresholdBinary(new Gray(30), new Gray(255));

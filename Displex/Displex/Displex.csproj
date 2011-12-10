@@ -90,14 +90,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DebugDeviceControl.xaml.cs">
+      <DependentUpon>DebugDeviceControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Detection\CircularList.cs" />
     <Compile Include="Detection\IDevice.cs" />
     <Compile Include="Detection\Iphone.cs" />
     <Compile Include="Detection\IphoneTracker.cs" />
     <Compile Include="Detection\Tracker.cs" />
     <Compile Include="Detection\TrackerDelegates.cs" />
-    <Compile Include="DisplexControl.xaml.cs">
-      <DependentUpon>DisplexControl.xaml</DependentUpon>
+    <Compile Include="DeviceControl.xaml.cs">
+      <DependentUpon>DeviceControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -125,19 +128,26 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\homeButton.png" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\iconPreview.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\iphoneBody.png" />
+    <Resource Include="Resources\iphoneScreen.png" />
     <Resource Include="Displex.xml" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\WindowBackground.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="DisplexControl.xaml">
+    <Page Include="DebugDeviceControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DeviceControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
