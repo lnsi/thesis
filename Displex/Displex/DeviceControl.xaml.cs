@@ -24,10 +24,14 @@ namespace Displex
     public partial class DeviceControl : SurfaceUserControl
     {
         public delegate void DCEventHandler(object sender);
-        public event DCEventHandler Disconnected;
+        //public event DCEventHandler Disconnected;
+        public virtual event DeviceRemoved Disconnected;
 
-        public DeviceControl()
+        protected IDevice device { get; set; }
+
+        public DeviceControl(IDevice device)
         {
+            this.device = device;
             InitializeComponent();
             PreviewContactDown += new ContactEventHandler(_ContactDown);
             PreviewContactUp += new ContactEventHandler(_ContactUp);
@@ -43,13 +47,19 @@ namespace Displex
         private void closeButton_Click(object sender, RoutedEventArgs e)
         {
             rdfWPF.Disconnect();
-            Disconnected(this);
+            Disconnected(this, new TrackerEventArgs(device, TrackerEventType.Removed));
         }
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
         {
+            rdfWPF.OnRightClick();
+        }
+
+        void OnRender()
+        {
 
         }
+
 
         protected void _ContactDown(object sender, ContactEventArgs e)
         {
@@ -98,21 +108,23 @@ namespace Displex
         {
             //if (e.Contact.DirectlyOver != rdfWPF.ImageRDF)
 
+            ScatterViewItem parentSVI = this.Parent as ScatterViewItem;
+
             if (e.Contact.GetCenterPosition(rdfWPF.ImageRDF).X >= 0
                 && e.Contact.GetCenterPosition(rdfWPF.ImageRDF).X <= rdfWPF.ImageRDF.ActualWidth
                 && e.Contact.GetCenterPosition(rdfWPF.ImageRDF).Y >= 0
                 && e.Contact.GetCenterPosition(rdfWPF.ImageRDF).Y <= rdfWPF.ImageRDF.ActualHeight)
             {
-                MainSVI.CanMove = false;
-                MainSVI.CanScale = false;
-                MainSVI.CanRotate = false;
+                parentSVI.CanMove = false;
+                parentSVI.CanScale = false;
+                parentSVI.CanRotate = false;
                 return false;
             }
             else
             {
-                MainSVI.CanMove = true;
-                MainSVI.CanScale = true;
-                MainSVI.CanRotate = true;
+                parentSVI.CanMove = true;
+                parentSVI.CanScale = true;
+                parentSVI.CanRotate = true;
                 return true;
             }   
         }

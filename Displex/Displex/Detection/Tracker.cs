@@ -74,8 +74,6 @@ namespace Displex.Detection
         /// <param name="gray"></param>
         private void PerformOneTimeDetection(Image<Gray, Byte> gray)
         {
-            if (TrackingDisabled) return;
-
             gray = gray.ThresholdBinary(new Gray(30), new Gray(255));
 
             Contour<System.Drawing.Point> contours = gray.FindContours(Emgu.CV.CvEnum.CHAIN_APPROX_METHOD.CV_CHAIN_APPROX_SIMPLE,
@@ -94,8 +92,6 @@ namespace Displex.Detection
             if (foundDevices.Count == 0)
             {
                 TrackingDisabled = false;
-                Console.WriteLine("empty");
-                return;
             }
             else
             {

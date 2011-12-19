@@ -28,6 +28,13 @@ namespace Displex
             PreviewContactDown += new ContactEventHandler(_ContactDown);
             PreviewContactUp += new ContactEventHandler(_ContactUp);
             PreviewContactChanged += new ContactEventHandler(_ContactChanged);
+
+            //MainSVI.ApplyTemplate();
+            //MainSVI.Background = new SolidColorBrush(Colors.Transparent);
+            //MainSVI.ShowsActivationEffects = false;
+            //Microsoft.Surface.Presentation.Generic.SurfaceShadowChrome ssc;
+            //ssc = MainSVI.Template.FindName("shadow", MainSVI) as Microsoft.Surface.Presentation.Generic.SurfaceShadowChrome;
+            //ssc.Visibility = Visibility.Hidden;
         }
 
         public Image Screen
@@ -78,18 +85,18 @@ namespace Displex
                 && e.Contact.GetCenterPosition(Screen).Y >= 0
                 && e.Contact.GetCenterPosition(Screen).Y <= Screen.ActualHeight)
             {
-                MainSVI.CanMove = false;
-                MainSVI.CanScale = false;
-                MainSVI.CanRotate = false;
+                //MainSVI.CanMove = false;
+                //MainSVI.CanScale = false;
+                //MainSVI.CanRotate = false;
                 return false;
             }
             else
             {
-                MainSVI.CanMove = true;
-                MainSVI.CanScale = true;
-                MainSVI.CanRotate = true;
+                //MainSVI.CanMove = true;
+                //MainSVI.CanScale = true;
+                //MainSVI.CanRotate = true;
                 return true;
-            }   
+            }
         }
 
         private void homeButton_Click(object sender, RoutedEventArgs e)

@@ -360,6 +360,8 @@ namespace VncSharp
                            vnc.Framebuffer.Height,
                            vnc.Framebuffer.DesktopName));
 
+      Console.WriteLine("WIDTH " + vnc.Framebuffer.Width + " - HEIGHT " + vnc.Framebuffer.Height + " - NAME " + vnc.Framebuffer.DesktopName);
+
       // Refresh scroll properties
       //AutoScrollMinSize = desktopPolicy.AutoScrollMinSize;
 
@@ -569,6 +571,16 @@ namespace VncSharp
       mousePosition = contactPos;
       button = MouseButton.Left;
       UpdateRemotePointer();
+    }
+
+    public void OnRightClick()
+    {
+        mousePosition = new Point(20,20);
+        button = MouseButton.Right;
+        UpdateRemotePointer();
+        UpdateRemotePointer();
+        button = null;
+        UpdateRemotePointer();
     }
 
     // TODO: Perhaps overload UpdateRemotePointer to take a flag indicating if mousescroll has occured??
@@ -817,6 +829,5 @@ namespace VncSharp
     //    }
     //  }
     //}
-
   }
 }

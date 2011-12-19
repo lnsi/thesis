@@ -23,7 +23,7 @@ namespace Displex.Detection
 
             for (; contours != null; contours = contours.HNext)
             {
-                Console.WriteLine("potential APPLE: {0}", contours.Area);
+                //Console.WriteLine("potential APPLE: {0}", contours.Area);
                 // look for the Apple logo
                 if (contours.Area >= 200 && contours.Area <= 250)
                 {
@@ -36,7 +36,7 @@ namespace Displex.Detection
 
                     for (; contours != null; contours = contours.HNext)
                     {
-                        Console.WriteLine("potential camera: {0}", contours.Area);
+                        //Console.WriteLine("potential camera: {0}", contours.Area);
                         // look for the camera lens
                         if (contours.Area >= 20 && contours.Area <= 35)
                         {

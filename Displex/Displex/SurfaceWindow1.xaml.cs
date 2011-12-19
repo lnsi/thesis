@@ -50,17 +50,28 @@ namespace Displex
             
             // Add handlers for Application activation events
             AddActivationHandlers();
+
+            //ScatterViewItem svi = InitializeSVI();
+            //svi.Content = new DebugDeviceControl();
+            //MainSV.Items.Add(svi);
+
         }
 
-        //public void Disconnect()
-        //{
-        //    if (control != null) 
-        //    {
-        //        this.RemoveLogicalChild(control);
-        //        control = null;
-        //    }
-        //}
+        private void InitializeSVI(DeviceControl control)
+        {
+            ScatterViewItem svi = new ScatterViewItem();
+            svi.Center = new System.Windows.Point(500, 350);
+            svi.Orientation = 0;
+            svi.Height = 515;
+            svi.Width = 260;
+            svi.Background = System.Windows.Media.Brushes.Transparent;
+            svi.BorderBrush = System.Windows.Media.Brushes.Transparent;
+            svi.SetResourceReference(StyleProperty, "ScatterViewItemStyleInvisible");
 
+            svi.Content = control;
+            MainSV.Items.Add(svi);
+
+        }
 
         private void InitializeSurfaceInput()
         {
@@ -78,20 +89,25 @@ namespace Displex
 
         void tracker_DeviceAdded(object sender, TrackerEventArgs e)
         {
-            this.AddChild(e.Device.Control);
-            e.Device.Control.Disconnected += new DeviceControl.DCEventHandler(Control_Disconnected);
+            InitializeSVI(e.Device.Control);
+            //e.Device.Control.Disconnected += new DeviceControl.DCEventHandler(Control_Disconnected);
+            e.Device.Control.Disconnected += new DeviceRemoved(tracker_DeviceRemoved);
         }
 
         void Control_Disconnected(object sender)
         {
-            this.RemoveLogicalChild(sender);
-            this.UpdateLayout();
+            //((DeviceControl)sender).Visibility = Visibility.Hidden;
+            //this.RemoveLogicalChild(sender);
+            //this.UpdateLayout();
         }
 
         void tracker_DeviceRemoved(object sender, TrackerEventArgs e)
         {
-            //Status.Content = "Device Removed!";
-            //DisplayExtension.Visibility = Visibility.Hidden;
+            Console.WriteLine("Device Removed!");
+
+            MainSV.Items.Remove(((DeviceControl)sender).Parent);
+            MainSV.UpdateLayout();
+            EnableRawImage();
         }
 
         void tracker_DeviceUpdated(object sender, TrackerEventArgs e)
@@ -222,7 +238,8 @@ namespace Displex
             tracker.ProcessImage(bitmap);
 
             imageAvailable = false;
-            EnableRawImage();
+            if (!tracker.TrackingDisabled)
+                EnableRawImage();
         }
 
         private void SurfaceWindow_Loaded(object sender, RoutedEventArgs e)

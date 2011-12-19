@@ -95,7 +95,7 @@ namespace Displex.Detection
         // Constructor
         public Iphone(CircleF apple, CircleF camera)
         {
-            Control = new DeviceControl();
+            Control = new DeviceControl(this);
 
             framesMissingNr = 0;
             Apple = apple;
