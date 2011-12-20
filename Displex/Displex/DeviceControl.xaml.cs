@@ -23,7 +23,7 @@ namespace Displex
     /// </summary>
     public partial class DeviceControl : SurfaceUserControl
     {
-        public delegate void DCEventHandler(object sender);
+        //public delegate void DCEventHandler(object sender);
         //public event DCEventHandler Disconnected;
         public virtual event DeviceRemoved Disconnected;
 
@@ -33,9 +33,10 @@ namespace Displex
         {
             this.device = device;
             InitializeComponent();
-            PreviewContactDown += new ContactEventHandler(_ContactDown);
-            PreviewContactUp += new ContactEventHandler(_ContactUp);
-            PreviewContactChanged += new ContactEventHandler(_ContactChanged);
+            ContactDown += new ContactEventHandler(_ContactDown);
+            ContactUp += new ContactEventHandler(_ContactUp);
+            ContactChanged += new ContactEventHandler(_ContactChanged);
+            ContactTapGesture += new ContactEventHandler(_ContactTap);
             Connect("10.1.1.198");
         }
 
@@ -60,9 +61,26 @@ namespace Displex
 
         }
 
+        protected void _ContactTap(object sender, ContactEventArgs e)
+        {
+            Console.WriteLine("CONTACT TAP");
+
+            //base.OnContactDown(e);
+
+            if (!e.Contact.IsFingerRecognized)
+                return;
+            if (IsMetaContact(e))
+                return;
+
+            Point touchPoint = MapPosition(e.GetPosition(rdfWPF.ImageRDF));
+            rdfWPF.ContactDown(touchPoint);
+            rdfWPF.ContactUp(touchPoint);
+            Console.WriteLine("ContactTap({0:00.00}, {1:00.00})", touchPoint.X, touchPoint.Y);
+        }
 
         protected void _ContactDown(object sender, ContactEventArgs e)
         {
+            Console.WriteLine("CONTACT DOWN");
             
             //base.OnContactDown(e);
 
@@ -71,7 +89,7 @@ namespace Displex
             if (IsMetaContact(e))
                 return;
 
-            Point touchPoint = e.GetPosition(rdfWPF.ImageRDF);
+            Point touchPoint = MapPosition(e.GetPosition(rdfWPF.ImageRDF));
             rdfWPF.ContactDown(touchPoint);
             Console.WriteLine("ContactDown({0:00.00}, {1:00.00})", touchPoint.X, touchPoint.Y);
         }
@@ -79,19 +97,21 @@ namespace Displex
         protected void _ContactUp(object sender, ContactEventArgs e)
         {
             //base.OnContactUp(e);
-
+            Console.WriteLine("CONTACT UP");
             if (!e.Contact.IsFingerRecognized)
                 return;
             if (IsMetaContact(e))
                 return;
 
-            Point touchPoint = e.GetPosition(rdfWPF.ImageRDF);
+            Point touchPoint = MapPosition(e.GetPosition(rdfWPF.ImageRDF));
             rdfWPF.ContactUp(touchPoint);
             Console.WriteLine("ContactUp({0:00.00}, {1:00.00})\n", touchPoint.X, touchPoint.Y);
         }
 
         protected void _ContactChanged(object sender, ContactEventArgs e)
         {
+            Console.WriteLine("CONTACT CHANGED");
+
             //base.OnContactChanged(e);
             
             if (!e.Contact.IsFingerRecognized)
@@ -99,7 +119,7 @@ namespace Displex
             if (IsMetaContact(e))
                 return;
 
-            Point touchPoint = e.GetPosition(rdfWPF.ImageRDF);
+            Point touchPoint = MapPosition(e.GetPosition(rdfWPF.ImageRDF));
             rdfWPF.ContactChange(touchPoint);
             Console.WriteLine(".");
         }
@@ -129,25 +149,31 @@ namespace Displex
             }   
         }
 
-    }
-
-    public class PercentageConverter : IValueConverter
-    {
-        public object Convert(object value,
-            Type targetType,
-            object parameter,
-            System.Globalization.CultureInfo culture)
+        private Point MapPosition(Point currentPosition)
         {
-            return System.Convert.ToDouble(value) *
-                   System.Convert.ToDouble(parameter);
-        }
-
-        public object ConvertBack(object value,
-            Type targetType,
-            object parameter,
-            System.Globalization.CultureInfo culture)
-        {
-            throw new NotImplementedException();
+            return new Point(
+                (currentPosition.X * rdfWPF.serverWidth) / rdfWPF.ImageRDF.ActualWidth,
+                (currentPosition.Y * rdfWPF.serverHeight) / rdfWPF.ImageRDF.ActualHeight);
         }
     }
+
+    //public class PercentageConverter : IValueConverter
+    //{
+    //    public object Convert(object value,
+    //        Type targetType,
+    //        object parameter,
+    //        System.Globalization.CultureInfo culture)
+    //    {
+    //        return System.Convert.ToDouble(value) *
+    //               System.Convert.ToDouble(parameter);
+    //    }
+
+    //    public object ConvertBack(object value,
+    //        Type targetType,
+    //        object parameter,
+    //        System.Globalization.CultureInfo culture)
+    //    {
+    //        throw new NotImplementedException();
+    //    }
+    //}
 }

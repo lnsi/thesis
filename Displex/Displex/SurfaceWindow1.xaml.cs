@@ -51,13 +51,26 @@ namespace Displex
             // Add handlers for Application activation events
             AddActivationHandlers();
 
-            //ScatterViewItem svi = InitializeSVI();
-            //svi.Content = new DebugDeviceControl();
-            //MainSV.Items.Add(svi);
+            //AddDebugSVI(new DebugDeviceControl());
+        }
+
+        private void AddSVI(DeviceControl control)
+        {
+            ScatterViewItem svi = new ScatterViewItem();
+            svi.Center = new System.Windows.Point(500, 350);
+            svi.Orientation = 0;
+            svi.Height = 515;
+            svi.Width = 260;
+            svi.Background = System.Windows.Media.Brushes.Transparent;
+            svi.BorderBrush = System.Windows.Media.Brushes.Transparent;
+            svi.SetResourceReference(StyleProperty, "ScatterViewItemStyleInvisible");
+
+            svi.Content = control;
+            MainSV.Items.Add(svi);
 
         }
 
-        private void InitializeSVI(DeviceControl control)
+        private void AddDebugSVI(DebugDeviceControl control)
         {
             ScatterViewItem svi = new ScatterViewItem();
             svi.Center = new System.Windows.Point(500, 350);
@@ -89,7 +102,7 @@ namespace Displex
 
         void tracker_DeviceAdded(object sender, TrackerEventArgs e)
         {
-            InitializeSVI(e.Device.Control);
+            AddSVI(e.Device.Control);
             //e.Device.Control.Disconnected += new DeviceControl.DCEventHandler(Control_Disconnected);
             e.Device.Control.Disconnected += new DeviceRemoved(tracker_DeviceRemoved);
         }

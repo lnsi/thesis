@@ -5,7 +5,7 @@
     xmlns:vnc="clr-namespace:VncSharp;assembly=VncSharp"
     xmlns:local="clr-namespace:Displex">
     <s:SurfaceUserControl.Resources>
-        <local:PercentageConverter x:Key="PercentageConverter"/>
+        <!--<local:PercentageConverter x:Key="PercentageConverter"/>-->
     </s:SurfaceUserControl.Resources>
 
         <!--<s:ScatterView>-->

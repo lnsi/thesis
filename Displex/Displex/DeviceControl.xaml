@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:Displex" x:Class="Displex.DeviceControl"
     xmlns:Microsoft_Surface_Presentation_Generic="clr-namespace:Microsoft.Surface.Presentation.Generic;assembly=Microsoft.Surface.Presentation.Generic" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
     <s:SurfaceUserControl.Resources>
-        <local:PercentageConverter x:Key="PercentageConverter"/>
+        <!--<local:PercentageConverter x:Key="PercentageConverter"/>-->
     </s:SurfaceUserControl.Resources>
 
         <!--<s:ScatterView>

@@ -121,6 +121,16 @@ namespace VncSharp
       get { return iRDF; }
     }
 
+    public int serverWidth
+    {
+        get { return vnc.Framebuffer.Width; }
+    }
+
+    public int serverHeight
+    {
+        get { return vnc.Framebuffer.Height; }
+    }
+
     /// <summary>
     /// Get a complete update of the entire screen from the remote host.
     /// </summary>
@@ -359,8 +369,6 @@ namespace VncSharp
       OnConnectComplete(new ConnectEventArgs(vnc.Framebuffer.Width,
                            vnc.Framebuffer.Height,
                            vnc.Framebuffer.DesktopName));
-
-      Console.WriteLine("WIDTH " + vnc.Framebuffer.Width + " - HEIGHT " + vnc.Framebuffer.Height + " - NAME " + vnc.Framebuffer.DesktopName);
 
       // Refresh scroll properties
       //AutoScrollMinSize = desktopPolicy.AutoScrollMinSize;
