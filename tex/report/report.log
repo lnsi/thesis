@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  14 DEC 2011 11:56
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  6 JAN 2012 17:58
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -225,73 +225,120 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
  [1
 
-] [2
+] (./report.lof)
+\tf@lof=\write4
+\openout4 = `report.lof'.
+
+ [2
+
+] [3
 
 ]
 \openout2 = `introduction.aux'.
 
- (./introduction.tex) [3
+ (./introduction.tex) [4
 
-] [4
+] [5
 
 
 ]
 \openout2 = `design.aux'.
 
- (./design.tex) [5
 
-] [6
+(./design.tex [6
+
+]
+Chapter 1.
+[7
+
+]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 62.
+
+<images/primHistog.pdf, id=38, 419.166pt x 437.4744pt>
+File: images/primHistog.pdf Graphic file (type pdf)
+
+<use images/primHistog.pdf>
+Overfull \hbox (0.9113pt too wide) in paragraph at lines 65--66
+ [][] 
+ []
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 68.
+
+<images/stratHistog.pdf, id=39, 419.166pt x 437.4744pt>
+File: images/stratHistog.pdf Graphic file (type pdf)
+
+<use images/stratHistog.pdf>
+Overfull \hbox (0.9113pt too wide) in paragraph at lines 71--72
+ [][] 
+ []
+
+) [8] [9 <./images/primHistog.pdf>] [10 <./images/stratHistog.pdf>] [11
 
 
 ]
 \openout2 = `implementation.aux'.
 
 
-(./implementation.tex) [7
+(./implementation.tex
+Overfull \hbox (5.3744pt too wide) in paragraph at lines 17--20
+[]\OT1/cmr/m/it/12 Interaction De-sign\OT1/cmr/m/n/12 : What means of in-ter-ac
+-tion are best-fitted for the tabletop-
+ []
 
-] [8
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+) [12
+
+] [13
 
 
 ]
 \openout2 = `evaluation.aux'.
 
- (./evaluation.tex) [9
+ (./evaluation.tex) [14
 
-] [10
+] [15
 
 
 ]
 \openout2 = `conclusion.aux'.
 
- (./conclusion.tex)
-[11
+ (./conclusion.tex) [16
 
-] [12
+] [17
 
 
 ]
 \openout2 = `.aux'.
 
- (/usr/local/texlive/2010/texmf-dist/tex/latex/tools/.tex
-File ignored) (./report.aux (./introduction.aux) (./design.aux)
-(./implementation.aux) (./evaluation.aux) (./conclusion.aux) (./.aux)) ) 
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/tools/.tex File ignored)
+(./report.aux (./introduction.aux) (./design.aux) (./implementation.aux)
+(./evaluation.aux) (./conclusion.aux) (./.aux)) ) 
 Here is how much of TeX's memory you used:
- 2123 strings out of 493747
- 29630 string characters out of 3143546
- 87112 words of memory out of 3000000
- 5366 multiletter control sequences out of 15000+200000
- 8403 words of font info for 32 fonts, out of 3000000 for 9000
+ 2167 strings out of 493747
+ 30224 string characters out of 3143546
+ 88114 words of memory out of 3000000
+ 5396 multiletter control sequences out of 15000+200000
+ 13703 words of font info for 52 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  41i,6n,24p,1175b,226s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/l
-ocal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/lo
-cal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
-l/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/
-texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on report.pdf (15 pages, 54806 bytes).
+</usr/local/texlive/2010/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2010/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2010/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2010/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on report.pdf (20 pages, 1487637 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 95 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

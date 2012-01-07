@@ -1,0 +1,62 @@
+early user study open suggestions
+
+DRAGGING
+
+(6) drag on window (1F on empty space between icons / multifinger)
+(3) 1F drag on active border
+(2) 1F drag on manipulation handle
+(1) using phone as remote controller
+(1) 1F drag on toggled virtual touchpad attached to window
+(1) tap on target location on surface
+(1) toggle window to inactive, then manipulate as a picture
+(1) 1F drag on window corner
+
+ROTATING
+
+(4) 2F rotate on active border (border activated via button)
+(4) >=3F rotate on window
+(2) remote control on surface
+(1) 2F rotate on toggled virtual touchpad attached to window
+(1) curved sweep gesture around window corners
+(1) toggle window to inactive, then manipulate as a picture
+(1) 2F rotate on active corners
+(1) 1F drag on active corner
+
+RESIZING
+
+(8) 2F resize on active border
+(2) 2F resize on active corners
+(1) 2F resize on toggled virtual touchpad attached to window AND opposite corner
+(1) toggle window to inactive, then manipulate as a picture
+(1) remote control on surface
+
+MINIMIZING
+
+(7) drag window offscreen/specific location
+(2) tap on specific button
+(1) double tap on specific button (top left corner of window)
+(1) press and hold specific button
+(1) specific gesture on surface beside window
+(1) remote control on surface (menu bar)
+
+HIDING
+
+(4) whole hand on window (tap/hold)
+(3) tap on specific button attached to window
+(2) drag window offscreen
+(1) lift phone off surface (or turn it upside down)
+(1) double tap on specific button located on surface edge
+(1) toggle window to inactive (=hidden)
+(1) specific gesture on window
+
+EXITING
+
+(5) drag window offscreen / to specific location
+(4) lift phone off
+(3) tap on specific button
+(2) exit from phone
+(1) shake the phone
+(1) press border
+
+
+?? what is the correct metaphor for surface computing?
