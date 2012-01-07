@@ -121,6 +121,16 @@ namespace VncSharp
       get { return iRDF; }
     }
 
+    public int serverWidth
+    {
+        get { return vnc.Framebuffer.Width; }
+    }
+
+    public int serverHeight
+    {
+        get { return vnc.Framebuffer.Height; }
+    }
+
     /// <summary>
     /// Get a complete update of the entire screen from the remote host.
     /// </summary>
@@ -571,6 +581,16 @@ namespace VncSharp
       UpdateRemotePointer();
     }
 
+    public void OnRightClick()
+    {
+        mousePosition = new Point(20,20);
+        button = MouseButton.Right;
+        UpdateRemotePointer();
+        UpdateRemotePointer();
+        button = null;
+        UpdateRemotePointer();
+    }
+
     // TODO: Perhaps overload UpdateRemotePointer to take a flag indicating if mousescroll has occured??
     //protected override void OnMouseWheel(MouseEventArgs mea)
     //{
@@ -817,6 +837,5 @@ namespace VncSharp
     //    }
     //  }
     //}
-
   }
 }
