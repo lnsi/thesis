@@ -49,3 +49,5 @@ C:\LeoThesis\thesis\Displex\Displex\obj\Debug\DeviceControl.g.cs
 C:\LeoThesis\thesis\Displex\Displex\obj\Debug\DeviceControl.baml
 C:\LeoThesis\thesis\Displex\Displex\obj\Debug\DebugDeviceControl.g.cs
 C:\LeoThesis\thesis\Displex\Displex\obj\Debug\DebugDeviceControl.baml
+C:\LeoThesis\thesis\Displex\Displex\obj\Debug\MinimizedControl.baml
+C:\LeoThesis\thesis\Displex\Displex\obj\Debug\MinimizedControl.g.cs

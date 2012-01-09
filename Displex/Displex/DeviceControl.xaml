@@ -1,21 +1,15 @@
-﻿<s:SurfaceUserControl
+﻿<s:SurfaceUserControl x:Class="Displex.DeviceControl"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:s="http://schemas.microsoft.com/surface/2008"
     xmlns:vnc="clr-namespace:VncSharp;assembly=VncSharp"
-    xmlns:local="clr-namespace:Displex" x:Class="Displex.DeviceControl"
+    xmlns:local="clr-namespace:Displex" 
     xmlns:Microsoft_Surface_Presentation_Generic="clr-namespace:Microsoft.Surface.Presentation.Generic;assembly=Microsoft.Surface.Presentation.Generic" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
     <s:SurfaceUserControl.Resources>
         <!--<local:PercentageConverter x:Key="PercentageConverter"/>-->
     </s:SurfaceUserControl.Resources>
 
-        <!--<s:ScatterView>
-            <s:ScatterViewItem Name="MainSVI" Center="500,350" Height="515" Width="260" Orientation="0" 
-                           MaxHeight="1200" MaxWidth="840"
-                           Background="Transparent" BorderBrush="Transparent" 
-                           Style="{DynamicResource ScatterViewItemStyleInvisible}">
-            -->
-                    <Grid x:Name="MainGrid" d:IsHidden="True">
+    <Grid x:Name="MainGrid" d:IsHidden="True">
                 <Grid.Background>
                     <ImageBrush ImageSource="pack://application:,,,/Resources/iphoneBody.png"/>
                 </Grid.Background>
@@ -31,19 +25,8 @@
                 </Grid.ColumnDefinitions>
 
                 <vnc:RemoteDesktopWPF x:Name="rdfWPF" Grid.Column="1" Grid.Row="1" />
-                                  <!--Height="{Binding
-                       Converter={StaticResource PercentageConverter}, 
-                       ElementName=DisplayExtension, 
-                       Path=ActualHeight, ConverterParameter=0.8}" 
-                                  Width="{Binding
-                       Converter={StaticResource PercentageConverter}, 
-                       ElementName=DisplayExtension, 
-                       Path=ActualWidth, ConverterParameter=0.8}" /-->
 
-                <s:SurfaceButton x:Name="closeButton" Click="closeButton_Click"
-                                 Grid.Column="1" Grid.Row="0"
-                                 Background="Red" Height="40" Width="40"
-                                 VerticalAlignment="Top" HorizontalAlignment="Right"/>
+                
 
                 <Grid x:Name="Footer" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <Grid.RowDefinitions>
@@ -56,10 +39,18 @@
                         <ColumnDefinition Width="0.24*"/>
                         <ColumnDefinition Width="0.38*"/>
                     </Grid.ColumnDefinitions>
-                    <s:SurfaceButton x:Name="homeButton" Click="homeButton_Click" Background="Transparent"
-                                 Grid.Column="1" Grid.Row="1" Foreground="Transparent" 
-                                 VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-                </Grid>
+                    <s:SurfaceButton Name="homeButton" Click="homeButton_Click" Background="Transparent"
+                                 Grid.Column="1" Grid.Row="1" Foreground="Transparent" BorderBrush="Transparent"
+                                 VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Style="{DynamicResource SurfaceButtonStyleInv}"/>
+                    <s:SurfaceButton x:Name="closeButton" Click="closeButton_Click"
+                                 Grid.Column="2" Grid.Row="1"
+                                 Background="Transparent" BorderBrush="Transparent"
+                                 Height="40" Width="40" Padding="0"
+                                 VerticalAlignment="Center" HorizontalAlignment="Right"
+                                 Style="{DynamicResource SurfaceButtonStyleInv}">
+                <Image Source="pack://application:,,,/Resources/buttonClose.png"/>
+            </s:SurfaceButton>
+        </Grid>
                 
             </Grid>
 

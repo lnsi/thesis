@@ -102,6 +102,9 @@
     <Compile Include="DeviceControl.xaml.cs">
       <DependentUpon>DeviceControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MinimizedControl.xaml.cs">
+      <DependentUpon>MinimizedControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -129,12 +132,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\homeButton.png" />
+    <Resource Include="Resources\buttonClose.png" />
+    <Resource Include="Resources\buttonRestore.png" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\iconPreview.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\iphoneMinimized.png" />
     <Resource Include="Resources\iphoneBody.png" />
     <Resource Include="Resources\iphoneScreen.png" />
     <Resource Include="Displex.xml" />
@@ -148,6 +154,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="DeviceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MinimizedControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

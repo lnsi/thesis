@@ -26,8 +26,9 @@ namespace Displex
         //public delegate void DCEventHandler(object sender);
         //public event DCEventHandler Disconnected;
         public virtual event DeviceRemoved Disconnected;
+        public virtual event ControlMinimized Minimized;
 
-        protected IDevice device { get; set; }
+        public IDevice device { get; set; }
 
         public DeviceControl(IDevice device)
         {
@@ -36,7 +37,7 @@ namespace Displex
             ContactDown += new ContactEventHandler(_ContactDown);
             ContactUp += new ContactEventHandler(_ContactUp);
             ContactChanged += new ContactEventHandler(_ContactChanged);
-            ContactTapGesture += new ContactEventHandler(_ContactTap);
+            //ContactTapGesture += new ContactEventHandler(_ContactTap);
             Connect("10.1.1.198");
         }
 
@@ -61,29 +62,34 @@ namespace Displex
 
         }
 
-        protected void _ContactTap(object sender, ContactEventArgs e)
+        private DateTime lastTapTime = DateTime.Now;
+
+        public void _ContactTap(object sender, ContactEventArgs e)
         {
-            Console.WriteLine("CONTACT TAP");
-
-            //base.OnContactDown(e);
-
+            //base.OnContactTapGesture(e);
             if (!e.Contact.IsFingerRecognized)
                 return;
             if (IsMetaContact(e))
+            {
+                if (DateTime.Now.Subtract(lastTapTime).Seconds <= 1)
+                {
+                    Minimized(this, new MinimizeEventArgs(device, MinimizeEventType.Minimized, e.Contact.GetPosition(null)));
+                    e.Handled = true;
+                }
+                lastTapTime = DateTime.Now;
                 return;
+            }
 
-            Point touchPoint = MapPosition(e.GetPosition(rdfWPF.ImageRDF));
-            rdfWPF.ContactDown(touchPoint);
-            rdfWPF.ContactUp(touchPoint);
-            Console.WriteLine("ContactTap({0:00.00}, {1:00.00})", touchPoint.X, touchPoint.Y);
+            //Point touchPoint = MapPosition(e.GetPosition(rdfWPF.ImageRDF));
+            //rdfWPF.ContactDown(touchPoint);
+            //rdfWPF.ContactUp(touchPoint);
+            //Console.WriteLine("ContactTap({0:00.00}, {1:00.00})", touchPoint.X, touchPoint.Y);
+            //e.Handled = true;
         }
 
-        protected void _ContactDown(object sender, ContactEventArgs e)
-        {
-            Console.WriteLine("CONTACT DOWN");
-            
+        public void _ContactDown(object sender, ContactEventArgs e)
+        {   
             //base.OnContactDown(e);
-
             if (!e.Contact.IsFingerRecognized)
                 return;
             if (IsMetaContact(e))
@@ -92,12 +98,19 @@ namespace Displex
             Point touchPoint = MapPosition(e.GetPosition(rdfWPF.ImageRDF));
             rdfWPF.ContactDown(touchPoint);
             Console.WriteLine("ContactDown({0:00.00}, {1:00.00})", touchPoint.X, touchPoint.Y);
+            e.Handled = true;
         }
 
-        protected void _ContactUp(object sender, ContactEventArgs e)
+        public void _ContactUp(object sender, ContactEventArgs e)
         {
+            //if (((ScatterViewItem)MainGrid.Parent).ActualCenter.X <= 0.0 || ((ScatterViewItem)MainGrid.Parent).ActualCenter.Y <= 0.0)
+            //{
+            //    Minimized(this, new MinimizeEventArgs(device, MinimizeEventType.Minimized, e.Contact.GetPosition(null)));
+            //}
+
+
+
             //base.OnContactUp(e);
-            Console.WriteLine("CONTACT UP");
             if (!e.Contact.IsFingerRecognized)
                 return;
             if (IsMetaContact(e))
@@ -106,14 +119,15 @@ namespace Displex
             Point touchPoint = MapPosition(e.GetPosition(rdfWPF.ImageRDF));
             rdfWPF.ContactUp(touchPoint);
             Console.WriteLine("ContactUp({0:00.00}, {1:00.00})\n", touchPoint.X, touchPoint.Y);
+
+            
+
+            e.Handled = true;
         }
 
-        protected void _ContactChanged(object sender, ContactEventArgs e)
+        public void _ContactChanged(object sender, ContactEventArgs e)
         {
-            Console.WriteLine("CONTACT CHANGED");
-
             //base.OnContactChanged(e);
-            
             if (!e.Contact.IsFingerRecognized)
                 return;
             if (IsMetaContact(e))
@@ -122,6 +136,19 @@ namespace Displex
             Point touchPoint = MapPosition(e.GetPosition(rdfWPF.ImageRDF));
             rdfWPF.ContactChange(touchPoint);
             Console.WriteLine(".");
+            e.Handled = true;
+        }
+
+        public void _ContactHold(object sender, ContactEventArgs e)
+        {
+            if (!e.Contact.IsFingerRecognized)
+                return;
+            if (IsMetaContact(e))
+            {
+                Minimized(this, new MinimizeEventArgs(device, MinimizeEventType.Minimized, e.Contact.GetPosition(null)));
+            }
+            
+            e.Handled = true;
         }
 
         private bool IsMetaContact(ContactEventArgs e)

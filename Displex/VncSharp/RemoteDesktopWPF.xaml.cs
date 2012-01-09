@@ -629,7 +629,8 @@ namespace VncSharp
         if (button == MouseButton.Right) mask += 4;
 
         if (current.X < 0 || current.Y < 0)
-          throw new Exception("Crazy value for mouse pointer!");
+            return;
+            //throw new Exception("Crazy value for mouse pointer!");
 
         vnc.WritePointerEvent(mask, current);
       }
