@@ -94,6 +94,8 @@
       <DependentUpon>DebugDeviceControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Detection\CircularList.cs" />
+    <Compile Include="Detection\Legend.cs" />
+    <Compile Include="Detection\LegendTracker.cs" />
     <Compile Include="Detection\IDevice.cs" />
     <Compile Include="Detection\Iphone.cs" />
     <Compile Include="Detection\IphoneTracker.cs" />

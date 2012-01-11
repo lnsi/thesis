@@ -38,7 +38,11 @@ namespace Displex
             ContactUp += new ContactEventHandler(_ContactUp);
             ContactChanged += new ContactEventHandler(_ContactChanged);
             //ContactTapGesture += new ContactEventHandler(_ContactTap);
-            Connect("10.1.1.198");
+        }
+
+        public void Connect()
+        {
+            Connect(device.Ip());
         }
 
         public void Connect(String ip)
@@ -46,13 +50,19 @@ namespace Displex
             rdfWPF.Connect(ip);
         }
 
-        private void closeButton_Click(object sender, RoutedEventArgs e)
+        //public void Connect(String ip, int port)
+        //{
+        //    rdfWPF.VncPort = port;
+        //    rdfWPF.Connect(ip);
+        //}
+
+        public void closeButton_Click(object sender, RoutedEventArgs e)
         {
             rdfWPF.Disconnect();
             Disconnected(this, new TrackerEventArgs(device, TrackerEventType.Removed));
         }
 
-        private void homeButton_Click(object sender, RoutedEventArgs e)
+        public void homeButton_Click(object sender, RoutedEventArgs e)
         {
             rdfWPF.OnRightClick();
         }

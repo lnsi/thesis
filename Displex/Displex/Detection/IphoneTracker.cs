@@ -10,9 +10,9 @@ namespace Displex.Detection
 {
      public class IphoneTracker
      {
-         public List<Iphone> FindIphones(Contour<Point> contours)
+         public List<Iphone> FindIphoneDevices(Contour<Point> contours)
          {
-            List<Iphone> FoundiPhones = new List<Iphone>();
+            List<Iphone> FoundDevices = new List<Iphone>();
 
             if (contours == null)
                 return null;
@@ -49,7 +49,7 @@ namespace Displex.Detection
                             double dist = Euclidean(apple.Center, camera.Center);
                             if (dist >= 35 && dist <= 40)
                             {
-                                FoundiPhones.Add(new Iphone(apple, camera));
+                                FoundDevices.Add(new Iphone(apple, camera));
                                 Console.WriteLine("found iphone");
                             }
                         }
@@ -58,7 +58,7 @@ namespace Displex.Detection
                 }
                 if (contours.HNext == null) break;
             }
-            return FoundiPhones;
+            return FoundDevices;
         }
 
         private void ResetContoursNavigation(ref Contour<Point> contours)

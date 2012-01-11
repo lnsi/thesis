@@ -12,6 +12,7 @@ namespace Displex.Detection
         int Orientation();
         int Width();
         int Height();
+        string Ip();
         bool IsSameDevice(IDevice device);
         bool CanBeRemoved();
         void UpdatePosition();

@@ -70,6 +70,7 @@ namespace Displex
 
         void tracker_DeviceAdded(object sender, TrackerEventArgs e)
         {
+            e.Device.Control.Connect();
             AddSVI(e.Device.Control);
             //e.Device.Control.Disconnected += new DeviceControl.DCEventHandler(Control_Disconnected);
             e.Device.Control.Disconnected += new DeviceRemoved(tracker_DeviceRemoved);
@@ -87,7 +88,7 @@ namespace Displex
 
             MainSV.Items.Remove(e.Device.Control.Parent);
             MainSV.UpdateLayout();
-            EnableRawImage();
+            //EnableRawImage();
         }
 
         void tracker_DeviceUpdated(object sender, TrackerEventArgs e)
@@ -254,53 +255,63 @@ namespace Displex
             contactTarget.FrameReceived -= new EventHandler<FrameReceivedEventArgs>(target_FrameReceived);
         }
 
+        private int count = 0;
         void target_FrameReceived(object sender, FrameReceivedEventArgs e)
         {
-            imageAvailable = false;
-            int paddingLeft, paddingRight;
-            if (null == normalizedImage)
+            if (++count < 30)
             {
-                imageAvailable = e.TryGetRawImage(ImageType.Normalized,
-                  Microsoft.Surface.Core.InteractiveSurface.DefaultInteractiveSurface.Left,
-                  Microsoft.Surface.Core.InteractiveSurface.DefaultInteractiveSurface.Top,
-                  Microsoft.Surface.Core.InteractiveSurface.DefaultInteractiveSurface.Width,
-                  Microsoft.Surface.Core.InteractiveSurface.DefaultInteractiveSurface.Height,
-                  out normalizedImage, out imageMetrics, out paddingLeft, out paddingRight);
+                Console.WriteLine(count);
+                return;
             }
             else
             {
-                imageAvailable = e.UpdateRawImage(ImageType.Normalized, normalizedImage,
-                  Microsoft.Surface.Core.InteractiveSurface.DefaultInteractiveSurface.Left,
-                  Microsoft.Surface.Core.InteractiveSurface.DefaultInteractiveSurface.Top,
-                  Microsoft.Surface.Core.InteractiveSurface.DefaultInteractiveSurface.Width,
-                  Microsoft.Surface.Core.InteractiveSurface.DefaultInteractiveSurface.Height);
-            }
+                count = 0;
+                imageAvailable = false;
+                int paddingLeft, paddingRight;
+                if (null == normalizedImage)
+                {
+                    imageAvailable = e.TryGetRawImage(ImageType.Normalized,
+                      Microsoft.Surface.Core.InteractiveSurface.DefaultInteractiveSurface.Left,
+                      Microsoft.Surface.Core.InteractiveSurface.DefaultInteractiveSurface.Top,
+                      Microsoft.Surface.Core.InteractiveSurface.DefaultInteractiveSurface.Width,
+                      Microsoft.Surface.Core.InteractiveSurface.DefaultInteractiveSurface.Height,
+                      out normalizedImage, out imageMetrics, out paddingLeft, out paddingRight);
+                }
+                else
+                {
+                    imageAvailable = e.UpdateRawImage(ImageType.Normalized, normalizedImage,
+                      Microsoft.Surface.Core.InteractiveSurface.DefaultInteractiveSurface.Left,
+                      Microsoft.Surface.Core.InteractiveSurface.DefaultInteractiveSurface.Top,
+                      Microsoft.Surface.Core.InteractiveSurface.DefaultInteractiveSurface.Width,
+                      Microsoft.Surface.Core.InteractiveSurface.DefaultInteractiveSurface.Height);
+                }
 
-            if (!imageAvailable)
-                return;
+                if (!imageAvailable)
+                    return;
 
-            DisableRawImage();
+                DisableRawImage();
 
-            //System.IO.MemoryStream stream = new System.IO.MemoryStream(normalizedImage);
-            //BmpBitmapDecoder decoder = new BmpBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.OnLoad);
-            //ImageSource source = decoder.Frames[0];
-            //source.Freeze();
-            //iCapturedFrame.Source = source;
+                //System.IO.MemoryStream stream = new System.IO.MemoryStream(normalizedImage);
+                //BmpBitmapDecoder decoder = new BmpBitmapDecoder(stream, BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.OnLoad);
+                //ImageSource source = decoder.Frames[0];
+                //source.Freeze();
+                //iCapturedFrame.Source = source;
 
-            GCHandle h = GCHandle.Alloc(normalizedImage, GCHandleType.Pinned);
-            IntPtr ptr = h.AddrOfPinnedObject();
-            Bitmap bitmap = new Bitmap(imageMetrics.Width,
-                                  imageMetrics.Height,
-                                  imageMetrics.Stride,
-                                  System.Drawing.Imaging.PixelFormat.Format8bppIndexed,
-                                  ptr);
-            
-            
-            tracker.ProcessImage(bitmap);
+                GCHandle h = GCHandle.Alloc(normalizedImage, GCHandleType.Pinned);
+                IntPtr ptr = h.AddrOfPinnedObject();
+                Bitmap bitmap = new Bitmap(imageMetrics.Width,
+                                      imageMetrics.Height,
+                                      imageMetrics.Stride,
+                                      System.Drawing.Imaging.PixelFormat.Format8bppIndexed,
+                                      ptr);
 
-            imageAvailable = false;
-            if (!tracker.TrackingDisabled)
+
+                tracker.ProcessImage(bitmap);
+
+                imageAvailable = false;
+                //if (!tracker.TrackingDisabled)
                 EnableRawImage();
+            }
         }
 
         private void SurfaceWindow_Loaded(object sender, RoutedEventArgs e)
@@ -311,7 +322,6 @@ namespace Displex
         private void ScatterViewItem_ScatterManipulationCompleted
             (object sender, ScatterManipulationCompletedEventArgs e)
         {
-            Console.WriteLine("MANIPUIELI");
             // Get a reference to the ScatterViewItem item.
             ScatterViewItem item = (ScatterViewItem)e.Source;
             if (item.Center.X < -5 || item.Center.X > 1035 || item.Center.Y < -5 || item.Center.Y > 780)
@@ -341,6 +351,11 @@ namespace Displex
                 return new System.Windows.Point(p.X, 700);
             }
             else return p;
+        }
+
+        private void GetIpFromUser()
+        {
+
         }
     }
 }

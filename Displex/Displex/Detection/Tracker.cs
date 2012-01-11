@@ -17,15 +17,17 @@ namespace Displex.Detection
         public virtual event DeviceUpdated DeviceUpdated;
         public virtual event DeviceRemoved DeviceRemoved;
 
-        private ObservableCollection<IDevice> currentDevices;
+        private ObservableCollection<IDevice> knownDevices;
         private IphoneTracker iphoneTracker;
+        private LegendTracker legendTracker;
         private ColorPalette pal;
         public bool TrackingDisabled;
 
         public Tracker() 
         {
-            currentDevices = new ObservableCollection<IDevice>();
+            knownDevices = new ObservableCollection<IDevice>();
             iphoneTracker = new IphoneTracker();
+            legendTracker = new LegendTracker();
             Console.WriteLine("tracker instantiated");
         }
 
@@ -50,8 +52,8 @@ namespace Displex.Detection
         public void ProcessImage(Bitmap bitmap)
         {
             Convert8bppBMPToGrayscale(bitmap);
-            //PerformDetection(new Image<Gray, byte>(bitmap));
-            PerformOneTimeDetection(new Image<Gray, byte>(bitmap));
+            PerformDetection(new Image<Gray, byte>(bitmap));
+            //PerformOneTimeDetection(new Image<Gray, byte>(bitmap));
         }
 
         private void Convert8bppBMPToGrayscale(Bitmap bmp)
@@ -82,12 +84,12 @@ namespace Displex.Detection
             IList<IDevice> foundDevices = new List<IDevice>();
 
             // each specific type of device must be tracked independently with specific implementation
-            List<Iphone> foundIphones = iphoneTracker.FindIphones(contours);
+            List<Iphone> foundIphones = iphoneTracker.FindIphoneDevices(contours);
             if (foundIphones != null)
             {
                 foreach (Iphone i in foundIphones)
                     foundDevices.Add(i);
-            }
+            }  
 
             if (foundDevices.Count == 0)
             {
@@ -114,26 +116,35 @@ namespace Displex.Detection
             Contour<System.Drawing.Point> contours = gray.FindContours(Emgu.CV.CvEnum.CHAIN_APPROX_METHOD.CV_CHAIN_APPROX_SIMPLE,
               Emgu.CV.CvEnum.RETR_TYPE.CV_RETR_LIST);
 
+            //ListContours(contours);
+
             IList<IDevice> foundDevices = new List<IDevice>();
 
             // each specific type of device must be tracked independently with specific implementation
-            List<Iphone> foundIphones = iphoneTracker.FindIphones(contours);
+            List<Iphone> foundIphones = iphoneTracker.FindIphoneDevices(contours);
             if (foundIphones != null)
             {
                 foreach (Iphone i in foundIphones)
                     foundDevices.Add(i);
             }
 
+            List<Legend> foundLegends = legendTracker.FindLegendDevices(contours);
+            if (foundLegends != null)
+            {
+                foreach (Legend l in foundLegends)
+                    foundDevices.Add(l);
+            }
+
+            if (foundDevices.Count == 0) return;
+
             IList<IDevice> devicesToBeAdded = new List<IDevice>();
             // keeping track of indexes of current devices and whether they have disappeared or not
-            bool[] notToBeRemoved = new bool[currentDevices.Count];
-
-            if (foundDevices == null) return;
+            bool[] notToBeRemoved = new bool[knownDevices.Count];
 
             foreach (IDevice fD in foundDevices)
             {
                 bool isNew = true;
-                foreach (IDevice cD in currentDevices)
+                foreach (IDevice cD in knownDevices)
                 {        
                     // a found device is identified as a current device
                     if (fD.IsSameDevice(cD))
@@ -141,7 +152,7 @@ namespace Displex.Detection
                         // the device is not new
                         isNew = false;
                         // the device should not be removed
-                        notToBeRemoved[currentDevices.IndexOf(cD)] = true;
+                        notToBeRemoved[knownDevices.IndexOf(cD)] = true;
 
                         cD.UpdatePosition();
                         OnDeviceUpdated(cD);
@@ -155,25 +166,25 @@ namespace Displex.Detection
                 }
             }    
             // attempt removing lost devices
-            for (int i = 0; i < notToBeRemoved.Length; i++)
-            {
-                if (!notToBeRemoved[i])
-                {
-                    IDevice d = currentDevices.ElementAt(i);
-                    if (d.CanBeRemoved())
-                    {
-                        currentDevices.Remove(d);
-                        OnDeviceRemoved(d);
-                    }
-                    Console.WriteLine("attempted removal");
-                }
-            }
+            //for (int i = 0; i < notToBeRemoved.Length; i++)
+            //{
+            //    if (!notToBeRemoved[i])
+            //    {
+            //        IDevice d = knownDevices.ElementAt(i);
+            //        if (d.CanBeRemoved())
+            //        {
+            //            knownDevices.Remove(d);
+            //            OnDeviceRemoved(d);
+            //        }
+            //        Console.WriteLine("attempted removal");
+            //    }
+            //}
             // add new devices
             if (devicesToBeAdded != null)
             {
                 foreach (IDevice d in devicesToBeAdded)
                 {
-                    currentDevices.Add(d);
+                    knownDevices.Add(d);
                     OnDeviceAdded(d);
                 }
             }
@@ -194,18 +205,28 @@ namespace Displex.Detection
         }
 
         // Utility method to list all found circle areas.
-        //private void ListCircleAreas(Contour<Point> contours)
-        //{
-        //    if (contours == null)
-        //        return;
-        //    ResetContoursNavigation(ref contours);
-        //    int count = 0;
-        //    for (; contours != null; contours = contours.HNext)
-        //    {
-        //        Console.WriteLine("area " + (++count) + ": " + contours.Area.ToString());
-        //        if (contours.HNext == null) break;
-        //    }
-        //    Console.WriteLine();
-        //}
+        private void ListContours(Contour<Point> contours)
+        {
+            if (contours == null)
+                return;
+            ResetContoursNavigation(ref contours);
+            int count = 0;
+            for (; contours != null; contours = contours.HNext)
+            {
+                Console.WriteLine("area " + (++count) + ": " + contours.Area.ToString());
+                if (contours.HNext == null) break;
+            }
+            Console.WriteLine();
+        }
+
+        private void ResetContoursNavigation(ref Contour<Point> contours)
+        {
+            if (contours == null)
+                return;
+
+            //go back to the begining
+            while (contours.HPrev != null)
+                contours = contours.HPrev;
+        }
     }
 }
