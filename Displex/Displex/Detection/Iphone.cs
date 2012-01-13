@@ -322,6 +322,11 @@ namespace Displex.Detection
         //    return degreeAngle * (Math.PI / 180.0);
         //}
 
+        public void homeButton_Click(object sender, RoutedEventArgs e)
+        {
+            Control.rdfWPF.OnRightClick();
+        }
+
         private void SetSkin()
         {
             string packUri = "pack://application:,,,/Resources/iphoneBody.png";
@@ -377,7 +382,7 @@ namespace Displex.Detection
 
             // HOME BUTTON
             SurfaceButton homeButton = new SurfaceButton();
-            homeButton.Click += new RoutedEventHandler(Control.homeButton_Click);
+            homeButton.Click += new RoutedEventHandler(homeButton_Click);
             homeButton.Background = System.Windows.Media.Brushes.Transparent;
             homeButton.BorderBrush = System.Windows.Media.Brushes.Transparent;
             homeButton.VerticalAlignment = VerticalAlignment.Stretch;

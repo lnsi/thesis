@@ -25,6 +25,7 @@ using System.Diagnostics;
 using VncSharp;
 using Displex.Detection;
 using System.Windows.Data;
+using System.Windows.Forms;
 
 namespace Displex
 {
@@ -260,7 +261,6 @@ namespace Displex
         {
             if (++count < 30)
             {
-                Console.WriteLine(count);
                 return;
             }
             else

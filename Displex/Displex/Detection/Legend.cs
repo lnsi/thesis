@@ -20,7 +20,7 @@ namespace Displex.Detection
         private PointF deviceCenter;
         public System.Drawing.Point Center()
         {
-            return Point.Round(deviceCenter);
+            return System.Drawing.Point.Round(deviceCenter);
         }
 
         private double orientation = 0;
@@ -116,16 +116,34 @@ namespace Displex.Detection
             return Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2));
         }
 
+        // call method that simulates a mouse right click
+        public void backButton_Click(object sender, RoutedEventArgs e)
+        {
+            Control.rdfWPF.OnRightClick();
+        }
+
+        // call method that simulates a press on PageUp key
+        public void menuButton_Click(object sender, RoutedEventArgs e)
+        {
+            Control.rdfWPF.PageUpKeyPress();
+        }
+
+        // call method that simulates a press on Home key
+        public void homeButton_Click(object sender, RoutedEventArgs e)
+        {
+            Control.rdfWPF.HomeKeyPress();
+        }
+
         private void SetSkin()
         {
-            string packUri = "pack://application:,,,/Resources/iphoneBody.png";
+            string packUri = "pack://application:,,,/Resources/androidBody.png";
             Control.MainBg.ImageSource = new ImageSourceConverter().ConvertFromString(packUri) as ImageSource;
 
             // MAIN GRID DEFINITION
             RowDefinition r = new RowDefinition();
-            r.Height = new GridLength(0.15, GridUnitType.Star);
+            r.Height = new GridLength(0.1, GridUnitType.Star);
             RowDefinition r1 = new RowDefinition();
-            r1.Height = new GridLength(0.65, GridUnitType.Star);
+            r1.Height = new GridLength(0.7, GridUnitType.Star);
             RowDefinition r2 = new RowDefinition();
             r2.Height = new GridLength(0.2, GridUnitType.Star);
             Control.MainGrid.RowDefinitions.Add(r);
@@ -133,11 +151,11 @@ namespace Displex.Detection
             Control.MainGrid.RowDefinitions.Add(r2);
 
             ColumnDefinition c = new ColumnDefinition();
-            c.Width = new GridLength(0.07, GridUnitType.Star);
+            c.Width = new GridLength(0.09, GridUnitType.Star);
             ColumnDefinition c1 = new ColumnDefinition();
-            c1.Width = new GridLength(0.86, GridUnitType.Star);
+            c1.Width = new GridLength(0.82, GridUnitType.Star);
             ColumnDefinition c2 = new ColumnDefinition();
-            c2.Width = new GridLength(0.07, GridUnitType.Star);
+            c2.Width = new GridLength(0.09, GridUnitType.Star);
             Control.MainGrid.ColumnDefinitions.Add(c);
             Control.MainGrid.ColumnDefinitions.Add(c1);
             Control.MainGrid.ColumnDefinitions.Add(c2);
@@ -150,36 +168,57 @@ namespace Displex.Detection
 
             // FOOTER GRID DEFINITION
             RowDefinition rf = new RowDefinition();
-            rf.Height = new GridLength(0.2, GridUnitType.Star);
+            rf.Height = new GridLength(0.3, GridUnitType.Star);
             RowDefinition rf1 = new RowDefinition();
-            rf1.Height = new GridLength(0.5, GridUnitType.Star);
-            RowDefinition rf2 = new RowDefinition();
-            rf2.Height = new GridLength(0.3, GridUnitType.Star);
+            rf1.Height = new GridLength(0.7, GridUnitType.Star);
             Control.Footer.RowDefinitions.Add(rf);
             Control.Footer.RowDefinitions.Add(rf1);
-            Control.Footer.RowDefinitions.Add(rf2);
 
             ColumnDefinition cf = new ColumnDefinition();
-            cf.Width = new GridLength(0.38, GridUnitType.Star);
+            cf.Width = new GridLength(0.25, GridUnitType.Star);
             ColumnDefinition cf1 = new ColumnDefinition();
-            cf1.Width = new GridLength(0.24, GridUnitType.Star);
+            cf1.Width = new GridLength(0.25, GridUnitType.Star);
             ColumnDefinition cf2 = new ColumnDefinition();
-            cf2.Width = new GridLength(0.38, GridUnitType.Star);
+            cf2.Width = new GridLength(0.25, GridUnitType.Star);
+            ColumnDefinition cf3 = new ColumnDefinition();
+            cf3.Width = new GridLength(0.25, GridUnitType.Star);
             Control.Footer.ColumnDefinitions.Add(cf);
             Control.Footer.ColumnDefinitions.Add(cf1);
             Control.Footer.ColumnDefinitions.Add(cf2);
+            Control.Footer.ColumnDefinitions.Add(cf3);
+
+            // BACK BUTTON
+            SurfaceButton backButton = new SurfaceButton();
+            backButton.Click += new RoutedEventHandler(backButton_Click);
+            backButton.Background = System.Windows.Media.Brushes.Transparent;
+            backButton.VerticalAlignment = VerticalAlignment.Stretch;
+            backButton.HorizontalAlignment = HorizontalAlignment.Stretch;
+            backButton.SetResourceReference(FrameworkElement.StyleProperty, "SurfaceButtonStyleInv");
+            Control.Footer.Children.Add(backButton);
+            backButton.SetValue(Grid.ColumnProperty, 0);
+            backButton.SetValue(Grid.RowProperty, 0);
+
+            // MENU BUTTON
+            SurfaceButton menuButton = new SurfaceButton();
+            menuButton.Click += new RoutedEventHandler(menuButton_Click);
+            menuButton.Background = System.Windows.Media.Brushes.Transparent;
+            menuButton.VerticalAlignment = VerticalAlignment.Stretch;
+            menuButton.HorizontalAlignment = HorizontalAlignment.Stretch;
+            menuButton.SetResourceReference(FrameworkElement.StyleProperty, "SurfaceButtonStyleInv");
+            Control.Footer.Children.Add(menuButton);
+            menuButton.SetValue(Grid.ColumnProperty, 1);
+            menuButton.SetValue(Grid.RowProperty, 0);
 
             // HOME BUTTON
             SurfaceButton homeButton = new SurfaceButton();
-            homeButton.Click += new RoutedEventHandler(Control.homeButton_Click);
+            homeButton.Click += new RoutedEventHandler(homeButton_Click);
             homeButton.Background = System.Windows.Media.Brushes.Transparent;
-            homeButton.BorderBrush = System.Windows.Media.Brushes.Transparent;
             homeButton.VerticalAlignment = VerticalAlignment.Stretch;
             homeButton.HorizontalAlignment = HorizontalAlignment.Stretch;
             homeButton.SetResourceReference(FrameworkElement.StyleProperty, "SurfaceButtonStyleInv");
             Control.Footer.Children.Add(homeButton);
-            homeButton.SetValue(Grid.ColumnProperty, 1);
-            homeButton.SetValue(Grid.RowProperty, 1);
+            homeButton.SetValue(Grid.ColumnProperty, 2);
+            homeButton.SetValue(Grid.RowProperty, 0);
 
             // EXIT BUTTON
             SurfaceButton closeButton = new SurfaceButton();

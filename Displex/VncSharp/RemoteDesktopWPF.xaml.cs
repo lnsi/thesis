@@ -591,6 +591,38 @@ namespace VncSharp
         UpdateRemotePointer();
     }
 
+    public void HomeKeyPress()
+    {
+        Console.WriteLine("trying home press");
+
+        UInt32 keyChar = 0x0000FF50;
+        vnc.WriteKeyboardEvent(keyChar, true);
+            //e.Handled = true;
+
+        //KeyEventArgs e = new KeyEventArgs(Keyboard.PrimaryDevice, Keyboard.PrimaryDevice.ActiveSource, 0, Key.Home);
+        //e.RoutedEvent = UIElement.KeyDownEvent;
+        //System.Windows.Input.InputManager.Current.ProcessInput(e);
+        
+        //base.OnKeyDown(e);
+        //base.OnKeyUp(e);
+    }
+
+    public void PageUpKeyPress()
+    {
+        Console.WriteLine("trying menu press");
+
+        UInt32 keyChar = 0x0000FF55;
+        vnc.WriteKeyboardEvent(keyChar, true);
+
+        //KeyEventArgs e = new KeyEventArgs(Keyboard.PrimaryDevice, Keyboard.PrimaryDevice.ActiveSource, 0, Key.PageUp);
+        //e.RoutedEvent = UIElement.KeyDownEvent;
+        //System.Windows.Input.InputManager.Current.ProcessInput(e);
+        
+        //base.OnKeyDown(e);
+        //base.OnKeyUp(e);
+    }
+
+
     // TODO: Perhaps overload UpdateRemotePointer to take a flag indicating if mousescroll has occured??
     //protected override void OnMouseWheel(MouseEventArgs mea)
     //{
@@ -636,8 +668,8 @@ namespace VncSharp
       }
     }
 
-    // Handle Keyboard Events:		 -------------------------------------------
-    // These keys don't normally throw an OnKeyDown event. Returning true here fixes this.
+    // //Handle Keyboard Events:		 -------------------------------------------
+    // //These keys don't normally throw an OnKeyDown event. Returning true here fixes this.
     //protected override bool IsInputKey(Keys keyData)
     //{
     //  switch (keyData)
@@ -656,9 +688,9 @@ namespace VncSharp
     //  }
     //}
 
-    // Thanks to Lionel Cuir, Christian and the other developers at 
-    // Aulofee.com for cleaning-up my keyboard code, specifically:
-    // ManageKeyDownAndKeyUp, OnKeyPress, OnKeyUp, OnKeyDown.
+    // //Thanks to Lionel Cuir, Christian and the other developers at 
+    // //Aulofee.com for cleaning-up my keyboard code, specifically:
+    // //ManageKeyDownAndKeyUp, OnKeyPress, OnKeyUp, OnKeyDown.
     //private void ManageKeyDownAndKeyUp(KeyEventArgs e, bool isDown)
     //{
     //  UInt32 keyChar;
@@ -747,26 +779,26 @@ namespace VncSharp
 
     //protected override void OnKeyDown(KeyEventArgs e)
     //{
-    //  if (DesignMode || !IsConnected)
-    //    return;
+    //    if (DesignMode || !IsConnected)
+    //        return;
 
-    //  ManageKeyDownAndKeyUp(e, true);
-    //  if (e.Handled)
-    //    return;
+    //    ManageKeyDownAndKeyUp(e, true);
+    //    if (e.Handled)
+    //        return;
 
-    //  base.OnKeyDown(e);
+    //    base.OnKeyDown(e);
     //}
 
     //protected override void OnKeyUp(KeyEventArgs e)
     //{
-    //  if (DesignMode || !IsConnected)
-    //    return;
+    //    if (DesignMode || !IsConnected)
+    //        return;
 
-    //  ManageKeyDownAndKeyUp(e, false);
-    //  if (e.Handled)
-    //    return;
+    //    ManageKeyDownAndKeyUp(e, false);
+    //    if (e.Handled)
+    //        return;
 
-    //  base.OnKeyDown(e);
+    //    base.OnKeyDown(e);
     //}
 
     ///// <summary>

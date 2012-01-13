@@ -16,6 +16,6 @@
         </Grid.Background>
         <vnc:RemoteDesktopWPF x:Name="rdfWPF"/>
         <Grid x:Name="Footer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-    </Grid>
+     </Grid>
 
 </s:SurfaceUserControl>

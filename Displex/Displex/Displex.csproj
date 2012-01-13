@@ -136,6 +136,7 @@
     <Resource Include="Resources\homeButton.png" />
     <Resource Include="Resources\buttonClose.png" />
     <Resource Include="Resources\buttonRestore.png" />
+    <Resource Include="Resources\androidBody.png" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

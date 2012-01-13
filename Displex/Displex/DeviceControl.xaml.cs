@@ -62,11 +62,6 @@ namespace Displex
             Disconnected(this, new TrackerEventArgs(device, TrackerEventType.Removed));
         }
 
-        public void homeButton_Click(object sender, RoutedEventArgs e)
-        {
-            rdfWPF.OnRightClick();
-        }
-
         void OnRender()
         {
 
