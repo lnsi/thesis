@@ -1,0 +1,9 @@
+EVALUATION
+
+3 implementations (designers best, users best, combination)
+
+3 tasks, one for each implementation.
+
+after each task, general questionnaire: feedback on user experience?
+
+final questionnaire: Would you use such an application?

@@ -1,0 +1,72 @@
+\begin{thebibliography}{10}
+
+\bibitem{amnesia}
+http://www.amnesiarazorfish.com.au/2011/01/amnesia-razorfish-announces-gesture-sharing-for-smartphones-and-tablets-using-microsoft-surface-press-release.
+
+\bibitem{Bardram:2010:compute}
+Jakob~E. Bardram, Christina Fuglsang, and Simon~C. Pedersen.
+\newblock Compute: a runtime infrastructure for device composition.
+\newblock In {\em Proceedings of the International Conference on Advanced
+  Visual Interfaces}, AVI '10, pages 111--118, New York, NY, USA, 2010. ACM.
+
+\bibitem{Clifton:2010:sketchtop}
+Paul Clifton, Ali Mazalek, Jon Sanford, Claudia R\'{e}bola, Seunghyun Lee, and
+  Natasha Powell.
+\newblock Sketchtop: design collaboration on a multi-touch tabletop.
+\newblock In {\em Proceedings of the fifth international conference on
+  Tangible, embedded, and embodied interaction}, TEI '11, pages 333--336, New
+  York, NY, USA, 2011. ACM.
+
+\bibitem{Dietz:2001:diamondtouch}
+Paul Dietz and Darren Leigh.
+\newblock Diamondtouch: a multi-user touch technology.
+\newblock In {\em Proceedings of the 14th annual ACM symposium on User
+  interface software and technology}, UIST '01, pages 219--226, New York, NY,
+  USA, 2001. ACM.
+
+\bibitem{Dietz:2009:surfaceware}
+Paul~H. Dietz and Benjamin~D. Eidelson.
+\newblock Surfaceware: dynamic tagging for microsoft surface.
+\newblock In {\em Proceedings of the 3rd International Conference on Tangible
+  and Embedded Interaction}, TEI '09, pages 249--254, New York, NY, USA, 2009.
+  ACM.
+
+\bibitem{Hincapie:2011:rabbit}
+Juan~David Hincapi{\'e}-Ramos, Aur{\'e}lien Tabard, and Jakob~E. Bardram.
+\newblock Mediated tabletop interaction in the biology lab - exploring the
+  design space of the rabbit.
+\newblock {\em Ubicomp}, 2011.
+
+\bibitem{Hunter:2011:memtable}
+Seth Hunter, Pattie Maes, Stacey Scott, and Henry Kaufman.
+\newblock Memtable: an integrated system for capture and recall of shared
+  histories in group workspaces.
+\newblock In {\em Proceedings of the 2011 annual conference on Human factors in
+  computing systems}, CHI '11, pages 3305--3314, New York, NY, USA, 2011. ACM.
+
+\bibitem{Schmidt:2000:implicit}
+Albrecht Schmidt.
+\newblock Implicit human computer interaction through context.
+\newblock {\em Personal and Ubiquitous Computing}, 4:191--199, 2000.
+
+\bibitem{Schmidt:2010:handsdown}
+Dominik Schmidt, Ming~Ki Chong, and Hans Gellersen.
+\newblock Handsdown: hand-contour-based user identification for interactive
+  surfaces.
+\newblock In {\em Proceedings of the 6th Nordic Conference on Human-Computer
+  Interaction: Extending Boundaries}, NordiCHI '10, pages 432--441, New York,
+  NY, USA, 2010. ACM.
+
+\bibitem{Wellner:1993:digitaldesk}
+Pierre Wellner.
+\newblock Interacting with paper on the digitaldesk.
+\newblock {\em Commun. ACM}, 36:87--96, July 1993.
+
+\bibitem{Wobbrock:2009:gestures}
+Jacob~O. Wobbrock, Meredith~Ringel Morris, and Andrew~D. Wilson.
+\newblock User-defined gestures for surface computing.
+\newblock In {\em Proceedings of the 27th international conference on Human
+  factors in computing systems}, CHI '09, pages 1083--1092, New York, NY, USA,
+  2009. ACM.
+
+\end{thebibliography}

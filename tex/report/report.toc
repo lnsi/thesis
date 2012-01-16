@@ -1,8 +1,39 @@
-\contentsline {part}{I\hspace {1em}Introduction}{3}
-\contentsline {part}{II\hspace {1em}Design}{5}
-\contentsline {chapter}{\numberline {1}Preliminary user study}{7}
-\contentsline {section}{\numberline {1.1}Method}{7}
-\contentsline {part}{III\hspace {1em}Implementation}{11}
-\contentsline {part}{IV\hspace {1em}Evaluation}{13}
-\contentsline {part}{V\hspace {1em}Conclusion}{15}
-\contentsline {part}{VI\hspace {1em}Appendices}{17}
+\contentsline {chapter}{\numberline {1}Introduction}{4}
+\contentsline {section}{\numberline {1.1}Problem formulation}{4}
+\contentsline {chapter}{\numberline {2}Related Work}{7}
+\contentsline {chapter}{\numberline {3}Analysis}{8}
+\contentsline {section}{\numberline {3.1}Context of use}{8}
+\contentsline {subsection}{\numberline {3.1.1}Scenarios}{8}
+\contentsline {subsubsection}{The coffee shop}{8}
+\contentsline {subsubsection}{The meeting}{9}
+\contentsline {subsubsection}{The office}{9}
+\contentsline {subsection}{\numberline {3.1.2}Storyboards}{10}
+\contentsline {section}{\numberline {3.2}Application requirements}{10}
+\contentsline {subsection}{\numberline {3.2.1}Hardware constraints}{10}
+\contentsline {subsubsection}{Design concerns for tabletops}{10}
+\contentsline {subsubsection}{Designing for mobile devices}{11}
+\contentsline {subsection}{\numberline {3.2.2}Software components}{11}
+\contentsline {subsubsection}{Detection and discovery}{11}
+\contentsline {subsubsection}{Display transfer}{11}
+\contentsline {subsubsection}{Surface user interface}{11}
+\contentsline {subsection}{\numberline {3.2.3}Choice of features}{11}
+\contentsline {section}{\numberline {3.3}Interaction design}{11}
+\contentsline {subsection}{\numberline {3.3.1}Generating ideas with low fidelity prototypes}{11}
+\contentsline {subsection}{\numberline {3.3.2}Commands and actions}{11}
+\contentsline {subsection}{\numberline {3.3.3}Interaction strategies}{12}
+\contentsline {section}{\numberline {3.4}Preliminary usability study}{12}
+\contentsline {subsection}{\numberline {3.4.1}Method}{13}
+\contentsline {subsubsection}{Parameters}{13}
+\contentsline {subsubsection}{Participants}{13}
+\contentsline {subsubsection}{Experiment}{13}
+\contentsline {subsection}{\numberline {3.4.2}Results}{13}
+\contentsline {chapter}{\numberline {4}Design}{14}
+\contentsline {section}{\numberline {4.1}users best}{14}
+\contentsline {section}{\numberline {4.2}designers best}{14}
+\contentsline {section}{\numberline {4.3}hybrid}{14}
+\contentsline {chapter}{\numberline {5}Implementation}{17}
+\contentsline {chapter}{\numberline {6}Evaluation}{19}
+\contentsline {section}{\numberline {6.1}Experiment}{19}
+\contentsline {section}{\numberline {6.2}Results}{19}
+\contentsline {section}{\numberline {6.3}Discussion}{19}
+\contentsline {chapter}{\numberline {7}Conclusion}{20}
