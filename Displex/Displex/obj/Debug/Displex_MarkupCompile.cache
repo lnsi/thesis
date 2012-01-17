@@ -10,9 +10,9 @@ none
 false
 DEBUG;TRACE
 C:\LeoThesis\thesis\Displex\Displex\App.xaml
-4764769614
+71188176190
 2-1369897525
-16-1636550146
+18-1899828183
 18-468455667
-DebugDeviceControl.xaml;DeviceControl.xaml;MinimizedControl.xaml;SurfaceWindow1.xaml;
+Controls\DebugDeviceControl.xaml;Controls\DeviceControl.xaml;Controls\Dialog.xaml;Controls\MessageBox.xaml;Controls\MinimizedControl.xaml;Controls\Resources\InputWindow.xaml;MainWindow.xaml;
 

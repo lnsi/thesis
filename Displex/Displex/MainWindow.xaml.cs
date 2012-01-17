@@ -3,14 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows;
-//using System.Windows.Controls;
-//using System.Windows.Data;
-//using System.Windows.Documents;
-//using System.Windows.Input;
-//using System.Windows.Media;
-//using System.Windows.Media.Imaging;
-//using System.Windows.Shapes;
-//using System.Windows.Threading;
 using Microsoft.Surface;
 using Microsoft.Surface.Presentation;
 using Microsoft.Surface.Presentation.Controls;
@@ -25,14 +17,16 @@ using System.Diagnostics;
 using VncSharp;
 using Displex.Detection;
 using System.Windows.Data;
-using System.Windows.Forms;
+using Displex.Controls;
+using System.Windows.Media.Animation;
+using System.Windows.Resources;
 
 namespace Displex
 {
     /// <summary>
-    /// Interaction logic for SurfaceWindow1.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class SurfaceWindow1 : SurfaceWindow
+    public partial class MainWindow : SurfaceWindow
     {
         private ContactTarget contactTarget;
         private IntPtr hwnd;
@@ -44,7 +38,7 @@ namespace Displex
         /// <summary>
         /// Default constructor.
         /// </summary>
-        public SurfaceWindow1()
+        public MainWindow()
         {
             InitializeComponent();
             InitializeSurfaceInput();
@@ -71,6 +65,60 @@ namespace Displex
 
         void tracker_DeviceAdded(object sender, TrackerEventArgs e)
         {
+            //messageBox.Show(Displex.Controls.MessageBox.OK, "Device detected", "Connect to new device?");
+
+            ScatterViewItem item = new ScatterViewItem();
+            item.CanMove = false;
+            item.CanRotate = false;
+            item.CanScale = false;
+            item.Orientation = 0;
+            item.Center = new System.Windows.Point(e.Device.Center().X, e.Device.Center().Y);
+            item.Background = System.Windows.Media.Brushes.Transparent;
+            item.BorderBrush = System.Windows.Media.Brushes.Transparent;
+            item.SetResourceReference(StyleProperty, "ScatterViewItemStyleInvisible");
+            
+
+            Dialog dialog = new Dialog();
+            item.Content = dialog;
+            dialog.Question = "New Device Connection?";
+            MainSV.Items.Add(item);
+                        
+            Storyboard story = SetStoryTarget("showDialog", item);
+            story.Begin(this);
+
+            Action hideItem = delegate
+            {
+                dialog.Freeze();
+                Storyboard endStory = SetStoryTarget("hideDialog", item);
+                endStory.Completed += delegate { MainSV.Items.Remove(item); };
+                endStory.Begin(this);
+            };
+
+            dialog.No += delegate { hideItem(); };
+
+            dialog.Yes += delegate
+            {
+                hideItem();
+                AddDevice(e);
+            };
+        }
+
+        /// <summary>
+        /// Sets the control to whom the animation will be played.
+        /// </summary>
+        /// <param name="storyName">The name of the animation</param>
+        /// <param name="target">animated object</param>
+        /// <returns>Object animation class</returns>
+        protected Storyboard SetStoryTarget(string storyName, DependencyObject target)
+        {
+            Storyboard story = FindResource(storyName) as Storyboard;
+            foreach (var child in story.Children)
+                Storyboard.SetTarget(child, target);
+            return story;
+        }
+
+        void AddDevice(TrackerEventArgs e)
+        {
             e.Device.Control.Connect();
             AddSVI(e.Device.Control);
             //e.Device.Control.Disconnected += new DeviceControl.DCEventHandler(Control_Disconnected);
@@ -80,7 +128,7 @@ namespace Displex
 
         void tracker_DeviceRemoved(object sender, TrackerEventArgs e)
         {
-            Console.WriteLine("Device removed by " + sender.GetType().Name);
+            //Console.WriteLine("Device removed by " + sender.GetType().Name);
 
             if (sender.GetType().Name.Equals("MinimizedControl"))
             {

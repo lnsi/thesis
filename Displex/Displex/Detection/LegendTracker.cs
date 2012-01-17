@@ -24,13 +24,10 @@ namespace Displex.Detection
                 // look for the HTC Legend silver body (white rectangle)
                 if (contours.Area >= 5200 && contours.Area <= 5600)
                 {
-                    
-                    CircleF body = new CircleF(
-                      new PointF(contours.BoundingRectangle.Left + contours.BoundingRectangle.Width / 2,
-                        contours.BoundingRectangle.Top + contours.BoundingRectangle.Height / 2),
-                        contours.BoundingRectangle.Width / 2);
-
-                    FoundDevices.Add(new Legend(body.Center));
+                    //Console.WriteLine("legend area: " + contours.Area);
+                    CircleF body = new CircleF(new PointF(contours.BoundingRectangle.Left + contours.BoundingRectangle.Width / 2,
+                        contours.BoundingRectangle.Top + contours.BoundingRectangle.Height / 2), contours.BoundingRectangle.Width / 2);
+                    FoundDevices.Add(new Legend(ConvertCenter(body.Center)));
                     Console.WriteLine("found legend");
                 }
                 if (contours.HNext == null) break;
@@ -54,6 +51,11 @@ namespace Displex.Detection
         private double Euclidean(PointF p1, PointF p2)
         {
             return Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2));
+        }
+
+        private PointF ConvertCenter(PointF center)
+        {
+            return new PointF((center.X*1024)/768, (center.Y*768)/576);
         }
      }
 }

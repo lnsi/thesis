@@ -156,12 +156,13 @@ namespace Displex.Detection
 
                         cD.UpdatePosition();
                         OnDeviceUpdated(cD);
-                        Console.WriteLine("device updated");
+                        //Console.WriteLine("device updated");
                     }          
                 }
                 // a found device is identified as a new device
                 if (isNew)
                 {
+                    Console.WriteLine("device center: " + fD.Center());
                     devicesToBeAdded.Add(fD);
                 }
             }    

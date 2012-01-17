@@ -15,7 +15,7 @@ using Microsoft.Surface;
 using Microsoft.Surface.Presentation;
 using Microsoft.Surface.Presentation.Controls;
 
-namespace Displex
+namespace Displex.Controls
 {
     /// <summary>
     /// Interaction logic for DebugDeviceControl.xaml

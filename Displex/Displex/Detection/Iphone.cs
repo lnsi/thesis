@@ -9,6 +9,7 @@ using System.Windows.Media;
 using System.Windows.Controls;
 using System.Windows;
 using Microsoft.Surface.Presentation.Controls;
+using Displex.Controls;
 
 namespace Displex.Detection
 {
@@ -395,13 +396,19 @@ namespace Displex.Detection
             // EXIT BUTTON
             SurfaceButton closeButton = new SurfaceButton();
             closeButton.Click += new RoutedEventHandler(Control.closeButton_Click);
-            closeButton.Background = System.Windows.Media.Brushes.Red;
+            closeButton.Background = System.Windows.Media.Brushes.Transparent;
             closeButton.BorderBrush = System.Windows.Media.Brushes.Transparent;
             closeButton.VerticalAlignment = VerticalAlignment.Stretch;
             closeButton.HorizontalAlignment = HorizontalAlignment.Stretch;
             closeButton.SetResourceReference(FrameworkElement.StyleProperty, "SurfaceButtonStyleInv");
-            Control.MainGrid.Children.Add(closeButton);
-            closeButton.SetValue(Grid.ColumnProperty, 2);
+            
+            var img = new System.Windows.Controls.Image();
+            string packUri1 = "pack://application:,,,/Resources/blackClose.png";
+            img.Source = new ImageSourceConverter().ConvertFromString(packUri1) as ImageSource;
+            closeButton.Content = img;
+
+            Control.Footer.Children.Add(closeButton);
+            closeButton.SetValue(Grid.ColumnProperty, 1);
             closeButton.SetValue(Grid.RowProperty, 2);
         }
     }

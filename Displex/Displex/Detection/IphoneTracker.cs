@@ -78,5 +78,10 @@ namespace Displex.Detection
         {
             return Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2));
         }
+
+        private PointF ConvertCenter(PointF center)
+        {
+            return new PointF((center.X * 1024) / 768, (center.Y * 768) / 576);
+        }
      }
 }
