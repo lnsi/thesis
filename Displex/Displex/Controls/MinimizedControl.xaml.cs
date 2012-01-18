@@ -16,7 +16,7 @@ using Microsoft.Surface.Presentation;
 using Microsoft.Surface.Presentation.Controls;
 using Displex.Detection;
 
-namespace Displex
+namespace Displex.Controls
 {
     /// <summary>
     /// Interaction logic for MinimizedControl.xaml

@@ -90,8 +90,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DebugDeviceControl.xaml.cs">
+    <Compile Include="Controls\DebugDeviceControl.xaml.cs">
       <DependentUpon>DebugDeviceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dialog.xaml.cs">
+      <DependentUpon>Dialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="Detection\CircularList.cs" />
     <Compile Include="Detection\Legend.cs" />
@@ -101,10 +104,13 @@
     <Compile Include="Detection\IphoneTracker.cs" />
     <Compile Include="Detection\Tracker.cs" />
     <Compile Include="Detection\TrackerDelegates.cs" />
-    <Compile Include="DeviceControl.xaml.cs">
+    <Compile Include="Controls\DeviceControl.xaml.cs">
       <DependentUpon>DeviceControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MinimizedControl.xaml.cs">
+    <Compile Include="Controls\MessageBox.xaml.cs">
+      <DependentUpon>MessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MinimizedControl.xaml.cs">
       <DependentUpon>MinimizedControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -127,8 +133,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="SurfaceWindow1.xaml.cs">
-      <DependentUpon>SurfaceWindow1.xaml</DependentUpon>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
@@ -137,12 +143,21 @@
     <Resource Include="Resources\buttonClose.png" />
     <Resource Include="Resources\buttonRestore.png" />
     <Resource Include="Resources\androidBody.png" />
+    <Resource Include="Resources\blackClose.png" />
+    <Resource Include="Resources\blackPlus.png" />
+    <Resource Include="Resources\blueClose.png" />
+    <Resource Include="Resources\bluePlus.png" />
+    <Resource Include="Resources\error.png" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\iconPreview.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\info.png" />
+    <Resource Include="Resources\ok.png" />
+    <Resource Include="Resources\WindowBackground2.jpg" />
+    <Resource Include="Resources\WindowBackground1.jpg" />
     <Resource Include="Resources\iphoneMinimized.png" />
     <Resource Include="Resources\iphoneBody.png" />
     <Resource Include="Resources\iphoneScreen.png" />
@@ -152,19 +167,31 @@
     <Resource Include="Resources\WindowBackground.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="DebugDeviceControl.xaml">
+    <Page Include="Controls\DebugDeviceControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="DeviceControl.xaml">
+    <Page Include="Controls\DeviceControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MinimizedControl.xaml">
+    <Page Include="Controls\Dialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SurfaceWindow1.xaml">
+    <Page Include="Controls\MessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MinimizedControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Resources\InputWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
