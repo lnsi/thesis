@@ -162,7 +162,6 @@ namespace Displex.Detection
                 // a found device is identified as a new device
                 if (isNew)
                 {
-                    Console.WriteLine("device center: " + fD.Center());
                     devicesToBeAdded.Add(fD);
                 }
             }    

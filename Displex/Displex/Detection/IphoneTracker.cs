@@ -50,7 +50,7 @@ namespace Displex.Detection
                             if (dist >= 35 && dist <= 40)
                             {
                                 FoundDevices.Add(new Iphone(apple, camera));
-                                Console.WriteLine("found iphone");
+                                //Console.WriteLine("found iphone");
                             }
                         }
                         if (contours.HNext == null) break;

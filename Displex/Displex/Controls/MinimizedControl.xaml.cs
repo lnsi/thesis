@@ -36,13 +36,66 @@ namespace Displex.Controls
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
         {
-            device.Control.rdfWPF.Disconnect();
+            //device.Control.rdfWPF.Disconnect();
             Disconnected(this, new TrackerEventArgs(device, TrackerEventType.Removed));
         }
 
         private void restoreButton_Click(object sender, RoutedEventArgs e)
         {
             Restored(this, new MinimizeEventArgs(device, MinimizeEventType.Restored, ((ScatterViewItem)this.Parent).Center));
+        }
+
+        public void CheckPosition()
+        {
+            int minX = 0 + 35;
+            int minY = 0 + 70;
+            int maxX = 1024 - 35;
+            int maxY = 768 - 70;
+
+            bool IsInCorner = false;
+            ScatterViewItem item = (ScatterViewItem)this.Parent;
+
+            double newX = item.Center.X, newY = item.Center.Y;
+            if (item.Center.X < minX) // left edge
+            {
+                newX = minX;
+                if (item.Center.Y < minY) // top left corner
+                {
+                    newY = minY;
+                    IsInCorner = true;
+                }
+                if (item.Center.Y > maxY) // bottom left corner
+                {
+                    newY = maxY;
+                    IsInCorner = true;
+                }
+            }
+            else if (item.Center.X > maxX) //right edge
+            {
+                newX = maxX;
+                if (item.Center.Y < minY) // top right corner
+                {
+                    newY = minY;
+                    IsInCorner = true;
+                }
+                if (item.Center.Y > maxY) // bottom right corner
+                {
+                    newY = maxY;
+                    IsInCorner = true;
+                }
+            }
+            else if (item.Center.Y < minY) // top edge
+            {
+                newY = minY;
+            }
+            else if (item.Center.Y > maxY) // bottom edge
+            {
+                newY = maxY;
+            }
+
+            item.Center = new Point(newX, newY);
+            if (IsInCorner)
+                Disconnected(this, new TrackerEventArgs(device, TrackerEventType.Removed));
         }
     }
 

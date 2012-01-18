@@ -7,13 +7,17 @@
     xmlns:controls="clr-namespace:Displex.Controls"             
     Title="Displex" Loaded="SurfaceWindow_Loaded">
     <s:SurfaceWindow.Resources>
-    <ImageBrush x:Key="WindowBackground" Stretch="Fill" Opacity="1" ImageSource="pack://application:,,,/Resources/WindowBackground1.jpg"/>
+    <ImageBrush x:Key="WindowBackground" Stretch="Fill" Opacity="1" ImageSource="pack://application:,,,/Resources/WindowBackground2.png"/>
         <Storyboard x:Key="showDialog">
-            <DoubleAnimation From="0" To="1" Duration="0:0:0.6" Storyboard.TargetProperty="Opacity" />
-            <PointAnimation By="200,0" Duration="0:0:0.6" Storyboard.TargetProperty="Center" />
+            <DoubleAnimation From="0" To="1" Duration="0:0:0.4" Storyboard.TargetProperty="Opacity" />
+            <PointAnimation By="120,0" Duration="0:0:0.4" Storyboard.TargetProperty="Center" />
+        </Storyboard>
+        <Storyboard x:Key="showDialogLeft">
+            <DoubleAnimation From="0" To="1" Duration="0:0:0.4" Storyboard.TargetProperty="Opacity" />
+            <PointAnimation By="-120,0" Duration="0:0:0.4" Storyboard.TargetProperty="Center" />
         </Storyboard>
         <Storyboard x:Key="hideDialog">
-            <DoubleAnimation To="0" Duration="0:0:0.5" Storyboard.TargetProperty="Opacity" />
+            <DoubleAnimation To="0" Duration="0:0:0.4" Storyboard.TargetProperty="Opacity" />
         </Storyboard>
     </s:SurfaceWindow.Resources>
     <Grid Background="{StaticResource WindowBackground}" >
