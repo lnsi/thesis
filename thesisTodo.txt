@@ -1,10 +1,50 @@
-thesis todo:
+introduction write 1
+introduction write 2
+introduction write 3
 
-missing papers:
-- barry brown draft?
+related work write 1
+related work write 2
+related work write 3
 
-iPhone:
-- jailbreak
-- install cydia
-- install VNC
-- run VNC from macbook
+theory write 1
+theory write 2
+theory write 3
+
+design write 1
+design write 2
+design write 3
+
+system write 1
+system write 2
+system write 3
+
+evaluation write 1
+evaluation write 2
+evaluation write 3
+
+discussion write 1
+discussion write 2
+discussion write 3
+
+conclusion write 1
+conclusion write 2
+conclusion write 3
+
+implement hiding
+implement size constraints (maximize?)
+
+finalize implementation (4 eval)
+
+read
+
+make video
+
+prepare evaluation
+
+test run evaluation
+
+finalize evaluation
+
+run evaluation
+
+analyze evaluation results
