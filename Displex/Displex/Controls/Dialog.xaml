@@ -3,10 +3,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:s="http://schemas.microsoft.com/surface/2008">
     <s:SurfaceUserControl.Resources>
-        <ResourceDictionary Source="Resources/InputWindow.xaml" />
     </s:SurfaceUserControl.Resources>
     <Border BorderBrush="AntiqueWhite" BorderThickness="2" CornerRadius="12">
-        <Grid Width="160" Height="65">
+        <Grid Width="120" Height="65" Background="#50000000">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.5*" />
                 <ColumnDefinition Width="0.5*" />
@@ -15,13 +14,11 @@
                 <RowDefinition Height="0.43*" />
                 <RowDefinition Height="0.57*" />
             </Grid.RowDefinitions>
+                <TextBlock x:Name="question" Grid.Row="0" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="{Binding Question}" Foreground="AntiqueWhite" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
-            <TextBlock x:Name="question" Grid.Row="0" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="{Binding Question}" Foreground="AntiqueWhite" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <s:SurfaceButton Grid.Row="1" Grid.Column="0" x:Name="yesButton" Content="Yes" HorizontalAlignment="Center" VerticalAlignment="Top" Width="50" Click="OnYesButtonClick" Foreground="AntiqueWhite" />
 
-            <s:SurfaceButton Grid.Row="1" Grid.Column="0" x:Name="yesButton" Content="Yes" HorizontalAlignment="Center" VerticalAlignment="Top" Width="60" Click="OnYesButtonClick" Foreground="AntiqueWhite" />
-
-            <s:SurfaceButton Grid.Row="1" Grid.Column="1" x:Name="noButton" Content="No" HorizontalAlignment="Center" VerticalAlignment="Top" Width="60" Click="OnNoButtonClick" Foreground="AntiqueWhite" />
-
+                <s:SurfaceButton Grid.Row="1" Grid.Column="1" x:Name="noButton" Content="No" HorizontalAlignment="Center" VerticalAlignment="Top" Width="50" Click="OnNoButtonClick" Foreground="AntiqueWhite" />
         </Grid>
     </Border>
 </s:SurfaceUserControl>

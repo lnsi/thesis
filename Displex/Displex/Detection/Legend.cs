@@ -85,12 +85,11 @@ namespace Displex.Detection
         // Constructor
         public Legend(PointF center)
         {
-            Console.WriteLine("original device center; " + center);
             Control = new DeviceControl(this);
             SetSkin();
 
             framesMissingNr = 0;
-            deviceCenter = center;
+            deviceCenter = ConvertCenter(center);
 
             centersAvg = new CircularList<PointF>(centersNr);
         }
@@ -118,6 +117,12 @@ namespace Displex.Detection
             return Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2));
         }
 
+        // converts from bitmap dimension (768*576) to MS window dimension (1024*768)
+        private PointF ConvertCenter(PointF center)
+        {
+            return new PointF((center.X * 1024) / 768, (center.Y * 768) / 576);
+        }
+
         // call method that simulates a mouse right click
         public void backButton_Click(object sender, RoutedEventArgs e)
         {
@@ -134,6 +139,11 @@ namespace Displex.Detection
         public void homeButton_Click(object sender, RoutedEventArgs e)
         {
             Control.rdfWPF.HomeKeyPress();
+        }
+
+        public void hideButton_Click(object sender, RoutedEventArgs e)
+        {
+            Control.MainGrid.Opacity = (Control.MainGrid.Opacity == 1) ? 0.1 : 1;
         }
 
         private void SetSkin()
@@ -172,9 +182,12 @@ namespace Displex.Detection
             RowDefinition rf = new RowDefinition();
             rf.Height = new GridLength(0.3, GridUnitType.Star);
             RowDefinition rf1 = new RowDefinition();
-            rf1.Height = new GridLength(0.7, GridUnitType.Star);
+            rf1.Height = new GridLength(0.3, GridUnitType.Star);
+            RowDefinition rf2 = new RowDefinition();
+            rf2.Height = new GridLength(0.4, GridUnitType.Star);
             Control.Footer.RowDefinitions.Add(rf);
             Control.Footer.RowDefinitions.Add(rf1);
+            Control.Footer.RowDefinitions.Add(rf2);
 
             ColumnDefinition cf = new ColumnDefinition();
             cf.Width = new GridLength(0.25, GridUnitType.Star);
@@ -222,23 +235,38 @@ namespace Displex.Detection
             homeButton.SetValue(Grid.ColumnProperty, 2);
             homeButton.SetValue(Grid.RowProperty, 0);
 
+            // HIDE BUTTON
+            //SurfaceButton hideButton = new SurfaceButton();
+            //hideButton.Click += new RoutedEventHandler(hideButton_Click);
+            //hideButton.Background = System.Windows.Media.Brushes.Green;
+            //hideButton.BorderBrush = System.Windows.Media.Brushes.Transparent;
+            //hideButton.Opacity = 0.3;
+            //hideButton.VerticalAlignment = VerticalAlignment.Stretch;
+            //hideButton.HorizontalAlignment = HorizontalAlignment.Stretch;
+            //hideButton.SetResourceReference(FrameworkElement.StyleProperty, "SurfaceButtonStyleInv");
+            //Control.Footer.Children.Add(hideButton);
+            //hideButton.SetValue(Grid.ColumnProperty, 0);
+            //hideButton.SetValue(Grid.RowProperty, 2);
+            //hideButton.SetValue(Grid.ColumnSpanProperty, 4);
+
             // EXIT BUTTON
-            SurfaceButton closeButton = new SurfaceButton();
-            closeButton.Click += new RoutedEventHandler(Control.closeButton_Click);
-            closeButton.Background = System.Windows.Media.Brushes.Transparent;
-            closeButton.BorderBrush = System.Windows.Media.Brushes.Transparent;
-            closeButton.VerticalAlignment = VerticalAlignment.Stretch;
-            closeButton.HorizontalAlignment = HorizontalAlignment.Stretch;
-            closeButton.SetResourceReference(FrameworkElement.StyleProperty, "SurfaceButtonStyleInv");
+            //SurfaceButton closeButton = new SurfaceButton();
+            //closeButton.Click += new RoutedEventHandler(Control.closeButton_Click);
+            //closeButton.Background = System.Windows.Media.Brushes.Transparent;
+            //closeButton.BorderBrush = System.Windows.Media.Brushes.Transparent;
+            //closeButton.VerticalAlignment = VerticalAlignment.Top;
+            //closeButton.HorizontalAlignment = HorizontalAlignment.Stretch;
+            //closeButton.Padding = new Thickness(5);
+            //closeButton.SetResourceReference(FrameworkElement.StyleProperty, "SurfaceButtonStyleInv");
 
-            var img = new System.Windows.Controls.Image();
-            string packUri1 = "pack://application:,,,/Resources/blackClose.png";
-            img.Source = new ImageSourceConverter().ConvertFromString(packUri1) as ImageSource;
-            closeButton.Content = img;
+            //var img = new System.Windows.Controls.Image();
+            //string packUri1 = "pack://application:,,,/Resources/blackClose.png";
+            //img.Source = new ImageSourceConverter().ConvertFromString(packUri1) as ImageSource;
+            //closeButton.Content = img;
 
-            Control.Footer.Children.Add(closeButton);
-            closeButton.SetValue(Grid.ColumnProperty, 3);
-            closeButton.SetValue(Grid.RowProperty, 1);
+            //Control.MainGrid.Children.Add(closeButton);
+            //closeButton.SetValue(Grid.ColumnProperty, 2);
+            //closeButton.SetValue(Grid.RowProperty, 2);
         }
     }
 }

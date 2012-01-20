@@ -52,8 +52,8 @@ namespace Displex.Detection
         {
             if (device == null) return false;
 
-            if (Euclidean(Center(),device.Center()) < deltaCenter 
-                && Math.Abs(Orientation() - device.Orientation()) < deltaOrientation)
+            if (Euclidean(Center(),device.Center()) < deltaCenter )
+//                && Math.Abs(Orientation() - device.Orientation()) < deltaOrientation)
                 return true;
             
             return false;
@@ -70,14 +70,14 @@ namespace Displex.Detection
         public void UpdatePosition()
         {       
             CalculatePosition();
-            Console.WriteLine("Before adjust");
-            Console.WriteLine("center: " + Center().X + "," + Center().Y);
-            Console.WriteLine("orientation: " + Orientation());
+            //Console.WriteLine("Before adjust");
+            //Console.WriteLine("center: " + Center().X + "," + Center().Y);
+            //Console.WriteLine("orientation: " + Orientation());
             AdjustPosition();
             //Console.WriteLine("After adjust");
             //Console.WriteLine("center: " + Center().X + "," + Center().Y);
             //Console.WriteLine("orientation: " + Orientation());
-            Console.WriteLine("**************************");
+            //Console.WriteLine("**************************");
             framesMissingNr = 0;
         }
 
@@ -92,7 +92,7 @@ namespace Displex.Detection
         private const double alpha = 0.805;
         private const double distFromAppleToCenter = 15;
         public const double deltaCenter = 30;
-        public const double deltaOrientation = 30;
+        //public const double deltaOrientation = 30;
 
         private float[] cameraStandCoord;
         private int quadrant;
@@ -207,7 +207,7 @@ namespace Displex.Detection
                     break;
             }
 
-            deviceCenter = new PointF((Apple.Center.X + (float)distX), (Apple.Center.Y - (float)distY));
+            deviceCenter = ConvertCenter( new PointF((Apple.Center.X + (float)distX), (Apple.Center.Y - (float)distY)));
             //Console.WriteLine("apple center x: " + Apple.Center.X + ", y: " + Apple.Center.Y);
             //Console.WriteLine("devicecenter x: " + iphoneCenter.X + ", y: " + iphoneCenter.Y);
         }
@@ -323,9 +323,20 @@ namespace Displex.Detection
         //    return degreeAngle * (Math.PI / 180.0);
         //}
 
+        // converts from bitmap dimension (768*576) to MS window dimension (1024*768)
+        private PointF ConvertCenter(PointF center)
+        {
+            return new PointF((center.X * 1024) / 768, (center.Y * 768) / 576);
+        }
+
         public void homeButton_Click(object sender, RoutedEventArgs e)
         {
             Control.rdfWPF.OnRightClick();
+        }
+
+        public void hideButton_Click(object sender, RoutedEventArgs e)
+        {
+            Control.MainGrid.Opacity = (Control.MainGrid.Opacity == 1) ? 0.1 : 1;
         }
 
         private void SetSkin()
@@ -392,24 +403,39 @@ namespace Displex.Detection
             Control.Footer.Children.Add(homeButton);
             homeButton.SetValue(Grid.ColumnProperty, 1);
             homeButton.SetValue(Grid.RowProperty, 1);
+
+            // HIDE BUTTON
+            //SurfaceButton hideButton = new SurfaceButton();
+            //hideButton.Click += new RoutedEventHandler(hideButton_Click);
+            //hideButton.Background = System.Windows.Media.Brushes.Green;
+            //hideButton.BorderBrush = System.Windows.Media.Brushes.Transparent;
+            //hideButton.Opacity = 0.3;
+            //hideButton.VerticalAlignment = VerticalAlignment.Stretch;
+            //hideButton.HorizontalAlignment = HorizontalAlignment.Stretch;
+            //hideButton.SetResourceReference(FrameworkElement.StyleProperty, "SurfaceButtonStyleInv");
+            //Control.Footer.Children.Add(hideButton);
+            //hideButton.SetValue(Grid.ColumnProperty, 0);
+            //hideButton.SetValue(Grid.RowProperty, 2);
+            //hideButton.SetValue(Grid.ColumnSpanProperty, 3);
             
             // EXIT BUTTON
-            SurfaceButton closeButton = new SurfaceButton();
-            closeButton.Click += new RoutedEventHandler(Control.closeButton_Click);
-            closeButton.Background = System.Windows.Media.Brushes.Transparent;
-            closeButton.BorderBrush = System.Windows.Media.Brushes.Transparent;
-            closeButton.VerticalAlignment = VerticalAlignment.Stretch;
-            closeButton.HorizontalAlignment = HorizontalAlignment.Stretch;
-            closeButton.SetResourceReference(FrameworkElement.StyleProperty, "SurfaceButtonStyleInv");
+            //SurfaceButton closeButton = new SurfaceButton();
+            //closeButton.Click += new RoutedEventHandler(Control.closeButton_Click);
+            //closeButton.Background = System.Windows.Media.Brushes.Transparent;
+            //closeButton.BorderBrush = System.Windows.Media.Brushes.Transparent;
+            //closeButton.VerticalAlignment = VerticalAlignment.Top;
+            //closeButton.HorizontalAlignment = HorizontalAlignment.Stretch;
+            //closeButton.Padding = new Thickness(5);
+            //closeButton.SetResourceReference(FrameworkElement.StyleProperty, "SurfaceButtonStyleInv");
             
-            var img = new System.Windows.Controls.Image();
-            string packUri1 = "pack://application:,,,/Resources/blackClose.png";
-            img.Source = new ImageSourceConverter().ConvertFromString(packUri1) as ImageSource;
-            closeButton.Content = img;
+            //var img = new System.Windows.Controls.Image();
+            //string packUri1 = "pack://application:,,,/Resources/blackClose.png";
+            //img.Source = new ImageSourceConverter().ConvertFromString(packUri1) as ImageSource;
+            //closeButton.Content = img;
 
-            Control.Footer.Children.Add(closeButton);
-            closeButton.SetValue(Grid.ColumnProperty, 1);
-            closeButton.SetValue(Grid.RowProperty, 2);
+            //Control.MainGrid.Children.Add(closeButton);
+            //closeButton.SetValue(Grid.ColumnProperty, 2);
+            //closeButton.SetValue(Grid.RowProperty, 2);
         }
     }
 }

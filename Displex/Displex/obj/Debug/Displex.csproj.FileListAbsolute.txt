@@ -55,5 +55,4 @@ C:\LeoThesis\thesis\Displex\Displex\obj\Debug\Controls\DeviceControl.baml
 C:\LeoThesis\thesis\Displex\Displex\obj\Debug\MainWindow.g.cs
 C:\LeoThesis\thesis\Displex\Displex\obj\Debug\MainWindow.baml
 C:\LeoThesis\thesis\Displex\Displex\obj\Debug\Controls\Dialog.baml
-C:\LeoThesis\thesis\Displex\Displex\obj\Debug\Controls\Resources\InputWindow.baml
 C:\LeoThesis\thesis\Displex\Displex\obj\Debug\Controls\Dialog.g.cs

@@ -10,7 +10,7 @@
     </s:SurfaceUserControl.Resources>
 
     <!-- LAYOUT IS SET PROGRAMMATICALLY WITH METHOD SETSKIN() IN DEVICE IMPLEMENTATION-->
-    <Grid x:Name="MainGrid" d:IsHidden="True">
+    <Grid x:Name="MainGrid" d:IsHidden="True" Opacity="1">
         <Grid.Background>
             <ImageBrush x:Name="MainBg"/>
         </Grid.Background>

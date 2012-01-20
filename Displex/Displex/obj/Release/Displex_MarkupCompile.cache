@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\LeoThesis\thesis\Displex\Displex\obj\Debug\
+C:\LeoThesis\thesis\Displex\Displex\obj\Release\
 Displex
 none
 false
-DEBUG;TRACE
+TRACE
 C:\LeoThesis\thesis\Displex\Displex\App.xaml
 61547797152
 2-1369897525
 18-1899828183
-18-468455667
+18-636079668
 Controls\DebugDeviceControl.xaml;Controls\DeviceControl.xaml;Controls\Dialog.xaml;Controls\MessageBox.xaml;Controls\MinimizedControl.xaml;MainWindow.xaml;
 

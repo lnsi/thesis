@@ -72,7 +72,8 @@ namespace Displex
             item.CanRotate = false;
             item.CanScale = false;
             item.Orientation = 0;
-            item.Center = new System.Windows.Point(e.Device.Center().X, e.Device.Center().Y);
+            var pos = e.Device.Center();
+            item.Center = new System.Windows.Point(pos.X, pos.Y);
             item.Background = System.Windows.Media.Brushes.Transparent;
             item.BorderBrush = System.Windows.Media.Brushes.Transparent;
             item.SetResourceReference(StyleProperty, "ScatterViewItemStyleInvisible");
@@ -80,10 +81,10 @@ namespace Displex
 
             Dialog dialog = new Dialog();
             item.Content = dialog;
-            dialog.Question = "New Device Connection?";
+            dialog.Question = "Connect to device?";
             MainSV.Items.Add(item);
-                        
-            Storyboard story = SetStoryTarget("showDialog", item);
+
+            Storyboard story = item.Center.X > 824 ? SetStoryTarget("showDialogLeft", item) : SetStoryTarget("showDialog", item);
             story.Begin(this);
 
             Action hideItem = delegate
@@ -99,7 +100,7 @@ namespace Displex
             dialog.Yes += delegate
             {
                 hideItem();
-                AddDevice(e);
+                AddDevice(sender, e);
             };
         }
 
@@ -117,7 +118,7 @@ namespace Displex
             return story;
         }
 
-        void AddDevice(TrackerEventArgs e)
+        void AddDevice(object sender, TrackerEventArgs e)
         {
             e.Device.Control.Connect();
             AddSVI(e.Device.Control);
@@ -129,15 +130,57 @@ namespace Displex
         void tracker_DeviceRemoved(object sender, TrackerEventArgs e)
         {
             //Console.WriteLine("Device removed by " + sender.GetType().Name);
+            System.Windows.Point pos;
+            if (sender.GetType().Name.Equals("MinimizedControl"))
+                pos = ((ScatterViewItem)((MinimizedControl)sender).Parent).Center;
+            else
+                pos = ((ScatterViewItem)e.Device.Control.Parent).Center;
+            
+            ScatterViewItem item = new ScatterViewItem();
+            item.CanMove = false;
+            item.CanRotate = false;
+            item.CanScale = false;
+            item.Orientation = 0;    
+            item.Center = new System.Windows.Point(pos.X, pos.Y);
+            item.Background = System.Windows.Media.Brushes.Transparent;
+            item.BorderBrush = System.Windows.Media.Brushes.Transparent;
+            item.SetResourceReference(StyleProperty, "ScatterViewItemStyleInvisible");
+
+
+            Dialog dialog = new Dialog();
+            item.Content = dialog;
+            dialog.Question = "Exit application?";
+            MainSV.Items.Add(item);
+
+            Storyboard story = item.Center.X > 924 ? SetStoryTarget("showDialogLeft", item) : SetStoryTarget("showDialog", item);
+            story.Begin(this);
+
+            Action hideItem = delegate
+            {
+                dialog.Freeze();
+                Storyboard endStory = SetStoryTarget("hideDialog", item);
+                endStory.Completed += delegate { MainSV.Items.Remove(item); };
+                endStory.Begin(this);
+            };
+
+            dialog.No += delegate { hideItem(); };
+
+            dialog.Yes += delegate
+            {
+                hideItem();
+                RemoveDevice(sender, e);
+            };
+        }
+
+        void RemoveDevice(object sender, TrackerEventArgs e)
+        {
+            e.Device.Control.rdfWPF.Disconnect();
 
             if (sender.GetType().Name.Equals("MinimizedControl"))
-            {
                 MainSV.Items.Remove(((MinimizedControl)sender).Parent);
-            }
-
+            
             MainSV.Items.Remove(e.Device.Control.Parent);
             MainSV.UpdateLayout();
-            //EnableRawImage();
         }
 
         void tracker_DeviceUpdated(object sender, TrackerEventArgs e)
@@ -158,9 +201,11 @@ namespace Displex
 
             MinimizedControl mControl = new MinimizedControl(e.Device);
             AddSVI(mControl, e.Position);
-
+            
             mControl.Disconnected += new DeviceRemoved(tracker_DeviceRemoved);
             mControl.Restored += new ControlRestored(Control_Restored);
+
+            mControl.CheckPosition();
         }
 
         void Control_Restored(object sender, MinimizeEventArgs e)
@@ -194,7 +239,9 @@ namespace Displex
             svi.Center = new System.Windows.Point(500, 350);
             svi.Orientation = 0;
             svi.Height = 515;
+            svi.MaxHeight = 2060;
             svi.Width = 260;
+            svi.MaxWidth = 1040;
             svi.Background = System.Windows.Media.Brushes.Transparent;
             svi.BorderBrush = System.Windows.Media.Brushes.Transparent;
             svi.SetResourceReference(StyleProperty, "ScatterViewItemStyleInvisible");
@@ -204,6 +251,7 @@ namespace Displex
             svi.ContactChanged += new ContactEventHandler(control._ContactChanged);
             svi.ContactTapGesture += new ContactEventHandler(control._ContactTap);
             svi.ContactHoldGesture += new ContactEventHandler(control._ContactHold);
+            //svi.PreviewContactDown += new ContactEventHandler(control._PreviewContactDown);
 
             svi.ScatterManipulationCompleted += new ScatterManipulationCompletedEventHandler(ScatterViewItem_ScatterManipulationCompleted);
 
@@ -364,15 +412,21 @@ namespace Displex
 
         private void SurfaceWindow_Loaded(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void ScatterViewItem_ScatterManipulationCompleted
             (object sender, ScatterManipulationCompletedEventArgs e)
         {
+            int dist = 10;
+            int minX = 0 + dist;
+            int minY = 0 + dist;
+            int maxX = 1024 - dist;
+            int maxY = 768 - dist;
+
             // Get a reference to the ScatterViewItem item.
             ScatterViewItem item = (ScatterViewItem)e.Source;
-            if (item.Center.X < -5 || item.Center.X > 1035 || item.Center.Y < -5 || item.Center.Y > 780)
+
+            if (item.Center.X < minX || item.Center.X > maxX || item.Center.Y < minY || item.Center.Y > maxY)
             {
                 Control_Minimized(this, new MinimizeEventArgs(((DeviceControl)item.Content).device, MinimizeEventType.Minimized, CalculateEdgePosition(item.Center)));
                 //Console.WriteLine(item.Content.GetType().Name);
@@ -401,9 +455,9 @@ namespace Displex
             else return p;
         }
 
-        private void GetIpFromUser()
-        {
+        //private void GetIpFromUser()
+        //{
 
-        }
+        //}
     }
 }

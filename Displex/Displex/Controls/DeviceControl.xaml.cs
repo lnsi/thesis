@@ -58,13 +58,19 @@ namespace Displex.Controls
 
         public void closeButton_Click(object sender, RoutedEventArgs e)
         {
-            rdfWPF.Disconnect();
+            //rdfWPF.Disconnect();
             Disconnected(this, new TrackerEventArgs(device, TrackerEventType.Removed));
         }
 
         void OnRender()
         {
 
+        }
+
+        public void _PreviewContactDown(object sender, ContactEventArgs e)
+        {
+            if (((ScatterViewItem)sender).ContactsCaptured.Count > 3)
+                MainGrid.Opacity = 1;
         }
 
         private DateTime lastTapTime = DateTime.Now;
@@ -76,7 +82,9 @@ namespace Displex.Controls
                 return;
             if (IsMetaContact(e))
             {
-                if (DateTime.Now.Subtract(lastTapTime).Seconds <= 1)
+                Console.WriteLine(DateTime.Now.Subtract(lastTapTime).Milliseconds);
+                DateTime now = DateTime.Now;
+                if (now.Subtract(lastTapTime).Seconds < 1 && now.Subtract(lastTapTime).Milliseconds < 300)
                 {
                     Minimized(this, new MinimizeEventArgs(device, MinimizeEventType.Minimized, e.Contact.GetPosition(null)));
                     e.Handled = true;
@@ -150,7 +158,8 @@ namespace Displex.Controls
                 return;
             if (IsMetaContact(e))
             {
-                Minimized(this, new MinimizeEventArgs(device, MinimizeEventType.Minimized, e.Contact.GetPosition(null)));
+                //Minimized(this, new MinimizeEventArgs(device, MinimizeEventType.Minimized, e.Contact.GetPosition(null)));
+                Disconnected(this, new TrackerEventArgs(device, TrackerEventType.Removed));
             }
             
             e.Handled = true;
