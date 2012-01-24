@@ -6,6 +6,8 @@
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{epstopdf}
+\usepackage{natbib}
+\bibpunct{[}{]}{;}{a}{}{,}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
 \title{Device Composition on Tabletop Computers}
@@ -27,38 +29,33 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
 \end{abstract}
 
 \tableofcontents
-
 \listoffigures
-
-%\part{Introduction}
 
 \include{introduction}
 
 \include{relatedwork}
 
-%\part{Design}
-
-\include{analysis}
+\include{theory}
 
 \include{design}
 
-%\part{Implementation}
-
-\include{implementation}
-
-%\part{Evaluation}
+\include{system}
 
 \include{evaluation}
 
-%\part{Conclusion}
-
 \include{conclusion}
 
-%\part{Appendices}
+%\cleardoublepage
+%\chapter*{Bibliography}
+\addcontentsline{toc}{chapter}{Bibliography}
 
-%\include{}
-
-\bibliographystyle{plain} %abbrv,ieeetr
+\bibliographystyle{plainnat} %abbrv,ieeetr
 \bibliography{../references}
+
+%\cleardoublepage
+%\part*{Appendices}
+%\addcontentsline{toc}{part}{Appendices}
+
+\include{scenarios}
 
 \end{document}

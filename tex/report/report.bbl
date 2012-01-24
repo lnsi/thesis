@@ -1,72 +1,110 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{11}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem{amnesia}
-http://www.amnesiarazorfish.com.au/2011/01/amnesia-razorfish-announces-gesture-sharing-for-smartphones-and-tablets-using-microsoft-surface-press-release.
+\bibitem[amn(2011)]{amnesia}
+http://www.amnesiarazorfish.com.au/2011/01/amnesia-razorfish-announces-gesture-sharing-for-smartphones-and-tablets-using-microsoft-surface-press-release,
+  2011.
 
-\bibitem{Bardram:2010:compute}
+\bibitem[Bardram et~al.(2010)Bardram, Fuglsang, and
+  Pedersen]{Bardram:2010:compute}
 Jakob~E. Bardram, Christina Fuglsang, and Simon~C. Pedersen.
 \newblock Compute: a runtime infrastructure for device composition.
-\newblock In {\em Proceedings of the International Conference on Advanced
+\newblock In \emph{Proceedings of the International Conference on Advanced
   Visual Interfaces}, AVI '10, pages 111--118, New York, NY, USA, 2010. ACM.
+\newblock ISBN 978-1-4503-0076-6.
+\newblock \doi{http://doi.acm.org/10.1145/1842993.1843014}.
+\newblock URL \url{http://doi.acm.org/10.1145/1842993.1843014}.
 
-\bibitem{Clifton:2010:sketchtop}
+\bibitem[Clifton et~al.(2011)Clifton, Mazalek, Sanford, R\'{e}bola, Lee, and
+  Powell]{Clifton:2010:sketchtop}
 Paul Clifton, Ali Mazalek, Jon Sanford, Claudia R\'{e}bola, Seunghyun Lee, and
   Natasha Powell.
 \newblock Sketchtop: design collaboration on a multi-touch tabletop.
-\newblock In {\em Proceedings of the fifth international conference on
+\newblock In \emph{Proceedings of the fifth international conference on
   Tangible, embedded, and embodied interaction}, TEI '11, pages 333--336, New
   York, NY, USA, 2011. ACM.
+\newblock ISBN 978-1-4503-0478-8.
+\newblock \doi{http://doi.acm.org/10.1145/1935701.1935778}.
+\newblock URL \url{http://doi.acm.org/10.1145/1935701.1935778}.
 
-\bibitem{Dietz:2001:diamondtouch}
+\bibitem[Dietz and Leigh(2001)]{Dietz:2001:diamondtouch}
 Paul Dietz and Darren Leigh.
 \newblock Diamondtouch: a multi-user touch technology.
-\newblock In {\em Proceedings of the 14th annual ACM symposium on User
+\newblock In \emph{Proceedings of the 14th annual ACM symposium on User
   interface software and technology}, UIST '01, pages 219--226, New York, NY,
   USA, 2001. ACM.
+\newblock ISBN 1-58113-438-X.
+\newblock \doi{http://doi.acm.org/10.1145/502348.502389}.
+\newblock URL \url{http://doi.acm.org/10.1145/502348.502389}.
 
-\bibitem{Dietz:2009:surfaceware}
+\bibitem[Dietz and Eidelson(2009)]{Dietz:2009:surfaceware}
 Paul~H. Dietz and Benjamin~D. Eidelson.
 \newblock Surfaceware: dynamic tagging for microsoft surface.
-\newblock In {\em Proceedings of the 3rd International Conference on Tangible
+\newblock In \emph{Proceedings of the 3rd International Conference on Tangible
   and Embedded Interaction}, TEI '09, pages 249--254, New York, NY, USA, 2009.
   ACM.
+\newblock ISBN 978-1-60558-493-5.
+\newblock \doi{http://doi.acm.org/10.1145/1517664.1517717}.
+\newblock URL \url{http://doi.acm.org/10.1145/1517664.1517717}.
 
-\bibitem{Hincapie:2011:rabbit}
+\bibitem[Hincapi{\'e}-Ramos et~al.(2011)Hincapi{\'e}-Ramos, Tabard, and
+  Bardram]{Hincapie:2011:rabbit}
 Juan~David Hincapi{\'e}-Ramos, Aur{\'e}lien Tabard, and Jakob~E. Bardram.
 \newblock Mediated tabletop interaction in the biology lab - exploring the
   design space of the rabbit.
-\newblock {\em Ubicomp}, 2011.
+\newblock \emph{Ubicomp}, 2011.
 
-\bibitem{Hunter:2011:memtable}
+\bibitem[Hunter et~al.(2011)Hunter, Maes, Scott, and
+  Kaufman]{Hunter:2011:memtable}
 Seth Hunter, Pattie Maes, Stacey Scott, and Henry Kaufman.
 \newblock Memtable: an integrated system for capture and recall of shared
   histories in group workspaces.
-\newblock In {\em Proceedings of the 2011 annual conference on Human factors in
-  computing systems}, CHI '11, pages 3305--3314, New York, NY, USA, 2011. ACM.
+\newblock In \emph{Proceedings of the 2011 annual conference on Human factors
+  in computing systems}, CHI '11, pages 3305--3314, New York, NY, USA, 2011.
+  ACM.
+\newblock ISBN 978-1-4503-0228-9.
+\newblock \doi{http://doi.acm.org/10.1145/1978942.1979432}.
+\newblock URL \url{http://doi.acm.org/10.1145/1978942.1979432}.
 
-\bibitem{Schmidt:2000:implicit}
+\bibitem[Schmidt(2000)]{Schmidt:2000:implicit}
 Albrecht Schmidt.
 \newblock Implicit human computer interaction through context.
-\newblock {\em Personal and Ubiquitous Computing}, 4:191--199, 2000.
+\newblock \emph{Personal and Ubiquitous Computing}, 4:\penalty0 191--199, 2000.
+\newblock \doi{10.1007/BF01324126}.
 
-\bibitem{Schmidt:2010:handsdown}
+\bibitem[Schmidt et~al.(2010)Schmidt, Chong, and
+  Gellersen]{Schmidt:2010:handsdown}
 Dominik Schmidt, Ming~Ki Chong, and Hans Gellersen.
 \newblock Handsdown: hand-contour-based user identification for interactive
   surfaces.
-\newblock In {\em Proceedings of the 6th Nordic Conference on Human-Computer
+\newblock In \emph{Proceedings of the 6th Nordic Conference on Human-Computer
   Interaction: Extending Boundaries}, NordiCHI '10, pages 432--441, New York,
   NY, USA, 2010. ACM.
+\newblock ISBN 978-1-60558-934-3.
+\newblock \doi{http://doi.acm.org/10.1145/1868914.1868964}.
+\newblock URL \url{http://doi.acm.org/10.1145/1868914.1868964}.
 
-\bibitem{Wellner:1993:digitaldesk}
+\bibitem[Wellner(1993)]{Wellner:1993:digitaldesk}
 Pierre Wellner.
 \newblock Interacting with paper on the digitaldesk.
-\newblock {\em Commun. ACM}, 36:87--96, July 1993.
+\newblock \emph{Commun. ACM}, 36:\penalty0 87--96, July 1993.
+\newblock ISSN 0001-0782.
+\newblock \doi{http://doi.acm.org/10.1145/159544.159630}.
+\newblock URL \url{http://doi.acm.org/10.1145/159544.159630}.
 
-\bibitem{Wobbrock:2009:gestures}
+\bibitem[Wobbrock et~al.(2009)Wobbrock, Morris, and
+  Wilson]{Wobbrock:2009:gestures}
 Jacob~O. Wobbrock, Meredith~Ringel Morris, and Andrew~D. Wilson.
 \newblock User-defined gestures for surface computing.
-\newblock In {\em Proceedings of the 27th international conference on Human
+\newblock In \emph{Proceedings of the 27th international conference on Human
   factors in computing systems}, CHI '09, pages 1083--1092, New York, NY, USA,
   2009. ACM.
+\newblock ISBN 978-1-60558-246-7.
+\newblock \doi{http://doi.acm.org/10.1145/1518701.1518866}.
+\newblock URL \url{http://doi.acm.org/10.1145/1518701.1518866}.
 
 \end{thebibliography}

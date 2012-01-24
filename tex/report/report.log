@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  18 JAN 2012 17:24
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  23 JAN 2012 18:29
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -143,22 +143,29 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 )))
-(./report.aux (./introduction.aux) (./relatedwork.aux) (./analysis.aux)
-(./design.aux) (./implementation.aux) (./evaluation.aux) (./conclusion.aux))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2009/11/07 8.31a (PWD, AO)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count92
+) (./report.aux
+(./introduction.aux) (./relatedwork.aux) (./theory.aux) (./design.aux)
+(./system.aux) (./evaluation.aux) (./conclusion.aux) (./scenarios.aux))
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -196,22 +203,22 @@ LaTeX Font Info:    ... okay on input line 15.
 
 (/usr/local/texlive/2010/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count92
+\scratchcounter=\count93
 \scratchdimen=\dimen113
 \scratchbox=\box26
-\nofMPsegments=\count93
-\nofMParguments=\count94
+\nofMPsegments=\count94
+\nofMParguments=\count95
 \everyMPshowfont=\toks17
-\MPscratchCnt=\count95
+\MPscratchCnt=\count96
 \MPscratchDim=\dimen114
-\MPnumerator=\count96
+\MPnumerator=\count97
 \everyMPtoPDFconversion=\toks18
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 16.
+LaTeX Font Info:    Try loading font information for U+msa on input line 18.
  (/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 16.
+LaTeX Font Info:    Try loading font information for U+msb on input line 18.
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -264,83 +271,78 @@ Chapter 2.
 
 
 ]
-\openout2 = `analysis.aux'.
+\openout2 = `theory.aux'.
 
- (./analysis.tex
+ (./theory.tex
 Chapter 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--15
-
- []
-
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Õ in font cmr10!
-Missing character: There is no Õ in font cmr10!
-Missing character: There is no Õ in font cmr10!
-[8
+) [8
 
 
 
 ]
-Missing character: There is no Õ in font cmr10!
-Missing character: There is no Õ in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Õ in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Õ in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Õ in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Õ in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Õ in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Õ in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Õ in font cmr10!
- [9]
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Õ in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Õ in font cmr10!
- [10] [11] [12]) [13]
 \openout2 = `design.aux'.
 
  (./design.tex
 Chapter 4.
+[9
+
+
+
+]
+Package epstopdf Info: Source file: <images/useCase.eps>
+(epstopdf)                    date: 2012-01-23 17:47:56
+(epstopdf)                    size: 481685 bytes
+(epstopdf)             Output file: <images/useCase-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-01-23 17:49:02
+(epstopdf)                    size: 83789 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/useCase-eps-converte
+d-to.pdf images/useCase.eps>
+(epstopdf)             \includegraphics on input line 42.
+Package epstopdf Info: Output file is already uptodate.
+ <images/useCase-eps-converted-to.pdf, id=45, 495.8525pt x 165.61874pt>
+File: images/useCase-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/useCase-eps-converted-to.pdf> [10 <./images/useCase-eps-converted-t
+o.pdf>] [11] [12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 198--208
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--208
+
+ []
+
+[14] [15]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 23.
+               Default added (so using `tbp') on input line 331.
 
-<images/primHistog.pdf, id=59, 419.166pt x 437.4744pt>
+<images/primHistog.pdf, id=84, 419.166pt x 437.4744pt>
 File: images/primHistog.pdf Graphic file (type pdf)
 
 <use images/primHistog.pdf>
-Overfull \hbox (0.9113pt too wide) in paragraph at lines 26--27
+Overfull \hbox (0.9113pt too wide) in paragraph at lines 334--335
  [][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 29.
+               Default added (so using `tbp') on input line 337.
 
-<images/stratHistog.pdf, id=60, 419.166pt x 437.4744pt>
+<images/stratHistog.pdf, id=85, 419.166pt x 437.4744pt>
 File: images/stratHistog.pdf Graphic file (type pdf)
 
 <use images/stratHistog.pdf>
-Overfull \hbox (0.9113pt too wide) in paragraph at lines 32--33
+Overfull \hbox (0.9113pt too wide) in paragraph at lines 340--341
  [][] 
  []
 
-) [14
+) [16] [17 <./images/primHistog.pdf>] [18 <./images/stratHistog.pdf>]
+\openout2 = `system.aux'.
 
 
-
-] [15 <./images/primHistog.pdf>] [16 <./images/stratHistog.pdf>]
-\openout2 = `implementation.aux'.
-
-
-(./implementation.tex
+(./system.tex
 Chapter 5.
 
 Overfull \hbox (5.3744pt too wide) in paragraph at lines 19--22
@@ -353,16 +355,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
-[17
+[19
 
 
 
-]) [18]
+]) [20]
 \openout2 = `evaluation.aux'.
 
  (./evaluation.tex
 Chapter 6.
-) [19
+) [21
 
 
 
@@ -371,51 +373,129 @@ Chapter 6.
 
  (./conclusion.tex
 Chapter 7.
-[20
+[22
 
 
 
 ]
 Chapter 8.
-) [21
+) [23
 
 ] (./report.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 4--5
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
 []\OT1/cmr/m/n/12 http://www.amnesiarazorfish.com.au/2011/01/amnesia-razorfish-
 announces-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--5
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
 \OT1/cmr/m/n/12 gesture-sharing-for-smartphones-and-tablets-using-microsoft-sur
 face-press-
  []
 
-[22
+
+Underfull \hbox (badness 1509) in paragraph at lines 14--21
+[]\OT1/cmr/m/n/12 Jakob E. Bardram, Christina Fuglsang, and Si-mon C. Ped-er-se
+n.  Com-
+ []
 
 
-]) [23] (./report.aux (./introduction.aux) (./relatedwork.aux)
-(./analysis.aux) (./design.aux) (./implementation.aux) (./evaluation.aux)
-(./conclusion.aux)) ) 
+Underfull \hbox (badness 2941) in paragraph at lines 14--21
+\OT1/cmr/m/n/12 pute: a run-time in-fras-truc-ture for de-vice com-po-si-tion. 
+ In \OT1/cmr/m/it/12 Pro-ceed-
+ []
+
+
+Underfull \hbox (badness 2165) in paragraph at lines 14--21
+\OT1/cmr/m/n/12 '10, pages 111--118, New York, NY, USA, 2010. ACM.  ISBN 978-
+ []
+
+
+Underfull \hbox (badness 1448) in paragraph at lines 14--21
+\OT1/cmr/m/n/12 1-4503-0076-6.  doi: http://doi.acm.org/10.1145/1842993.1843014
+.  URL
+ []
+
+
+Underfull \hbox (badness 6559) in paragraph at lines 45--53
+[]\OT1/cmr/m/n/12 Paul H. Di-etz and Ben-jamin D. Ei-del-son.  Sur-face-ware: d
+y-namic
+ []
+
+
+Underfull \hbox (badness 8151) in paragraph at lines 45--53
+\OT1/cmr/m/n/12 tag-ging for mi-crosoft sur-face.  In \OT1/cmr/m/it/12 Pro-ceed
+-ings of the 3rd In-ter-
+ []
+
+
+Underfull \hbox (badness 4132) in paragraph at lines 45--53
+\OT1/cmr/m/it/12 na-tional Con-fer-ence on Tan-gi-ble and Em-bed-ded In-ter-ac-
+tion\OT1/cmr/m/n/12 , TEI '09,
+ []
+
+
+Underfull \hbox (badness 4832) in paragraph at lines 45--53
+\OT1/cmr/m/n/12 pages 249--254, New York, NY, USA, 2009. ACM.  ISBN 978-1-
+ []
+
+
+Underfull \hbox (badness 2884) in paragraph at lines 45--53
+\OT1/cmr/m/n/12 60558-493-5.  doi: http://doi.acm.org/10.1145/1517664.1517717. 
+ URL
+ []
+
+[24
+
+
+]
+Underfull \hbox (badness 1019) in paragraph at lines 101--109
+\OT1/cmr/m/n/12 defined ges-tures for sur-face com-put-ing.  In \OT1/cmr/m/it/1
+2 Pro-ceed-ings of the 27th in-
+ []
+
+
+Underfull \hbox (badness 3029) in paragraph at lines 101--109
+\OT1/cmr/m/n/12 pages 1083--1092, New York, NY, USA, 2009. ACM.  ISBN 978-1-
+ []
+
+
+Underfull \hbox (badness 2884) in paragraph at lines 101--109
+\OT1/cmr/m/n/12 60558-246-7.  doi: http://doi.acm.org/10.1145/1518701.1518866. 
+ URL
+ []
+
+) [25]
+\openout2 = `scenarios.aux'.
+
+ (./scenarios.tex
+Appendix A.
+[26
+
+
+]) [27] (./report.aux (./introduction.aux) (./relatedwork.aux) (./theory.aux) (
+./design.aux) (./system.aux) (./evaluation.aux) (./conclusion.aux)
+(./scenarios.aux)) ) 
 Here is how much of TeX's memory you used:
- 2208 strings out of 493747
- 30856 string characters out of 3143546
- 90398 words of memory out of 3000000
- 5424 multiletter control sequences out of 15000+200000
- 14003 words of font info for 53 fonts, out of 3000000 for 9000
+ 2595 strings out of 493747
+ 35815 string characters out of 3143546
+ 97202 words of memory out of 3000000
+ 5786 multiletter control sequences out of 15000+200000
+ 14172 words of font info for 54 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 41i,6n,24p,1175b,226s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2010/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmbx12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr17.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmti12.pfb>
-Output written on report.pdf (26 pages, 1540982 bytes).
+ 41i,6n,24p,1192b,226s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmbx12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr17.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmti12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mtt12.pfb>
+Output written on report.pdf (30 pages, 1636704 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 158 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
