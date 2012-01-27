@@ -3,7 +3,7 @@
 \contentsline {chapter}{\numberline {2}Related Work}{7}
 \contentsline {chapter}{\numberline {3}Theory}{8}
 \contentsline {chapter}{\numberline {4}Design}{9}
-\contentsline {section}{\numberline {4.1}Enhancing mobile computing with tabletops (application context analysis)}{9}
+\contentsline {section}{\numberline {4.1}Enhancing mobile computing with tabletops}{9}
 \contentsline {subsection}{\numberline {4.1.1}The devices}{10}
 \contentsline {subsubsection}{Tabletops}{10}
 \contentsline {subsubsection}{Mobile computing devices}{11}
@@ -12,37 +12,49 @@
 \contentsline {subsubsection}{Multi users on a public tabletop}{12}
 \contentsline {subsubsection}{Single user on a private tabletop}{13}
 \contentsline {section}{\numberline {4.2}Solution requirements}{13}
-\contentsline {subsection}{\numberline {4.2.1}Detection and pairing}{13}
-\contentsline {subsection}{\numberline {4.2.2}UI transfer}{13}
-\contentsline {subsection}{\numberline {4.2.3}Surface UI}{13}
-\contentsline {subsection}{\numberline {4.2.4}Tangible UI}{13}
-\contentsline {section}{\numberline {4.3}Interaction design}{14}
-\contentsline {subsection}{\numberline {4.3.1}Storyboards}{14}
-\contentsline {subsection}{\numberline {4.3.2}Generating ideas with low fidelity prototypes}{14}
-\contentsline {subsection}{\numberline {4.3.3}Commands and actions}{14}
-\contentsline {subsection}{\numberline {4.3.4}Interaction strategies}{15}
-\contentsline {section}{\numberline {4.4}Preliminary usability study}{15}
-\contentsline {subsection}{\numberline {4.4.1}Method}{16}
-\contentsline {subsubsection}{Parameters}{16}
-\contentsline {subsubsection}{Participants}{16}
-\contentsline {subsubsection}{Experiment}{16}
-\contentsline {subsection}{\numberline {4.4.2}Results}{16}
-\contentsline {section}{\numberline {4.5}Design Choices}{16}
-\contentsline {subsection}{\numberline {4.5.1}users best}{16}
-\contentsline {subsection}{\numberline {4.5.2}designers best}{16}
-\contentsline {subsection}{\numberline {4.5.3}hybrid}{16}
-\contentsline {chapter}{\numberline {5}The TIDE application: Tabletop Interactive Display Extension for mobile devices}{19}
-\contentsline {section}{\numberline {5.1}Device Composition}{20}
-\contentsline {subsection}{\numberline {5.1.1}Device setup}{20}
-\contentsline {subsection}{\numberline {5.1.2}Detection and discovery}{20}
-\contentsline {subsection}{\numberline {5.1.3}Vision-based device tracking}{20}
-\contentsline {subsection}{\numberline {5.1.4}UI transfer}{20}
-\contentsline {section}{\numberline {5.2}Surface application UI}{20}
-\contentsline {subsection}{\numberline {5.2.1}}{20}
-\contentsline {chapter}{\numberline {6}Evaluation}{21}
-\contentsline {section}{\numberline {6.1}Experiment}{21}
-\contentsline {section}{\numberline {6.2}Results}{21}
-\contentsline {chapter}{\numberline {7}Discussion}{22}
-\contentsline {chapter}{\numberline {8}Conclusion}{23}
-\contentsline {chapter}{Bibliography}{24}
-\contentsline {chapter}{\numberline {A}Scenarios}{26}
+\contentsline {subsection}{\numberline {4.2.1}Pairing}{13}
+\contentsline {subsection}{\numberline {4.2.2}Remote UI}{13}
+\contentsline {subsection}{\numberline {4.2.3}Surface UI}{14}
+\contentsline {subsection}{\numberline {4.2.4}Tangible UI}{14}
+\contentsline {section}{\numberline {4.3}Interaction design: the surface UI}{14}
+\contentsline {subsection}{\numberline {4.3.1}Generating ideas}{15}
+\contentsline {subsubsection}{Storyboards}{15}
+\contentsline {subsubsection}{Low fidelity prototypes}{15}
+\contentsline {subsection}{\numberline {4.3.2}Defining interaction stragegies}{15}
+\contentsline {subsubsection}{Commands}{16}
+\contentsline {subsubsection}{Actions}{17}
+\contentsline {section}{\numberline {4.4}Preliminary usability study}{17}
+\contentsline {subsection}{\numberline {4.4.1}Method}{17}
+\contentsline {subsubsection}{Parameters}{17}
+\contentsline {subsubsection}{Experiment}{18}
+\contentsline {subsection}{\numberline {4.4.2}Results}{19}
+\contentsline {subsubsection}{Analysis}{20}
+\contentsline {subsubsection}{Open suggestion analysis}{22}
+\contentsline {section}{\numberline {4.5}Design Decisions}{23}
+\contentsline {chapter}{\numberline {5}The TIDE application: Tabletop Interactive Display Extension for mobile devices}{25}
+\contentsline {section}{\numberline {5.1}Device Composition}{26}
+\contentsline {subsection}{\numberline {5.1.1}Device setup}{26}
+\contentsline {subsection}{\numberline {5.1.2}Detection and discovery}{26}
+\contentsline {subsection}{\numberline {5.1.3}Vision-based device tracking}{26}
+\contentsline {subsection}{\numberline {5.1.4}UI transfer}{26}
+\contentsline {section}{\numberline {5.2}Surface application UI}{26}
+\contentsline {subsection}{\numberline {5.2.1}}{26}
+\contentsline {chapter}{\numberline {6}Evaluation}{27}
+\contentsline {section}{\numberline {6.1}Experiment}{27}
+\contentsline {section}{\numberline {6.2}Results}{27}
+\contentsline {chapter}{\numberline {7}Discussion}{28}
+\contentsline {chapter}{\numberline {8}Conclusion}{29}
+\contentsline {chapter}{Bibliography}{30}
+\setcounter {tocdepth}{0}
+\contentsline {chapter}{\numberline {A}Scenarios}{32}
+\contentsline {chapter}{\numberline {B}Preliminary usability study - experiment script}{34}
+\contentsline {section}{\numberline {B.1}Introduction}{34}
+\contentsline {subsection}{\numberline {B.1.1}Example: Pairing}{35}
+\contentsline {section}{\numberline {B.2}Experiment}{36}
+\contentsline {subsection}{\numberline {B.2.1}Dragging}{36}
+\contentsline {subsection}{\numberline {B.2.2}Rotating}{36}
+\contentsline {subsection}{\numberline {B.2.3}Resizing}{37}
+\contentsline {subsection}{\numberline {B.2.4}Minimizing}{38}
+\contentsline {subsection}{\numberline {B.2.5}Hiding}{38}
+\contentsline {subsection}{\numberline {B.2.6}Exiting}{39}
+\contentsline {chapter}{\numberline {C}Preliminary usability study - result form.}{40}

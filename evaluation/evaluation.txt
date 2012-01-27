@@ -1,9 +1,35 @@
 EVALUATION
 
-3 implementations (designers best, users best, combination)
+log everything (timestamp, command, action, user, session)
 
-3 tasks, one for each implementation.
+STRUCTURE:
 
-after each task, general questionnaire: feedback on user experience?
+discovery phase: 5 min to themselves
 
-final questionnaire: Would you use such an application?
+teaching phase for each primitive (5):
+1) ask them to do it
+	- do they know how to do it
+	- which technique do they use?
+2) ask them if they know of other technique
+- if yes, which? show?
+- if no, tell them. show?
+
+scenario phase:
+1) browsing:
+- pair Legend
+- look up sthg online: remote UI, dragging, resizing
+- shoe me sthg: rotating
+- hide stag from someone: minimizing/hiding
+
+2) gaming (designer is opponent)
+- pair iPhone
+- launch game: remote UI
+- resize to fullscreen (maximize)
+- exit
+
+questionnaire phase: google forms?
+= straightforward user satisfaction study
+- rate the experience: usable? engaging?
+- would you use such a system?
+- how intuitive is the system?
+

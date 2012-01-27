@@ -1,13 +1,15 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{13}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[amn(2011)]{amnesia}
-http://www.amnesiarazorfish.com.au/2011/01/amnesia-razorfish-announces-gesture-sharing-for-smartphones-and-tablets-using-microsoft-surface-press-release,
-  2011.
+\bibitem[Apple(2012)]{iphone}
+Apple.
+\newblock iphone.
+\newblock \url{http://www.apple.com/iphone/}, 2012.
+\newblock (accessed 2/12).
 
 \bibitem[Bardram et~al.(2010)Bardram, Fuglsang, and
   Pedersen]{Bardram:2010:compute}
@@ -18,6 +20,13 @@ Jakob~E. Bardram, Christina Fuglsang, and Simon~C. Pedersen.
 \newblock ISBN 978-1-4503-0076-6.
 \newblock \doi{http://doi.acm.org/10.1145/1842993.1843014}.
 \newblock URL \url{http://doi.acm.org/10.1145/1842993.1843014}.
+
+\bibitem[Benyon(2010)]{Benyon:2010}
+David Benyon.
+\newblock \emph{Designing interactive systems: a comprehensive guide to HCI and
+  interaction design}.
+\newblock Addison Wesley, 2010.
+\newblock URL \url{http://books.google.com/books?id=P923PwAACAAJ}.
 
 \bibitem[Clifton et~al.(2011)Clifton, Mazalek, Sanford, R\'{e}bola, Lee, and
   Powell]{Clifton:2010:sketchtop}
@@ -69,6 +78,12 @@ Seth Hunter, Pattie Maes, Stacey Scott, and Henry Kaufman.
 \newblock ISBN 978-1-4503-0228-9.
 \newblock \doi{http://doi.acm.org/10.1145/1978942.1979432}.
 \newblock URL \url{http://doi.acm.org/10.1145/1978942.1979432}.
+
+\bibitem[Microsoft(2012)]{ms}
+Microsoft.
+\newblock Microsoft surface.
+\newblock \url{http://www.microsoft.com/surface/}, 2012.
+\newblock (accessed 2/12).
 
 \bibitem[Schmidt(2000)]{Schmidt:2000:implicit}
 Albrecht Schmidt.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  23 JAN 2012 18:29
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  27 JAN 2012 14:47
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -149,23 +149,48 @@ Package: natbib 2009/11/07 8.31a (PWD, AO)
 \bibsep=\skip44
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count92
-) (./report.aux
-(./introduction.aux) (./relatedwork.aux) (./theory.aux) (./design.aux)
-(./system.aux) (./evaluation.aux) (./conclusion.aux) (./scenarios.aux))
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/tocvsec2/tocvsec2.sty
+Package: tocvsec2 2010/02/27 v1.2b variable ToC section entries
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2010/01/09 v3.1m Customizing captions (AR)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2010/01/14 v3.1m caption3 kernel (AR)
+\captionmargin=\dimen113
+\captionmargin@=\dimen114
+\captionwidth=\dimen115
+\caption@indent=\dimen116
+\caption@parindent=\dimen117
+\caption@hangindent=\dimen118
+)
+\c@ContinuedFloat=\count93
+)
+(./report.aux (./introduction.aux) (./relatedwork.aux) (./theory.aux)
+(./design.aux) (./system.aux) (./evaluation.aux) (./conclusion.aux)
+(./scenarios.aux) (./study.aux) (./studyform.aux
+
+LaTeX Warning: Label `studyScreenshot' multiply defined.
+
+))
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -203,22 +228,24 @@ LaTeX Font Info:    ... okay on input line 17.
 
 (/usr/local/texlive/2010/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count93
-\scratchdimen=\dimen113
+\scratchcounter=\count94
+\scratchdimen=\dimen119
 \scratchbox=\box26
-\nofMPsegments=\count94
-\nofMParguments=\count95
+\nofMPsegments=\count95
+\nofMParguments=\count96
 \everyMPshowfont=\toks17
-\MPscratchCnt=\count96
-\MPscratchDim=\dimen114
-\MPnumerator=\count97
+\MPscratchCnt=\count97
+\MPscratchDim=\dimen120
+\MPnumerator=\count98
 \everyMPtoPDFconversion=\toks18
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 18.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 20.
  (/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 18.
+LaTeX Font Info:    Try loading font information for U+msb on input line 20.
 
 (/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -297,52 +324,102 @@ Package epstopdf Info: Source file: <images/useCase.eps>
 (epstopdf)                    size: 83789 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/useCase-eps-converte
 d-to.pdf images/useCase.eps>
-(epstopdf)             \includegraphics on input line 42.
+(epstopdf)             \includegraphics on input line 38.
 Package epstopdf Info: Output file is already uptodate.
  <images/useCase-eps-converted-to.pdf, id=45, 495.8525pt x 165.61874pt>
 File: images/useCase-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/useCase-eps-converted-to.pdf> [10 <./images/useCase-eps-converted-t
 o.pdf>] [11] [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 198--208
+
+LaTeX Warning: Reference `' on page 14 undefined on input line 209.
+
+[14]
+Package epstopdf Info: Source file: <images/paperProtDouble.eps>
+(epstopdf)                    date: 2012-01-24 17:53:24
+(epstopdf)                    size: 6165450 bytes
+(epstopdf)             Output file: <images/paperProtDouble-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2012-01-24 17:54:36
+(epstopdf)                    size: 370794 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/paperProtDouble-eps-
+converted-to.pdf images/paperProtDouble.eps>
+(epstopdf)             \includegraphics on input line 241.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/paperProtDouble-eps-converted-to.pdf, id=83, 433.62pt x 161.60374pt>
+File: images/paperProtDouble-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/paperProtDouble-eps-converted-to.pdf> [15] [16 <./images/paperProtD
+ouble-eps-converted-to.pdf>]
+<images/studyScreenshot.png, id=95, 1240.635pt x 806.01125pt>
+File: images/studyScreenshot.png Graphic file (type png)
+
+<use images/studyScreenshot.png> [17]
+Underfull \hbox (badness 10000) in paragraph at lines 328--335
 
  []
 
+[18 <./images/studyScreenshot.png (PNG copy)>]
+Package epstopdf Info: Source file: <images/groups.eps>
+(epstopdf)                    date: 2012-01-25 18:05:26
+(epstopdf)                    size: 1894578 bytes
+(epstopdf)             Output file: <images/groups-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-01-25 18:06:39
+(epstopdf)                    size: 29774 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/groups-eps-converted
+-to.pdf images/groups.eps>
+(epstopdf)             \includegraphics on input line 362.
+Package epstopdf Info: Output file is already uptodate.
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--208
+<images/groups-eps-converted-to.pdf, id=102, 228.855pt x 102.3825pt>
+File: images/groups-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/groups-eps-converted-to.pdf> [19 <./images/groups-eps-converted-to.
+pdf>]
+Package epstopdf Info: Source file: <images/resultMatrix.eps>
+(epstopdf)                    date: 2012-01-27 09:45:07
+(epstopdf)                    size: 3869884 bytes
+(epstopdf)             Output file: <images/resultMatrix-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-01-27 09:45:35
+(epstopdf)                    size: 70772 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/resultMatrix-eps-con
+verted-to.pdf images/resultMatrix.eps>
+(epstopdf)             \includegraphics on input line 383.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/resultMatrix-eps-converted-to.pdf, id=110, 407.5225pt x 121.45375pt>
+File: images/resultMatrix-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/resultMatrix-eps-converted-to.pdf>
+Package epstopdf Info: Source file: <images/primHistog.eps>
+(epstopdf)                    date: 2012-01-25 18:50:54
+(epstopdf)                    size: 13876278 bytes
+(epstopdf)             Output file: <images/primHistog-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-01-25 18:51:18
+(epstopdf)                    size: 334289 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/primHistog-eps-conve
+rted-to.pdf images/primHistog.eps>
+(epstopdf)             \includegraphics on input line 390.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/primHistog-eps-converted-to.pdf, id=111, 386.44376pt x 409.53pt>
+File: images/primHistog-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/primHistog-eps-converted-to.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[20 <./images/resultMatrix-eps-converted-to.pdf>] [21 <./images/primHistog-eps-
+converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 457--465
 
  []
 
-[14] [15]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 331.
-
-<images/primHistog.pdf, id=84, 419.166pt x 437.4744pt>
-File: images/primHistog.pdf Graphic file (type pdf)
-
-<use images/primHistog.pdf>
-Overfull \hbox (0.9113pt too wide) in paragraph at lines 334--335
- [][] 
- []
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 337.
-
-<images/stratHistog.pdf, id=85, 419.166pt x 437.4744pt>
-File: images/stratHistog.pdf Graphic file (type pdf)
-
-<use images/stratHistog.pdf>
-Overfull \hbox (0.9113pt too wide) in paragraph at lines 340--341
- [][] 
- []
-
-) [16] [17 <./images/primHistog.pdf>] [18 <./images/stratHistog.pdf>]
+[22]) [23] [24]
 \openout2 = `system.aux'.
 
-
-(./system.tex
+ (./system.tex
 Chapter 5.
 
 Overfull \hbox (5.3744pt too wide) in paragraph at lines 19--22
@@ -355,16 +432,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
-[19
+[25
 
 
 
-]) [20]
+]) [26]
 \openout2 = `evaluation.aux'.
 
  (./evaluation.tex
 Chapter 6.
-) [21
+) [27
 
 
 
@@ -373,129 +450,168 @@ Chapter 6.
 
  (./conclusion.tex
 Chapter 7.
-[22
+[28
 
 
 
 ]
 Chapter 8.
-) [23
+) [29
 
 ] (./report.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 9--11
-[]\OT1/cmr/m/n/12 http://www.amnesiarazorfish.com.au/2011/01/amnesia-razorfish-
-announces-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--11
-\OT1/cmr/m/n/12 gesture-sharing-for-smartphones-and-tablets-using-microsoft-sur
-face-press-
- []
-
-
-Underfull \hbox (badness 1509) in paragraph at lines 14--21
+Underfull \hbox (badness 1509) in paragraph at lines 16--23
 []\OT1/cmr/m/n/12 Jakob E. Bardram, Christina Fuglsang, and Si-mon C. Ped-er-se
 n.  Com-
  []
 
 
-Underfull \hbox (badness 2941) in paragraph at lines 14--21
+Underfull \hbox (badness 2941) in paragraph at lines 16--23
 \OT1/cmr/m/n/12 pute: a run-time in-fras-truc-ture for de-vice com-po-si-tion. 
  In \OT1/cmr/m/it/12 Pro-ceed-
  []
 
 
-Underfull \hbox (badness 2165) in paragraph at lines 14--21
+Underfull \hbox (badness 2165) in paragraph at lines 16--23
 \OT1/cmr/m/n/12 '10, pages 111--118, New York, NY, USA, 2010. ACM.  ISBN 978-
  []
 
 
-Underfull \hbox (badness 1448) in paragraph at lines 14--21
+Underfull \hbox (badness 1448) in paragraph at lines 16--23
 \OT1/cmr/m/n/12 1-4503-0076-6.  doi: http://doi.acm.org/10.1145/1842993.1843014
 .  URL
  []
 
 
-Underfull \hbox (badness 6559) in paragraph at lines 45--53
+Underfull \hbox (badness 3815) in paragraph at lines 25--30
+[]\OT1/cmr/m/n/12 David Benyon.  \OT1/cmr/m/it/12 De-sign-ing in-ter-ac-tive sy
+s-tems: a com-pre-hen-sive guide
+ []
+
+
+Underfull \hbox (badness 7740) in paragraph at lines 25--30
+\OT1/cmr/m/it/12 to HCI and in-ter-ac-tion de-sign\OT1/cmr/m/n/12 .  Ad-di-son 
+Wes-ley, 2010.  URL
+ []
+
+
+Underfull \hbox (badness 6559) in paragraph at lines 54--62
 []\OT1/cmr/m/n/12 Paul H. Di-etz and Ben-jamin D. Ei-del-son.  Sur-face-ware: d
 y-namic
  []
 
 
-Underfull \hbox (badness 8151) in paragraph at lines 45--53
+Underfull \hbox (badness 8151) in paragraph at lines 54--62
 \OT1/cmr/m/n/12 tag-ging for mi-crosoft sur-face.  In \OT1/cmr/m/it/12 Pro-ceed
 -ings of the 3rd In-ter-
  []
 
 
-Underfull \hbox (badness 4132) in paragraph at lines 45--53
+Underfull \hbox (badness 4132) in paragraph at lines 54--62
 \OT1/cmr/m/it/12 na-tional Con-fer-ence on Tan-gi-ble and Em-bed-ded In-ter-ac-
 tion\OT1/cmr/m/n/12 , TEI '09,
  []
 
 
-Underfull \hbox (badness 4832) in paragraph at lines 45--53
+Underfull \hbox (badness 4832) in paragraph at lines 54--62
 \OT1/cmr/m/n/12 pages 249--254, New York, NY, USA, 2009. ACM.  ISBN 978-1-
  []
 
 
-Underfull \hbox (badness 2884) in paragraph at lines 45--53
+Underfull \hbox (badness 2884) in paragraph at lines 54--62
 \OT1/cmr/m/n/12 60558-493-5.  doi: http://doi.acm.org/10.1145/1517664.1517717. 
  URL
  []
 
-[24
+[30
 
 
 ]
-Underfull \hbox (badness 1019) in paragraph at lines 101--109
+Underfull \hbox (badness 1019) in paragraph at lines 116--124
 \OT1/cmr/m/n/12 defined ges-tures for sur-face com-put-ing.  In \OT1/cmr/m/it/1
 2 Pro-ceed-ings of the 27th in-
  []
 
 
-Underfull \hbox (badness 3029) in paragraph at lines 101--109
+Underfull \hbox (badness 3029) in paragraph at lines 116--124
 \OT1/cmr/m/n/12 pages 1083--1092, New York, NY, USA, 2009. ACM.  ISBN 978-1-
  []
 
 
-Underfull \hbox (badness 2884) in paragraph at lines 101--109
+Underfull \hbox (badness 2884) in paragraph at lines 116--124
 \OT1/cmr/m/n/12 60558-246-7.  doi: http://doi.acm.org/10.1145/1518701.1518866. 
  URL
  []
 
-) [25]
+) [31]
 \openout2 = `scenarios.aux'.
 
  (./scenarios.tex
 Appendix A.
-[26
+[32
 
 
-]) [27] (./report.aux (./introduction.aux) (./relatedwork.aux) (./theory.aux) (
-./design.aux) (./system.aux) (./evaluation.aux) (./conclusion.aux)
-(./scenarios.aux)) ) 
+]) [33]
+\openout2 = `study.aux'.
+
+ (./study.tex
+Appendix B.
+[34
+
+
+
+] [35] [36] [37] [38]) [39]
+\openout2 = `studyform.aux'.
+
+ (./studyform.tex
+Appendix C.
+Package epstopdf Info: Source file: <images/studyForm.eps>
+(epstopdf)                    date: 2012-01-27 08:15:30
+(epstopdf)                    size: 20725374 bytes
+(epstopdf)             Output file: <images/studyForm-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-01-27 08:20:47
+(epstopdf)                    size: 82496 bytes
+(epstopdf)             Command: <epstopdf --outfile=images/studyForm-eps-conver
+ted-to.pdf images/studyForm.eps>
+(epstopdf)             \includegraphics on input line 6.
+Package epstopdf Info: Output file is already uptodate.
+<images/studyForm-eps-converted-to.pdf, id=184, 717.68124pt x 339.2675pt>
+File: images/studyForm-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/studyForm-eps-converted-to.pdf>) [40
+
+
+
+ <./images/studyForm-eps-converted-to.pdf>] (./report.aux (./introduction.aux) 
+(./relatedwork.aux)
+(./theory.aux) (./design.aux) (./system.aux) (./evaluation.aux)
+(./conclusion.aux) (./scenarios.aux) (./study.aux) (./studyform.aux))
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2595 strings out of 493747
- 35815 string characters out of 3143546
- 97202 words of memory out of 3000000
- 5786 multiletter control sequences out of 15000+200000
- 14172 words of font info for 54 fonts, out of 3000000 for 9000
+ 3653 strings out of 493747
+ 54882 string characters out of 3143546
+ 125266 words of memory out of 3000000
+ 6812 multiletter control sequences out of 15000+200000
+ 14480 words of font info for 55 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 41i,6n,24p,1192b,226s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr17.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmti12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mtt12.pfb>
-Output written on report.pdf (30 pages, 1636704 bytes).
+ 41i,6n,38p,1175b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
+local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
+ocal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/lo
+cal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on report.pdf (43 pages, 2010783 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
+ 223 PDF objects out of 1000 (max. 8388607)
+ 140 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

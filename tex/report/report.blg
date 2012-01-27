@@ -9,49 +9,46 @@ A level-1 auxiliary file: system.aux
 A level-1 auxiliary file: evaluation.aux
 A level-1 auxiliary file: conclusion.aux
 The style file: plainnat.bst
+A level-1 auxiliary file: scenarios.aux
 Database file #1: ../references.bib
-Warning--entry type for "amnesia" isn't style-file defined
---line 775 of file ../references.bib
-Warning--to sort, need author or key in amnesia
-You've used 11 entries,
+You've used 13 entries,
             2773 wiz_defined-function locations,
-            693 strings with 7950 characters,
-and the built_in function-call counts, 6420 in all, are:
-= -- 677
-> -- 278
-< -- 11
-+ -- 95
-- -- 84
-* -- 493
-:= -- 925
-add.period$ -- 63
-call.type$ -- 11
-change.case$ -- 61
-chr.to.int$ -- 11
-cite$ -- 24
-duplicate$ -- 308
-empty$ -- 511
-format.name$ -- 98
-if$ -- 1437
+            709 strings with 8120 characters,
+and the built_in function-call counts, 7105 in all, are:
+= -- 737
+> -- 308
+< -- 14
++ -- 106
+- -- 93
+* -- 522
+:= -- 1053
+add.period$ -- 74
+call.type$ -- 13
+change.case$ -- 69
+chr.to.int$ -- 13
+cite$ -- 26
+duplicate$ -- 343
+empty$ -- 572
+format.name$ -- 110
+if$ -- 1576
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 10
-newline$ -- 86
-num.names$ -- 40
-pop$ -- 103
+missing$ -- 12
+newline$ -- 101
+num.names$ -- 52
+pop$ -- 124
 preamble$ -- 1
-purify$ -- 50
+purify$ -- 57
 quote$ -- 0
-skip$ -- 256
+skip$ -- 278
 stack$ -- 0
-substring$ -- 307
-swap$ -- 79
+substring$ -- 310
+swap$ -- 81
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 121
-warning$ -- 1
-while$ -- 55
+type$ -- 138
+warning$ -- 0
+while$ -- 64
 width$ -- 0
-write$ -- 215
-(There were 2 warnings)
+write$ -- 249
