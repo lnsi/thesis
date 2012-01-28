@@ -42,7 +42,7 @@ namespace Displex.Detection
             return height;
         }
 
-        private string ip = "10.1.1.198";
+        private string ip = "10.1.1.199";
         public string Ip()
         {
             return ip;

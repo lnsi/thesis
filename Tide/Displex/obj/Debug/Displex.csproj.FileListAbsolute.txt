@@ -56,3 +56,5 @@ C:\LeoThesis\thesis\Displex\Displex\obj\Debug\MainWindow.g.cs
 C:\LeoThesis\thesis\Displex\Displex\obj\Debug\MainWindow.baml
 C:\LeoThesis\thesis\Displex\Displex\obj\Debug\Controls\Dialog.baml
 C:\LeoThesis\thesis\Displex\Displex\obj\Debug\Controls\Dialog.g.cs
+C:\LeoThesis\thesis\Tide\Displex\obj\Debug\Displex.exe
+C:\LeoThesis\thesis\Tide\Displex\obj\Debug\Displex.pdb
