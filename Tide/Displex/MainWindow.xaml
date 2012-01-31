@@ -47,9 +47,6 @@
 
     </Grid>-->
         </s:ScatterView>
-        
-        <controls:MessageBox x:Name="messageBox" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
-        
     </Grid>
 
 </s:SurfaceWindow>

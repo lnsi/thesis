@@ -82,6 +82,7 @@ namespace Displex.Detection
         }
 
         public DeviceControl Control { get; set; }
+        public MinimizedControl MinControl { get; set; }
 
         #endregion
 
@@ -107,6 +108,7 @@ namespace Displex.Detection
         public Iphone(CircleF apple, CircleF camera)
         {
             Control = new DeviceControl(this);
+            MinControl = new MinimizedControl(this);
             SetSkin();
 
             framesMissingNr = 0;

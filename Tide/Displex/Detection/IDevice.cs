@@ -18,5 +18,6 @@ namespace Displex.Detection
         bool CanBeRemoved();
         void UpdatePosition();
         DeviceControl Control { get; set; }
+        MinimizedControl MinControl { get; set; }
     }
 }

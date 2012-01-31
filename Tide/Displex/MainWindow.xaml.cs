@@ -34,6 +34,9 @@ namespace Displex
         private ImageMetrics imageMetrics;
         private bool imageAvailable;
         private Tracker tracker;
+
+        private ScatterViewItem DialogConnectSvi, DialogExitSvi;
+        private bool DialogConnectActive, DialogExitActive;
         
         /// <summary>
         /// Default constructor.
@@ -42,11 +45,10 @@ namespace Displex
         {
             InitializeComponent();
             InitializeSurfaceInput();
+            InitializeDialogs();
             
             // Add handlers for Application activation events
             AddActivationHandlers();
-
-            //AddDebugSVI(new DebugDeviceControl());
         }
 
         private void InitializeSurfaceInput()
@@ -56,52 +58,65 @@ namespace Displex
             contactTarget.EnableInput();
 
             tracker = new Tracker();
-            tracker.DeviceAdded += new DeviceAdded(tracker_DeviceAdded);
-            tracker.DeviceRemoved += new DeviceRemoved(tracker_DeviceRemoved);
-            tracker.DeviceUpdated += new DeviceUpdated(tracker_DeviceUpdated);
+            tracker.DeviceAdded += tracker_DeviceAdded;
+            tracker.DeviceRemoved += tracker_DeviceRemoved;
+            tracker.DeviceUpdated += tracker_DeviceUpdated;
             
             EnableRawImage();
         }
 
-        void tracker_DeviceAdded(object sender, TrackerEventArgs e)
+        private void InitializeDialogs()
         {
-            //messageBox.Show(Displex.Controls.MessageBox.OK, "Device detected", "Connect to new device?");
-
-            ScatterViewItem item = new ScatterViewItem();
-            item.CanMove = false;
-            item.CanRotate = false;
-            item.CanScale = false;
-            item.Orientation = 0;
-            var pos = e.Device.Center();
-            item.Center = new System.Windows.Point(pos.X, pos.Y);
-            item.Background = System.Windows.Media.Brushes.Transparent;
-            item.BorderBrush = System.Windows.Media.Brushes.Transparent;
-            item.SetResourceReference(StyleProperty, "ScatterViewItemStyleInvisible");
             
 
-            Dialog dialog = new Dialog();
-            item.Content = dialog;
-            dialog.Question = "Connect to device?";
-            MainSV.Items.Add(item);
+                       
+        }
 
-            Storyboard story = item.Center.X > 824 ? SetStoryTarget("showDialogLeft", item) : SetStoryTarget("showDialog", item);
-            story.Begin(this);
-
-            Action hideItem = delegate
+        void tracker_DeviceAdded(object sender, TrackerEventArgs e)
+        {
+            if (!DialogConnectActive)
             {
-                dialog.Freeze();
-                Storyboard endStory = SetStoryTarget("hideDialog", item);
-                endStory.Completed += delegate { MainSV.Items.Remove(item); };
-                endStory.Begin(this);
-            };
+                DialogConnectActive = true;
 
-            dialog.No += delegate { hideItem(); };
+                DialogConnectSvi = new ScatterViewItem();
+                DialogConnectSvi.CanMove = false;
+                DialogConnectSvi.CanRotate = false;
+                DialogConnectSvi.CanScale = false;
+                DialogConnectSvi.Orientation = 0;
+                DialogConnectSvi.Width = 120;
+                DialogConnectSvi.Height = 65;
+                //DialogConnectSvi.Center = new System.Windows.Point(200, 200);
+                DialogConnectSvi.Background = System.Windows.Media.Brushes.Transparent;
+                DialogConnectSvi.BorderBrush = System.Windows.Media.Brushes.Transparent;
+                DialogConnectSvi.SetResourceReference(StyleProperty, "ScatterViewItemStyleInvisible");
+                MainSV.Items.Add(DialogConnectSvi);
+                //DialogConnectSvi.Visibility = Visibility.Hidden;
 
-            dialog.Yes += delegate
-            {
-                hideItem();
-                AddDevice(sender, e);
-            };
+                Dialog dialog = new Dialog();
+                DialogConnectSvi.Content = dialog;
+                dialog.Question = "Connect to device?";
+                DialogConnectSvi.Center = new System.Windows.Point(e.Device.Center().X, e.Device.Center().Y);
+                //  DialogConnectSvi.Visibility = Visibility.Visible;
+
+                Storyboard story = DialogConnectSvi.Center.X > 824 ? SetStoryTarget("showDialogLeft", DialogConnectSvi) : SetStoryTarget("showDialog", DialogConnectSvi);
+                story.Begin(this);
+
+                Action hideItem = delegate
+                {
+                    dialog.Freeze();
+                    Storyboard endStory = SetStoryTarget("hideDialog", DialogConnectSvi);
+                    endStory.Completed += delegate { MainSV.Items.Remove(DialogConnectSvi); DialogConnectActive = false; };
+                    endStory.Begin(this);
+                };
+
+                dialog.No += delegate { hideItem(); };
+
+                dialog.Yes += delegate
+                {
+                    hideItem();
+                    AddDevice(sender, e);
+                };
+            }
         }
 
         /// <summary>
@@ -121,55 +136,71 @@ namespace Displex
         void AddDevice(object sender, TrackerEventArgs e)
         {
             e.Device.Control.Connect();
-            AddSVI(e.Device.Control);
             //e.Device.Control.Disconnected += new DeviceControl.DCEventHandler(Control_Disconnected);
-            e.Device.Control.Disconnected += new DeviceRemoved(tracker_DeviceRemoved);
-            e.Device.Control.Minimized += new ControlMinimized(Control_Minimized);
+            e.Device.Control.Disconnected += tracker_DeviceRemoved;
+            e.Device.Control.Minimized += Control_Minimized;
+
+            AddSVI(e.Device.Control);
+            AddSVI(e.Device.MinControl);
         }
 
         void tracker_DeviceRemoved(object sender, TrackerEventArgs e)
         {
-            //Console.WriteLine("Device removed by " + sender.GetType().Name);
-            System.Windows.Point pos;
-            if (sender.GetType().Name.Equals("MinimizedControl"))
-                pos = ((ScatterViewItem)((MinimizedControl)sender).Parent).Center;
-            else
-                pos = ((ScatterViewItem)e.Device.Control.Parent).Center;
-            
-            ScatterViewItem item = new ScatterViewItem();
-            item.CanMove = false;
-            item.CanRotate = false;
-            item.CanScale = false;
-            item.Orientation = 0;    
-            item.Center = new System.Windows.Point(pos.X, pos.Y);
-            item.Background = System.Windows.Media.Brushes.Transparent;
-            item.BorderBrush = System.Windows.Media.Brushes.Transparent;
-            item.SetResourceReference(StyleProperty, "ScatterViewItemStyleInvisible");
-
-
-            Dialog dialog = new Dialog();
-            item.Content = dialog;
-            dialog.Question = "Exit application?";
-            MainSV.Items.Add(item);
-
-            Storyboard story = item.Center.X > 924 ? SetStoryTarget("showDialogLeft", item) : SetStoryTarget("showDialog", item);
-            story.Begin(this);
-
-            Action hideItem = delegate
+            if (!DialogExitActive)
             {
-                dialog.Freeze();
-                Storyboard endStory = SetStoryTarget("hideDialog", item);
-                endStory.Completed += delegate { MainSV.Items.Remove(item); };
-                endStory.Begin(this);
-            };
+                DialogExitActive = true;
 
-            dialog.No += delegate { hideItem(); };
+                ScatterViewItem control;
+                if (sender.GetType().Name.Equals("MinimizedControl"))
+                    control = ((ScatterViewItem)e.Device.MinControl.Parent);
+                else
+                    control = ((ScatterViewItem)e.Device.Control.Parent);
+                control.ContactLeave += new ContactEventHandler(control_ContactLeave);
 
-            dialog.Yes += delegate
-            {
-                hideItem();
-                RemoveDevice(sender, e);
-            };
+                DialogExitSvi = new ScatterViewItem();
+                DialogExitSvi.CanMove = false;
+                DialogExitSvi.CanRotate = false;
+                DialogExitSvi.CanScale = false;
+                DialogExitSvi.Orientation = 0;
+                DialogExitSvi.Width = 120;
+                DialogExitSvi.Height = 65;
+                //DialogExitSvi.Center = new System.Windows.Point(200, 200);
+                DialogExitSvi.Background = System.Windows.Media.Brushes.Transparent;
+                DialogExitSvi.BorderBrush = System.Windows.Media.Brushes.Transparent;
+                DialogExitSvi.SetResourceReference(StyleProperty, "ScatterViewItemStyleInvisible");
+                MainSV.Items.Add(DialogExitSvi);
+                //DialogExitSvi.Visibility = Visibility.Hidden; 
+
+                Dialog dialog = new Dialog();
+                DialogExitSvi.Content = dialog;
+                dialog.Question = "Exit application?";
+                DialogExitSvi.Center = new System.Windows.Point(control.Center.X, control.Center.Y);
+                //DialogExitSvi.Visibility = Visibility.Visible;
+
+                Storyboard story = DialogExitSvi.Center.X > 924 ? SetStoryTarget("showDialogLeft", DialogExitSvi) : SetStoryTarget("showDialog", DialogExitSvi);
+                story.Begin(this);
+
+                Action hideItem = delegate
+                {
+                    dialog.Freeze();
+                    Storyboard endStory = SetStoryTarget("hideDialog", DialogExitSvi);
+                    endStory.Completed += delegate { MainSV.Items.Remove(DialogExitSvi); DialogExitActive = false; };
+                    endStory.Begin(this);
+                };
+
+                dialog.No += delegate { hideItem(); };
+
+                dialog.Yes += delegate
+                {
+                    hideItem();
+                    RemoveDevice(sender, e);
+                };
+            }
+        }
+
+        void control_ContactLeave(object sender, Microsoft.Surface.Presentation.ContactEventArgs e)
+        {
+            ((ScatterViewItem)sender).SetRelativeZIndex(RelativeScatterViewZIndex.Bottommost);
         }
 
         void RemoveDevice(object sender, TrackerEventArgs e)
@@ -190,36 +221,89 @@ namespace Displex
             //DisplayExtension.Orientation = e.Device.Orientation();
         }
 
-        void Control_Disconnected(object sender)
-        {
-            //((DeviceControl)sender).Visibility = Visibility.Hidden;
-        }
-
         void Control_Minimized(object sender, MinimizeEventArgs e)
         {
-            ((ScatterViewItem)e.Device.Control.Parent).Visibility = Visibility.Hidden;
+            e.Device.Control.Disconnected -= tracker_DeviceRemoved;
+            e.Device.Control.Minimized -= Control_Minimized;
 
-            MinimizedControl mControl = new MinimizedControl(e.Device);
-            AddSVI(mControl, e.Position);
-            
-            mControl.Disconnected += new DeviceRemoved(tracker_DeviceRemoved);
-            mControl.Restored += new ControlRestored(Control_Restored);
+            ScatterViewItem item = ((ScatterViewItem)e.Device.Control.Parent);
+            item.Visibility = Visibility.Hidden;
+            item.ScatterManipulationDelta -= ScatterViewItem_ScatterManipulationDelta;
 
-            mControl.CheckPosition();
+            ScatterViewItem MinItem = ((ScatterViewItem)e.Device.MinControl.Parent);
+            MinItem.Visibility = Visibility.Visible;
+            MinItem.Center = e.Position;
+
+            e.Device.MinControl.Disconnected += tracker_DeviceRemoved;
+            e.Device.MinControl.Restored += Control_Restored;
+            e.Device.MinControl.CheckPosition();
         }
 
         void Control_Restored(object sender, MinimizeEventArgs e)
         {
-            ((ScatterViewItem)e.Device.Control.Parent).Center = e.Position;
-            ((ScatterViewItem)e.Device.Control.Parent).Visibility = Visibility.Visible;
-            MainSV.Items.Remove(((MinimizedControl)sender).Parent);
-            MainSV.UpdateLayout();
+            e.Device.Control.Disconnected += tracker_DeviceRemoved;
+            e.Device.Control.Minimized += Control_Minimized;
+
+            e.Device.MinControl.Disconnected -= tracker_DeviceRemoved;
+            e.Device.MinControl.Restored -= Control_Restored;
+            ((ScatterViewItem)e.Device.MinControl.Parent).Visibility = Visibility.Hidden;
+
+            ScatterViewItem item = ((ScatterViewItem)e.Device.Control.Parent);
+            item.Center = e.Position;
+            item.Visibility = Visibility.Visible;
+            item.ScatterManipulationDelta += ScatterViewItem_ScatterManipulationDelta;
         }
 
-        private void AddSVI(MinimizedControl control, System.Windows.Point position)
+        private void ScatterViewItem_ScatterManipulationCompleted
+            (object sender, ScatterManipulationCompletedEventArgs e)
+        {
+            Console.WriteLine("logging");
+            Logger.Log("testCommand","testAction");
+
+        }
+
+        private void ScatterViewItem_ScatterManipulationDelta
+            (object sender, ScatterManipulationDeltaEventArgs e)
+        {
+            // Get a reference to the ScatterViewItem item.
+            ScatterViewItem item = (ScatterViewItem)e.Source;
+
+            //Console.WriteLine("width: " + item.ActualWidth);
+            //Console.WriteLine("heigth: " + item.ActualHeight);
+
+            if (item.ActualWidth <= 100)
+            {
+                Control_Minimized(this, new MinimizeEventArgs(((DeviceControl)item.Content).device, MinimizeEventType.Minimized, item.Center));
+                item.Width = 156;
+                item.Height = 309;
+                e.Handled = true;
+                return;
+            }
+
+            if (item.ActualWidth >= 600)
+            {
+                Maximize(item);
+            }
+
+            int dist = 10;
+            int minX = 0 + dist;
+            int minY = 0 + dist;
+            int maxX = 1024 - dist;
+            int maxY = 768 - dist;
+
+            if (item.Center.X < minX || item.Center.X > maxX || item.Center.Y < minY || item.Center.Y > maxY)
+            {
+                Control_Minimized(this, new MinimizeEventArgs(((DeviceControl)item.Content).device, MinimizeEventType.Minimized, CalculateEdgePosition(item.Center)));
+                e.Handled = true;
+                return;
+            }
+            e.Handled = true;
+        }
+
+        private void AddSVI(MinimizedControl control)
         {
             ScatterViewItem svi = new ScatterViewItem();
-            svi.Center = position;
+            svi.Center = new System.Windows.Point(200,200);
             svi.Orientation = 0;
             svi.Height = 148;
             svi.Width = 75;
@@ -228,8 +312,8 @@ namespace Displex
             svi.Background = System.Windows.Media.Brushes.Transparent;
             svi.BorderBrush = System.Windows.Media.Brushes.Transparent;
             svi.SetResourceReference(StyleProperty, "ScatterViewItemStyleInvisible");
-
             svi.Content = control;
+            svi.Visibility = Visibility.Hidden;
             MainSV.Items.Add(svi);
         }
 
@@ -239,42 +323,100 @@ namespace Displex
             svi.Center = new System.Windows.Point(500, 350);
             svi.Orientation = 0;
             svi.Height = 515;
-            svi.MaxHeight = 2060;
             svi.Width = 260;
-            svi.MaxWidth = 1040;
             svi.Background = System.Windows.Media.Brushes.Transparent;
             svi.BorderBrush = System.Windows.Media.Brushes.Transparent;
             svi.SetResourceReference(StyleProperty, "ScatterViewItemStyleInvisible");
 
-            svi.ContactDown += new ContactEventHandler(control._ContactDown);
-            svi.ContactUp += new ContactEventHandler(control._ContactUp);
-            svi.ContactChanged += new ContactEventHandler(control._ContactChanged);
-            svi.ContactTapGesture += new ContactEventHandler(control._ContactTap);
-            svi.ContactHoldGesture += new ContactEventHandler(control._ContactHold);
-            //svi.PreviewContactDown += new ContactEventHandler(control._PreviewContactDown);
-
-            svi.ScatterManipulationCompleted += new ScatterManipulationCompletedEventHandler(ScatterViewItem_ScatterManipulationCompleted);
+            svi.ContactDown += control._ContactDown;
+            svi.ContactUp += control._ContactUp;
+            svi.ContactChanged += control._ContactChanged;
+            svi.ContactTapGesture += control._ContactTap;
+            svi.ContactHoldGesture += control._ContactHold;
+            
+            svi.ScatterManipulationCompleted += ScatterViewItem_ScatterManipulationCompleted;
+            svi.ScatterManipulationDelta += ScatterViewItem_ScatterManipulationDelta;
 
             svi.Content = control;
             MainSV.Items.Add(svi);
-
         }
 
-        private void AddDebugSVI(DebugDeviceControl control)
+        public void Maximize(ScatterViewItem item)
         {
-            ScatterViewItem svi = new ScatterViewItem();
-            svi.Center = new System.Windows.Point(500, 350);
-            svi.Orientation = 0;
-            svi.Height = 515;
-            svi.Width = 260;
-            svi.Background = System.Windows.Media.Brushes.Transparent;
-            svi.BorderBrush = System.Windows.Media.Brushes.Transparent;
-            svi.SetResourceReference(StyleProperty, "ScatterViewItemStyleInvisible");
-
-            svi.Content = control;
-            MainSV.Items.Add(svi);
-
+            Maximize(item, 0);
         }
+
+        public void Maximize(ScatterViewItem item, double rotation)
+        {
+            if (!((DeviceControl)item.Content).maximized)
+            {
+                ((DeviceControl)item.Content).Demaximized += Demaximize;
+                ((DeviceControl)item.Content).maximized = true;
+                ((DeviceControl)item.Content).addRotateButtons();
+            }
+            
+            double o, oo = item.Orientation + rotation;
+            if (oo < 0)
+                o = 360 + oo;
+            else if (oo >= 360)
+                o = oo - 360;
+            else
+                o = oo;
+
+            if (o < 45 || o > 315)
+            {
+                Console.WriteLine("1: " + o);
+                item.Orientation = 0;
+                item.Height = 1032;
+                item.Width = 521;
+                item.Center = new System.Windows.Point(512, 344);
+            }
+            else if (o >= 45 && o <= 135)
+            {
+                Console.WriteLine("2: " + o);
+                item.Orientation = 90;
+                item.Height = 1365;
+                item.Width = 690;
+                item.Center = new System.Windows.Point(562, 384);
+            }
+            else if (o > 135 && o < 225)
+            {
+                Console.WriteLine("3: " + o);
+                item.Orientation = 180;
+                item.Height = 1032;
+                item.Width = 521;
+                item.Center = new System.Windows.Point(512, 424);
+            }
+            else if (o >= 225 && o <= 315)
+            {
+                Console.WriteLine("4: " + o);
+                item.Orientation = 270;
+                item.Height = 1365;
+                item.Width = 690;
+                item.Center = new System.Windows.Point(462, 384);
+            }
+
+            item.CanMove = false;
+            item.CanScale = false;
+            item.CanRotate = false;
+        }
+
+
+        private void Demaximize(object sender, RoutedEventArgs e)
+        {
+            DeviceControl control = (DeviceControl)sender;
+            control.Demaximized -= Demaximize;
+            control.maximized = false;
+
+            ScatterViewItem item = (ScatterViewItem)control.Parent;
+            item.Height = 515;
+            item.Width = 260;
+
+            item.CanMove = true;
+            item.CanScale = true;
+            item.CanRotate = true;
+        }
+
 
         /// <summary>
         /// Occurs when the window is about to close. 
@@ -414,26 +556,6 @@ namespace Displex
         {
         }
 
-        private void ScatterViewItem_ScatterManipulationCompleted
-            (object sender, ScatterManipulationCompletedEventArgs e)
-        {
-            int dist = 10;
-            int minX = 0 + dist;
-            int minY = 0 + dist;
-            int maxX = 1024 - dist;
-            int maxY = 768 - dist;
-
-            // Get a reference to the ScatterViewItem item.
-            ScatterViewItem item = (ScatterViewItem)e.Source;
-
-            if (item.Center.X < minX || item.Center.X > maxX || item.Center.Y < minY || item.Center.Y > maxY)
-            {
-                Control_Minimized(this, new MinimizeEventArgs(((DeviceControl)item.Content).device, MinimizeEventType.Minimized, CalculateEdgePosition(item.Center)));
-                //Console.WriteLine(item.Content.GetType().Name);
-            }
-            e.Handled = true;
-        }
-
         private System.Windows.Point CalculateEdgePosition(System.Windows.Point p)
         {
             if (p.X < -5)
@@ -454,10 +576,5 @@ namespace Displex
             }
             else return p;
         }
-
-        //private void GetIpFromUser()
-        //{
-
-        //}
     }
 }

@@ -90,9 +90,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\DebugDeviceControl.xaml.cs">
-      <DependentUpon>DebugDeviceControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Controls\Dialog.xaml.cs">
       <DependentUpon>Dialog.xaml</DependentUpon>
     </Compile>
@@ -107,12 +104,10 @@
     <Compile Include="Controls\DeviceControl.xaml.cs">
       <DependentUpon>DeviceControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\MessageBox.xaml.cs">
-      <DependentUpon>MessageBox.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Controls\MinimizedControl.xaml.cs">
       <DependentUpon>MinimizedControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Logs\Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -154,6 +149,8 @@
     <Content Include="Resources\iconPreview.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\rotateLeft.png" />
+    <Resource Include="Resources\rotateRight.png" />
     <Resource Include="Resources\WindowBackground2.png" />
     <Resource Include="Resources\info.png" />
     <Resource Include="Resources\ok.png" />
@@ -167,19 +164,11 @@
     <Resource Include="Resources\WindowBackground.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Controls\DebugDeviceControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Controls\DeviceControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Dialog.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\MessageBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

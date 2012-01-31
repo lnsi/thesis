@@ -73,6 +73,7 @@ namespace Displex.Detection
         }
 
         public DeviceControl Control { get; set; }
+        public MinimizedControl MinControl { get; set; }
 
         #endregion
 
@@ -86,6 +87,7 @@ namespace Displex.Detection
         public Legend(PointF center)
         {
             Control = new DeviceControl(this);
+            MinControl = new MinimizedControl(this);
             SetSkin();
 
             framesMissingNr = 0;

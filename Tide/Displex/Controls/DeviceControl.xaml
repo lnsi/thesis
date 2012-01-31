@@ -14,7 +14,7 @@
         <Grid.Background>
             <ImageBrush x:Name="MainBg"/>
         </Grid.Background>
-        <vnc:RemoteDesktopWPF x:Name="rdfWPF"/>
+        <vnc:RemoteDesktopWPF x:Name="rdfWPF" VerticalAlignment="Bottom"/>
         <Grid x:Name="Footer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
      </Grid>
 

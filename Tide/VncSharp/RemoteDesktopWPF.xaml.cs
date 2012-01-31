@@ -593,8 +593,6 @@ namespace VncSharp
 
     public void HomeKeyPress()
     {
-        Console.WriteLine("trying home press");
-
         UInt32 keyChar = 0x0000FF50;
         vnc.WriteKeyboardEvent(keyChar, true);
             //e.Handled = true;
