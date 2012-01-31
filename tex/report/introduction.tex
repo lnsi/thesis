@@ -3,65 +3,116 @@
 %%% INTRODUCTION %%%
 %%%%%%%%%%%%%%%%%%%%
 
+%PROBLEM : WHICH INTERACTION TECHNIQUES TO USE WHEN DEVELOPING FOR UI REPLICATION BETWEEN A SMARTPHONE AND A TABLETOP?
+%
+%SOLUTION : THE PROTOTYPE, SUPPORTED BY BOTH STUDIES
+
 \chapter{Introduction}
 
-Tabletops should be used as peripherals
+Modern smartphones are performant enough to support most users' daily computing tasks.
+They are ultra mobile, fitting in a pocket, and they offer good connectivity.
+This tendency implies that users have access to personal data and applications at all times.
+Smartphones support a new type of computer interaction which is unplanned, spontaneous, on-the-go.
+However there are situations in which the small form factor of the device is a limitation to this form of improvised computer interaction.
+This is especially the case in a collocated collaborative context, because a smartphone is simply to small for several users to gather around it.
 
-Improve user experience
+Tabletop computers are cutting-edge devices that merge input and output spaces into one horizontal interactive surface.
+They have been the focus of extensive research since the DigitalDesk \citep{Wellner:1993:digitaldesk}, and in recent years they are being commercialized.
+One of the first products was the Microsoft Surface \citep{ms}, but there have been other since, such as \ldots
+Tabletops are tables, and therefore an ideal computing platform for collocated multi-user scenarios.
+Their displays often support multi-touch input, thus providing users an interactive  experience quite similar to the one on most smartphones.
 
-both mobile devices and tabletops are made useful.
+Even though screen resolution on smartphones can be very high, sometimes the issue is the pixel size.
+Reading an article and consulting a map are examples of situations in which the user experience would be enhanced by the possibility of augmenting the scale of the image.
+The perception of the human eye has its limits, that smartphone screens are about to exceed.
 
-Tabletop displays offer a more direct, intuitive experience than traditional computers:
-- the interactive area is more natural and regroups both input and output
-- by using touch / hand gestures instead of input peripherals (keyboard, mouse)
-- collocated and collaborative atmosphere
-They have potential for being adopted by a broader public, not necessarily computer literate.
-By focusing on an intuitive interaction, tabletops can be made accessible to a broader range of users.
+In this perspective, device composition between smartphones and tabletops seems like a good idea.
 
-\section{Problem formulation}
+Device composition presents different challenges:
+- technical challenges
+- ...
+- interaction = our focus
 
-Tabletop computers are cutting-edge devices that merge input and output spaces into one single interactive surface \cite{Wellner:1993:digitaldesk}.
-Researchers have investigated the use of interactive tables in a number of different ways: support for meetings, canvas for architectural design \cite{Clifton:2010:sketchtop}, media for document navigation, mediator for sharing files, etc.
-Due to their size and embedded nature, tabletops seem to naturally fit in public spaces such as shops, bars and work places.
-Common scenarios include catalog browsing, drink ordering and product configuration.
-Technologies such as DiamondTouch \cite{Dietz:2001:diamondtouch} allow tabletops to support multiple and simultaneous users. Example of applications include sharing data between smartphones, collaborating on a design \cite{Hunter:2011:memtable}, or simply taking notes during a meeting.
-In the case of multiple individualized users, solutions are needed to identify each user, as seen in \cite{Schmidt:2010:handsdown}, where the simple action of placing one's hand on the surface enables a person to identify and start interacting with the device.
+Interaction can be done in various ways/metaphors:
+- streaming
+- projection
+- adaptation
+- extension
+- replication = our focus
 
-Another interesting property of interactive surfaces is their ability to integrate with physical objects, both passive and dynamic, for the purpose of augmenting them with digital information, or controlling the application state.
-For example, SurfaceWare \cite{Dietz:2009:surfaceware} allows the Microsoft Surface to sense the fluid level in a slightly enhanced drinking glass.
-Another example is the software developed by Amnesia Razorfish, that allows the sharing of data between multiple handheld devices using the actual devices, as well as gestures, on the Microsoft Surface.
-Finally, researchers at ITU have developed the Rabbit \cite{Hincapie:2011:rabbit}, a device that integrates small RFID-tagged objects and tabletops.
+argument to focus on replication with streaming is simplicity
+- multiple mobile and tabletop platforms
+- simpler to keep logic on smartphone, and implement something light and generic on tabletop (result works both for iPhone and Adnroid)
+- show that other metaphors are more complicated
+- show that esthetics is not an issue when replicating
 
-The specificity of tabletops raises the question of how to interact with them on an everyday basis.
-Recent development initiatives tend to answer this question by regarding tabletops as yet another computational platform, requiring its own software.
-With this project, we explore a different approach to integrating tabletops in our environment, namely by using them only as UI peripheral, providing touch-based input and graphical output to the devices that we already have.
-Exploring this path is supported by three important factors.
-First, most users already own computing devices, such as laptops or smart phones, with tailor-made applications and local storage, and might be less prone to use an additional device if it requires management (updates, backups, synchronizations, etc) and the purchase of applications.
-Second, tabletops are embedded in the environment and as such can be expected to be shared devices.
-Using them as simple graphic peripheral would allow to avoid the traditional desktop/laptop issues related to user profiles, privacy and data integrity.
-Finally, as embedded devices, it is reasonable to expect tabletops to have good networking capabilities.
+Research problem is which interaction techniques should be used to provide the user with an intuitive experience?
+define intuition
 
-Device composition focuses on getting the most out of various computing entities, by making them work together and function as one, as seen in \cite{Bardram:2010:compute}.
-This project explores device composition for UI integration between tabletops and mobile devices, focusing on seamless user experience and implicit human computer interaction as defined by Schmidt in \cite{Schmidt:2000:implicit}.
+Research approach is as follows:
+-
+-
+-
+- user centered design (cite benyon)
 
-UI integration can happen in several different ways:
-\begin{itemize}
-\item{\emph{UI transfer} (mirror): the tabletop `takes over' and displays the UI of the connected device.}
-\item{\emph{Dual view}: the tabletop display becomes secondary screen space for the connected device.}
-\item{\emph{UI nesting}: the connected device is physically located on the tabletop, and its UI is extended to the additional screen space around it.}
-\end{itemize}
+present TIDE
 
-Following is an open list of problems that we will address in order to achieve device composition by means of implicit interaction.
-\begin{enumerate}
-\item{\emph{Setup}: How is a device enabled for integrating with a tabletop?
-The setup should be simple, to be performed only once by non-technical users.
-An initial survey of possible solutions points towards the use of tagging mechanisms and/or camera-based object recognition.}
-\item{\emph{Discovery}: How do the tabletop and the device discover and communicate with each other?
-How do we solve the issues of discovery, handshake, network connectivity, and encryption mechanisms to ensure privacy?}
-\item{\emph{UI transfer}: Given the computational constraints of mobile devices, how can the UI transfer be efficiently implemented so as to support native applications and guarantee a seamless user experience?}
-\item{\emph{Input}: How can the users interact with their applications on the tabletop (touch and other peripherals)?}
-\item{\emph{Interaction Design}: What means of interaction are best-fitted for the tabletop-based systems that we propose to develop?
-How can we best adapt to public/private uses and single/multiple users?
-How can we take advantage of the larger interaction surface?}
-\end{enumerate}
+present contributions
+
+% tabletop application/research examples
+%%%%%%%%%%%%%%%%%
+%Tabletop computers are cutting-edge devices that merge input and output spaces into one single interactive surface \cite{Wellner:1993:digitaldesk}.
+%Researchers have investigated the use of interactive tables in a number of different ways: support for meetings, canvas for architectural design \cite{Clifton:2010:sketchtop}, media for document navigation, mediator for sharing files, etc.
+%Due to their size and embedded nature, tabletops seem to naturally fit in public spaces such as shops, bars and work places.
+%Common scenarios include catalog browsing, drink ordering and product configuration.
+%Technologies such as DiamondTouch \cite{Dietz:2001:diamondtouch} allow tabletops to support multiple and simultaneous users. Example of applications include sharing data between smartphones, collaborating on a design \cite{Hunter:2011:memtable}, or simply taking notes during a meeting.
+%In the case of multiple individualized users, solutions are needed to identify each user, as seen in \cite{Schmidt:2010:handsdown}, where the simple action of placing one's hand on the surface enables a person to identify and start interacting with the device.
+
+% tabletop integration with tangibles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Another interesting property of interactive surfaces is their ability to integrate with physical objects, both passive and dynamic, for the purpose of augmenting them with digital information, or controlling the application state.
+%For example, SurfaceWare \cite{Dietz:2009:surfaceware} allows the Microsoft Surface to sense the fluid level in a slightly enhanced drinking glass.
+%Another example is the software developed by Amnesia Razorfish, that allows the sharing of data between multiple handheld devices using the actual devices, as well as gestures, on the Microsoft Surface.
+%Finally, researchers at ITU have developed the Rabbit \cite{Hincapie:2011:rabbit}, a device that integrates small RFID-tagged objects and tabletops.
+
+% solution : using tabletops as UI peripherals
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%The specificity of tabletops raises the question of how to interact with them on an everyday basis.
+%Recent development initiatives tend to answer this question by regarding tabletops as yet another computational platform, requiring its own software.
+%With this project, we explore a different approach to integrating tabletops in our environment, namely by using them only as UI peripheral, providing touch-based input and graphical output to the devices that we already have.
+%Exploring this path is supported by three important factors.
+%First, most users already own computing devices, such as laptops or smart phones, with tailor-made applications and local storage, and might be less prone to use an additional device if it requires management (updates, backups, synchronizations, etc) and the purchase of applications.
+%Second, tabletops are embedded in the environment and as such can be expected to be shared devices.
+%Using them as simple graphic peripheral would allow to avoid the traditional desktop/laptop issues related to user profiles, privacy and data integrity.
+%Finally, as embedded devices, it is reasonable to expect tabletops to have good networking capabilities.
+
+% device composition
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Device composition focuses on getting the most out of various computing entities, by making them work together and function as one, as seen in \cite{Bardram:2010:compute}.
+%This project explores device composition for UI integration between tabletops and mobile devices, focusing on seamless user experience and implicit human computer interaction as defined by Schmidt in \cite{Schmidt:2000:implicit}.
+
+% UI integration metaphors
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%UI integration can happen in several different ways:
+%\begin{itemize}
+%\item{\emph{UI transfer} (mirror): the tabletop `takes over' and displays the UI of the connected device.}
+%\item{\emph{Dual view}: the tabletop display becomes secondary screen space for the connected device.}
+%\item{\emph{UI nesting}: the connected device is physically located on the tabletop, and its UI is extended to the additional screen space around it.}
+%\end{itemize}
+
+% challenges
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Following is an open list of problems that we will address in order to achieve device composition by means of implicit interaction.
+%\begin{enumerate}
+%\item{\emph{Setup}: How is a device enabled for integrating with a tabletop?
+%The setup should be simple, to be performed only once by non-technical users.
+%An initial survey of possible solutions points towards the use of tagging mechanisms and/or camera-based object recognition.}
+%\item{\emph{Discovery}: How do the tabletop and the device discover and communicate with each other?
+%How do we solve the issues of discovery, handshake, network connectivity, and encryption mechanisms to ensure privacy?}
+%\item{\emph{UI transfer}: Given the computational constraints of mobile devices, how can the UI transfer be efficiently implemented so as to support native applications and guarantee a seamless user experience?}
+%\item{\emph{Input}: How can the users interact with their applications on the tabletop (touch and other peripherals)?}
+%\item{\emph{Interaction Design}: What means of interaction are best-fitted for the tabletop-based systems that we propose to develop?
+%How can we best adapt to public/private uses and single/multiple users?
+%How can we take advantage of the larger interaction surface?}
+%\end{enumerate}
 
