@@ -18,3 +18,13 @@ C:\LeoThesis\thesis\Displex\VncSharpExampleCS\obj\Release\VncSharpExampleCS.Prop
 C:\LeoThesis\thesis\Displex\VncSharpExampleCS\obj\Release\VncSharpExampleCS.csproj.GenerateResource.Cache
 C:\LeoThesis\thesis\Displex\VncSharpExampleCS\obj\Release\VncSharpExampleCS.exe
 C:\LeoThesis\thesis\Displex\VncSharpExampleCS\obj\Release\VncSharpExampleCS.pdb
+C:\LeoThesis\thesis\Tide\VncSharpExampleCS\bin\Release\VncSharpExampleCS.exe
+C:\LeoThesis\thesis\Tide\VncSharpExampleCS\bin\Release\VncSharpExampleCS.pdb
+C:\LeoThesis\thesis\Tide\VncSharpExampleCS\bin\Release\VncSharp.dll
+C:\LeoThesis\thesis\Tide\VncSharpExampleCS\obj\Release\ResolveAssemblyReference.cache
+C:\LeoThesis\thesis\Tide\VncSharpExampleCS\obj\Release\VncSharp.ConnectDialog.resources
+C:\LeoThesis\thesis\Tide\VncSharpExampleCS\obj\Release\VncSharpExampleCS.form.resources
+C:\LeoThesis\thesis\Tide\VncSharpExampleCS\obj\Release\VncSharpExampleCS.Properties.Resources.resources
+C:\LeoThesis\thesis\Tide\VncSharpExampleCS\obj\Release\VncSharpExampleCS.csproj.GenerateResource.Cache
+C:\LeoThesis\thesis\Tide\VncSharpExampleCS\obj\Release\VncSharpExampleCS.exe
+C:\LeoThesis\thesis\Tide\VncSharpExampleCS\obj\Release\VncSharpExampleCS.pdb

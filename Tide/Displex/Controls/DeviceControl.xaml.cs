@@ -85,6 +85,7 @@ namespace Displex.Controls
                     else
                     {
                         Minimized(this, new MinimizeEventArgs(device, MinimizeEventType.Minimized, e.Contact.GetPosition(null)));
+                        Logger.Log("minimize", "double tap");
                         e.Handled = true;
                     }
                 }
@@ -110,6 +111,7 @@ namespace Displex.Controls
                 if (e.Contact.BoundingRect.Width > 15 && e.Contact.BoundingRect.Height > 15)
                 {
                     Minimized(this, new MinimizeEventArgs(device, MinimizeEventType.Minimized, e.Contact.GetPosition(null)));
+                    Logger.Log("minimize", "blob touch");
                     e.Handled = true;
                 }
                 return;
@@ -159,6 +161,7 @@ namespace Displex.Controls
             {
                 //Minimized(this, new MinimizeEventArgs(device, MinimizeEventType.Minimized, e.Contact.GetPosition(null)));
                 Disconnected(this, new TrackerEventArgs(device, TrackerEventType.Removed));
+                Logger.Log("exit", "press and hold");
             }
             
             e.Handled = true;

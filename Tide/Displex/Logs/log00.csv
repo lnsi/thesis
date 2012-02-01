@@ -26,3 +26,135 @@
 00,TE,testCommand,testAction,17:32:26
 00,TE,testCommand,testAction,17:32:35
 00,TE,testCommand,testAction,17:32:35
+Logging session 00 - user TE
+drag,gesture h:231,v:4,09:46:25
+resize,gesture 0.99090,09:46:25
+resize,gesture 1.01999,09:46:27
+resize,gesture 0.99074,09:46:28
+resize,gesture 0.99294,09:46:29
+rotate,gesture r:5,09:46:31
+resize,gesture 1.11424,09:46:31
+resize,gesture 1.70620,09:46:33
+drag,gesture h:17,v:132,09:46:34
+resize,gesture 0.69665,09:46:34
+drag,gesture h:16,v:193,09:46:36
+resize,gesture 0.40935,09:46:36
+resize,gesture 2.44813,09:46:38
+drag,gesture h:469,v:11,09:46:43
+rotate,gesture r:103,09:46:43
+resize,gesture 1.17283,09:46:43
+resize,gesture 0.89165,09:46:44
+drag,gesture h:-245,v:97,09:46:46
+resize,gesture 0.98053,09:46:46
+drag,gesture h:265,v:-190,09:46:47
+rotate,gesture r:82,09:46:47
+resize,gesture 1.19347,09:46:47
+drag,gesture h:17,v:33,09:46:49
+drag,gesture h:-195,v:36,09:46:51
+resize,gesture 0.83724,09:46:51
+resize,maximize,09:46:55
+maximize,size enlarge,09:46:55
+resize,gesture 1.48194,09:46:55
+rotate,maximized,09:46:57
+rotate,maximized,09:46:59
+resize,gesture 0.49904,09:47:01
+minimize,double tap,09:47:06
+minimize,size reduce,09:47:11
+drag,gesture h:70,v:32,09:47:11
+Logging session 00 - user TE
+drag,gesture h:86,v:79,09:48:28
+resize,gesture 0.38523,09:48:28
+minimize,size reduce,09:48:31
+resize,gesture 1.55751,09:48:31
+minimize,size reduce,09:48:31
+minimize,size reduce,09:48:36
+drag,gesture h:27,v:45,09:48:36
+minimize,size reduce,09:48:36
+minimize,off edge,09:48:40
+minimize,off edge,09:48:40
+drag,gesture h:137,v:-517,09:48:41
+drag,gesture h:-292,v:265,09:48:47
+rotate,gesture r:45,09:48:47
+minimize,off edge,09:48:48
+minimize,off edge,09:48:48
+drag,gesture h:27,v:145,09:48:49
+rotate,gesture r:51,09:48:49
+drag,gesture h:115,v:-292,09:48:51
+rotate,gesture r:28,09:48:51
+resize,gesture 1.49251,09:48:54
+minimize,blob touch,09:48:55
+minimize,blob touch,09:48:57
+minimize,blob touch,09:49:02
+rotate,gesture r:5,09:49:05
+drag,gesture h:30,v:20,09:49:07
+rotate,gesture r:8,09:49:07
+resize,gesture 0.82936,09:49:07
+minimize,off edge,09:49:09
+minimize,off edge,09:49:09
+drag,gesture h:396,v:-436,09:49:10
+rotate,gesture r:29,09:49:10
+resize,gesture 0.91635,09:49:10
+exit,minz button,09:49:11
+exit,off corner,09:49:20
+minimize,off edge,09:49:20
+exit,off corner,09:49:20
+minimize,off edge,09:49:20
+exit,off corner,09:49:20
+minimize,off edge,09:49:20
+resize,gesture 0.81044,09:49:21
+minimize,blob touch,09:49:44
+minimize,double tap,09:49:52
+exit,minz button,09:49:56
+exit,press and hold,09:50:17
+
+Logging session 00 - user TE
+minimize,double tap,10:23:57
+exit,minimized button,10:23:57
+rotate,gesture r:8,10:24:01
+maximize,size enlarge,10:24:02
+drag,gesture h:-126,v:60,10:24:03
+resize,gesture 1.37268,10:24:03
+resize,gesture 0.72851,10:24:04
+drag,gesture h:113,v:-152,10:24:07
+rotate,gesture r:11,10:24:07
+resize,gesture 1.76016,10:24:07
+drag,gesture h:31,v:-92,10:24:08
+resize,gesture 1.23084,10:24:08
+maximize,size enlarge,10:24:08
+rotate,maximized,10:24:08
+drag,gesture h:-92,v:74,10:24:08
+resize,gesture 1.10480,10:24:08
+rotate,maximized,10:24:10
+drag,gesture h:6,v:87,10:24:11
+rotate,gesture r:3,10:24:11
+resize,gesture 0.83720,10:24:11
+rotate,maximized,10:24:11
+rotate,maximized,10:24:14
+resize,gesture 0.49904,10:24:15
+minimize,off edge,10:24:17
+rotate,gesture r:72,10:24:18
+drag,gesture h:100,v:-23,10:24:20
+resize,gesture 1.02024,10:24:22
+rotate,gesture r:23,10:24:23
+minimize,off edge,10:24:24
+drag,gesture h:51,v:-522,10:24:24
+resize,gesture 1.03894,10:24:24
+drag,gesture h:-89,v:271,10:24:27
+drag,gesture h:214,v:-52,10:24:29
+rotate,gesture r:3,10:24:29
+resize,gesture 1.86173,10:24:29
+drag,gesture h:-70,v:78,10:24:30
+maximize,size enlarge,10:24:54
+rotate,maximized,10:24:54
+rotate,maximized,10:24:54
+resize,gesture 1.10419,10:24:54
+rotate,maximized,10:24:55
+rotate,maximized,10:25:19
+drag,gesture h:70,v:296,10:25:24
+rotate,gesture r:9,10:25:25
+rotate,gesture r:18,10:25:26
+drag,gesture h:118,v:-116,10:25:30
+rotate,gesture r:5,10:25:30
+resize,gesture 1.77573,10:25:30
+drag,gesture h:-83,v:85,10:25:42
+exit,press and hold,10:26:15

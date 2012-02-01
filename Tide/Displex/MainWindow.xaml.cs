@@ -257,9 +257,27 @@ namespace Displex
         private void ScatterViewItem_ScatterManipulationCompleted
             (object sender, ScatterManipulationCompletedEventArgs e)
         {
-            Console.WriteLine("logging");
-            Logger.Log("testCommand","testAction");
+            //Console.WriteLine("logging test: ");
+            //Console.WriteLine("rotation: " + e.RotationalChange);
+            //Console.WriteLine("horizontal: " + e.HorizontalChange + ", h: " + h);
+            //Console.WriteLine("vertical: " + e.VerticalChange + ", v: " + v);
+            //Console.WriteLine("scale: " + e.ScaleFactor);
 
+            if (e.HorizontalChange > 30 || e.VerticalChange > 30)
+            {
+                string h = e.HorizontalChange.ToString().Remove(e.HorizontalChange.ToString().IndexOf("."));
+                string v = e.VerticalChange.ToString().Remove(e.VerticalChange.ToString().IndexOf("."));
+                Logger.Log("drag", String.Concat("gesture h:",h,",v:",v));
+            }
+            if (e.RotationalChange > 3)
+            {
+                string r = e.RotationalChange.ToString().Remove(e.RotationalChange.ToString().IndexOf("."));
+                Logger.Log("rotate", String.Concat("gesture r:",r));
+            }
+            if (e.ScaleFactor != 1)
+            {
+                Logger.Log("resize", String.Concat("gesture ", e.ScaleFactor.ToString().Remove(7)));
+            }
         }
 
         private void ScatterViewItem_ScatterManipulationDelta
@@ -274,6 +292,7 @@ namespace Displex
             if (item.ActualWidth <= 100)
             {
                 Control_Minimized(this, new MinimizeEventArgs(((DeviceControl)item.Content).device, MinimizeEventType.Minimized, item.Center));
+                Logger.Log("minimize","size reduce");
                 item.Width = 156;
                 item.Height = 309;
                 e.Handled = true;
@@ -294,6 +313,7 @@ namespace Displex
             if (item.Center.X < minX || item.Center.X > maxX || item.Center.Y < minY || item.Center.Y > maxY)
             {
                 Control_Minimized(this, new MinimizeEventArgs(((DeviceControl)item.Content).device, MinimizeEventType.Minimized, CalculateEdgePosition(item.Center)));
+                Logger.Log("minimize", "off edge");
                 e.Handled = true;
                 return;
             }
@@ -353,7 +373,10 @@ namespace Displex
                 ((DeviceControl)item.Content).Demaximized += Demaximize;
                 ((DeviceControl)item.Content).maximized = true;
                 ((DeviceControl)item.Content).addRotateButtons();
+                Logger.Log("maximize", "size enlarge");
             }
+            else
+                Logger.Log("rotate", "maximized");
             
             double o, oo = item.Orientation + rotation;
             if (oo < 0)
@@ -365,7 +388,6 @@ namespace Displex
 
             if (o < 45 || o > 315)
             {
-                Console.WriteLine("1: " + o);
                 item.Orientation = 0;
                 item.Height = 1032;
                 item.Width = 521;
@@ -373,7 +395,6 @@ namespace Displex
             }
             else if (o >= 45 && o <= 135)
             {
-                Console.WriteLine("2: " + o);
                 item.Orientation = 90;
                 item.Height = 1365;
                 item.Width = 690;
@@ -381,7 +402,6 @@ namespace Displex
             }
             else if (o > 135 && o < 225)
             {
-                Console.WriteLine("3: " + o);
                 item.Orientation = 180;
                 item.Height = 1032;
                 item.Width = 521;
@@ -389,7 +409,6 @@ namespace Displex
             }
             else if (o >= 225 && o <= 315)
             {
-                Console.WriteLine("4: " + o);
                 item.Orientation = 270;
                 item.Height = 1365;
                 item.Width = 690;

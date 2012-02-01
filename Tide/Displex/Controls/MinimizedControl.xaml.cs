@@ -38,6 +38,7 @@ namespace Displex.Controls
         {
             //device.Control.rdfWPF.Disconnect();
             Disconnected(this, new TrackerEventArgs(device, TrackerEventType.Removed));
+            Logger.Log("exit", "minimized button");
         }
 
         private void restoreButton_Click(object sender, RoutedEventArgs e)
@@ -95,7 +96,10 @@ namespace Displex.Controls
 
             item.Center = new Point(newX, newY);
             if (IsInCorner)
+            {
                 Disconnected(this, new TrackerEventArgs(device, TrackerEventType.Removed));
+                Logger.Log("exit", "off corner");
+            }
         }
     }
 

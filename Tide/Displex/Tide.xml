@@ -9,9 +9,9 @@ instructions.
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xmlns:ss="http://schemas.microsoft.com/Surface/2007/ApplicationMetadata">
   <Application>
-    <Title>Displex</Title>
-    <Description>Displex</Description>
-    <ExecutableFile>C:\LeoThesis\thesis\Displex\Displex\bin\Release\Displex.exe</ExecutableFile>
+    <Title>Tide</Title>
+    <Description>Tide prototype</Description>
+    <ExecutableFile>C:\LeoThesis\thesis\Tide\Displex\bin\Debug\Displex.exe</ExecutableFile>
     <Arguments></Arguments>
     <IconImageFile>Resources\icon.png</IconImageFile>
     <Preview>

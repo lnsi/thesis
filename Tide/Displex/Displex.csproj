@@ -158,7 +158,7 @@
     <Resource Include="Resources\iphoneMinimized.png" />
     <Resource Include="Resources\iphoneBody.png" />
     <Resource Include="Resources\iphoneScreen.png" />
-    <Resource Include="Displex.xml" />
+    <Resource Include="Tide.xml" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\WindowBackground.jpg" />

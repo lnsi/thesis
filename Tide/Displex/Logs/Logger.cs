@@ -16,14 +16,10 @@ namespace Displex
         private static StringBuilder builder;
 
         static Logger() {
-
               // load the logging path
-
             string relativepath = String.Concat(@"..\..\Logs\",filename);
             string filepath = Path.Combine(Environment.CurrentDirectory, relativepath);
-
               // if the file doesn't exist, create it
-
             if (!File.Exists(filepath))
             {
                 FileStream fs = new FileStream(filepath,
@@ -31,18 +27,19 @@ namespace Displex
                 fs.Close();
             }
               // open up the streamwriter for writing..
-
               sw = File.AppendText(filepath);
-              Console.WriteLine("Logger ready...");
+              Console.WriteLine("Logger ready: session " + sessionNr + " - user " + userInitials);
+              lock (sw)
+              {
+                  sw.WriteLine();
+                  sw.WriteLine("Logging session " + sessionNr + " - user " + userInitials);
+                  sw.Flush();
+              }
         }
 
         public static void Log(string command, string action)
         {
             builder = new StringBuilder();
-            builder.Append(sessionNr);
-            builder.Append(",");
-            builder.Append(userInitials);
-            builder.Append(",");
             builder.Append(command);
             builder.Append(",");
             builder.Append(action);
