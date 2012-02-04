@@ -10,45 +10,47 @@ A level-1 auxiliary file: evaluation.aux
 A level-1 auxiliary file: conclusion.aux
 The style file: plainnat.bst
 A level-1 auxiliary file: scenarios.aux
+A level-1 auxiliary file: study.aux
+A level-1 auxiliary file: studyform.aux
 Database file #1: ../references.bib
-You've used 13 entries,
+You've used 14 entries,
             2773 wiz_defined-function locations,
-            709 strings with 8120 characters,
-and the built_in function-call counts, 7105 in all, are:
-= -- 737
-> -- 308
+            694 strings with 7119 characters,
+and the built_in function-call counts, 5964 in all, are:
+= -- 589
+> -- 240
 < -- 14
-+ -- 106
-- -- 93
-* -- 522
-:= -- 1053
-add.period$ -- 74
-call.type$ -- 13
-change.case$ -- 69
++ -- 87
+- -- 72
+* -- 397
+:= -- 910
+add.period$ -- 68
+call.type$ -- 14
+change.case$ -- 65
 chr.to.int$ -- 13
-cite$ -- 26
-duplicate$ -- 343
-empty$ -- 572
-format.name$ -- 110
-if$ -- 1576
-int.to.chr$ -- 1
+cite$ -- 28
+duplicate$ -- 284
+empty$ -- 530
+format.name$ -- 90
+if$ -- 1298
+int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 12
+missing$ -- 8
 newline$ -- 101
-num.names$ -- 52
-pop$ -- 124
+num.names$ -- 56
+pop$ -- 143
 preamble$ -- 1
-purify$ -- 57
+purify$ -- 52
 quote$ -- 0
-skip$ -- 278
+skip$ -- 220
 stack$ -- 0
-substring$ -- 310
-swap$ -- 81
-text.length$ -- 7
+substring$ -- 192
+swap$ -- 45
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 138
+type$ -- 149
 warning$ -- 0
-while$ -- 64
+while$ -- 56
 width$ -- 0
-write$ -- 249
+write$ -- 236

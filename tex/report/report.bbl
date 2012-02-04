@@ -1,9 +1,15 @@
-\begin{thebibliography}{13}
+\begin{thebibliography}{14}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[3M(2012)]{3m}
+3M.
+\newblock 3m.
+\newblock \url{http://www.3m.com/}, 2012.
+\newblock (accessed 2/12).
 
 \bibitem[Apple(2012)]{iphone}
 Apple.
@@ -11,15 +17,14 @@ Apple.
 \newblock \url{http://www.apple.com/iphone/}, 2012.
 \newblock (accessed 2/12).
 
-\bibitem[Bardram et~al.(2010)Bardram, Fuglsang, and
-  Pedersen]{Bardram:2010:compute}
-Jakob~E. Bardram, Christina Fuglsang, and Simon~C. Pedersen.
-\newblock Compute: a runtime infrastructure for device composition.
-\newblock In \emph{Proceedings of the International Conference on Advanced
-  Visual Interfaces}, AVI '10, pages 111--118, New York, NY, USA, 2010. ACM.
-\newblock ISBN 978-1-4503-0076-6.
-\newblock \doi{http://doi.acm.org/10.1145/1842993.1843014}.
-\newblock URL \url{http://doi.acm.org/10.1145/1842993.1843014}.
+\bibitem[Arthur and Olsen(2011)]{Arthur:2011:xice}
+Richard Arthur and Dan~R. Olsen, Jr.
+\newblock Xice windowing toolkit: Seamless display annexation.
+\newblock \emph{ACM Trans. Comput.-Hum. Interact.}, 18:\penalty0 14:1--14:46,
+  August 2011.
+\newblock ISSN 1073-0516.
+\newblock \doi{http://doi.acm.org/10.1145/1993060.1993064}.
+\newblock URL \url{http://doi.acm.org/10.1145/1993060.1993064}.
 
 \bibitem[Benyon(2010)]{Benyon:2010}
 David Benyon.
@@ -27,18 +32,6 @@ David Benyon.
   interaction design}.
 \newblock Addison Wesley, 2010.
 \newblock URL \url{http://books.google.com/books?id=P923PwAACAAJ}.
-
-\bibitem[Clifton et~al.(2011)Clifton, Mazalek, Sanford, R\'{e}bola, Lee, and
-  Powell]{Clifton:2010:sketchtop}
-Paul Clifton, Ali Mazalek, Jon Sanford, Claudia R\'{e}bola, Seunghyun Lee, and
-  Natasha Powell.
-\newblock Sketchtop: design collaboration on a multi-touch tabletop.
-\newblock In \emph{Proceedings of the fifth international conference on
-  Tangible, embedded, and embodied interaction}, TEI '11, pages 333--336, New
-  York, NY, USA, 2011. ACM.
-\newblock ISBN 978-1-4503-0478-8.
-\newblock \doi{http://doi.acm.org/10.1145/1935701.1935778}.
-\newblock URL \url{http://doi.acm.org/10.1145/1935701.1935778}.
 
 \bibitem[Dietz and Leigh(2001)]{Dietz:2001:diamondtouch}
 Paul Dietz and Darren Leigh.
@@ -50,58 +43,43 @@ Paul Dietz and Darren Leigh.
 \newblock \doi{http://doi.acm.org/10.1145/502348.502389}.
 \newblock URL \url{http://doi.acm.org/10.1145/502348.502389}.
 
-\bibitem[Dietz and Eidelson(2009)]{Dietz:2009:surfaceware}
-Paul~H. Dietz and Benjamin~D. Eidelson.
-\newblock Surfaceware: dynamic tagging for microsoft surface.
-\newblock In \emph{Proceedings of the 3rd International Conference on Tangible
-  and Embedded Interaction}, TEI '09, pages 249--254, New York, NY, USA, 2009.
-  ACM.
-\newblock ISBN 978-1-60558-493-5.
-\newblock \doi{http://doi.acm.org/10.1145/1517664.1517717}.
-\newblock URL \url{http://doi.acm.org/10.1145/1517664.1517717}.
-
-\bibitem[Hincapi{\'e}-Ramos et~al.(2011)Hincapi{\'e}-Ramos, Tabard, and
-  Bardram]{Hincapie:2011:rabbit}
-Juan~David Hincapi{\'e}-Ramos, Aur{\'e}lien Tabard, and Jakob~E. Bardram.
-\newblock Mediated tabletop interaction in the biology lab - exploring the
-  design space of the rabbit.
-\newblock \emph{Ubicomp}, 2011.
-
-\bibitem[Hunter et~al.(2011)Hunter, Maes, Scott, and
-  Kaufman]{Hunter:2011:memtable}
-Seth Hunter, Pattie Maes, Stacey Scott, and Henry Kaufman.
-\newblock Memtable: an integrated system for capture and recall of shared
-  histories in group workspaces.
-\newblock In \emph{Proceedings of the 2011 annual conference on Human factors
-  in computing systems}, CHI '11, pages 3305--3314, New York, NY, USA, 2011.
-  ACM.
-\newblock ISBN 978-1-4503-0228-9.
-\newblock \doi{http://doi.acm.org/10.1145/1978942.1979432}.
-\newblock URL \url{http://doi.acm.org/10.1145/1978942.1979432}.
-
-\bibitem[Microsoft(2012)]{ms}
-Microsoft.
-\newblock Microsoft surface.
-\newblock \url{http://www.microsoft.com/surface/}, 2012.
+\bibitem[Displax(2012)]{displax}
+Displax.
+\newblock Displax.
+\newblock \url{http://www.displax.com/}, 2012.
 \newblock (accessed 2/12).
 
-\bibitem[Schmidt(2000)]{Schmidt:2000:implicit}
-Albrecht Schmidt.
-\newblock Implicit human computer interaction through context.
-\newblock \emph{Personal and Ubiquitous Computing}, 4:\penalty0 191--199, 2000.
-\newblock \doi{10.1007/BF01324126}.
+\bibitem[Microsoft(2012{\natexlab{a}})]{ms}
+Microsoft.
+\newblock Microsoft surface.
+\newblock \url{http://www.microsoft.com/surface/}, 2012{\natexlab{a}}.
+\newblock (accessed 2/12).
 
-\bibitem[Schmidt et~al.(2010)Schmidt, Chong, and
-  Gellersen]{Schmidt:2010:handsdown}
-Dominik Schmidt, Ming~Ki Chong, and Hans Gellersen.
-\newblock Handsdown: hand-contour-based user identification for interactive
-  surfaces.
-\newblock In \emph{Proceedings of the 6th Nordic Conference on Human-Computer
-  Interaction: Extending Boundaries}, NordiCHI '10, pages 432--441, New York,
-  NY, USA, 2010. ACM.
-\newblock ISBN 978-1-60558-934-3.
-\newblock \doi{http://doi.acm.org/10.1145/1868914.1868964}.
-\newblock URL \url{http://doi.acm.org/10.1145/1868914.1868964}.
+\bibitem[Microsoft(2012{\natexlab{b}})]{pixelsense}
+Microsoft.
+\newblock Pixelsense.
+\newblock \url{http://www.microsoft.com/surface/en/us/pixelsense.aspx},
+  2012{\natexlab{b}}.
+\newblock (accessed 2/12).
+
+\bibitem[MultiTouch(2012)]{multitouch}
+MultiTouch.
+\newblock Multitouch.
+\newblock \url{http://multitouch.fi}, 2012.
+\newblock (accessed 2/12).
+
+\bibitem[{PQ Labs}(2012)]{pq}
+{PQ Labs}.
+\newblock Pq labs.
+\newblock \url{http://multi-touch-screen.com/}, 2012.
+\newblock (accessed 2/12).
+
+\bibitem[Richardson et~al.(1998)Richardson, Stafford-Fraser, Wood, and
+  Hopper]{Richardson:1998:vnc}
+Tristan Richardson, Quentin Stafford-Fraser, Kenneth~R. Wood, and Andy Hopper.
+\newblock Virtual network computing.
+\newblock \emph{Internet Computing, IEEE}, 2\penalty0 (1):\penalty0 33--38,
+  1998.
 
 \bibitem[Wellner(1993)]{Wellner:1993:digitaldesk}
 Pierre Wellner.
@@ -110,6 +88,18 @@ Pierre Wellner.
 \newblock ISSN 0001-0782.
 \newblock \doi{http://doi.acm.org/10.1145/159544.159630}.
 \newblock URL \url{http://doi.acm.org/10.1145/159544.159630}.
+
+\bibitem[Winkler et~al.(2011)Winkler, Reinartz, Nowacka, and
+  Rukzio]{Winkler:2011:interactivephonecall}
+Christian Winkler, Christian Reinartz, Diana Nowacka, and Enrico Rukzio.
+\newblock Interactive phone call: synchronous remote collaboration and
+  projected interactive surfaces.
+\newblock In \emph{Proceedings of the ACM International Conference on
+  Interactive Tabletops and Surfaces}, ITS '11, pages 61--70, New York, NY,
+  USA, 2011. ACM.
+\newblock ISBN 978-1-4503-0871-7.
+\newblock \doi{http://doi.acm.org/10.1145/2076354.2076367}.
+\newblock URL \url{http://doi.acm.org/10.1145/2076354.2076367}.
 
 \bibitem[Wobbrock et~al.(2009)Wobbrock, Morris, and
   Wilson]{Wobbrock:2009:gestures}

@@ -8,56 +8,108 @@
 %SOLUTION : THE PROTOTYPE, SUPPORTED BY BOTH STUDIES
 
 \chapter{Introduction}
+\label{introduction}
+
+\section{Research context}
 
 Modern smartphones are performant enough to support most users' daily computing tasks.
-They are ultra mobile, fitting in a pocket, and they offer good connectivity.
+They fit in a pocket, which makes them ultra mobile, and they offer good connectivity.
 This tendency implies that users have access to personal data and applications at all times.
 Smartphones support a new type of computer interaction which is unplanned, spontaneous, on-the-go.
-However there are situations in which the small form factor of the device is a limitation to this form of improvised computer interaction.
-This is especially the case in a collocated collaborative context, because a smartphone is simply to small for several users to gather around it.
+However there are times when the size of the device is a limitation to this form of improvised computer interaction.
+This is especially true in situations with multiple users, because a smartphone is too small for several persons to gather around it.
 
 Tabletop computers are cutting-edge devices that merge input and output spaces into one horizontal interactive surface.
-They have been the focus of extensive research since the DigitalDesk \citep{Wellner:1993:digitaldesk}, and in recent years they are being commercialized.
-One of the first products was the Microsoft Surface \citep{ms}, but there have been other since, such as \ldots
-Tabletops are tables, and therefore an ideal computing platform for collocated multi-user scenarios.
-Their displays often support multi-touch input, thus providing users an interactive  experience quite similar to the one on most smartphones.
+They have been the focus of extensive research since the 1990s, with early systems such as the DigitalDesk \citep{Wellner:1993:digitaldesk} and DiamondTouch \citep{Dietz:2001:diamondtouch}, that used overhead projection.
+In recent years, tabletops are being commercialized, with interactive displays mostly based on computer vision and capacitive technologies.
+Capacitive screens are marketed since the iPhone \citep{iphone}, but are now being produced in larger sizes \citep{displax}, \citep{3m}.
+Though its predecessor uses camera-based vision, the latest Microsoft Surface \citep{ms} is based on PixelSense technology \citep{pixelsense}.
+Other computer vision based solutions include MultiTaction \citep{multitouch} and side vision overlays \citep{pq}.
+Thus, tabletop displays are gradually becoming part of the infrastructure in shared environments such as meeting rooms, public lobbies, bars, restaurants, etc\ldots
+They are an ideal platform for spontaneous use, and multi-user interactions.
+Furthermore, they support a multi-touch based experience that is in many ways similar to the one on most smartphones.
 
-Even though screen resolution on smartphones can be very high, sometimes the issue is the pixel size.
-Reading an article and consulting a map are examples of situations in which the user experience would be enhanced by the possibility of augmenting the scale of the image.
-The perception of the human eye has its limits, that smartphone screens are about to exceed.
+The latest smartphones boast 720p HD screen resolutions (1280 by 720 pixels) that exceed the naked eye's ability to distinguish separate pixels.
+However, sometimes it is the bigger picture that matters.
+Reading an article and consulting a map are examples of situations in which small displays present limitations.
+To be able to view the data at a convenient scale, the user must zoom in on a portion at a time.
+This implies using repetitive zoom and pan gestures, which makes the whole interaction somewhat cumbersome.
+In such a situation, a smartphone could benefit from the additional screen space provided by a tabletop.
 
-In this perspective, device composition between smartphones and tabletops seems like a good idea.
+\emph{Device composition} is a research area that can be traced back to the early work on smart space technologies [REFERENCE].
+It has been steadily gaining importance due to the growing multiplicity of computing devices and mobility of users.
+Nowadays, a typical user owns mobile computers (handheld, tablet, laptop, etc\ldots) and interacts with other devices in an ad hoc way, as s/he comes upon them throughout the day (public desktops, printers, displays, etc\ldots).
+Enabling efficient communication and collaboration between various devices is therefore an essential issue, with the overall goal of improving the user experience.
+\\\\
+Device composition focuses on the following challenges:
 
-Device composition presents different challenges:
-- technical challenges
-- ...
-- interaction = our focus
+\begin{description}
+\item[Connection:] this includes device detection, identification and connection.
+\item[Communication:] different types of devices (hardware, OS) must use a common language if they are to collaborate.   
+\item[Sharing:] collaboration often requires sharing information. Besides technical problems, this raises the privacy issue of protecting the user's personal data.
+\item[Interaction:] the user must be able to interact with the system if s/he is to benefit from it.
+\end{description}
+\hfill\\
+This project focuses on the human computer interaction aspect of combining smartphones and tabletops.
+The slightly broader issue of combining smartphones and larger interactive displays has been approached in various ways, each focusing on a specific interaction metaphor.
+\begin{description}
+\item[Streaming] is a one way approach where only the visual output of the smartphone is forwarded to a remote display.
+\item[Replication] goes one step further, by allowing the user to interact with the replicated UI.
+\item[Projection] is a metaphor similar to replication, in which the smartphone is used as a projector, allowing the user to ``drop'' the UI onto an available display \citep{Winkler:2011:interactivephonecall}.
+\item[Adaptation] refers to an improved UI transfer where the UI is modified to make full use of the additional resources offered by the remote display \citep{Arthur:2011:xice}.
+\item[Extension] provides the possibility of transferring single applications/processes to a remote  machine.
+\end{description}
 
-Interaction can be done in various ways/metaphors:
-- streaming
-- projection
-- adaptation
-- extension
-- replication = our focus
+This project focuses on UI replication because it improves the user experience while keeping the interaction natural, and it can be implemented with the available resources.
+On a technical level, the advantage of UI replication is that it uses the application logic of the personal device, requiring of the remote display only to forward graphical output, and touch-based input.
+This allows the development of software that is easily adaptable to various programming platforms.
+On a human-computer interaction level, it reduces the learning curve for the user, by providing an intuitive experience that is similar to the one s/he is used to.
+By comparison, the streaming metaphor is too limited, and the other paradigms all introduce new interaction dimensions that require user adaptation.
+A final argument in favor of UI replication is that it allows the implementation of an engaging prototype without requiring any additional graphical design.
 
-argument to focus on replication with streaming is simplicity
-- multiple mobile and tabletop platforms
-- simpler to keep logic on smartphone, and implement something light and generic on tabletop (result works both for iPhone and Adnroid)
-- show that other metaphors are more complicated
-- show that esthetics is not an issue when replicating
+\section{Problem statement}
 
-Research problem is which interaction techniques should be used to provide the user with an intuitive experience?
-define intuition
+\emph{Intuition} is the ability to understand something immediately, without the need for conscious reasoning.
+\\\\
+This project attempts to find out \emph{how to design intuitive systems that integrate smartphones and tabletops.}
+\\\\
+Particularly, the following questions are asked:
+\begin{itemize}
+\item is it feasible to build a system that supports the UI replication of any smartphone to the Microsoft Surface tabletop computer?
+\item which interaction techniques should be used to design for an intuitive user experience?
+\end{itemize}
 
-Research approach is as follows:
--
--
--
-- user centered design (cite benyon)
+\section{Research methods}
 
-present TIDE
+To answer these questions, the following methods are used:
+\begin{itemize}
+\item a literary review and analysis of the research background,
+\item a requirements analysis of the system,
+\item a solution design produced via a user-centered approach \citep{Benyon:2010},
+\item the implementation of an application prototype,
+\item an evaluation of the solution by way of a usability study.
+\end{itemize}
 
-present contributions
+\section{Results}
+
+This report shows that it is possible to develop software that supports novel interactions, without requiring any conscious learning effort of the user, by designing intuitive systems.
+\emph{TIDE} (Tabletop Interactive Display Extension) is a prototype that makes using a tabletop to interact with a smartphone as natural as interacting with the smartphone itself.
+The report presents design guidelines with a list of the interaction techniques that are most intuitive for the user in this application context.
+
+The TIDE prototype shows that it is possible to implement an application on the Microsoft Surface that replicates the UI of any type of smartphone.
+It currently supports iOS and Android smartphones, and can easily be extended to other devices.
+The system consists of two main components.
+The \emph{Remote UI} is a window on the tabletop that replicates the UI of a smartphone, and allows remote interaction.
+It is based on the VNC protocol \citep{Richardson:1998:vnc}.
+The \emph{Surface UI} is the tabletop UI that contains the Remote UI, and provides controls to manipulate it.
+
+\section{Thesis overview}
+
+Chapter~\ref{relatedwork} presents a literary review of the research that constitutes the background to this work, and the theoretical work on which the design approach is based.\\
+Chapter~\ref{design} describes the process that lead to the design of the TIDE prototype.\\
+The system itself is presented in Chapter~\ref{system}, and its evaluation by way of a usability study in Chapter~\ref{evaluation}.\\
+Chapter~\ref{discussion} is a discussion that addresses the results and lessons learned throughout this process, and brings suggestions for future work.\\
+Chapter~\ref{conclusion} concludes the report.
 
 % tabletop application/research examples
 %%%%%%%%%%%%%%%%%

@@ -1,0 +1,144 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\title{TIDE user experiment}
+\author{lnsi}
+%\date{February 2012}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+\emph{Introduction speech to the user:}
+\\\\
+``The experiment is divided in 3 parts.
+First, you will learn how to use the application.
+Second, I will guide you through two scenarios where you will use the application to do specific things.
+Third, I will ask you to answer to a questionnaire.
+
+The Microsoft Surface is a tabletop computer with an interactive display.
+You interact with it by using finger touch, like on a smartphone.
+
+The TIDE application allows you to connect a smartphone to the tabletop.
+To do that, you only need to put the phone on the table.
+An application window appears on the table screen, which resembles the phone.
+You can manipulate the window, but if you touch inside, the input will be relayed to the phone.
+
+This is a prototype, implying that the application presents some defaults.
+The main issue is that there is an important lag when interacting with the phone, please be patient.
+Unexpected behavior might occur, in which case I will step in to keep the experiment on track.''
+
+\section{Discovering Tide (10 min)}
+
+The user discovers the application and learns to use its features.
+First by himself, then with the support of the designer.
+
+\subsection{Free exploration}
+ 
+The user has 5 minutes to freely try the prototype, understand how it works and discover its features.
+
+\subsection{Features}
+
+User and designer go through each command together.
+For each command, the user shows which actions he knows.
+If there are any unknown actions, the designer teaches them to the user.
+
+The designer fills out the form Tide-EF1.
+
+\section{Using Tide (10 min)}
+
+The designer guides the user through two scenarios where the user performs various tasks using the application.
+The designer tells the user what to do, but not how to do it.
+
+\subsection{Gaming}
+
+Scenario: user and designer are two friends in a waiting room. They play a game of tic-tac-toe to pass the time.
+
+\begin{enumerate}
+\item connect the iPhone to the tabletop
+\item launch the game called 'tic tac toe'
+\item start a 2 players game
+\item position and resize the window to allow for 2 players to interact
+\item now we play
+\item exit the game
+\item close the application
+\end{enumerate}
+
+\subsection{Browsing}
+
+Scenario: user and designer are planning a surprise dinner at a restaurant for the birthday of a friend. The user uses the application to go online and find the address of a restaurant, then to find how to go from the university to the restaurant.
+When the friend is close, the user should hide what he is doing.
+
+\begin{enumerate}
+\item connect the HTC Legend to the tabletop
+\item adjust the position and size of the window
+\item launch the app called Internet
+\item find the address of 'restaurant aristo'
+\item minimize the window to hide what you are doing
+\item restore the window
+\item launch the app called Maps
+\item look up the address for the restaurant
+\item zoom in on the restaurant
+\item find out how to walk from ITU to the restaurant
+\item rotate the window to show me how to walk from ITU to the library
+\item minimize the window to hide what you are doing
+\item restore the window
+\item return to phone home screen
+\item exit application
+\end{enumerate}
+
+\section{Questionnaire (10 min)}
+
+The user fills in the evaluation form Tide-EF2.
+
+%teaching phase for each primitive (5):
+%1) ask them to do it
+%	- do they know how to do it
+%	- which technique do they use?
+%2) ask them if they know of other technique
+%- if yes, which? show?
+%- if no, tell them. show?
+%
+%scenario phase:
+%1) browsing:
+%- pair Legend
+%- look up sthg online: remote UI, dragging, resizing
+%- shoe me sthg: rotating
+%- hide stag from someone: minimizing/hiding
+%
+%2) gaming (designer is opponent)
+%- pair iPhone
+%- launch game: remote UI
+%- resize to fullscreen (maximize)
+%- exit
+%
+%questionnaire phase: google forms?
+%= straightforward user satisfaction study
+%- rate the experience: usable? engaging?
+%- would you use such a system?
+%- how intuitive is the system?
+%
+%
+%LOGGING (user, session, command, action, timestamp)
+%
+%drag, resize, rotate = using active border
+%
+%maximize by size enlarge
+%rotate when maximized
+%
+%minimize by drag to edge
+%minimize by double tap
+%minimize by blob touch
+%minimize by size reduce
+%
+%close by minimize
+%close by corner
+%close by press and hold
+
+\end{document}

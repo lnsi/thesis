@@ -1,7 +1,5 @@
 EVALUATION
 
-log everything (timestamp, command, action, user, session)
-
 STRUCTURE:
 
 discovery phase: 5 min to themselves
@@ -33,3 +31,19 @@ questionnaire phase: google forms?
 - would you use such a system?
 - how intuitive is the system?
 
+
+LOGGING (user, session, command, action, timestamp)
+
+drag, resize, rotate = using active border
+
+maximize by size enlarge
+rotate when maximized
+
+minimize by drag to edge
+minimize by double tap
+minimize by blob touch
+minimize by size reduce
+
+close by minimize
+close by corner
+close by press and hold
