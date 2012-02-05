@@ -1,0 +1,59 @@
+Scott MacKenzie - CHI submission tips
+
+focus on people
+use standardized methodology to evaluate
+must: part called method with first section called participants
+like in 'Evaluation of Mouse, Rate-Controlled Isometric Joystick, Step Keys, and Text Keys for Text Selection on a CRT' = first HCI paper
+
+experiment and evaluation is mandatory
+must have comparison and measurements
+
+remove noise from paper (must be perfect)
+imitate good papers
+
+LEARN HOW TO DO FOLLOWING THINGS:
+
+DESIGN AND CONDUCT EXPERIMENTS
+
+know method and terminology
+Doing Psychology Experiments by Martin, D. W.
+
+ABSTRACT
+
+should tell what you did and what you found (not intro)
+
+RELATED WORK
+
+formatting requirements are very important
+tips:
+do not treat citations as nouns!
+
+CRAFT TABLE, CHARTS, VISUALS
+
+USE ITALICS, QUOTATIONS, ABBREVIATIONS
+
+variables should be italics
+key term in italics but ONLY first time
+
+WRITE GOOD ENGLISH
+
+'The elements of style' By Strunk W., Jr. and White, E.B.
+Rule #17: omit needless words!
+
+STRUCTURE AND ORGANIZE A RESEARCH PAPER
+
+Introduction: tell your story. Don't forget "the rest of this paper is presented as follows.."
+
+Method: tell how you did it: call it Method, with subsections: participants, apparatus, procedure, design (independent/dependent variables), results. Don't be creative. Methodology.
+Research must be reproducible, it is like a recipe
+
+Results and discussion: move from overall to detailed results. don't give too much, filter what is important, discuss the results, explain. Statistics are only a support for the result. 
+
+Conclusion: summarize and restate findings, no new ideas
+Aknowledgements
+References
+
+
+
+
+
