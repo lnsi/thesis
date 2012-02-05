@@ -267,7 +267,7 @@ namespace Displex
             {
                 string h = e.HorizontalChange.ToString().Remove(e.HorizontalChange.ToString().IndexOf("."));
                 string v = e.VerticalChange.ToString().Remove(e.VerticalChange.ToString().IndexOf("."));
-                Logger.Log("drag", String.Concat("gesture h:",h,",v:",v));
+                Logger.Log("drag", String.Concat("gesture h:",h," v:",v));
             }
             if (e.RotationalChange > 3)
             {
@@ -276,7 +276,8 @@ namespace Displex
             }
             if (e.ScaleFactor != 1)
             {
-                Logger.Log("resize", String.Concat("gesture ", e.ScaleFactor.ToString().Remove(7)));
+                string scale = e.ScaleFactor.ToString().Length > 5 ? e.ScaleFactor.ToString().Remove(5) : e.ScaleFactor.ToString();
+                Logger.Log("resize", String.Concat("gesture ", scale));
             }
         }
 
@@ -340,7 +341,7 @@ namespace Displex
         private void AddSVI(DeviceControl control)
         {
             ScatterViewItem svi = new ScatterViewItem();
-            svi.Center = new System.Windows.Point(500, 350);
+            svi.Center = new System.Windows.Point(control.device.Center().X-200, control.device.Center().Y);
             svi.Orientation = 0;
             svi.Height = 515;
             svi.Width = 260;
@@ -389,30 +390,30 @@ namespace Displex
             if (o < 45 || o > 315)
             {
                 item.Orientation = 0;
-                item.Height = 1032;
-                item.Width = 521;
-                item.Center = new System.Windows.Point(512, 344);
+                item.Height = 1030;
+                item.Width = 520;
+                item.Center = new System.Windows.Point(512, 360);
             }
             else if (o >= 45 && o <= 135)
             {
                 item.Orientation = 90;
-                item.Height = 1365;
-                item.Width = 690;
-                item.Center = new System.Windows.Point(562, 384);
+                item.Height = 1370;
+                item.Width = 692;
+                item.Center = new System.Windows.Point(542, 384);
             }
             else if (o > 135 && o < 225)
             {
                 item.Orientation = 180;
-                item.Height = 1032;
-                item.Width = 521;
-                item.Center = new System.Windows.Point(512, 424);
+                item.Height = 1030;
+                item.Width = 520;
+                item.Center = new System.Windows.Point(512, 408);
             }
             else if (o >= 225 && o <= 315)
             {
                 item.Orientation = 270;
-                item.Height = 1365;
-                item.Width = 690;
-                item.Center = new System.Windows.Point(462, 384);
+                item.Height = 1370;
+                item.Width = 692;
+                item.Center = new System.Windows.Point(482, 384);
             }
 
             item.CanMove = false;

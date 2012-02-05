@@ -22,7 +22,7 @@ namespace Displex.Detection
             for (; contours != null; contours = contours.HNext)
             {
                 // look for the HTC Legend silver body (white rectangle)
-                if (contours.Area >= 5400 && contours.Area <= 5600)
+                if (contours.Area >= 5300 && contours.Area <= 6000)
                 {
                     //Console.WriteLine("legend area: " + contours.Area);
                     CircleF body = new CircleF(new PointF(contours.BoundingRectangle.Left + contours.BoundingRectangle.Width / 2,

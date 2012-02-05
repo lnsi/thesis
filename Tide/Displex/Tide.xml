@@ -13,9 +13,9 @@ instructions.
     <Description>Tide prototype</Description>
     <ExecutableFile>C:\LeoThesis\thesis\Tide\Displex\bin\Debug\Displex.exe</ExecutableFile>
     <Arguments></Arguments>
-    <IconImageFile>Resources\icon.png</IconImageFile>
+    <IconImageFile>C:\LeoThesis\thesis\Tide\Displex\Resources\icon.png</IconImageFile>
     <Preview>
-      <PreviewImageFile>Resources\iconPreview.png</PreviewImageFile>
+      <PreviewImageFile>C:\LeoThesis\thesis\Tide\Displex\Resources\iconPreview.png</PreviewImageFile>
     </Preview>
     <Tags>
       <!--
