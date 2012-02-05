@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  1 FEB 2012 15:05
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  5 FEB 2012 14:37
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -288,31 +288,42 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 \MPnumerator=\count107
 \everyMPtoPDFconversion=\toks28
 )
-Underfull \hbox (badness 10000) in paragraph at lines 18--24
+Underfull \hbox (badness 10000) in paragraph at lines 18--31
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--31
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--31
 
  []
 
 [1{/usr/local/texlive/2010/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2] (./evalscript.aux) ) 
 Here is how much of TeX's memory you used:
- 3115 strings out of 493747
- 40246 string characters out of 3143546
- 103086 words of memory out of 3000000
- 6218 multiletter control sequences out of 15000+200000
- 8941 words of font info for 34 fonts, out of 3000000 for 9000
+ 3128 strings out of 493747
+ 40409 string characters out of 3143546
+ 104086 words of memory out of 3000000
+ 6228 multiletter control sequences out of 15000+200000
+ 11433 words of font info for 44 fonts, out of 3000000 for 9000
  875 hyphenation exceptions out of 8191
- 41i,5n,31p,349b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,5n,31p,349b,221s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2010/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmbx10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmcsc10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmr10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmr8.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmr9.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmti10.pfb>
-Output written on evalscript.pdf (2 pages, 78274 bytes).
+cm/cmsy10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmti10.pfb>
+Output written on evalscript.pdf (2 pages, 86792 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 39 PDF objects out of 1000 (max. 8388607)
+ 27 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
