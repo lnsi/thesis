@@ -8,7 +8,7 @@ namespace Displex
 {
     public class Logger
     {
-        private static string userInitials = "LS";
+        private static string userInitials = "00";
         private static string sessionNr = "00";
         private static string filename = "logDev.csv";
 
@@ -32,7 +32,7 @@ namespace Displex
               lock (sw)
               {
                   sw.WriteLine();
-                  sw.WriteLine("Logging session " + sessionNr + " - user " + userInitials);
+                  sw.WriteLine("Logging session " + sessionNr + " - user " + userInitials + " - " + DateTime.Now.ToString());
                   sw.Flush();
               }
         }
@@ -40,11 +40,14 @@ namespace Displex
         public static void Log(string command, string action)
         {
             builder = new StringBuilder();
+            builder.Append(DateTime.Now.ToOADate());
+            builder.Append(",");
             builder.Append(command);
             builder.Append(",");
             builder.Append(action);
             builder.Append(",");
-            builder.Append(DateTime.Now.ToString("HH:mm:ss"));
+            builder.Append(sessionNr);
+            
 
             lock(sw)
             {

@@ -1,0 +1,743 @@
+
+Logging session 02 - user RS - 2/6/2012 1:01:25 PM
+drag,gesture h:110 v:62,13:01:25
+minimize,double tap,13:03:19
+exit,minimized button,13:03:20
+drag,gesture h:108 v:3,13:05:24
+rotate,gesture r:15,13:05:24
+drag,gesture h:352 v:209,13:05:29
+resize,gesture 0.413,13:05:29
+resize,gesture 2.704,13:05:32
+rotate,gesture r:87,13:05:41
+resize,gesture 0.837,13:05:41
+minimize,double tap,13:05:43
+drag,gesture h:-41 v:32,13:05:43
+rotate,gesture r:5,13:05:43
+drag,gesture h:106 v:-265,13:05:49
+minimize,double tap,13:05:55
+drag,gesture h:-101 v:292,13:05:59
+rotate,gesture r:3,13:05:59
+rotate,gesture r:33,13:06:00
+drag,gesture h:45 v:8,13:06:02
+rotate,gesture r:3,13:06:02
+resize,gesture 1.816,13:06:02
+drag,gesture h:-18 v:210,13:06:03
+rotate,gesture r:5,13:06:03
+resize,gesture 0.558,13:06:03
+drag,gesture h:40 v:-218,13:06:06
+resize,gesture 1.088,13:06:06
+rotate,gesture r:3,13:06:07
+drag,gesture h:43 v:220,13:06:08
+minimize,double tap,13:06:20
+exit,minimized button,13:06:21
+rotate,gesture r:8,13:06:47
+minimize,double tap,13:06:56
+maximize,size enlarge,13:06:59
+rotate,maximized,13:07:00
+rotate,maximized,13:07:00
+rotate,maximized,13:07:00
+resize,gesture 2.026,13:07:01
+rotate,maximized,13:07:03
+resize,gesture 0.889,13:07:07
+drag,gesture h:37 v:-6,13:07:10
+rotate,maximized,13:07:10
+rotate,maximized,13:07:10
+rotate,maximized,13:07:11
+drag,gesture h:57 v:4,13:07:11
+resize,gesture 1.109,13:07:11
+drag,gesture h:270 v:-23,13:07:16
+drag,gesture h:-111 v:76,13:07:20
+rotate,gesture r:8,13:07:20
+resize,gesture 1.009,13:07:25
+rotate,maximized,13:07:29
+rotate,maximized,13:07:35
+drag,gesture h:-25 v:132,13:07:40
+resize,gesture 0.237,13:07:40
+drag,gesture h:-20 v:232,13:07:42
+resize,gesture 3.498,13:07:42
+resize,gesture 0.600,13:07:44
+resize,gesture 1.065,13:08:19
+drag,gesture h:-63 v:219,13:08:22
+drag,gesture h:23 v:69,13:08:26
+minimize,double tap,13:08:33
+exit,minimized button,13:08:33
+minimize,double tap,13:08:34
+drag,gesture h:48 v:-147,13:08:41
+drag,gesture h:116 v:-13,13:09:27
+rotate,gesture r:3,13:09:27
+rotate,gesture r:6,13:09:37
+drag,gesture h:282 v:-45,13:09:38
+drag,gesture h:39 v:46,13:09:40
+resize,gesture 1.109,13:09:40
+minimize,double tap,13:09:48
+drag,gesture h:152 v:105,13:09:57
+rotate,gesture r:3,13:09:57
+drag,gesture h:13 v:39,13:09:59
+resize,gesture 0.807,13:09:59
+drag,gesture h:148 v:67,13:10:17
+resize,gesture 0.914,13:10:17
+rotate,gesture r:173,13:10:19
+resize,gesture 1.133,13:10:19
+rotate,gesture r:7,13:10:24
+resize,gesture 1.021,13:10:24
+resize,gesture 1.066,13:10:31
+drag,gesture h:-187 v:192,13:10:36
+resize,gesture 0.971,13:10:36
+drag,gesture h:124 v:-101,13:10:39
+rotate,gesture r:108,13:10:39
+resize,gesture 0.722,13:10:39
+exit,press and hold,13:10:43
+drag,gesture h:38 v:-53,13:10:47
+resize,gesture 1.382,13:10:47
+drag,gesture h:-75 v:46,13:10:49
+drag,gesture h:46 v:-45,13:10:52
+rotate,gesture r:56,13:10:52
+drag,gesture h:113 v:188,13:10:53
+rotate,gesture r:52,13:10:53
+drag,gesture h:207 v:-33,13:10:55
+resize,gesture 0.927,13:11:00
+minimize,size reduce,13:11:12
+drag,gesture h:-5 v:121,13:11:12
+resize,gesture 0.659,13:11:12
+minimize,size reduce,13:11:12
+minimize,size reduce,13:11:20
+drag,gesture h:27 v:124,13:11:20
+rotate,gesture r:3,13:11:20
+minimize,size reduce,13:11:20
+drag,gesture h:84 v:-174,13:11:25
+resize,gesture 1.513,13:11:25
+drag,gesture h:31 v:29,13:11:29
+resize,gesture 0.850,13:11:29
+resize,gesture 1.272,13:11:34
+rotate,gesture r:4,13:11:43
+resize,gesture 0.878,13:11:43
+minimize,double tap,13:11:53
+drag,gesture h:54 v:-211,13:11:57
+resize,gesture 1.145,13:11:57
+minimize,size reduce,13:11:58
+drag,gesture h:-3 v:161,13:11:58
+resize,gesture 0.606,13:11:58
+minimize,size reduce,13:11:58
+rotate,gesture r:23,13:12:02
+drag,gesture h:-24 v:282,13:12:06
+minimize,off edge,13:12:07
+minimize,off edge,13:12:07
+drag,gesture h:11 v:73,13:12:07
+minimize,off edge,13:12:12
+minimize,off edge,13:12:12
+drag,gesture h:-86 v:130,13:12:12
+minimize,off edge,13:12:17
+minimize,off edge,13:12:17
+drag,gesture h:-256 v:143,13:12:18
+drag,gesture h:443 v:-265,13:12:20
+rotate,gesture r:56,13:12:20
+rotate,gesture r:101,13:12:22
+drag,gesture h:71 v:-96,13:12:23
+drag,gesture h:-248 v:31,13:12:25
+resize,gesture 0.830,13:12:25
+minimize,off edge,13:12:28
+minimize,off edge,13:12:28
+drag,gesture h:177 v:-56,13:12:29
+drag,gesture h:-25 v:95,13:12:32
+resize,gesture 2.099,13:12:32
+minimize,off edge,13:12:34
+minimize,off edge,13:12:34
+drag,gesture h:101 v:-600,13:12:34
+drag,gesture h:-5 v:174,13:12:36
+rotate,gesture r:19,13:12:36
+minimize,off edge,13:12:39
+minimize,off edge,13:12:39
+drag,gesture h:121 v:-424,13:12:40
+rotate,gesture r:8,13:12:40
+drag,gesture h:-76 v:365,13:12:42
+drag,gesture h:7 v:44,13:12:43
+resize,gesture 0.757,13:12:43
+minimize,off edge,13:12:49
+minimize,off edge,13:12:49
+drag,gesture h:145 v:-496,13:12:50
+rotate,gesture r:42,13:12:50
+drag,gesture h:-380 v:405,13:12:54
+resize,gesture 0.947,13:12:54
+drag,gesture h:295 v:-77,13:12:56
+resize,gesture 1.375,13:12:56
+minimize,blob touch,13:12:57
+minimize,blob touch,13:13:01
+drag,gesture h:340 v:-68,13:13:08
+minimize,size reduce,13:13:09
+minimize,size reduce,13:13:09
+minimize,size reduce,13:13:09
+rotate,gesture r:4,13:13:09
+resize,gesture 0.580,13:13:09
+rotate,gesture r:59,13:13:11
+drag,gesture h:93 v:-58,13:13:37
+rotate,gesture r:7,13:13:37
+resize,gesture 3.586,13:13:37
+maximize,size enlarge,13:13:38
+rotate,maximized,13:13:38
+rotate,maximized,13:13:38
+drag,gesture h:49 v:-12,13:13:39
+resize,gesture 0.935,13:13:39
+rotate,maximized,13:13:44
+rotate,maximized,13:13:44
+resize,gesture 1.015,13:13:44
+rotate,maximized,13:13:57
+rotate,maximized,13:13:58
+rotate,maximized,13:13:58
+rotate,maximized,13:13:58
+rotate,maximized,13:13:58
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:13:59
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:01
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:02
+rotate,maximized,13:14:03
+rotate,maximized,13:14:03
+rotate,maximized,13:14:03
+rotate,maximized,13:14:03
+rotate,maximized,13:14:03
+rotate,maximized,13:14:03
+rotate,maximized,13:14:03
+rotate,maximized,13:14:03
+rotate,maximized,13:14:03
+rotate,maximized,13:14:03
+rotate,maximized,13:14:03
+rotate,maximized,13:14:03
+rotate,maximized,13:14:03
+rotate,maximized,13:14:03
+rotate,maximized,13:14:03
+rotate,maximized,13:14:03
+rotate,maximized,13:14:03
+rotate,maximized,13:14:03
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:04
+rotate,maximized,13:14:05
+rotate,maximized,13:14:05
+rotate,maximized,13:14:05
+rotate,maximized,13:14:05
+rotate,maximized,13:14:05
+rotate,maximized,13:14:05
+rotate,maximized,13:14:05
+rotate,maximized,13:14:05
+rotate,maximized,13:14:05
+rotate,maximized,13:14:05
+rotate,maximized,13:14:05
+rotate,maximized,13:14:05
+rotate,maximized,13:14:05
+rotate,maximized,13:14:05
+rotate,maximized,13:14:05
+rotate,maximized,13:14:05
+rotate,maximized,13:14:05
+rotate,maximized,13:14:13
+rotate,maximized,13:14:13
+rotate,maximized,13:14:13
+rotate,maximized,13:14:13
+rotate,maximized,13:14:13
+rotate,maximized,13:14:13
+rotate,maximized,13:14:13
+rotate,maximized,13:14:13
+rotate,maximized,13:14:13
+rotate,maximized,13:14:13
+rotate,maximized,13:14:13
+rotate,maximized,13:14:13
+rotate,maximized,13:14:13
+rotate,maximized,13:14:13
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:14
+rotate,maximized,13:14:15
+rotate,maximized,13:14:15
+rotate,maximized,13:14:15
+rotate,maximized,13:14:15
+rotate,maximized,13:14:15
+rotate,maximized,13:14:15
+rotate,maximized,13:14:15
+rotate,maximized,13:14:15
+rotate,maximized,13:14:15
+rotate,maximized,13:14:15
+rotate,maximized,13:14:15
+rotate,maximized,13:14:15
+rotate,maximized,13:14:15
+rotate,maximized,13:14:15
+rotate,maximized,13:14:15
+rotate,maximized,13:14:15
+rotate,maximized,13:14:15
+rotate,maximized,13:14:15
+rotate,maximized,13:14:15
+rotate,maximized,13:14:15
+rotate,maximized,13:14:17
+rotate,maximized,13:14:17
+rotate,maximized,13:14:17
+rotate,maximized,13:14:17
+rotate,maximized,13:14:17
+rotate,maximized,13:14:17
+rotate,maximized,13:14:17
+rotate,maximized,13:14:17
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:18
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:19
+rotate,maximized,13:14:20
+rotate,maximized,13:14:20
+rotate,maximized,13:14:20
+rotate,maximized,13:14:20
+rotate,maximized,13:14:20
+rotate,maximized,13:14:20
+rotate,maximized,13:14:20
+rotate,maximized,13:14:20
+rotate,maximized,13:14:20
+rotate,maximized,13:14:20
+rotate,maximized,13:14:20
+rotate,maximized,13:14:20
+rotate,maximized,13:14:20
+rotate,maximized,13:14:20
+rotate,maximized,13:14:20
+rotate,maximized,13:14:20
+rotate,maximized,13:14:20
+rotate,maximized,13:14:20
+rotate,maximized,13:14:20
+rotate,maximized,13:14:21
+rotate,maximized,13:14:21
+rotate,maximized,13:14:21
+maximize,size enlarge,13:14:21
+rotate,maximized,13:14:21
+rotate,maximized,13:14:21
+rotate,maximized,13:14:21
+rotate,maximized,13:14:21
+rotate,maximized,13:14:21
+rotate,maximized,13:14:21
+rotate,maximized,13:14:21
+rotate,maximized,13:14:21
+rotate,maximized,13:14:21
+rotate,maximized,13:14:21
+rotate,maximized,13:14:21
+rotate,maximized,13:14:21
+rotate,maximized,13:14:21
+rotate,maximized,13:14:21
+rotate,maximized,13:14:21
+rotate,maximized,13:14:22
+rotate,maximized,13:14:22
+resize,gesture 0.375,13:14:22
+drag,gesture h:-22 v:104,13:14:25
+resize,gesture 0.794,13:14:25
+minimize,blob touch,13:14:32
+exit,minimized button,13:14:34
+drag,gesture h:128 v:-187,13:14:49
+minimize,off edge,13:14:50
+minimize,off edge,13:14:50
+drag,gesture h:56 v:-354,13:14:51
+rotate,gesture r:36,13:14:51
+resize,gesture 1.014,13:14:51
+resize,gesture 0.832,13:14:54
+drag,gesture h:32 v:-8,13:14:56
+resize,gesture 0.947,13:14:56
+exit,off corner,13:14:57
+minimize,off edge,13:14:57
+exit,off corner,13:14:57
+minimize,off edge,13:14:57
+exit,off corner,13:15:03
+minimize,off edge,13:15:03
+exit,off corner,13:15:03
+minimize,off edge,13:15:03
+exit,off corner,13:15:03
+minimize,off edge,13:15:03
+resize,gesture 0.951,13:15:04
+rotate,gesture r:67,13:15:11
+drag,gesture h:-380 v:302,13:15:15
+rotate,gesture r:26,13:15:15
+drag,gesture h:-62 v:43,13:15:17
+exit,off corner,13:15:18
+minimize,off edge,13:15:18
+exit,off corner,13:15:18
+minimize,off edge,13:15:18
+exit,off corner,13:15:18
+minimize,off edge,13:15:18
+drag,gesture h:-76 v:105,13:15:19
+drag,gesture h:-440 v:240,13:15:25
+rotate,gesture r:7,13:15:25
+exit,off corner,13:15:26
+minimize,off edge,13:15:26
+exit,off corner,13:15:26
+minimize,off edge,13:15:26
+exit,off corner,13:15:26
+minimize,off edge,13:15:26
+drag,gesture h:-150 v:132,13:15:26
+drag,gesture h:-186 v:182,13:15:32
+exit,press and hold,13:15:37
+exit,press and hold,13:15:42
+rotate,gesture r:41,13:15:45
+exit,press and hold,13:15:48
+drag,gesture h:228 v:-198,13:17:32
+rotate,gesture r:67,13:17:32
+resize,gesture 1.935,13:17:32
+maximize,size enlarge,13:17:34
+rotate,maximized,13:17:34
+rotate,maximized,13:17:34
+rotate,maximized,13:17:34
+rotate,maximized,13:17:34
+rotate,maximized,13:17:34
+rotate,maximized,13:17:34
+rotate,maximized,13:17:34
+rotate,maximized,13:17:34
+drag,gesture h:-54 v:117,13:17:34
+rotate,gesture r:22,13:17:34
+resize,gesture 1.375,13:17:34
+rotate,maximized,13:17:57
+rotate,maximized,13:17:57
+resize,gesture 0.375,13:17:57
+drag,gesture h:85 v:-2,13:18:01
+drag,gesture h:55 v:90,13:18:11
+rotate,gesture r:27,13:18:11
+exit,press and hold,13:18:16
+maximize,size enlarge,13:18:28
+rotate,maximized,13:18:28
+rotate,maximized,13:18:28
+rotate,maximized,13:18:28
+rotate,maximized,13:18:28
+rotate,maximized,13:18:28
+rotate,maximized,13:18:28
+rotate,maximized,13:18:28
+rotate,maximized,13:18:28
+rotate,maximized,13:18:28
+rotate,maximized,13:18:28
+rotate,maximized,13:18:28
+rotate,maximized,13:18:28
+rotate,maximized,13:18:29
+
+Logging session 02 - user RS - 2/6/2012 1:22:57 PM
+maximize,size enlarge,13:22:57
+
+Logging session 02 - user RS - 2/6/2012 1:23:28 PM
+drag,gesture h:60 v:-75,13:23:28
+drag,gesture h:-0 v:91,13:23:39
+resize,gesture 1.567,13:23:39
+rotate,gesture r:20,13:23:49
+resize,gesture 1.050,13:23:49
+drag,gesture h:110 v:164,13:24:17
+resize,gesture 0.244,13:24:17
+drag,gesture h:-614 v:179,13:24:19
+minimize,off edge,13:24:20
+minimize,off edge,13:24:20
+drag,gesture h:47 v:-27,13:24:21
+exit,minimized button,13:24:21
+drag,gesture h:429 v:-192,13:25:19
+resize,gesture 1.608,13:25:37
+maximize,size enlarge,13:26:11
+rotate,gesture r:7,13:26:12
+resize,gesture 1.373,13:26:12
+minimize,blob touch,13:27:11
+rotate,maximized,13:27:28
+rotate,maximized,13:27:35
+rotate,maximized,13:27:36
+rotate,maximized,13:27:38
+rotate,maximized,13:27:39
+minimize,blob touch,13:28:08
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:20
+rotate,maximized,13:28:28
+rotate,maximized,13:28:28
+rotate,maximized,13:28:28
+rotate,maximized,13:28:28
+rotate,maximized,13:28:28
+rotate,maximized,13:28:28
+rotate,maximized,13:28:28
+rotate,maximized,13:28:28
+rotate,maximized,13:28:28
+rotate,maximized,13:28:28
+rotate,maximized,13:28:28
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:29
+rotate,maximized,13:28:34
+drag,gesture h:-38 v:163,13:28:37
+resize,gesture 0.449,13:28:37
+resize,gesture 0.818,13:28:38
+resize,gesture 2.275,13:28:39
+drag,gesture h:-81 v:106,13:28:43
+rotate,gesture r:49,13:28:43
+drag,gesture h:-178 v:186,13:28:44
+rotate,gesture r:22,13:28:44
+minimize,off edge,13:28:46
+minimize,off edge,13:28:46
+rotate,gesture r:57,13:28:47
+exit,minimized button,13:28:47

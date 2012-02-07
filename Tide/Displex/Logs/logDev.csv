@@ -413,3 +413,99 @@ drag,gesture h:359 v:-532,15:52:07
 rotate,gesture r:8,15:52:07
 resize,gesture 0.900,15:52:07
 exit,minimized button,15:52:08
+
+Logging session 00 - user LS
+minimize,off edge,09:42:52
+drag,gesture h:313 v:-407,09:42:53
+exit,minimized button,09:42:55
+drag,gesture h:-13 v:88,09:43:00
+rotate,gesture r:72,09:43:00
+maximize,size enlarge,09:43:01
+drag,gesture h:76 v:2,09:43:01
+rotate,gesture r:11,09:43:01
+resize,gesture 2,09:43:01
+rotate,maximized,09:43:03
+rotate,maximized,09:43:06
+rotate,maximized,09:43:07
+rotate,maximized,09:43:08
+rotate,gesture r:18,09:44:03
+drag,gesture h:50 v:26,09:44:05
+minimize,off edge,09:44:10
+drag,gesture h:485 v:-366,09:44:10
+resize,gesture 1.140,09:44:10
+drag,gesture h:-149 v:95,09:44:13
+rotate,gesture r:60,09:44:13
+minimize,off edge,09:44:14
+rotate,gesture r:33,09:44:14
+drag,gesture h:64 v:0,09:44:17
+exit,off corner,09:44:20
+minimize,off edge,09:44:20
+resize,gesture 0.856,09:44:20
+
+Logging session 00 - user LS
+maximize,size enlarge,09:51:32
+drag,gesture h:93 v:-110,09:51:33
+resize,gesture 2.037,09:51:33
+rotate,maximized,09:51:34
+rotate,maximized,09:51:35
+rotate,maximized,09:51:35
+rotate,maximized,09:51:35
+rotate,maximized,09:51:35
+resize,gesture 0.375,09:51:35
+drag,gesture h:246 v:104,09:51:36
+resize,gesture 1.024,09:51:39
+minimize,off edge,09:51:40
+exit,minimized button,09:51:41
+
+Logging session 00 - user AA - 2/6/2012 4:32:54 PM
+2/6/2012 4:32:54 PM,drag,gesture h:91 v:35
+
+Logging session 00 - user AA - 2/6/2012 4:35:02 PM
+40945.6910065972,minimize,off edge,00
+40945.6910116898,rotate,gesture r:66,00
+40945.6910116898,resize,gesture 1.097,00
+40945.6910484722,drag,gesture h:91 v:-134,00
+40945.691056088,drag,gesture h:-39 v:114,00
+40945.6910560995,resize,gesture 0.485,00
+40945.6910642245,minimize,size reduce,00
+40945.6910642245,drag,gesture h:-14 v:37,00
+40945.6910642245,resize,gesture 1.125,00
+40945.6910642245,minimize,size reduce,00
+40945.691076088,exit,minimized button,00
+
+Logging session 00 - user LS - 2/7/2012 9:08:40 AM
+40946.3810221412,rotate,gesture r:16,00
+40946.3810221412,resize,gesture 1.271,00
+40946.3810528009,resize,gesture 1.123,00
+40946.3811654977,rotate,gesture r:4,00
+40946.3816522917,minimize,double tap,00
+40946.3816624884,exit,minimized button,00
+40946.3823933796,drag,gesture h:45 v:-11,00
+40946.3823933796,resize,gesture 1.431,00
+40946.3835781597,drag,gesture h:-118 v:63,00
+40946.3835781597,resize,gesture 0.851,00
+40946.3836407523,resize,gesture 0.986,00
+
+Logging session 00 - user LS - 2/7/2012 9:19:54 AM
+40946.3888271644,drag,gesture h:34 v:-74,00
+40946.3888271644,resize,gesture 1.418,00
+40946.3890397454,resize,gesture 1.603,00
+40946.3890484259,maximize,size enlarge,00
+40946.3890502083,rotate,maximized,00
+40946.3890509028,drag,gesture h:-83 v:149,00
+40946.3890509144,resize,gesture 0.921,00
+40946.3912062037,rotate,maximized,00
+40946.391245625,rotate,maximized,00
+40946.3912620833,resize,gesture 0.5,00
+40946.3912945486,minimize,double tap,00
+40946.3913056944,exit,minimized button,00
+
+Logging session 00 - user LS - 2/7/2012 10:56:17 AM
+40946.4557557292,drag,gesture h:38 v:-208,00
+40946.4557796296,resize,gesture 1.538,00
+40946.4562193634,resize,gesture 1.074,00
+40946.456673206,maximize,size enlarge,00
+40946.4566806018,resize,gesture 1.230,00
+40946.4577043866,rotate,gesture r:85,00
+40946.4577239468,minimize,off edge,00
+40946.4578015393,exit,minimized button,00
