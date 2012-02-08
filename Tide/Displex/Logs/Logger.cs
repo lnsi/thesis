@@ -8,7 +8,7 @@ namespace Displex
 {
     public class Logger
     {
-        private static string userInitials = "00";
+        private static string userInitials = "test";
         private static string sessionNr = "00";
         private static string filename = "logDev.csv";
 

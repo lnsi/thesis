@@ -1,0 +1,438 @@
+
+Logging session 13 - user JB - 2/7/2012 6:24:21 PM
+40946.7669191667,rotate,gesture r:7,13
+40946.7672217245,minimize,double tap,13
+40946.7672342245,exit,minimized button,13
+40946.7681664931,drag,gesture h:77 v:53,13
+40946.7681941782,drag,gesture h:141 v:-52,13
+40946.7681941782,rotate,gesture r:56,13
+40946.7682309028,drag,gesture h:62 v:8,13
+40946.7682309028,resize,gesture 1.010,13
+40946.7684050463,drag,gesture h:-199 v:34,13
+40946.7684050579,resize,gesture 1.238,13
+40946.7684849421,rotate,gesture r:30,13
+40946.7685193981,drag,gesture h:15 v:142,13
+40946.7685193981,resize,gesture 0.484,13
+40946.7685703588,drag,gesture h:448 v:-12,13
+40946.7686233218,rotate,gesture r:76,13
+40946.7686957523,resize,gesture 1.418,13
+40946.7688994907,minimize,size reduce,13
+40946.7688995023,drag,gesture h:50 v:109,13
+40946.7688995023,resize,gesture 0.697,13
+40946.7688995023,minimize,size reduce,13
+40946.769069537,rotate,gesture r:6,13
+40946.769069537,resize,gesture 0.898,13
+40946.7691128704,minimize,double tap,13
+40946.7692078588,resize,gesture 1.888,13
+40946.7693040278,drag,gesture h:-48 v:124,13
+40946.7693040394,resize,gesture 0.635,13
+40946.7693127894,minimize,double tap,13
+40946.7693613773,minimize,double tap,13
+40946.769414919,minimize,double tap,13
+40946.7694577893,minimize,double tap,13
+40946.7695529282,minimize,size reduce,13
+40946.7695529282,drag,gesture h:15 v:34,13
+40946.7695529282,rotate,gesture r:4,13
+40946.7695529282,resize,gesture 0.927,13
+40946.7695529282,minimize,size reduce,13
+40946.7695708102,exit,minimized button,13
+40946.7701901273,drag,gesture h:297 v:24,13
+40946.7702205556,rotate,gesture r:45,13
+40946.7703211806,resize,gesture 0.945,13
+40946.7703606481,drag,gesture h:-199 v:63,13
+40946.7703606481,rotate,gesture r:43,13
+40946.7704395833,drag,gesture h:330 v:35,13
+40946.7704395833,resize,gesture 0.947,13
+40946.77062125,drag,gesture h:-62 v:37,13
+40946.77062125,resize,gesture 0.878,13
+40946.7706622917,drag,gesture h:167 v:26,13
+40946.7706622917,resize,gesture 0.956,13
+40946.7707304745,resize,gesture 1.038,13
+40946.7707304861,minimize,double tap,13
+40946.770785081,drag,gesture h:-64 v:39,13
+40946.770785081,rotate,gesture r:129,13
+40946.770785081,resize,gesture 0.858,13
+40946.7708420139,drag,gesture h:-52 v:216,13
+40946.7708420139,rotate,gesture r:58,13
+40946.7708647569,rotate,gesture r:177,13
+40946.7709033912,drag,gesture h:-51 v:464,13
+40946.7709033912,rotate,gesture r:125,13
+40946.770925787,drag,gesture h:325 v:-40,13
+40946.7709472685,rotate,gesture r:123,13
+40946.7710114931,drag,gesture h:4 v:39,13
+40946.7710114931,resize,gesture 1.001,13
+40946.7710508333,exit,press and hold,13
+40946.7710527083,resize,gesture 1.009,13
+40946.7711963426,minimize,double tap,13
+40946.7712588773,minimize,size reduce,13
+40946.7712588889,drag,gesture h:40 v:75,13
+40946.7712588889,resize,gesture 0.884,13
+40946.7712588889,minimize,size reduce,13
+40946.7713209722,resize,gesture 1.515,13
+40946.771370625,drag,gesture h:3 v:232,13
+40946.771370625,rotate,gesture r:4,13
+40946.7713793518,minimize,off edge,13
+40946.7713794792,minimize,off edge,13
+40946.7713888773,drag,gesture h:-28 v:252,13
+40946.7714240509,minimize,off edge,13
+40946.7714242708,minimize,off edge,13
+40946.7714329282,drag,gesture h:61 v:-838,13
+40946.7714977315,minimize,off edge,13
+40946.7714979861,minimize,off edge,13
+40946.7715073148,rotate,gesture r:103,13
+40946.7715490162,drag,gesture h:361 v:-0,13
+40946.7715836343,minimize,blob touch,13
+40946.7716461574,drag,gesture h:-22 v:74,13
+40946.7716461574,rotate,gesture r:6,13
+40946.7717080671,drag,gesture h:167 v:21,13
+40946.7717484144,maximize,size enlarge,13
+40946.7717512847,rotate,gesture r:33,13
+40946.7717512847,resize,gesture 2.440,13
+40946.7718096875,rotate,maximized,13
+40946.7718553935,rotate,maximized,13
+40946.7718563542,rotate,maximized,13
+40946.7718565046,rotate,maximized,13
+40946.7718568403,rotate,maximized,13
+40946.7718570949,rotate,maximized,13
+40946.7718572106,rotate,maximized,13
+40946.7718573843,rotate,maximized,13
+40946.7718575579,rotate,maximized,13
+40946.7718577662,rotate,maximized,13
+40946.7718579167,rotate,maximized,13
+40946.7718584954,rotate,maximized,13
+40946.771858669,rotate,maximized,13
+40946.771858831,rotate,maximized,13
+40946.7718590046,rotate,maximized,13
+40946.7718591782,rotate,maximized,13
+40946.7718596181,rotate,maximized,13
+40946.7718597454,rotate,maximized,13
+40946.7718599074,rotate,maximized,13
+40946.7718602894,rotate,maximized,13
+40946.7718609838,rotate,maximized,13
+40946.7718611806,rotate,maximized,13
+40946.771861412,rotate,maximized,13
+40946.7718615278,rotate,maximized,13
+40946.7718617361,rotate,maximized,13
+40946.7718619097,rotate,maximized,13
+40946.7718620833,rotate,maximized,13
+40946.7718623032,rotate,maximized,13
+40946.7718624306,rotate,maximized,13
+40946.7718626389,rotate,maximized,13
+40946.7718633449,rotate,maximized,13
+40946.7718635532,rotate,maximized,13
+40946.7718637269,rotate,maximized,13
+40946.7718639005,rotate,maximized,13
+40946.7718640856,rotate,maximized,13
+40946.7718642593,rotate,maximized,13
+40946.7718644329,rotate,maximized,13
+40946.7718646181,rotate,maximized,13
+40946.7718647801,rotate,maximized,13
+40946.7718652894,rotate,maximized,13
+40946.7718658681,rotate,maximized,13
+40946.7718660417,rotate,maximized,13
+40946.77186625,rotate,maximized,13
+40946.7718664236,rotate,maximized,13
+40946.7718666088,rotate,maximized,13
+40946.7718667824,rotate,maximized,13
+40946.7718669444,rotate,maximized,13
+40946.7718672222,rotate,maximized,13
+40946.7718673032,rotate,maximized,13
+40946.7718675116,rotate,maximized,13
+40946.7718676852,rotate,maximized,13
+40946.7718681019,rotate,maximized,13
+40946.7718684028,rotate,maximized,13
+40946.771868588,rotate,maximized,13
+40946.77186875,rotate,maximized,13
+40946.7718689583,rotate,maximized,13
+40946.7718691319,rotate,maximized,13
+40946.7718693056,rotate,maximized,13
+40946.7718696644,rotate,maximized,13
+40946.7718698495,rotate,maximized,13
+40946.7718700116,rotate,maximized,13
+40946.7718702315,rotate,maximized,13
+40946.7718704051,rotate,maximized,13
+40946.7718712847,rotate,maximized,13
+40946.7718714583,rotate,maximized,13
+40946.7718716435,rotate,maximized,13
+40946.7718718287,rotate,maximized,13
+40946.7718722338,rotate,maximized,13
+40946.7718725694,rotate,maximized,13
+40946.7718727315,rotate,maximized,13
+40946.7718729051,rotate,maximized,13
+40946.7718731482,rotate,maximized,13
+40946.7718738079,rotate,maximized,13
+40946.7718739931,rotate,maximized,13
+40946.7718741782,rotate,maximized,13
+40946.7718743518,rotate,maximized,13
+40946.7718745255,rotate,maximized,13
+40946.7718747222,rotate,maximized,13
+40946.7718749074,rotate,maximized,13
+40946.7718752778,rotate,maximized,13
+40946.7718759838,rotate,maximized,13
+40946.7718765394,rotate,maximized,13
+40946.7718767014,rotate,maximized,13
+40946.7718770833,rotate,maximized,13
+40946.7718772569,rotate,maximized,13
+40946.7718774653,rotate,maximized,13
+40946.7718776042,rotate,maximized,13
+40946.7718777778,rotate,maximized,13
+40946.7718780208,rotate,maximized,13
+40946.7718792477,rotate,maximized,13
+40946.7718794213,rotate,maximized,13
+40946.7718795949,rotate,maximized,13
+40946.7718797685,rotate,maximized,13
+40946.7718798611,rotate,maximized,13
+40946.7718799421,rotate,maximized,13
+40946.7718803125,rotate,maximized,13
+40946.7718804861,rotate,maximized,13
+40946.7718806944,rotate,maximized,13
+40946.7718808681,rotate,maximized,13
+40946.7718810417,rotate,maximized,13
+40946.7718812269,rotate,maximized,13
+40946.7718814005,rotate,maximized,13
+40946.7718816551,rotate,maximized,13
+40946.7718817477,rotate,maximized,13
+40946.771881956,rotate,maximized,13
+40946.7718821412,rotate,maximized,13
+40946.7718922222,rotate,maximized,13
+40946.771892419,rotate,maximized,13
+40946.7718925926,rotate,maximized,13
+40946.7718927662,rotate,maximized,13
+40946.7718929514,rotate,maximized,13
+40946.771893125,rotate,maximized,13
+40946.7718935532,rotate,maximized,13
+40946.7718936806,rotate,maximized,13
+40946.771893912,rotate,maximized,13
+40946.7718940857,rotate,maximized,13
+40946.7718943981,rotate,maximized,13
+40946.7718945718,rotate,maximized,13
+40946.771895081,rotate,maximized,13
+40946.7718951157,rotate,maximized,13
+40946.7718955671,rotate,maximized,13
+40946.7718958565,rotate,maximized,13
+40946.7718960301,rotate,maximized,13
+40946.7718962037,rotate,maximized,13
+40946.7718963773,rotate,maximized,13
+40946.7718965625,rotate,maximized,13
+40946.7718967361,rotate,maximized,13
+40946.7718970602,rotate,maximized,13
+40946.7718972917,rotate,maximized,13
+40946.7718974769,rotate,maximized,13
+40946.7718976505,rotate,maximized,13
+40946.7718978241,rotate,maximized,13
+40946.7718979977,rotate,maximized,13
+40946.7718982176,rotate,maximized,13
+40946.77189875,rotate,maximized,13
+40946.771899213,rotate,maximized,13
+40946.771899456,rotate,maximized,13
+40946.7718996412,rotate,maximized,13
+40946.7718998148,rotate,maximized,13
+40946.7719002546,rotate,maximized,13
+40946.7719005787,rotate,maximized,13
+40946.771900706,rotate,maximized,13
+40946.7719009144,rotate,maximized,13
+40946.7719010995,rotate,maximized,13
+40946.771901331,rotate,maximized,13
+40946.7719014468,rotate,maximized,13
+40946.7719016088,rotate,maximized,13
+40946.7719018519,rotate,maximized,13
+40946.771902037,rotate,maximized,13
+40946.7719025116,rotate,maximized,13
+40946.7719030671,rotate,maximized,13
+40946.7719033449,rotate,maximized,13
+40946.7719037963,rotate,maximized,13
+40946.7719040046,rotate,maximized,13
+40946.7719041782,rotate,maximized,13
+40946.7719045255,rotate,maximized,13
+40946.7719046759,rotate,maximized,13
+40946.7719051852,rotate,maximized,13
+40946.7719052199,rotate,maximized,13
+40946.7719056713,rotate,maximized,13
+40946.7719059491,rotate,maximized,13
+40946.771906412,rotate,maximized,13
+40946.7719070718,rotate,maximized,13
+40946.771907419,rotate,maximized,13
+40946.7719075926,rotate,maximized,13
+40946.7719078009,rotate,maximized,13
+40946.7719079398,rotate,maximized,13
+40946.7719081134,rotate,maximized,13
+40946.771908287,rotate,maximized,13
+40946.7719084838,rotate,maximized,13
+40946.7719086806,rotate,maximized,13
+40946.7719088542,rotate,maximized,13
+40946.7719090625,rotate,maximized,13
+40946.7719092361,rotate,maximized,13
+40946.7719093866,rotate,maximized,13
+40946.7719098611,rotate,maximized,13
+40946.771910463,rotate,maximized,13
+40946.7719111921,rotate,maximized,13
+40946.7719124421,rotate,maximized,13
+40946.7719512731,rotate,maximized,13
+40946.7719538079,rotate,maximized,13
+40946.7720148148,minimize,off edge,13
+40946.7720148264,drag,gesture h:28 v:380,13
+40946.7720148264,resize,gesture 2.315,13
+40946.7720148264,minimize,off edge,13
+40946.7720399421,maximize,size enlarge,13
+40946.7720453472,resize,gesture 0.863,13
+40946.772106956,rotate,maximized,13
+40946.7721315625,rotate,maximized,13
+40946.7721765856,drag,gesture h:156 v:94,13
+40946.7721765856,rotate,gesture r:50,13
+40946.7721889931,rotate,gesture r:70,13
+40946.7722197801,drag,gesture h:-157 v:56,13
+40946.7722197801,rotate,gesture r:58,13
+40946.7722329282,maximize,size enlarge,13
+40946.7722395139,resize,gesture 2,13
+40946.7722504167,rotate,maximized,13
+40946.7722639931,rotate,maximized,13
+40946.7722868171,rotate,maximized,13
+40946.7723017245,rotate,maximized,13
+40946.7723687847,rotate,maximized,13
+40946.7723828241,rotate,maximized,13
+40946.7724029745,rotate,maximized,13
+40946.7724134491,rotate,maximized,13
+40946.7725593519,minimize,size reduce,13
+40946.7725593634,drag,gesture h:64 v:135,13
+40946.7725593634,resize,gesture 0.6,13
+40946.7725593634,minimize,size reduce,13
+40946.7726435301,exit,minimized button,13
+40946.7727126852,resize,gesture 1.833,13
+40946.772735,drag,gesture h:-14 v:31,13
+40946.772735,resize,gesture 0.872,13
+40946.7727639236,resize,gesture 0.951,13
+40946.7727866551,minimize,off edge,13
+40946.7727866551,minimize,off edge,13
+40946.7727866667,minimize,off edge,13
+40946.7727900926,resize,gesture 1.015,13
+40946.7728401273,minimize,off edge,13
+40946.7728401389,minimize,off edge,13
+40946.7728401389,minimize,off edge,13
+40946.772843831,resize,gesture 1.311,13
+40946.7728778241,minimize,off edge,13
+40946.7728780324,minimize,off edge,13
+40946.772878287,minimize,off edge,13
+40946.7728877546,drag,gesture h:56 v:729,13
+40946.7728877546,rotate,gesture r:88,13
+40946.7729087269,minimize,off edge,13
+40946.7729089005,minimize,off edge,13
+40946.7729090856,minimize,off edge,13
+40946.7729177431,drag,gesture h:570 v:-706,13
+40946.7729177431,rotate,gesture r:59,13
+40946.7729177431,resize,gesture 0.563,13
+40946.7729337963,drag,gesture h:20 v:72,13
+40946.7729445486,exit,off corner,13
+40946.7729445486,minimize,off edge,13
+40946.7729445486,exit,off corner,13
+40946.7729445486,minimize,off edge,13
+40946.7729445486,exit,off corner,13
+40946.7729445486,minimize,off edge,13
+40946.7729471759,drag,gesture h:129 v:-127,13
+40946.7729471759,resize,gesture 0.752,13
+40946.7730634259,drag,gesture h:-157 v:167,13
+40946.773086713,exit,off corner,13
+40946.773086713,minimize,off edge,13
+40946.7730869329,exit,off corner,13
+40946.7730869329,minimize,off edge,13
+40946.7730870949,exit,off corner,13
+40946.7730870949,minimize,off edge,13
+40946.7730984838,drag,gesture h:316 v:307,13
+40946.7731642014,exit,minimized button,13
+40946.7732275347,rotate,gesture r:4,13
+40946.7732275347,resize,gesture 1.072,13
+40946.7732505556,exit,off corner,13
+40946.7732505556,minimize,off edge,13
+40946.7732507639,exit,off corner,13
+40946.7732507639,minimize,off edge,13
+40946.7732508796,exit,off corner,13
+40946.7732508796,minimize,off edge,13
+40946.773361875,exit,press and hold,13
+40946.773444294,exit,press and hold,13
+40946.7734712963,rotate,gesture r:51,13
+
+Logging session 13 - user JB - 2/7/2012 6:34:59 PM
+40946.774297581,minimize,off edge,13
+40946.7743152546,exit,minimized button,13
+40946.7744759491,drag,gesture h:443 v:57,13
+40946.7745013657,rotate,gesture r:18,13
+40946.7747509491,resize,gesture 1.105,13
+40946.7747956713,drag,gesture h:264 v:11,13
+40946.7747956713,resize,gesture 1.054,13
+40946.7748100926,maximize,size enlarge,13
+40946.7748149537,rotate,maximized,13
+40946.7748169444,resize,gesture 1.782,13
+40946.7748284375,rotate,maximized,13
+40946.7749472685,rotate,maximized,13
+40946.7749474074,resize,gesture 0.375,13
+40946.7749833102,minimize,double tap,13
+40946.7750252315,resize,gesture 2.139,13
+40946.7750330208,maximize,size enlarge,13
+40946.775033206,rotate,maximized,13
+40946.7750334606,rotate,maximized,13
+40946.7750336227,rotate,maximized,13
+40946.7750339352,rotate,maximized,13
+40946.7750341088,rotate,maximized,13
+40946.7750342824,rotate,maximized,13
+40946.775034456,rotate,maximized,13
+40946.7750346296,rotate,maximized,13
+40946.7750348611,rotate,maximized,13
+40946.7750351157,rotate,maximized,13
+40946.7750352778,drag,gesture h:32 v:118,13
+40946.7750352778,rotate,gesture r:3,13
+40946.7750352778,resize,gesture 1.244,13
+40946.7752418981,rotate,maximized,13
+40946.775242338,rotate,maximized,13
+40946.7752446644,resize,gesture 0.375,13
+40946.7753096296,exit,press and hold,13
+40946.7754591898,drag,gesture h:348 v:-20,13
+40946.7754591898,resize,gesture 0.990,13
+40946.7754770023,resize,gesture 1.650,13
+40946.7754854745,maximize,size enlarge,13
+40946.7754859954,rotate,maximized,13
+40946.7754868982,rotate,maximized,13
+40946.7754890741,rotate,maximized,13
+40946.7754894676,drag,gesture h:99 v:27,13
+40946.7754894676,rotate,gesture r:35,13
+40946.7754894676,resize,gesture 1.233,13
+40946.7755010069,rotate,maximized,13
+40946.7759064931,rotate,maximized,13
+40946.7759072106,rotate,maximized,13
+40946.7759090394,rotate,maximized,13
+40946.7759091319,resize,gesture 0.375,13
+40946.7759632292,drag,gesture h:8 v:69,13
+40946.7761958681,exit,press and hold,13
+40946.7761962963,minimize,size reduce,13
+40946.7761962963,minimize,size reduce,13
+40946.7761981829,drag,gesture h:80 v:185,13
+40946.7761981829,resize,gesture 0.6,13
+40946.776249294,exit,minimized button,13
+
+Logging session 13 - user JB - 2/7/2012 6:39:31 PM
+40946.7774424074,resize,gesture 1.509,13
+40946.7781943518,drag,gesture h:61 v:174,13
+40946.7781943518,resize,gesture 0.284,13
+40946.7782041782,minimize,size reduce,13
+40946.7782041782,resize,gesture 1.395,13
+40946.7782041782,minimize,size reduce,13
+40946.7783421759,drag,gesture h:113 v:-143,13
+40946.7783421759,rotate,gesture r:24,13
+40946.7783581481,maximize,size enlarge,13
+40946.7783628356,resize,gesture 3.333,13
+40946.7789606597,rotate,maximized,13
+40946.7791081366,rotate,maximized,13
+40946.7791083102,rotate,maximized,13
+40946.7791093982,rotate,maximized,13
+40946.7791097454,rotate,maximized,13
+40946.7791466088,minimize,size reduce,13
+40946.7791466204,drag,gesture h:54 v:78,13
+40946.7791466204,rotate,gesture r:9,13
+40946.7791466204,resize,gesture 0.6,13
+40946.7791466204,minimize,size reduce,13
+40946.7793123032,rotate,gesture r:55,13
+40946.7793123032,resize,gesture 1.362,13
+40946.7794036806,minimize,size reduce,13
+40946.7794036921,drag,gesture h:88 v:78,13
+40946.7794036921,rotate,gesture r:7,13
+40946.7794036921,resize,gesture 0.733,13
+40946.7794036921,minimize,size reduce,13
+40946.779418669,exit,minimized button,13
