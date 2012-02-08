@@ -1,7 +1,7 @@
 \contentsline {chapter}{\numberline {1}Introduction}{3}
 \contentsline {section}{\numberline {1.1}Research context}{3}
 \contentsline {section}{\numberline {1.2}Problem statement}{5}
-\contentsline {section}{\numberline {1.3}Research methods}{5}
+\contentsline {section}{\numberline {1.3}Research methods}{6}
 \contentsline {section}{\numberline {1.4}Results}{6}
 \contentsline {section}{\numberline {1.5}Thesis overview}{6}
 \contentsline {chapter}{\numberline {2}Related Work / Theory}{7}

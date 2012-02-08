@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  4 FEB 2012 17:59
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  7 FEB 2012 17:00
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -270,32 +270,32 @@ Chapter 1.
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 39--45
+Underfull \hbox (badness 10000) in paragraph at lines 41--47
 
  []
 
 
-Overfull \hbox (0.68092pt too wide) in paragraph at lines 49--50
+Overfull \hbox (0.68092pt too wide) in paragraph at lines 51--52
 []\OT1/cmr/m/n/12 collaboration of-ten re-quires shar-ing in-for-ma-tion. Be-si
 des tech-ni-cal prob-
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 72--77
+Underfull \hbox (badness 10000) in paragraph at lines 77--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--77
+Underfull \hbox (badness 10000) in paragraph at lines 77--82
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 78.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 83.
 (/usr/local/texlive/2010/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 78.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 83.
  [5]) [6]
 \openout2 = `relatedwork.aux'.
 
@@ -637,7 +637,7 @@ r/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/lo
 cal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (42 pages, 4095610 bytes).
+Output written on report.pdf (42 pages, 4095967 bytes).
 PDF statistics:
  239 PDF objects out of 1000 (max. 8388607)
  145 compressed objects within 2 object streams
