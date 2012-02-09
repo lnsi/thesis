@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  7 FEB 2012 17:00
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  9 FEB 2012 16:09
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -266,54 +266,52 @@ Missing character: There is no Ÿ in font cmr12!
 
  (./introduction.tex
 Chapter 1.
+<images/tide.png, id=22, 1003.75pt x 752.8125pt>
+File: images/tide.png Graphic file (type png)
+ <use images/tide.png>
+Underfull \hbox (badness 10000) in paragraph at lines 22--36
+
+ []
+
 [3
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 41--47
+ <./images/tide.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 51--64
 
- []
-
-
-Overfull \hbox (0.68092pt too wide) in paragraph at lines 51--52
-[]\OT1/cmr/m/n/12 collaboration of-ten re-quires shar-ing in-for-ma-tion. Be-si
-des tech-ni-cal prob-
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 77--82
+Underfull \hbox (badness 10000) in paragraph at lines 106--109
 
  []
 
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 110.
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--82
-
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 83.
 (/usr/local/texlive/2010/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 83.
- [5]) [6]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 110.
+ [5] [6]) [7]
 \openout2 = `relatedwork.aux'.
 
 
 (./relatedwork.tex
 Chapter 2.
-) [7
+) [8
 
 
 
 ]
 \openout2 = `design.aux'.
 
- (./design.tex
+ (./design.tex [9
+
+
+]
 Chapter 3.
-[8
-
-
+[10
 
 ]
 Package epstopdf Info: Source file: <images/useCase.eps>
@@ -324,17 +322,17 @@ Package epstopdf Info: Source file: <images/useCase.eps>
 (epstopdf)                    size: 83789 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/useCase-eps-converte
 d-to.pdf images/useCase.eps>
-(epstopdf)             \includegraphics on input line 39.
+(epstopdf)             \includegraphics on input line 42.
 Package epstopdf Info: Output file is already uptodate.
- <images/useCase-eps-converted-to.pdf, id=42, 495.8525pt x 165.61874pt>
+ <images/useCase-eps-converted-to.pdf, id=52, 495.8525pt x 165.61874pt>
 File: images/useCase-eps-converted-to.pdf Graphic file (type pdf)
 
-<use images/useCase-eps-converted-to.pdf> [9 <./images/useCase-eps-converted-to
-.pdf>] [10] [11] [12]
+<use images/useCase-eps-converted-to.pdf> [11 <./images/useCase-eps-converted-t
+o.pdf>] [12] [13] [14]
 
-LaTeX Warning: Reference `' on page 13 undefined on input line 210.
+LaTeX Warning: Reference `' on page 15 undefined on input line 213.
 
-[13]
+[15]
 Package epstopdf Info: Source file: <images/paperProtDouble.eps>
 (epstopdf)                    date: 2012-01-24 17:53:24
 (epstopdf)                    size: 6165450 bytes
@@ -344,13 +342,13 @@ f>
 (epstopdf)                    size: 370794 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/paperProtDouble-eps-
 converted-to.pdf images/paperProtDouble.eps>
-(epstopdf)             \includegraphics on input line 242.
+(epstopdf)             \includegraphics on input line 245.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/paperProtDouble-eps-converted-to.pdf, id=80, 433.62pt x 161.60374pt>
+<images/paperProtDouble-eps-converted-to.pdf, id=87, 433.62pt x 161.60374pt>
 File: images/paperProtDouble-eps-converted-to.pdf Graphic file (type pdf)
 
-<use images/paperProtDouble-eps-converted-to.pdf> [14]
+<use images/paperProtDouble-eps-converted-to.pdf> [16]
 Package epstopdf Info: Source file: <images/strat1.eps>
 (epstopdf)                    date: 2012-01-27 15:00:45
 (epstopdf)                    size: 8172160 bytes
@@ -359,10 +357,10 @@ Package epstopdf Info: Source file: <images/strat1.eps>
 (epstopdf)                    size: 582413 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/strat1-eps-converted
 -to.pdf images/strat1.eps>
-(epstopdf)             \includegraphics on input line 292.
+(epstopdf)             \includegraphics on input line 295.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/strat1-eps-converted-to.pdf, id=84, 1606.0pt x 1003.75pt>
+<images/strat1-eps-converted-to.pdf, id=92, 1606.0pt x 1003.75pt>
 File: images/strat1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/strat1-eps-converted-to.pdf>
@@ -374,10 +372,10 @@ Package epstopdf Info: Source file: <images/strat2.eps>
 (epstopdf)                    size: 580076 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/strat2-eps-converted
 -to.pdf images/strat2.eps>
-(epstopdf)             \includegraphics on input line 299.
+(epstopdf)             \includegraphics on input line 302.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/strat2-eps-converted-to.pdf, id=85, 1606.0pt x 1003.75pt>
+<images/strat2-eps-converted-to.pdf, id=93, 1606.0pt x 1003.75pt>
 File: images/strat2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/strat2-eps-converted-to.pdf>
@@ -389,10 +387,10 @@ Package epstopdf Info: Source file: <images/strat3.eps>
 (epstopdf)                    size: 403555 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/strat3-eps-converted
 -to.pdf images/strat3.eps>
-(epstopdf)             \includegraphics on input line 306.
+(epstopdf)             \includegraphics on input line 309.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/strat3-eps-converted-to.pdf, id=86, 1606.0pt x 1003.75pt>
+<images/strat3-eps-converted-to.pdf, id=94, 1606.0pt x 1003.75pt>
 File: images/strat3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/strat3-eps-converted-to.pdf>
@@ -404,39 +402,39 @@ Package epstopdf Info: Source file: <images/strat4.eps>
 (epstopdf)                    size: 525555 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/strat4-eps-converted
 -to.pdf images/strat4.eps>
-(epstopdf)             \includegraphics on input line 313.
+(epstopdf)             \includegraphics on input line 316.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/strat4-eps-converted-to.pdf, id=87, 1606.0pt x 1003.75pt>
+<images/strat4-eps-converted-to.pdf, id=95, 1606.0pt x 1003.75pt>
 File: images/strat4-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/strat4-eps-converted-to.pdf>
-Overfull \hbox (19.44852pt too wide) in paragraph at lines 290--317
+Overfull \hbox (19.44852pt too wide) in paragraph at lines 293--320
 [][]   []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--317
+Underfull \hbox (badness 10000) in paragraph at lines 293--320
 
  []
 
 
-Overfull \hbox (19.44852pt too wide) in paragraph at lines 290--317
+Overfull \hbox (19.44852pt too wide) in paragraph at lines 293--320
 []   [] 
  []
 
-[15 <./images/paperProtDouble-eps-converted-to.pdf>] [16 <./images/strat1-eps-c
+[17 <./images/paperProtDouble-eps-converted-to.pdf>] [18 <./images/strat1-eps-c
 onverted-to.pdf> <./images/strat2-eps-converted-to.pdf> <./images/strat3-eps-co
 nverted-to.pdf> <./images/strat4-eps-converted-to.pdf>]
-<images/studyScreenshot.png, id=115, 1240.635pt x 806.01125pt>
+<images/studyScreenshot.png, id=122, 1240.635pt x 806.01125pt>
 File: images/studyScreenshot.png Graphic file (type png)
 
 <use images/studyScreenshot.png>
-Underfull \hbox (badness 10000) in paragraph at lines 358--365
+Underfull \hbox (badness 10000) in paragraph at lines 361--368
 
  []
 
-[17 <./images/studyScreenshot.png (PNG copy)>]
+[19 <./images/studyScreenshot.png (PNG copy)>]
 Package epstopdf Info: Source file: <images/groups.eps>
 (epstopdf)                    date: 2012-01-25 18:05:26
 (epstopdf)                    size: 1894578 bytes
@@ -445,13 +443,13 @@ Package epstopdf Info: Source file: <images/groups.eps>
 (epstopdf)                    size: 29774 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/groups-eps-converted
 -to.pdf images/groups.eps>
-(epstopdf)             \includegraphics on input line 392.
+(epstopdf)             \includegraphics on input line 395.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/groups-eps-converted-to.pdf, id=119, 228.855pt x 102.3825pt>
+<images/groups-eps-converted-to.pdf, id=126, 228.855pt x 102.3825pt>
 File: images/groups-eps-converted-to.pdf Graphic file (type pdf)
 
-<use images/groups-eps-converted-to.pdf> [18]
+<use images/groups-eps-converted-to.pdf> [20]
 Package epstopdf Info: Source file: <images/resultMatrix.eps>
 (epstopdf)                    date: 2012-01-27 09:45:07
 (epstopdf)                    size: 3869884 bytes
@@ -460,10 +458,10 @@ Package epstopdf Info: Source file: <images/resultMatrix.eps>
 (epstopdf)                    size: 70772 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/resultMatrix-eps-con
 verted-to.pdf images/resultMatrix.eps>
-(epstopdf)             \includegraphics on input line 413.
+(epstopdf)             \includegraphics on input line 416.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/resultMatrix-eps-converted-to.pdf, id=123, 407.5225pt x 121.45375pt>
+<images/resultMatrix-eps-converted-to.pdf, id=130, 407.5225pt x 121.45375pt>
 File: images/resultMatrix-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/resultMatrix-eps-converted-to.pdf>
@@ -475,23 +473,23 @@ Package epstopdf Info: Source file: <images/primHistog.eps>
 (epstopdf)                    size: 334289 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/primHistog-eps-conve
 rted-to.pdf images/primHistog.eps>
-(epstopdf)             \includegraphics on input line 420.
+(epstopdf)             \includegraphics on input line 423.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/primHistog-eps-converted-to.pdf, id=124, 386.44376pt x 409.53pt>
+<images/primHistog-eps-converted-to.pdf, id=131, 386.44376pt x 409.53pt>
 File: images/primHistog-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/primHistog-eps-converted-to.pdf>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[19 <./images/groups-eps-converted-to.pdf> <./images/resultMatrix-eps-converted
--to.pdf>] [20 <./images/primHistog-eps-converted-to.pdf>] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 487--495
+[21 <./images/groups-eps-converted-to.pdf> <./images/resultMatrix-eps-converted
+-to.pdf>] [22 <./images/primHistog-eps-converted-to.pdf>] [23]
+Underfull \hbox (badness 10000) in paragraph at lines 490--498
 
  []
 
-[22]) [23]
+[24]) [25]
 \openout2 = `system.aux'.
 
  (./system.tex
@@ -507,16 +505,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
-[24
+[26
 
 
 
-]) [25]
+]) [27]
 \openout2 = `evaluation.aux'.
 
  (./evaluation.tex
 Chapter 5.
-) [26
+) [28
 
 
 
@@ -525,13 +523,13 @@ Chapter 5.
 
  (./conclusion.tex
 Chapter 6.
-[27
+[29
 
 
 
 ]
 Chapter 7.
-) [28
+) [30
 
 ] (./report.bbl
 Underfull \hbox (badness 3815) in paragraph at lines 30--35
@@ -551,7 +549,7 @@ Overfull \hbox (31.70317pt too wide) in paragraph at lines 59--64
 ft.com/surface/en/us/pixelsense.aspx\OT1/cmr/m/n/12 ,
  []
 
-[29
+[31
 
 
 ]
@@ -571,24 +569,24 @@ Underfull \hbox (badness 2884) in paragraph at lines 106--114
  URL
  []
 
-) [30]
+) [32]
 \openout2 = `scenarios.aux'.
 
  (./scenarios.tex
 Appendix A.
-[31
+[33
 
 
-]) [32]
+]) [34]
 \openout2 = `study.aux'.
 
  (./study.tex
 Appendix B.
-[33
+[35
 
 
 
-] [34] [35] [36] [37]) [38]
+] [36] [37] [38] [39]) [40]
 \openout2 = `studyform.aux'.
 
  (./studyform.tex
@@ -603,10 +601,10 @@ Package epstopdf Info: Source file: <images/studyForm.eps>
 ted-to.pdf images/studyForm.eps>
 (epstopdf)             \includegraphics on input line 6.
 Package epstopdf Info: Output file is already uptodate.
-<images/studyForm-eps-converted-to.pdf, id=202, 717.68124pt x 339.2675pt>
+<images/studyForm-eps-converted-to.pdf, id=210, 717.68124pt x 339.2675pt>
 File: images/studyForm-eps-converted-to.pdf Graphic file (type pdf)
 
-<use images/studyForm-eps-converted-to.pdf>) [39
+<use images/studyForm-eps-converted-to.pdf>) [41
 
 
 
@@ -622,10 +620,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3675 strings out of 493747
- 55434 string characters out of 3143546
+ 3681 strings out of 493747
+ 55527 string characters out of 3143546
  125266 words of memory out of 3000000
- 6840 multiletter control sequences out of 15000+200000
+ 6845 multiletter control sequences out of 15000+200000
  14480 words of font info for 55 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  41i,7n,38p,1175b,353s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -637,10 +635,10 @@ r/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/lo
 cal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (42 pages, 4095967 bytes).
+Output written on report.pdf (44 pages, 5290288 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
- 145 compressed objects within 2 object streams
+ 247 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

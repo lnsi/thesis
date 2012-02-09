@@ -3,7 +3,6 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: report.aux
 A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: relatedwork.aux
-A level-1 auxiliary file: theory.aux
 A level-1 auxiliary file: design.aux
 A level-1 auxiliary file: system.aux
 A level-1 auxiliary file: evaluation.aux
@@ -15,7 +14,7 @@ A level-1 auxiliary file: studyform.aux
 Database file #1: ../references.bib
 You've used 14 entries,
             2773 wiz_defined-function locations,
-            694 strings with 7119 characters,
+            694 strings with 7142 characters,
 and the built_in function-call counts, 5964 in all, are:
 = -- 589
 > -- 240
