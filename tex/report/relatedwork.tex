@@ -1,21 +1,111 @@
-\chapter{Related Work / Theory}
+\chapter{Related Work}
 \label{relatedwork}
 
-start with context/history
-- smart rooms
-- digital desk
-- metadesk / tangible interaction
+In this chapter, first the related work for device composition, then some theory about interaction design.
+
+\section{Device composition}
+
+Device composition is one approach to designing ubiquitous computing environments where heterogeneous devices can interoperate.
+A essential aspect of this research is the idea that users should be able to get the most out of the various resources available in the environment.
+This setup has inspired extensive work into computer augmented spaces, such as Augmented Surfaces \citep{Rekimoto:1999:augmentedsurfaces}, where the authors enabled the exchange of information between portable devices and interactive surfaces.
+Projects such as the i-LAND \citep{Streitz:1999:iland} and the Interactive Workspaces \citep{Johanson:2002:iroom}, went further in the design of smart spaces that were solutions to the support of collaborative work on multiple devices, complete with software infrastructures to enable device interoperability, such as BEACH developed for i-LAND \citep{Tandler:2001:smartenv}..
+This work lead to the emergence of the notion of \emph{smart rooms}, that typically consist of a set of situated devices, such as large displays, and the mobile devices that are moved around by users.
+
+%The work on smart rooms gave gradually rise to the concept of device composition, which addresses the challenges of building systems that integrate heterogeneous devices.
+
+
+The Personal Server \citep{Want:2002:personalserver} was an attempt to improve the digital mobile experience.
+It was a small device without a display, that allowed users to access personal data by annexing large screen interfaces in the environment.
+However, as with many smart room systems, it came with its own platform, that made the spontaneous integration of new devices difficult.
+
+With Obje \citep{Edwards:2009:obje}, the authors had ad-hoc interoperability in mind, and designed a software infrastructure that uses ``meta-interfaces'' to achieve device compatibility at runtime.
+This allowed ad-hoc interoperability, but it required of the user to provide the semantic interpretation, or ``make sense'' of the device interoperation.
+
+Pering et al.\ focused on understanding ad-hoc collaboration using pervasive technologies, and suggested Platform Composition as a technique to support collaborative work by using a combination of standard computing components \citep{Pering:2009:platformcomp}.
+
+The notion of a \emph{composite device}, as a device made up of a composition of several devices working together, was defined in the article on CompUTE \citep{Bardram:2010:compute}, a runtime architecture for device composition based on the extended desktop metaphor.
+
+\hfill\\
+\linebreak
 
 then device composition (use a matrix to show all possibilities)
-
 pairing = technologies
-
 UI distribution = technologies, approaches
 
-tabletops
 tracking (objects, users)
-identification
 
+% TRACKING %
+connect mobile device to interactive surface by placing, disconnect by removing. computer  vision detection and bluetooth based handshake procedure. + co-located graphics.
+\citep{Wilson:2007:bluetable}
+
+
+%computer augmented environment allow sharing between computers, table and wall displays. camera based object recognition (tangible). InfoTable
+
+%computer augmented room elements (roomware) = interactive wall display, table and chairs + Passage mechanism. focus on collocated collaboration. InteracTable
+
+%software infrastructure for synchronous collaboration and device composition (iLand roomware)
+
+%computer augmented meeting space, interactive workspace (iRoom)
+%started with large displays that integrate portable devices
+
+\hfill\\
+\linebreak
+
+
+\hfill\\
+\linebreak
+
+[?? TANGIBLE INTERACTION, METADESK ??]
+
+% END WITH TABLETOP
+The tabletop display is an essential element of smart room research, because of its form that is ideal for collocated collaborative work.
+Furthermore, as a situated device with a large interactive surface, it is not likely to be used as a standalone computer, but presents good potential in combination with other devices.
+
+
+Tabletop computers are a recurrent element of smart room research, as they are designed for collaboration, and typically situated devices, i.e.\ they sit still in a location.
+
+DiamondTouch \citep{Dietz:2001:diamondtouch}, that combines overhead projected output with capacitively sensed input
+
+%It has been steadily gaining importance due to the growing multiplicity of computing devices and mobility of users.
+%Nowadays, a typical user owns mobile computers (handheld, tablet, laptop, etc\ldots) and interacts with other devices in an ad hoc way, as s/he comes upon them throughout the day (public desktops, printers, displays, etc\ldots).
+%Enabling efficient communication and collaboration between various devices is therefore an essential issue, with the overall goal of improving the user experience.
+
+%Device composition focuses on the following challenges:
+%\begin{description}
+%\item[Connection:] this includes device detection, identification and connection.
+%\item[Communication:] different types of devices (hardware, OS) must use a common language if they are to collaborate.   
+%\item[Sharing:] collaboration often requires sharing information. Besides technical problems, this raises the privacy issue of protecting the user's personal data.
+%\item[Interaction:] the user must be able to interact with the system if s/he is to benefit from it.
+%\end{description}
+%\hfill\\
+%This project focuses on the human computer interaction aspect of combining smartphones and tabletops.
+%The slightly broader issue of combining smartphones and larger interactive displays has been approached in various ways, each focusing on a specific interaction metaphor.
+%\begin{description}
+%\item[Streaming] is a one way approach where only the visual output of the smartphone is forwarded to a remote display.
+%\item[Replication] goes one step further, by allowing the user to interact with the replicated UI.
+%\item[Projection] is a metaphor similar to replication, in which the smartphone is used as a projector, allowing the user to ``drop'' the UI onto an available display \citep{Winkler:2011:interactivephonecall}.
+%\item[Adaptation] refers to an improved UI transfer where the UI is modified to make full use of the additional resources offered by the remote display \citep{Arthur:2011:xice}.
+%\item[Extension] provides the possibility of transferring single applications/processes to a remote  machine.
+%\end{description}
+
+% tabletop application/research examples
+%%%%%%%%%%%%%%%%%
+%Tabletop computers are cutting-edge devices that merge input and output spaces into one single interactive surface \cite{Wellner:1993:digitaldesk}.
+%Researchers have investigated the use of interactive tables in a number of different ways: support for meetings, canvas for architectural design \cite{Clifton:2010:sketchtop}, media for document navigation, mediator for sharing files, etc.
+%Due to their size and embedded nature, tabletops seem to naturally fit in public spaces such as shops, bars and work places.
+%Common scenarios include catalog browsing, drink ordering and product configuration.
+%Technologies such as DiamondTouch \cite{Dietz:2001:diamondtouch} allow tabletops to support multiple and simultaneous users. Example of applications include sharing data between smartphones, collaborating on a design \cite{Hunter:2011:memtable}, or simply taking notes during a meeting.
+%In the case of multiple individualized users, solutions are needed to identify each user, as seen in \cite{Schmidt:2010:handsdown}, where the simple action of placing one's hand on the surface enables a person to identify and start interacting with the device.
+
+% tabletop integration with tangibles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Another interesting property of interactive surfaces is their ability to integrate with physical objects, both passive and dynamic, for the purpose of augmenting them with digital information, or controlling the application state.
+%For example, SurfaceWare \cite{Dietz:2009:surfaceware} allows the Microsoft Surface to sense the fluid level in a slightly enhanced drinking glass.
+%Another example is the software developed by Amnesia Razorfish, that allows the sharing of data between multiple handheld devices using the actual devices, as well as gestures, on the Microsoft Surface.
+%Finally, researchers at ITU have developed the Rabbit \cite{Hincapie:2011:rabbit}, a device that integrates small RFID-tagged objects and tabletops.
+
+
+\section{Interaction design}
 INTERACTION DESIGN / THEORY
 
 - intro / theory = Norman, Buxton (sketching user experiences)
