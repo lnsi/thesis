@@ -1,9 +1,15 @@
-\begin{thebibliography}{20}
+\begin{thebibliography}{42}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{Adobe Systems}(2012)]{flash}
+{Adobe Systems}.
+\newblock Flash.
+\newblock \url{http://get.adobe.com/flashplayer/}, 2012.
+\newblock (accessed 2/12).
 
 \bibitem[Amnesia(2011)]{amnesia}
 Amnesia.
@@ -16,6 +22,26 @@ Apple.
 \newblock iphone.
 \newblock \url{http://www.apple.com/iphone/}, 2012.
 \newblock (accessed 2/12).
+
+\bibitem[Arthur and Olsen(2011)]{Arthur:2011:xice}
+Richard Arthur and Dan~R. Olsen, Jr.
+\newblock Xice windowing toolkit: Seamless display annexation.
+\newblock \emph{ACM Trans. Comput.-Hum. Interact.}, 18:\penalty0 14:1--14:46,
+  August 2011.
+\newblock ISSN 1073-0516.
+\newblock \doi{http://doi.acm.org/10.1145/1993060.1993064}.
+\newblock URL \url{http://doi.acm.org/10.1145/1993060.1993064}.
+
+\bibitem[Ballagas et~al.(2005)Ballagas, Rohs, and
+  Sheridan]{Ballagas:2005:sweeppointshoot}
+Rafael Ballagas, Michael Rohs, and Jennifer~G. Sheridan.
+\newblock Sweep and point and shoot: phonecam-based interactions for large
+  public displays.
+\newblock In \emph{CHI '05 extended abstracts on Human factors in computing
+  systems}, CHI EA '05, pages 1200--1203, New York, NY, USA, 2005. ACM.
+\newblock ISBN 1-59593-002-7.
+\newblock \doi{http://doi.acm.org/10.1145/1056808.1056876}.
+\newblock URL \url{http://doi.acm.org/10.1145/1056808.1056876}.
 
 \bibitem[Bardram et~al.(2010)Bardram, Fuglsang, and
   Pedersen]{Bardram:2010:compute}
@@ -33,6 +59,16 @@ David Benyon.
   interaction design}.
 \newblock Addison Wesley, 2010.
 \newblock URL \url{http://books.google.com/books?id=P923PwAACAAJ}.
+
+\bibitem[Chapuis and Roussel(2005)]{Chapuis:2005:metisse}
+Olivier Chapuis and Nicolas Roussel.
+\newblock Metisse is not a 3d desktop!
+\newblock In \emph{Proceedings of the 18th annual ACM symposium on User
+  interface software and technology}, UIST '05, pages 13--22, New York, NY,
+  USA, 2005. ACM.
+\newblock ISBN 1-59593-271-2.
+\newblock \doi{http://doi.acm.org/10.1145/1095034.1095038}.
+\newblock URL \url{http://doi.acm.org/10.1145/1095034.1095038}.
 
 \bibitem[Clifton et~al.(2011)Clifton, Mazalek, Sanford, R\'{e}bola, Lee, and
   Powell]{Clifton:2010:sketchtop}
@@ -85,6 +121,43 @@ T.~Geller.
 \newblock ISSN 0272-1716.
 \newblock \doi{10.1109/MCG.2006.111}.
 
+\bibitem[Gjerlufsen et~al.(2011)Gjerlufsen, Klokmose, Eagan, Pillias, and
+  Beaudouin-Lafon]{Gjerlufsen:2011:substance}
+Tony Gjerlufsen, Clemens~Nylandsted Klokmose, James Eagan, Cl\'{e}ment Pillias,
+  and Michel Beaudouin-Lafon.
+\newblock Shared substance: developing flexible multi-surface applications.
+\newblock In \emph{PART 5 -------- Proceedings of the 2011 annual conference on
+  Human factors in computing systems}, CHI '11, pages 3383--3392, New York, NY,
+  USA, 2011. ACM.
+\newblock \doi{http://doi.acm.org/10.1145/1979442.1979446}.
+\newblock URL \url{http://doi.acm.org/10.1145/1979442.1979446}.
+
+\bibitem[Gosling et~al.(2000)Gosling, Joy, Steele, and Bracha]{java}
+James Gosling, Bill Joy, Guy Steele, and Gilad Bracha.
+\newblock \emph{Java Language Specification}.
+\newblock The Java Series. Addison-Wesley Longman Publishing Co., Inc., 2nd
+  edition edition, 2000.
+
+\bibitem[Hincapi{\'e}-Ramos et~al.(2011)Hincapi{\'e}-Ramos, Tabard, and
+  Bardram]{Hincapie:2011:rabbit}
+Juan~David Hincapi{\'e}-Ramos, Aur{\'e}lien Tabard, and Jakob~E. Bardram.
+\newblock Mediated tabletop interaction in the biology lab - exploring the
+  design space of the rabbit.
+\newblock \emph{Ubicomp}, 2011.
+
+\bibitem[Holmquist et~al.(2001)Holmquist, Mattern, Schiele, Alahuhta, Beigl5,
+  and Gellersen]{Holmquist:2001:smartits}
+Lars Holmquist, Friedemann Mattern, Bernt Schiele, Petteri Alahuhta, Michael
+  Beigl5, and Hans-W. Gellersen.
+\newblock Smart-its friends: A technique for users to easily establish
+  connections between smart artefacts.
+\newblock In Gregory Abowd, Barry Brumitt, and Steven Shafer, editors,
+  \emph{Ubicomp 2001: Ubiquitous Computing}, volume 2201 of \emph{Lecture Notes
+  in Computer Science}, pages 116--122. Springer Berlin / Heidelberg, 2001.
+\newblock ISBN 978-3-540-42614-1.
+\newblock URL \url{http://dx.doi.org/10.1007/3-540-45427-6\_10}.
+\newblock 10.1007/3-540-45427-6\_10.
+
 \bibitem[Hunter et~al.(2011)Hunter, Maes, Scott, and
   Kaufman]{Hunter:2011:memtable}
 Seth Hunter, Pattie Maes, Stacey Scott, and Henry Kaufman.
@@ -97,6 +170,12 @@ Seth Hunter, Pattie Maes, Stacey Scott, and Henry Kaufman.
 \newblock \doi{http://doi.acm.org/10.1145/1978942.1979432}.
 \newblock URL \url{http://doi.acm.org/10.1145/1978942.1979432}.
 
+\bibitem[IETF(2012)]{zeroconf}
+IETF.
+\newblock Zeroconf.
+\newblock \url{http://www.zeroconf.org/}, 2012.
+\newblock (accessed 2/12).
+
 \bibitem[Johanson et~al.(2002)Johanson, Fox, and Winograd]{Johanson:2002:iroom}
 B.~Johanson, A.~Fox, and T.~Winograd.
 \newblock The interactive workspaces project: experiences with ubiquitous
@@ -106,11 +185,37 @@ B.~Johanson, A.~Fox, and T.~Winograd.
 \newblock ISSN 1536-1268.
 \newblock \doi{10.1109/MPRV.2002.1012339}.
 
-\bibitem[Microsoft(2012)]{ms}
+\bibitem[Microsoft(2012{\natexlab{a}})]{ms}
 Microsoft.
 \newblock Microsoft surface.
-\newblock \url{http://www.microsoft.com/surface/}, 2012.
+\newblock \url{http://www.microsoft.com/surface/}, 2012{\natexlab{a}}.
 \newblock (accessed 2/12).
+
+\bibitem[Microsoft(2012{\natexlab{b}})]{silverlight}
+Microsoft.
+\newblock Silverlight.
+\newblock \url{http://www.microsoft.com/silverlight/}, 2012{\natexlab{b}}.
+\newblock (accessed 2/12).
+
+\bibitem[Olwal and Wilson(2008)]{Olwal:2008:surfacefusion}
+Alex Olwal and Andrew~D. Wilson.
+\newblock Surfacefusion: unobtrusive tracking of everyday objects in tangible
+  user interfaces.
+\newblock In \emph{Proceedings of graphics interface 2008}, GI '08, pages
+  235--242, Toronto, Ont., Canada, Canada, 2008. Canadian Information
+  Processing Society.
+\newblock ISBN 978-1-56881-423-0.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=1375714.1375754}.
+
+\bibitem[Patel et~al.(2004)Patel, Pierce, and Abowd]{Patel:2004:mobileauth}
+Shwetak~N. Patel, Jeffrey~S. Pierce, and Gregory~D. Abowd.
+\newblock A gesture-based authentication scheme for untrusted public terminals.
+\newblock In \emph{Proceedings of the 17th annual ACM symposium on User
+  interface software and technology}, UIST '04, pages 157--160, New York, NY,
+  USA, 2004. ACM.
+\newblock ISBN 1-58113-957-8.
+\newblock \doi{http://doi.acm.org/10.1145/1029632.1029658}.
+\newblock URL \url{http://doi.acm.org/10.1145/1029632.1029658}.
 
 \bibitem[Pering et~al.(2009)Pering, Want, Rosario, Sud, and
   Lyons]{Pering:2009:platformcomp}
@@ -130,6 +235,58 @@ Jun Rekimoto and Masanori Saitoh.
 \newblock ISBN 0-201-48559-1.
 \newblock \doi{http://doi.acm.org/10.1145/302979.303113}.
 \newblock URL \url{http://doi.acm.org/10.1145/302979.303113}.
+
+\bibitem[Rekimoto et~al.(2003)Rekimoto, Ayatsuka, and
+  Kohno]{Rekimoto:2003:synctap}
+Jun Rekimoto, Yuji Ayatsuka, and Michimune Kohno.
+\newblock Synctap: An interaction technique for mobile networking.
+\newblock In Luca Chittaro, editor, \emph{Human-Computer Interaction with
+  Mobile Devices and Services}, volume 2795 of \emph{Lecture Notes in Computer
+  Science}, pages 104--115. Springer Berlin / Heidelberg, 2003.
+\newblock ISBN 978-3-540-40821-5.
+\newblock URL \url{http://dx.doi.org/10.1007/978-3-540-45233-1\_9}.
+\newblock 10.1007/978-3-540-45233-1\_9.
+
+\bibitem[Richardson et~al.(1998)Richardson, Stafford-Fraser, Wood, and
+  Hopper]{Richardson:1998:vnc}
+Tristan Richardson, Quentin Stafford-Fraser, Kenneth~R. Wood, and Andy Hopper.
+\newblock Virtual network computing.
+\newblock \emph{Internet Computing, IEEE}, 2\penalty0 (1):\penalty0 33--38,
+  1998.
+
+\bibitem[Roman et~al.(2002)Roman, Hess, Cerqueira, Ranganathan, Campbell, and
+  Nahrstedt]{Roman:2002:gaia}
+M.~Roman, C.~Hess, R.~Cerqueira, A.~Ranganathan, R.H. Campbell, and
+  K.~Nahrstedt.
+\newblock A middleware infrastructure for active spaces.
+\newblock \emph{Pervasive Computing, IEEE}, 1\penalty0 (4):\penalty0 74 -- 83,
+  oct-dec 2002.
+\newblock ISSN 1536-1268.
+\newblock \doi{10.1109/MPRV.2002.1158281}.
+
+\bibitem[Scheifler and Gettys(1986)]{Scheifler:1986:x11}
+Robert~W. Scheifler and Jim Gettys.
+\newblock The x window system.
+\newblock \emph{ACM Trans. Graph.}, 5:\penalty0 79--109, April 1986.
+\newblock ISSN 0730-0301.
+\newblock \doi{http://doi.acm.org/10.1145/22949.24053}.
+\newblock URL \url{http://doi.acm.org/10.1145/22949.24053}.
+
+\bibitem[Scott et~al.(2005)Scott, Sharp, Madhavapeddy, and
+  Upton]{Scott:2005:visualauth}
+David Scott, Richard Sharp, Anil Madhavapeddy, and Eben Upton.
+\newblock Using visual tags to bypass bluetooth device discovery.
+\newblock \emph{SIGMOBILE Mob. Comput. Commun. Rev.}, 9:\penalty0 41--53,
+  January 2005.
+\newblock ISSN 1559-1662.
+\newblock \doi{http://doi.acm.org/10.1145/1055959.1055965}.
+\newblock URL \url{http://doi.acm.org/10.1145/1055959.1055965}.
+
+\bibitem[SIG(2012)]{bluetooth}
+Bluetooth SIG.
+\newblock Bluetooth.
+\newblock \url{http://www.bluetooth.org/apps/content/}, 2012.
+\newblock (accessed 2/12).
 
 \bibitem[Streitz et~al.(1999)Streitz, Geissler, Holmer, Konomi,
   M\"{u}ller-Tomfelde, Reischl, Rexroth, Seitz, and
@@ -152,6 +309,29 @@ Peter Tandler.
 \newblock In \emph{Ubicomp 2001: Ubiquitous Computing}, volume 2201 of
   \emph{Lecture Notes in Computer Science}, pages 96--115, 2001.
 \newblock \doi{10.1007/3-540-45427-6\_9}.
+
+\bibitem[Tritsch(2003)]{Tritsch:2003:rdp}
+Bernhard Tritsch.
+\newblock \emph{Microsoft Windows Server 2003 Terminal Services}.
+\newblock Microsoft Press, Redmond, WA, USA, 2003.
+\newblock ISBN 0735619042.
+
+\bibitem[Ullmer and Ishii(1997)]{Ullmer:1997:metadesk}
+Brygg Ullmer and Hiroshi Ishii.
+\newblock The metadesk: models and prototypes for tangible user interfaces.
+\newblock In \emph{Proceedings of the 10th annual ACM symposium on User
+  interface software and technology}, UIST '97, pages 223--232, New York, NY,
+  USA, 1997. ACM.
+\newblock ISBN 0-89791-881-9.
+\newblock \doi{http://doi.acm.org/10.1145/263407.263551}.
+\newblock URL \url{http://doi.acm.org/10.1145/263407.263551}.
+
+\bibitem[{UPnP Forum}(2012)]{upnp}
+{UPnP Forum}.
+\newblock Upnp.
+\newblock \url{http://upnp.org/sdcps-and-certification/resources/whitepapers/},
+  2012.
+\newblock (accessed 2/12).
 
 \bibitem[Want et~al.(2002)Want, Pering, Danneels, Kumar, Sundar, and
   Light]{Want:2002:personalserver}
@@ -183,6 +363,18 @@ Andrew~D. Wilson and Raman Sarin.
 \newblock ISBN 978-1-56881-337-0.
 \newblock \doi{http://doi.acm.org/10.1145/1268517.1268539}.
 \newblock URL \url{http://doi.acm.org/10.1145/1268517.1268539}.
+
+\bibitem[Winkler et~al.(2011)Winkler, Reinartz, Nowacka, and
+  Rukzio]{Winkler:2011:interactivephonecall}
+Christian Winkler, Christian Reinartz, Diana Nowacka, and Enrico Rukzio.
+\newblock Interactive phone call: synchronous remote collaboration and
+  projected interactive surfaces.
+\newblock In \emph{Proceedings of the ACM International Conference on
+  Interactive Tabletops and Surfaces}, ITS '11, pages 61--70, New York, NY,
+  USA, 2011. ACM.
+\newblock ISBN 978-1-4503-0871-7.
+\newblock \doi{http://doi.acm.org/10.1145/2076354.2076367}.
+\newblock URL \url{http://doi.acm.org/10.1145/2076354.2076367}.
 
 \bibitem[Wobbrock et~al.(2009)Wobbrock, Morris, and
   Wilson]{Wobbrock:2009:gestures}

@@ -12,8 +12,8 @@
 
 \begin{figure}[b!]
   \centering
-    \includegraphics[width=0.6\textwidth]{images/tide}
-  \caption{TIDE: extending the smartphone experience to the tabletop.}
+    \includegraphics[width=0.6\textwidth]{images/girlboyad}
+  \caption{People viewing information on a smartphone.}
   \label{tide}
 \end{figure}
 
@@ -30,20 +30,26 @@ However, the size of the device can be a limitation to this form of improvised c
 Tabletop computers, on the other hand, are ideal in social contexts.
 They bring computing to a very common piece of furniture, the table.
 As such, they present a horizontal interactive surface around which multiple users can regroup, to share a common experience, or to conduct parallel activities.
-They have been used extensively in museums and galleries, as documented by Geller \citep{Geller:2006:exhibits}, who notes that tabletops encourage a collaborative atmosphere, and that they provide a tactile experience that reaches even the less computer literate.
+They have been used extensively in museums and galleries, as documented by \cite{Geller:2006:exhibits}, who notes that tabletops encourage a collaborative atmosphere, and that they provide a tactile experience that reaches even the less computer literate.
 Tabletops provide a touch-based experience that is fundamentally different from the traditional desktop metaphor.
-A number of HCI studies show that this experience is a more natural one for the non-technical user, because it removes the abstraction layer of the mouse-and-keyboard and generates a more direct interaction.
+A number of HCI studies show that this experience is a more natural one for the non-technical user, because it removes the mouse-and-keyboard abstraction layer and generates a more direct interaction.
 
 \begin{figure}[htb]
   \centering
-    \includegraphics[width=0.6\textwidth]{images/visitors}
-  \caption{People using an interactive tabletop exhibit at the Asia Society and Museum.}
+    \includegraphics[width=0.4\textwidth]{images/visitors}
+  \caption{People using an interactive tabletop\\exhibit at the Asia Society Museum.}
   \label{visitors}
 \end{figure}
 
-Tabletop displays have been the object of extensive research since early systems such as the DigitalDesk \citep{Wellner:1993:digitaldesk}, whose focus was to bring the best of both the material and digital worlds to the common office desk.
+The first interactive tabletop displays were designed for individual use.
+Systems such as the DigitalDesk \citep{Wellner:1993:digitaldesk} aimed at incarnating the desktop metaphor of the personal computer to the common office desk.
+But tabletops have a huge potential for collaboration.
+In following years, a research branch emerged that focused on \emph{smart rooms}: spaces equipped with various cutting-edge computing devices that can interoperate, to support collaborative work for multiple users.
+Tabletops are an essential element of smart rooms, as shown with the InteracTable \citep{Streitz:1999:iland} and the iTable \citep{Johanson:2002:iroom}.
 
-
+With the emergence of commercial items such as the Microsoft Surface \citeyearpar{ms}, tabletops are gradually appearing in public environments such as museums, meeting rooms, public lobbies, bars, restaurants, etc.
+They are an ideal platform for spontaneous use and multi-user interactions, and they provide a touch-based experience that is similar than the one on most smartphones, making them easily accessible to the pubic.\\
+\linebreak
 %%% TECHNICAL REVIEW %%%%
 %were based on overhead projected output and overhead camera-based input.
 %In recent years, however, interactive displays are being commercialized, that are typically based either on computer vision or capacitance.
@@ -58,31 +64,32 @@ Tabletop displays have been the object of extensive research since early systems
 %Microsoft has perfected this technology in the latest Surface with PixelSense \citep{pixelsense}, where the individual pixels can detect what touches the screen, thus removing the need for cameras.
 %PQ Labs \citep{pq} produces side vision overlays that can provide multi-touch detection to any type of screen, though without the possibility for object detection.
 
-Researchers have investigated the use of interactive tables in a number of different ways: support for meetings, canvas for architectural design \cite{Clifton:2010:sketchtop}, media for document navigation, mediator for sharing files, etc.
-Due to their size and embedded nature, tabletops seem to naturally fit in public spaces such as shops, bars and work places.
-Common scenarios include catalog browsing, drink ordering and product configuration.
-Technologies such as DiamondTouch \cite{Dietz:2001:diamondtouch} allow tabletops to support multiple and simultaneous users. Example of applications include sharing data between smartphones, collaborating on a design \cite{Hunter:2011:memtable}, or simply taking notes during a meeting.
-
-Another interesting property of interactive surfaces is their ability to integrate with physical objects, both passive and dynamic, for the purpose of augmenting them with digital information, or controlling the application state.
-For example, SurfaceWare \cite{Dietz:2009:surfaceware} allows the Microsoft Surface to sense the fluid level in a slightly enhanced drinking glass.
-Another example is the software developed by Amnesia Razorfish \cite{amnesia}, that allows the sharing of data between multiple handheld devices using the actual devices, as well as gestures, on the Microsoft Surface.
-Finally, researchers at ITU have developed the Rabbit \cite{rabbit}, a device that integrates small RFID-tagged objects and tabletops.
-
-
-With the emergence of solid commercial items such as the above mentioned, tabletops are gradually becoming part of the infrastructure in shared environments such as museums, meeting rooms, public lobbies, bars, restaurants, etc.
-They are an ideal platform for spontaneous use and multi-user interactions, and they provide a touch-based experience that is similar than the one on most smartphones, making them easily accessible to the pubic.
-\\\\
 State-of-the-art smartphones boast screen resolutions up to 1280 by 720 pixels, that exceed the naked eye's ability to distinguish separate pixels.
-This implies beautiful graphics with profound and rich colors.
-However, sometimes it is the bigger picture that matters.
+%This implies beautiful graphics with profound and rich colors.
+However, a smartphone screen is too small to provide a satisfying user experience in the presence of multiple users, and when viewing dense content such as text or high-quality images.
 Screen sizes for ultra mobile devices go only up to 5 inches.
-Reading an article, browsing textual content and consulting a map are examples of situations in which small displays present limitations.
-In order to conveniently read a text or a street name, the user must zoom in on a portion of the document at a time.
-This requires using successive zoom in/zoom out and pan gestures, which usually makes the whole interaction somewhat cumbersome.
+Reading a text, consulting a map and viewing images are examples of situations in which small displays present limitations.
+
+An example of graphically dense content is a text of more than a few paragraphs.
+The default view of an online blog or a pdf document on a smartphone is too small for a user to be able to discern single words.
+Depending on one's eyesight, it usually takes 2 to 4 zooming gestures to enlarge the text to a size that is conveniently readable.
+At this point, the user generally tilts the phone to a landscape orientation, to give the paragraphs a more natural length.
+There is only space for 5 to 10 lines of text on the screen, which implies that the user uses successive pan gestures to update the content as s/he reads.
+Compared to the casual experience of reading a newspaper article or a book, this seems like a lot of trouble.
+
+Maps are also graphically dense.
+They present a lot of different informations, such as topography, street names and sights, on limited space.
+To be able to read a street name on a smartphone maps application, the user needs to zoom in on the relevant part of the map.
+The result is that the user can only view a very limited area.
+To be able to relate this area to, for example, his/her own location, the user must use a combination of pan and zoom out gestures that can be cumbersome.
+In certain cases, the area of interest is simply too vast to be viewed on a smartphone screen.
+
+TURN THIS INTO SOCIAL SCENARIO
 Smartphones are also gradually replacing point-and-shoot cameras, due to the fact that we carry them with us at all times, and that they are able to take pictures of high quality.
 However, image viewing and editing on a handheld device is a very frustrating activity.
 Screens are too small to do the pictures justice, let alone allow the comparison of more than one picture at a time.
 
+TURN THIS INTO RELATED WORK OVERVIEW
 In the above mentioned cases, the smartphone provides all the necessary computing resources (data, applications, processing power, connectivity), with the exception of a large enough display.
 This work focuses on these situations in which the smartphone experience would benefit from additional screen space.
 %readily available

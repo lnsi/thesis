@@ -12,46 +12,44 @@ A level-1 auxiliary file: scenarios.aux
 A level-1 auxiliary file: study.aux
 A level-1 auxiliary file: studyform.aux
 Database file #1: ../references.bib
-Warning--I didn't find a database entry for "rabbit"
-You've used 20 entries,
+You've used 42 entries,
             2773 wiz_defined-function locations,
-            778 strings with 10245 characters,
-and the built_in function-call counts, 11801 in all, are:
-= -- 1192
-> -- 576
-< -- 26
-+ -- 196
-- -- 176
-* -- 919
-:= -- 1741
-add.period$ -- 114
-call.type$ -- 20
-change.case$ -- 117
-chr.to.int$ -- 20
-cite$ -- 40
-duplicate$ -- 544
-empty$ -- 920
-format.name$ -- 204
-if$ -- 2609
-int.to.chr$ -- 1
+            942 strings with 15176 characters,
+and the built_in function-call counts, 23628 in all, are:
+= -- 2360
+> -- 1194
+< -- 48
++ -- 406
+- -- 363
+* -- 1844
+:= -- 3525
+add.period$ -- 232
+call.type$ -- 42
+change.case$ -- 243
+chr.to.int$ -- 41
+cite$ -- 84
+duplicate$ -- 1081
+empty$ -- 1847
+format.name$ -- 423
+if$ -- 5196
+int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 18
-newline$ -- 152
-num.names$ -- 82
-pop$ -- 211
+missing$ -- 37
+newline$ -- 304
+num.names$ -- 174
+pop$ -- 445
 preamble$ -- 1
-purify$ -- 98
+purify$ -- 203
 quote$ -- 0
-skip$ -- 450
+skip$ -- 877
 stack$ -- 0
-substring$ -- 517
-swap$ -- 142
-text.length$ -- 15
+substring$ -- 952
+swap$ -- 255
+text.length$ -- 26
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 215
+type$ -- 447
 warning$ -- 0
-while$ -- 102
+while$ -- 203
 width$ -- 0
-write$ -- 382
-(There was 1 warning)
+write$ -- 772
