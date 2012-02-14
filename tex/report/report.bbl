@@ -11,12 +11,6 @@
 \newblock \url{http://get.adobe.com/flashplayer/}, 2012.
 \newblock (accessed 2/12).
 
-\bibitem[Amnesia(2011)]{amnesia}
-Amnesia.
-\newblock
-  http://www.amnesiarazorfish.com.au/2011/01/amnesia-razorfish-announces-gesture-sharing-for-smartphones-and-tablets-using-microsoft-surface-press-release,
-  2011.
-
 \bibitem[Apple(2012)]{iphone}
 Apple.
 \newblock iphone.
@@ -53,22 +47,19 @@ Jakob~E. Bardram, Christina Fuglsang, and Simon~C. Pedersen.
 \newblock \doi{http://doi.acm.org/10.1145/1842993.1843014}.
 \newblock URL \url{http://doi.acm.org/10.1145/1842993.1843014}.
 
+\bibitem[Baur et~al.(2012)Baur, Boring, and
+  Feiner]{Baur:2012:virtualprojection}
+Dominikus Baur, Sebastian Boring, and Steven Feiner.
+\newblock Virtual projection: Exploring optical projection as a metaphor for
+  multi-device interaction.
+\newblock CHI '12. ACM, 2012.
+
 \bibitem[Benyon(2010)]{Benyon:2010}
 David Benyon.
 \newblock \emph{Designing interactive systems: a comprehensive guide to HCI and
   interaction design}.
 \newblock Addison Wesley, 2010.
 \newblock URL \url{http://books.google.com/books?id=P923PwAACAAJ}.
-
-\bibitem[Chapuis and Roussel(2005)]{Chapuis:2005:metisse}
-Olivier Chapuis and Nicolas Roussel.
-\newblock Metisse is not a 3d desktop!
-\newblock In \emph{Proceedings of the 18th annual ACM symposium on User
-  interface software and technology}, UIST '05, pages 13--22, New York, NY,
-  USA, 2005. ACM.
-\newblock ISBN 1-59593-271-2.
-\newblock \doi{http://doi.acm.org/10.1145/1095034.1095038}.
-\newblock URL \url{http://doi.acm.org/10.1145/1095034.1095038}.
 
 \bibitem[Clifton et~al.(2011)Clifton, Mazalek, Sanford, R\'{e}bola, Lee, and
   Powell]{Clifton:2010:sketchtop}
@@ -191,10 +182,18 @@ Microsoft.
 \newblock \url{http://www.microsoft.com/surface/}, 2012{\natexlab{a}}.
 \newblock (accessed 2/12).
 
-\bibitem[Microsoft(2012{\natexlab{b}})]{silverlight}
+\bibitem[Microsoft(2012{\natexlab{b}})]{mscase}
+Microsoft.
+\newblock Microsoft surface at royal bank of canada.
+\newblock
+  \url{http://www.microsoft.com/casestudies/Microsoft-Surface/Royal-Bank-of-Canada/Royal-Bank-of-Canada-delights-customers-with-innovative-Microsoft-Surface-experience/4000011029},
+  2012{\natexlab{b}}.
+\newblock (accessed 2/12).
+
+\bibitem[Microsoft(2012{\natexlab{c}})]{silverlight}
 Microsoft.
 \newblock Silverlight.
-\newblock \url{http://www.microsoft.com/silverlight/}, 2012{\natexlab{b}}.
+\newblock \url{http://www.microsoft.com/silverlight/}, 2012{\natexlab{c}}.
 \newblock (accessed 2/12).
 
 \bibitem[Olwal and Wilson(2008)]{Olwal:2008:surfacefusion}

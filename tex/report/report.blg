@@ -12,44 +12,46 @@ A level-1 auxiliary file: scenarios.aux
 A level-1 auxiliary file: study.aux
 A level-1 auxiliary file: studyform.aux
 Database file #1: ../references.bib
+Warning--empty booktitle in Baur:2012:virtualprojection
 You've used 42 entries,
             2773 wiz_defined-function locations,
-            942 strings with 15176 characters,
-and the built_in function-call counts, 23628 in all, are:
-= -- 2360
-> -- 1194
-< -- 48
-+ -- 406
-- -- 363
-* -- 1844
-:= -- 3525
-add.period$ -- 232
+            938 strings with 15179 characters,
+and the built_in function-call counts, 23511 in all, are:
+= -- 2337
+> -- 1203
+< -- 46
++ -- 410
+- -- 366
+* -- 1841
+:= -- 3514
+add.period$ -- 231
 call.type$ -- 42
-change.case$ -- 243
-chr.to.int$ -- 41
-cite$ -- 84
-duplicate$ -- 1081
-empty$ -- 1847
-format.name$ -- 423
-if$ -- 5196
-int.to.chr$ -- 2
+change.case$ -- 244
+chr.to.int$ -- 40
+cite$ -- 85
+duplicate$ -- 1074
+empty$ -- 1838
+format.name$ -- 424
+if$ -- 5161
+int.to.chr$ -- 3
 int.to.str$ -- 1
 missing$ -- 37
-newline$ -- 304
+newline$ -- 303
 num.names$ -- 174
-pop$ -- 445
+pop$ -- 451
 preamble$ -- 1
-purify$ -- 203
+purify$ -- 204
 quote$ -- 0
-skip$ -- 877
+skip$ -- 864
 stack$ -- 0
-substring$ -- 952
-swap$ -- 255
-text.length$ -- 26
+substring$ -- 928
+swap$ -- 249
+text.length$ -- 25
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 447
-warning$ -- 0
-while$ -- 203
+warning$ -- 1
+while$ -- 200
 width$ -- 0
-write$ -- 772
+write$ -- 767
+(There was 1 warning)
