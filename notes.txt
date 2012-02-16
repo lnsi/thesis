@@ -1,0 +1,11 @@
+THESIS NOTES
+
+early design ideas:
+- obstruction on the tabletop should be handled by the application window
+- support for other mobile devices such as tablets
+- share data with tabletops
+- (expansion metaphor) push application widgets to tabletop
+- tilt orientation
+
+requirements:
+- what about security? responsiveness?

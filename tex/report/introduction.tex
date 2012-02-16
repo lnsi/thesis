@@ -96,14 +96,33 @@ In the above mentioned cases, the smartphone provides all the necessary resource
 This work focuses on these situations in which the smartphone experience would benefit from additional screen space.
 \\
 \linebreak
-It does so by suggesting a \emph{device composition} approach, that integrates smartphones and tabletops.
-Tabletops are a solution to this problem for several reasons.
-They provide the needed display space, and a touch-based interaction that comes naturally to the typical smartphone user.
-Moreover, they are designed for collocated collaboration, which brings an interesting new dimension to the scenarios discussed above.
-Examples of the possibilities include consulting a map to show a location to a friend, reading and editing a document with a colleague, playing a multiplayer game, or viewing and sharing pictures between smartphones.
+%It does so by suggesting a \emph{device composition} approach, that integrates smartphones and tabletops.
+%Tabletops are a solution to this problem for several reasons.
+%They provide the needed display space, and a touch-based interaction that comes naturally to the typical smartphone user.
+%Moreover, they are designed for collocated collaboration, which brings an interesting new dimension to the scenarios discussed above.
+%Examples of the possibilities include consulting a map to show a location to a friend, reading and editing a document with a colleague, playing a multiplayer game, or viewing and sharing pictures between smartphones.
+A way to address this challenge is by using \emph{device composition}, a research approach that can be traced back to the work on smart space technologies and systems such as Augmented Surfaces \citep{Rekimoto:1999:augmentedsurfaces}, \mbox{i-LAND} \citep{Streitz:1999:iland} and the Interactive Workspaces \citep{Johanson:2002:iroom}.
+Smart rooms were designed as closed computing environments, so recent efforts have been invested in developing for a more ad-hoc type of device composition, with projects such as Obje \citep{Edwards:2009:obje}, Platform Composition \citep{Pering:2009:platformcomp} and CompUTE \citep{Bardram:2010:compute}.
 
-%DEVICE COMPOSITION is an approach that can solve this.
-%
+Tabletops are a central device in the aforementioned smart rooms, and a recurring element within device composition.
+They are an ideal platform for collocated collaboration, as was shown with systems such as the MemTable \citep{Hunter:2011:memtable} and SketchTop \citep{Clifton:2010:sketchtop}, that are designed to support the work of technical users.
+In recent years, however, tabletops are appearing in public spaces, aiming at engaging common users in a more casual form of interaction.
+\\
+\linebreak
+Within this context, designing for device composition between smartphones and tabletops implies addressing three fundamental challenges.
+
+The first one is the pairing procedure responsible for device discovery and connection.
+Pairing between unknown devices has been solved in many different ways.
+An example that is particularly relevant to this work is the BlueTable \citep{Wilson:2007:bluetable}, an interactive surface that uses Bluetooth to discover and connect to a mobile phone, but improves this process by using computer vision to locate the phone on the table, and verify its identity via the phone blinking an infrared signal.
+
+The second challenge is how to distribute the UI of the smartphone to the tabletop.
+There exists various stable technologies to choose from, but recent research works have chosen to build frameworks from scratch, to allow a more flexible distribution and sharing of user interfaces between multiple types of devices.
+An example of such an approach is XICE (eXtending Interactive Computing Everywhere) \citep{Arthur:2011:xice}, a programming framework that is destined to support a new form of nomadic experience, where users can annex various display servers with their mobile personal devices.
+
+The last challenge is to design a user interaction that suits the purpose of the system.
+Different interaction metaphors have been used to extend the UI of smartphones to larger display surfaces, including streaming, replication, expansion, projection and adaptation.
+In their recent work on Virtual Projection (VP), \cite{Baur:2012:virtualprojection} built a system where a smartphone can be used to seemingly project its UI onto an available computer display.
+
 %Device composition started with SMART ROOMS, and composing various devices, which we want to do in this case.
 %But smart rooms were designed as closed environments.
 %
@@ -140,50 +159,53 @@ Examples of the possibilities include consulting a map to show a location to a f
 %
 %FINISH with how we do differently!
 
-
-%
-%This project focuses on UI replication because it improves the user experience while keeping the interaction natural, and it can be implemented with the available resources.
-%On a technical level, the advantage of UI replication is that it uses the application logic of the personal device, requiring of the remote display only to forward graphical output, and touch-based input.
-%This allows the development of software that is easily adaptable to various programming platforms.
-%On a human-computer interaction level, it reduces the learning curve for the user, by providing an intuitive experience that is similar to the one s/he is used to.
-%By comparison, the streaming metaphor is too limited, and the other paradigms all introduce new interaction dimensions that require user adaptation.
-%A final argument in favor of UI replication is that it allows the implementation of an engaging prototype without requiring any additional graphical design.
-
 \section{Problem statement}
 
-This thesis addresses the problem of designing a composite device between a smartphone and a tabletop computer.
-\\\\
+This thesis addresses the problem of using \emph{consistent} design to build a composite device between a smartphone and a tabletop computer, that allows for \emph{spontaneous interaction}.
+\\
+\linebreak
 It does so by answering the following research questions:
 \begin{itemize}
 \item What are the requirements for such a system?
 \item Which interaction techniques are best suited to this type of system?
-\item Can this system be made to run on the Microsoft Surface and integrate different types of smartphones?
+\item Can this system be made to run on standard hardware and integrate different smartphone types?
 \end{itemize}
 
 \section{Research methods}
 
-A comprehensive literary review is made of the research work related to device composition and surface computing, and in particular, the following themes are investigated: device composition approaches, smart rooms, tabletop systems, tabletop applications, tangible integration, user identification, object tracking, UI distribution technologies.
-To complete this review, a study is made of the modern approaches and methodologies that are best suited for the design of interactive systems.
+To solve the problem at hand, the following research methods were used.
+\\
+\linebreak
+To place the present work within its research context, 
+a comprehensive literary review was made of the prior work related to device composition and surface computing.
+In particular, the following aspects of device composition were investigated: main approaches, tabletop systems and applications, pairing, UI distribution, user interaction.
+The resulting study is presented in Chapter~\ref{relatedwork}.
 
-Following a user-centered approach, a solution design is completed, which requires to iterate between several design tasks.
-An analysis of the context of use is made with the support of scenarios and storyboards, which lead to the definition of solution requirements.
-A series of design options are produced from the study of existing approaches to software design for surface computing.
-With the support of a study based on low-fidelity prototypes and the involvement of potential users, a final design is produced and described.
+Following a user-centered approach, a solution design was completed.
+The process was divided into to the following tasks.
+The application's context of use was analyzed with the support of scenarios and storyboards, which lead to the definition of solution requirements.
+A series of design options were generated from the study of existing approaches to software design for surface computing.
+With the support of a study based on low-fidelity prototypes and the involvement of potential users, a final design was produced.
+The design process is reported in Chapter~\ref{design}
 
-An application prototype is implemented on a Microsoft Surface tabletop computer (first generation) running Windows Vista, an iPhone 4 running iOS and a HTC Legend running Android.
-Third-party applications are used on the smartphones, that requires rooting the devices.
-On the tabletop computer, the application is programmed within the .NET framework,  using specifically WPF (Windows Presentation Foundations) and the Presentation layer of the Microsoft Surface API 1.0.
+In order to demonstrate the feasibility of the suggested solution, a proof of concept was realized, in the form of an application prototype implemented on the Microsoft Surface tabletop computer, an iPhone 4 and a HTC Legend phone.
+The implementation was focused on the user interaction, in the aim of showing that consistent design can lead to an easy user experience.
+The system is described in Chapter~\ref{system}.
 
-An evaluation of the design is achieved by way of a usability study, that involves the following steps.
-First, the aspects of the system that are to be evaluated are identified, and the evaluation method selected.
-Second, a user experiment is designed, based on cooperative evaluation, discovery, and a controlled test.
-Third, participants are recruited, and the experiment is conducted in the PITlab at the IT University of Copenhagen.
-Data is gathered via online forms as well as application logging.
-Lastly, the data is processed, analyzed, and the evaluation results derived.
+%Third-party applications are used on the smartphones, that requires rooting the devices.
+%On the tabletop computer, the application is programmed within the .NET framework,  using specifically WPF (Windows Presentation Foundations) and the Presentation layer of the Microsoft Surface API 1.0.
+
+An evaluation of the design was conducted by way of a usability study, that involved the following steps.
+The focus of the evaluation was identified, in terms of specific aspects of the system, and the evaluation methods were selected.
+A user experiment was designed, that involved a discovery phase, cooperative evaluation, a semi-controlled test and a questionnaire.
+Participants were recruited, and the experiment was carried out.
+Evaluation data was gathered via online forms as well as application logging.
+The resulting data was processed, analyzed, and the evaluation results were derived.
+The evaluation process and results are presented in reported in Chapter~\ref{evaluation}.
 
 \section{Contributions}
 
-This work reports the design, implementation and evaluation of a composite device that integrates smartphones to the Microsoft Surface.
+This work consists of the design, implementation and evaluation of a composite device that integrates smartphones to the Microsoft Surface.
 There are three major contributions.
 
 \begin{enumerate}
@@ -211,13 +233,13 @@ Finally, the evaluation confirms that there is a need for a system that allows u
 
 \end{enumerate}
 
-\section{Thesis overview}
-
-Chapter~\ref{relatedwork} presents a literary review of the research that constitutes the background to this work, and the theoretical work on which the design approach is based.\\
-Chapter~\ref{design} describes the process that lead to the design of the TIDE prototype.\\
-The system itself is presented in Chapter~\ref{system}, and its evaluation by way of a usability study in Chapter~\ref{evaluation}.\\
-Chapter~\ref{discussion} is a discussion that addresses the results and lessons learned throughout this process, and brings suggestions for future work.\\
-Chapter~\ref{conclusion} concludes the report.
+%\section{Thesis overview}
+%
+%Chapter~\ref{relatedwork} presents a literary review of the research that constitutes the background to this work, and the theoretical work on which the design approach is based.\\
+%Chapter~\ref{design} describes the process that lead to the design of the TIDE prototype.\\
+%The system itself is presented in Chapter~\ref{system}, and its evaluation by way of a usability study in Chapter~\ref{evaluation}.\\
+%Chapter~\ref{discussion} is a discussion that addresses the results and lessons learned throughout this process, and brings suggestions for future work.\\
+%Chapter~\ref{conclusion} concludes the report.
 
 % solution : using tabletops as UI peripherals
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

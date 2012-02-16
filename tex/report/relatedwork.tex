@@ -16,7 +16,7 @@ An essential aspect of ubiquitous computing is the idea that users can benefit f
 Extensive research focused on realizing that idea by designing computer augmented spaces, or \emph{smart rooms}, where heterogeneous devices can interoperate.
 Examples of such smart spaces are Augmented Surfaces \citep{Rekimoto:1999:augmentedsurfaces}, 
 %where portable devices and interactive surfaces are enabled for data exchange; 
-i-LAND \citep{Streitz:1999:iland} and the Interactive Workspaces \citep{Johanson:2002:iroom}.
+\mbox{i-LAND} \citep{Streitz:1999:iland} and the Interactive Workspaces \citep{Johanson:2002:iroom}.
 Beside device interaction, these projects were aimed at supporting collaborative work between collocated users.
 Smart rooms are usually closed computing environments that rely on a centralized software infrastructure, such as BEACH developed for i-LAND \citep{Tandler:2001:smartenv}, or Gaia OS for Active Spaces \citep{Roman:2002:gaia}.
 The advantage of such an approach is that the interaction between the enabled devices can be hugely optimized, as they shared a set of semantics.
@@ -69,7 +69,9 @@ This task poses three fundamental challenges: device pairing, distributing the u
 
 \subsubsection{Pairing}
 
-\emph{Pairing} is an essential part of any device composition, and a challenge that can be solved in many ways.
+\emph{Pairing} is the procedure through which two devices first discover each other, then connect to each other for interaction.
+It is an essential part of any device composition, and a challenge that can be solved in different ways.
+
 Some systems are designed for networked devices, and achieve pairing with TCP/IP based networking protocols such as Zeroconf \citeyearpar{zeroconf} for Obje and UPnP \citeyearpar{upnp} for CompUTE.
 
 Bluetooth \citeyearpar{bluetooth} supports a device discovery protocol that was used by the Personal Server \citep{Want:2002:personalserver}.
@@ -92,7 +94,7 @@ It can make the pairing process easier, as shown with the BlueTable \citep{Wilso
 
 \subsubsection{UI distribution}
 
-Device composition has been extensively used for building systems that allow the distribution of user interfaces between devices.
+Device composition has been extensively used for building systems that allow the sharing of user interfaces between devices.
 The typical setup is to be able to view and interact with the data and applications from a mobile device on a situated one that offers superior display resources.
 There are various technologies for UI distribution.
 
@@ -116,12 +118,12 @@ Such an approach can either be built on a web server model, which is basically w
 The Personal Server is a handheld device without a display, that transmits HTML pages to available displays in the environment.
 Using a web-based protocol implies a series of drawbacks that are induced by the use of HTML: browsers behave differently, HTML 1 to 4 does not support generalized drawing, HTML does not handle varying display sizes and resolutions and the use of Javascript introduces security issues related to programmable display.
 
-Arthur and Olsen \citeyearpar{Arthur:2011:xice} address UI distribution with XICE (eXtending Interactive Computing Everywhere).
-XICE is a programming framework that uses wireless networks to connect portable devices to display servers.
-It takes into account the limited CPU and battery capacities of mobile devices, and provide a flexible protocol that allows the annexation of different types of displays.
+Recent research efforts have been invested in the development of whole frameworks that can support flexible UI distribution.
+This is the case with XICE (eXtending Interactive Computing Everywhere) \citep{Arthur:2011:xice}, a programming framework that uses wireless networks to connect portable devices to display servers.
+It takes into account the limited CPU and battery capacities of mobile devices, and provides a flexible protocol that allows the annexation of different types of displays.
 
-Gjerlufsen et al.\ \citeyearpar{Gjerlufsen:2011:substance} have also taken the approach of building a framework to support the development of interactive multi-surface applications.
-Substance is a data-oriented programming model that was used to build a middleware that provides powerful sharing applications.
+Substance \citep{Gjerlufsen:2011:substance} was designed to support the development of interactive multi-surface applications.
+It is a data-oriented programming model that was used to build Shared Substance, a middleware that provides powerful sharing applications.
 
 %X-based window system to facilitate the design, implementation and evaluation of innovative window management techniques \citep{Chapuis:2005:metisse}.
 
@@ -150,9 +152,14 @@ Substance is a data-oriented programming model that was used to build a middlewa
 %- gestures
 %- interactions
 
-Recent research efforts have been invested in combining mobile devices such as smartphones to different types of larger displays, such as tabletop computers.
-The aim is always similar: extending the user interface of the phone to improve the user experience.
-But different approaches are possible in terms of the interaction metaphor that the extension is based on.
+Combining mobile devices with larger displays is not a new idea.
+It is already widely available for laptop computers, that can be connected via a cable---such as VGA or DVI---to external monitors, projectors, etc.
+There are serious limitations to this type of setup.
+Some are technical: said cables are limited in terms of graphical output, the large size of the connectors is prohibitive on mobile devices; and others are related to the user experience: the user must have the required cable, the user must find the connector on the larger display, the process of connecting/disconnecting is susceptible to take time.
+This work focuses therefore on providing a wireless user experience.
+
+Recent research efforts have shown that there are different approaches to improving the experience of the smartphone user by allowing the extension of the phone UI to an available display surface.
+The main approaches are listed here in terms of the interaction metaphor that they are based on.
 
 \emph{Streaming} is a straightforward approach where only the visual output of the mobile device is forwarded to a remote display.
 It is what happens when we connect a laptop to a projector, for example to give a presentation.
@@ -162,8 +169,9 @@ However, it presents serious limitations in terms of interaction potential.
 \emph{Replication} goes one step further, by allowing the user to provide input on the replicated UI.
 This type of integration is already available for personal computers, but requires using a cable, or a docking station.
 
-\emph{Expansion} is when the larger display is added to the UI of the mobile device.
-It provides the possibility of transferring data or applications to the remote  machine, while keeping the mobile UI independent and available.
+\emph{Expansion} is when the larger display becomes additional space for the existing UI of the mobile device.
+It is also available for laptops via a cable or docking station.
+It provides the possibility of transferring data or applications to the remote  machine, while preserving the integrality of the mobile UI.
 
 \emph{Projection} is a metaphor similar to replication, with the difference that the mobile device itself is used for projecting its UI onto an available display surface.
 \cite{Winkler:2011:interactivephonecall} have built a device composed of a smartphone and a personal projector, that provide powerful in-call collaboration features, by projecting a shared interface on any available surface.
@@ -171,5 +179,10 @@ Virtual Projection (VP) \citep{Baur:2012:virtualprojection} is a system where a 
 
 \emph{Adaptation} refers to an improved UI transfer where the UI is modified to make full use of the additional resources available on the remote display.
 This approach was followed by the authors of XICE \citep{Arthur:2011:xice}.
+\\
+\linebreak
+In comparison to prior work, this thesis focuses on building a system that provides an easy interface and a spontaneous user experience.
+Additionally, the system is built on standard hardware, and is compatible with most smartphone types.
+
 
 
