@@ -11,10 +11,16 @@
 \newblock \url{http://get.adobe.com/flashplayer/}, 2012.
 \newblock (accessed 2/12).
 
-\bibitem[Apple(2012)]{iphone}
+\bibitem[Apple(2012{\natexlab{a}})]{bonjour}
+Apple.
+\newblock Bonjour.
+\newblock \url{https://developer.apple.com/opensource/}, 2012{\natexlab{a}}.
+\newblock (accessed 2/12).
+
+\bibitem[Apple(2012{\natexlab{b}})]{iphone}
 Apple.
 \newblock iphone.
-\newblock \url{http://www.apple.com/iphone/}, 2012.
+\newblock \url{http://www.apple.com/iphone/}, 2012{\natexlab{b}}.
 \newblock (accessed 2/12).
 
 \bibitem[Arthur and Olsen(2011)]{Arthur:2011:xice}
@@ -83,16 +89,6 @@ Paul Dietz and Darren Leigh.
 \newblock \doi{http://doi.acm.org/10.1145/502348.502389}.
 \newblock URL \url{http://doi.acm.org/10.1145/502348.502389}.
 
-\bibitem[Dietz and Eidelson(2009)]{Dietz:2009:surfaceware}
-Paul~H. Dietz and Benjamin~D. Eidelson.
-\newblock Surfaceware: dynamic tagging for microsoft surface.
-\newblock In \emph{Proceedings of the 3rd International Conference on Tangible
-  and Embedded Interaction}, TEI '09, pages 249--254, New York, NY, USA, 2009.
-  ACM.
-\newblock ISBN 978-1-60558-493-5.
-\newblock \doi{http://doi.acm.org/10.1145/1517664.1517717}.
-\newblock URL \url{http://doi.acm.org/10.1145/1517664.1517717}.
-
 \bibitem[Edwards et~al.(2009)Edwards, Newman, Sedivy, and
   Smith]{Edwards:2009:obje}
 W.~Keith Edwards, Mark~W. Newman, Jana~Z. Sedivy, and Trevor~F. Smith.
@@ -128,13 +124,6 @@ James Gosling, Bill Joy, Guy Steele, and Gilad Bracha.
 \newblock \emph{Java Language Specification}.
 \newblock The Java Series. Addison-Wesley Longman Publishing Co., Inc., 2nd
   edition edition, 2000.
-
-\bibitem[Hincapi{\'e}-Ramos et~al.(2011)Hincapi{\'e}-Ramos, Tabard, and
-  Bardram]{Hincapie:2011:rabbit}
-Juan~David Hincapi{\'e}-Ramos, Aur{\'e}lien Tabard, and Jakob~E. Bardram.
-\newblock Mediated tabletop interaction in the biology lab - exploring the
-  design space of the rabbit.
-\newblock \emph{Ubicomp}, 2011.
 
 \bibitem[Holmquist et~al.(2001)Holmquist, Mattern, Schiele, Alahuhta, Beigl5,
   and Gellersen]{Holmquist:2001:smartits}
@@ -205,6 +194,12 @@ Alex Olwal and Andrew~D. Wilson.
   Processing Society.
 \newblock ISBN 978-1-56881-423-0.
 \newblock URL \url{http://dl.acm.org/citation.cfm?id=1375714.1375754}.
+
+\bibitem[OpenCV(2012)]{opencv}
+OpenCV.
+\newblock Opencv.
+\newblock \url{http://opencv.willowgarage.com/wiki/}, 2012.
+\newblock (accessed 2/12).
 
 \bibitem[Patel et~al.(2004)Patel, Pierce, and Abowd]{Patel:2004:mobileauth}
 Shwetak~N. Patel, Jeffrey~S. Pierce, and Gregory~D. Abowd.
@@ -315,21 +310,17 @@ Bernhard Tritsch.
 \newblock Microsoft Press, Redmond, WA, USA, 2003.
 \newblock ISBN 0735619042.
 
-\bibitem[Ullmer and Ishii(1997)]{Ullmer:1997:metadesk}
-Brygg Ullmer and Hiroshi Ishii.
-\newblock The metadesk: models and prototypes for tangible user interfaces.
-\newblock In \emph{Proceedings of the 10th annual ACM symposium on User
-  interface software and technology}, UIST '97, pages 223--232, New York, NY,
-  USA, 1997. ACM.
-\newblock ISBN 0-89791-881-9.
-\newblock \doi{http://doi.acm.org/10.1145/263407.263551}.
-\newblock URL \url{http://doi.acm.org/10.1145/263407.263551}.
-
 \bibitem[{UPnP Forum}(2012)]{upnp}
 {UPnP Forum}.
 \newblock Upnp.
 \newblock \url{http://upnp.org/sdcps-and-certification/resources/whitepapers/},
   2012.
+\newblock (accessed 2/12).
+
+\bibitem[VncSharp(2012)]{vncsharp}
+VncSharp.
+\newblock Vncsharp.
+\newblock \url{http://cdot.senecac.on.ca/projects/vncsharp/}, 2012.
 \newblock (accessed 2/12).
 
 \bibitem[Want et~al.(2002)Want, Pering, Danneels, Kumar, Sundar, and

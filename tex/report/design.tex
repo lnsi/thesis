@@ -15,16 +15,18 @@ The process was focused on producing a \emph{consistent} design.
 This concept was used in an effort to build an intuitive system, i.e.\ a system that users can understand without the need for conscious reasoning.
 Consistency can apply to various aspects of a system design.
 In the present case, the following were found to be the most relevant.
-The design should aim at being consistent with (1) the user's general background, (2) the physicality of the devices and (3) the existing user experience.
-The user's general background is a broad notion, that includes for example the common computer knowledge that can be expected of a user depending on his/her culture, gender, age, social background, etc.
-The physicality of the devices is an important notion when designing for devices such as tabletops, because their form has decisive implications on the user's expectations.
-The existing user experience refers to the user interaction that takes place on the single devices that form the composite device. Concretely, the interaction might be facilitated by keeping the experience on the tabletop consistent with the experience on the smartphone.
+The design should aim at being consistent with (1) the user background and (2) the physicality of the devices.
+The user background is a broad notion that includes any prior knowledge or experience that is relevant to the current system, and that the designer can derive from the design analysis.
+In the present case, for example, the system is aimed at smartphone users, so it can be expected of the end-user some prior experience with a smartphone.
+The physicality of the devices refers to the implications that the form of the devices have on the user's expectations.
+For example, the table form implies that a user will expect to be able to place an object on it.
+If one of the devices had wheels, the user will expect it to be able to roll.
 
 Due to time constraints, it was decided to limit the focus of this work to one interaction metaphor: \emph{UI replication}.
 This metaphor was chosen among the possibilities enumerated in Chapter~\ref{relatedwork}, for the following reasons.
 First, UI replication allows for a strong consistency between the experience on the smartphone and the one on the tabletop.
-Second, UI replication can be implemented in a straightforward way, with stable protocols such as VNC \citep{Richardson:1998:vnc}, which allows the implementation effort to be focused on the interaction techniques.
-Third, due to the availability of stable protocols for UI replication, the implementation can be made to support different types of smartphones.
+Second, UI replication implies that the smartphone's application logic stays unchanged, and allow the development effort to be focused on the tabletop.
+Third, for the same reason as above, the implementation can be made to support different types of smartphones.
 
 Thus, the system is designed so as to present the user with a mirrored image of the smartphone UI on the tabletop.
 This is referred to as the \emph{replicated UI}.
@@ -225,11 +227,11 @@ The requirements that were deemed essential to solving the thesis problem are fo
 The pairing procedure is responsible for device discovery and connection.
 It should fulfill the following requirements:
 
-\begin{enumerate}
+\begin{enumerate}[{RA}-1]
 \item Pairing the devices should be easy and quick.
 \item Discovery between the devices should be automatic.
 \item Establishing the connection should require explicit confirmation from the user.
-\item Automatic pairing should be an available option in trusted setups.
+%\item Automatic pairing should be an available option in trusted setups.
 \item Exiting the application should be easy and quick.
 \end{enumerate}
 
@@ -245,7 +247,7 @@ It should fulfill the following requirements:
 The replicated UI is the interactive mirror image of the smartphone displayed on the tabletop.
 It should fulfill the following requirements:
 
-\begin{enumerate}
+\begin{enumerate}[{RB}-1]
 \item The UI of the smartphone should be replicated on the tabletop.
 \item The graphical output from the smartphone should be dynamically relayed to the replicated UI.
 \item The touch-based input from the replicated UI should be dynamically relayed to the smartphone.
@@ -261,7 +263,7 @@ It should fulfill the following requirements:
 The surface UI is the interface on the tabletop that controls the replicated UI.
 It should fulfill the following requirements:
 
-\begin{enumerate}
+\begin{enumerate}[{RC}-1]
 \item The surface UI should be easy to use.
 \item The surface UI should allow the user to manipulate the replicated UI, i.e.\ the user should be able to move, rotate and resize the replicated UI across the tabletop display.
 \item The surface UI should allow the user to minimize and restore the replicated UI.
@@ -293,7 +295,7 @@ It should fulfill the following requirements:
 The tangible UI is the set of features that are used by physically interacting with the smartphone.
 It should fulfill the following requirements:
 
-\begin{enumerate}
+\begin{enumerate}[{RD}-1]
 \item Placing the smartphone on the tabletop should trigger the pairing procedure.
 \item The replicated UI should be collocated with the smartphone, i.e.\ the replicated UI should be seemingly linked to the device, and should move when the device is moved.
 \item Lifting the smartphone off the table should trigger the application exit.
@@ -315,7 +317,7 @@ First, it is consistent with the physicality of tabletops, who rely on touch-bas
 Second, it is consistent with the smartphone experience, which also relies on touch-based input.
 Lastly, the presence of other input peripherals cannot be expected, so relying on touch-based input will ensure that the system is compatible with any setup.
 
-The steps followed to design the surface UI were: (1) the generation of ideas, (2) the definition of \emph{interaction strategies }and (3) a study involving end-users to identify the most intuitive interaction techniques.
+The steps followed to design the surface UI were: (1) the generation of ideas, (2) the definition of \emph{interaction strategies}and (3) a study involving end-users to identify the most intuitive interaction techniques.
 
 %The pairing procedure does not introduce anything new to the field. There are known solutions to this challenge, which are described in section \ref{}.
 %The remote UI replicates the UI of the personal device on the tabletop, and does not require any supplementary design.
@@ -547,7 +549,7 @@ The favored strategies for minimizing were double tapping on the action bar and 
 For hiding, the favored strategy was double tapping on the active border.
 It is thus obvious that it is the double tap that participants have a preference for, possibly because it is a common technique in many other application contexts, as well as a quick and easy one.
 
-It is not possible to analyze the scores of the sixth interaction strategy as a whole, as it does not represent a consistent strategy, but more a patchwork of various suggestions, that were chosen because of their originality and interest. They are:
+It is not possible to analyze the scores of the sixth category as a whole, as it does not represent a consistent strategy, but more a patchwork of various suggestions. They are:
 \begin{enumerate}
 \item Drag by holding a finger on a specific tab, and using another finger to tap a destination target to move the window to.
 \item Rotate by performing a one finger dragging gesture on a corner of the window.
@@ -578,36 +580,69 @@ Moreover, it is consistent with the action of removing a real piece of paper fro
 %, and the act of minimizing, hiding or exiting the display extension application.
 %Moving the application out of focus seems like a good solution, and using a simple dragging gesture is a natural way of doing it.
 
-\section{Final Design}
+\section{Final Design of TIDE}
 \label{sec:design}
 
-%This project focuses on UI replication because it improves the user experience while keeping the interaction natural, and it can be implemented with the available resources.
-%On a technical level, the advantage of UI replication is that it uses the application logic of the personal device, requiring of the remote display only to forward graphical output, and touch-based input.
-%This allows the development of software that is easily adaptable to various programming platforms.
-%On a human-computer interaction level, it reduces the learning curve for the user, by providing an intuitive experience that is similar to the one s/he is used to.
-%By comparison, the streaming metaphor is too limited, and the other paradigms all introduce new interaction dimensions that require user adaptation.
-%A final argument in favor of UI replication is that it allows the implementation of an engaging prototype without requiring any additional graphical design.
+The design decisions reported in this section were derived from the user-centered analysis, with focus on design consistency, and relate to the requirements defined in section~\ref{sec:requirements}.
+%In the continued effort to build an intuitive system, that provides a spontaneous user interaction, special focus was given to the design consistency, and in particular:
+%\begin{itemize}
+%\item The design should be consistent with itself. If the features are coherent, the user will be able to derive one from the other.
+%\item The design should be consistent with the user background. In the present case, the user already has some expertise with a smartphone. Therefore, the design should be consistent with the touch-based interaction that is provided on most smartphones.
+%\item The design should be consistent with the physicality of the devices. In particular, the tabletop form has implications on the user's expectations.
+%\end{itemize}
 
-The experiment provided precious input from potential users, and this input supported the initial views that in order to build a successful system, the focus should be on usability and intuition.
-In this context, intuitive interaction means that the user should be able to learn the system through free exploration, all the time guessing and discovering functionalities.
-To allow this phenomenon, the implementation should focus on three things.
-First, it should be coherent. If the features are consistent, the user will be able to derive one from the other.
-Second, common interaction techniques should be used, such as the picture manipulation gestures (drag, pinch, rotate) that are already successful on touch-based interactive screens.
-Third, the implementation should refer to the table metaphor when possible, using the user's familiarity with normal table objects to hint at specific features.\\
-\hfill\\
-The implementation choices are as follows:
-\begin{itemize}
-\item Dragging, rotating and resizing are done by manipulating an active border that frames the window. The active border has the visual appearance of the body of the physical device.
-\item When the window is dragged off an edge of the table, the application is minimized. Minimizing can also be done by double tapping the active border.
-\item In its minimized state, the application appears as an icon on the tabletop. This icon can be moved around, restored, or closed.
-\item On closing the application, the user will be prompted to confirm exiting the application.
-\item Exiting can also be done by dragging the window to a corner of the tabletop, or by pressing and holding one finger on the active border.
-\item Hiding is achieved by minimizing the application. Minimizing is therefore also implemented as a result of holding a whole hand over the window.
-\item When reduced under a certain threshold, the application is minimized. Similarly when enlarged above a certain size, it is maximized to a fullscreen mode. To escape the fullscreen mode, buttons are implemented in the corners of the tabletop.
-\item the buttons present on the physical device are a logical part of the active border, and their functions are implemented accordingly.
-\end{itemize}
-\hfill\\
-In most software applications, there exists two ways to activate the same command.
-The advantage is that one implementation can be made to be easy to discover, while the other is more obscure, but a faster or easier interaction.
-The best example of this are keyboard shortcuts. They can not be guessed by the novice user, but they are used by the expert user for their efficiency.
-Similarly, the display extension can be minimized easily and quickly by double tapping the active border, but the novice user can easily discover the feature by simply dragging the window off screen.
+\subsection{Pairing}
+
+\begin{enumerate}[{DA}-1]
+\item Pairing is triggered by placing the smartphone on the tabletop, and based on wireless connectivity.
+\item Device discovery relies on a standard networking protocol such as UPnP \citep{upnp} or Bonjour \citep{bonjour}.
+\item The user must confirm the connection, both on the tabletop and on the smartphone.
+\item See DC-5.
+\end{enumerate}
+
+\subsection{Replicated UI}
+
+\begin{enumerate}[{DB}-1]
+\item The smartphone screen is replicated to the tabletop, using a standard rendering-based protocol such as VNC \citep{Richardson:1998:vnc}.
+\item See DB-1.
+\item See DB-1.
+\item See DB-1.
+\end{enumerate}
+
+\subsection{Surface UI}
+
+It was decided to use multiple techniques to activate certain features.
+The reason for this is to benefit from the advantages of all interaction techniques.
+Some are easy to discover, and provide the intuitiveness that is looked for, while others are quicker, and provide an efficiency that is beneficial for the application.
+This is standard practice within software design, a good example being keyboard shortcuts: they can not be easily discovered by a novice user, but are preferred by the expert user for their efficiency.
+
+\begin{enumerate}[{DC}-1]
+\item The surface UI takes the form of an active border that contains the replicated UI.
+It is a virtual replication of the physical body of the smartphone, to provide consistency in the user experience.
+\item The replicated UI can be manipulated by using touch-based gestures on the surface UI.
+	\begin{enumerate}[{DC-2}a]
+	\item Dragging is done by performing a dragging gesture with one or more fingers.
+	\item Rotating is done by: (1) dragging the corner of the surface UI, (2) performing a rotating gesture with two fingers of the same hand or (3) performing a rotating gesture with two hands.
+	\item Resizing is done by: (1) performing a pinching gesture with two fingers of the same hand or (2) performing a resizing gesture with two hands.
+	\end{enumerate}
+\item Minimizing the replicated UI can be done by: (1) resizing the surface UI down, (2) dragging the surface UI off an edge of the table, (3) double tapping the surface UI or (4) placing a full hand on the surface UI.
+When minimized, the surface UI appears as an icon on the tabletop, and can be restored by tapping a button on said icon.
+\item Hiding the replicated UI is done by minimizing the surface UI, see DC-3.
+\item Exiting the application can be done by: (1) closing the minimized surface UI, (2) dragging the surface UI to a corner of the tabletop or (3) pressing and holding a finger on the active border.
+\item The functionalities provided by the smartphone's physical buttons can be accessed by tapping virtual replications of these buttons on the surface UI.
+\end{enumerate}
+
+\subsection{Tangible UI}
+
+Based on a careful analysis of the context of use, supported by oral feedback gathered from the prototyping sessions, a decision was taken to limit the use of the smartphone as a tangible UI.
+The main reason supporting this decision is the realization that users might be reticent to leave their smartphones on the table for fear of being robbed, or to drag the device across the table for fear of damaging it.
+The physical device is therefore only involved in the pairing procedure.
+
+\begin{enumerate}[{DD}-1]
+\item The pairing procedure is triggered by placing the smartphone on the table.
+\item Requirement cancelled.
+\item Requirement cancelled.
+\item The replicated UI is active on the tabletop independently of the smartphone, as default.
+\end{enumerate}
+
+

@@ -9,3 +9,5 @@ early design ideas:
 
 requirements:
 - what about security? responsiveness?
+
+security and privacy issues?
