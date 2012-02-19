@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  19 FEB 2012 18:29
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  19 FEB 2012 19:24
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -640,6 +640,11 @@ File: images/trackingDiagram-eps-converted-to.pdf Graphic file (type pdf)
 File: images/msRaw.png Graphic file (type png)
  <use images/msRaw.png>
 [33 <./images/trackingDiagram-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:surfaceOverview' on page 34 undefined on input li
+ne 177.
+
+[34 <./images/msRaw.png (PNG copy)>]
 Package epstopdf Info: Source file: <images/surfaceDiagram.eps>
 (epstopdf)                    date: 2012-02-19 12:51:49
 (epstopdf)                    size: 3149013 bytes
@@ -649,14 +654,14 @@ Package epstopdf Info: Source file: <images/surfaceDiagram.eps>
 (epstopdf)                    size: 155963 bytes
 (epstopdf)             Command: <epstopdf --outfile=images/surfaceDiagram-eps-c
 onverted-to.pdf images/surfaceDiagram.eps>
-(epstopdf)             \includegraphics on input line 189.
+(epstopdf)             \includegraphics on input line 201.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/surfaceDiagram-eps-converted-to.pdf, id=706, 744.7825pt x 387.4475pt>
+<images/surfaceDiagram-eps-converted-to.pdf, id=712, 744.7825pt x 387.4475pt>
 File: images/surfaceDiagram-eps-converted-to.pdf Graphic file (type pdf)
 
-<use images/surfaceDiagram-eps-converted-to.pdf>) [34 <./images/msRaw.png (PNG 
-copy)>] [35 <./images/surfaceDiagram-eps-converted-to.pdf>]
+<use images/surfaceDiagram-eps-converted-to.pdf>) [35 <./images/surfaceDiagram-
+eps-converted-to.pdf>]
 \openout2 = `evaluation.aux'.
 
  (./evaluation.tex
@@ -749,14 +754,17 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: BF83DA6CEF16A106F80D91EECDF3EE94;578.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7321 strings out of 493747
- 112307 string characters out of 3143546
+ 7322 strings out of 493747
+ 112328 string characters out of 3143546
  201452 words of memory out of 3000000
- 10169 multiletter control sequences out of 15000+200000
+ 10170 multiletter control sequences out of 15000+200000
  14032 words of font info for 52 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  41i,6n,38p,1175b,487s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -771,7 +779,7 @@ cal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local
 texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/t
 exlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
 xlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (54 pages, 11382852 bytes).
+Output written on report.pdf (54 pages, 11384620 bytes).
 PDF statistics:
  977 PDF objects out of 1000 (max. 8388607)
  796 compressed objects within 8 object streams

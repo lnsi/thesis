@@ -171,12 +171,24 @@ This feature was part of the initial requirements, as presented in section~\ref{
 \section{Replicated UI}
 \label{sec:replicatedui}
 
- (I/O approach)
-- technology issues (slow Veency)
-
 The UI replication is based on the VNC protocol \citep{Richardson:1998:vnc}.
+The pairing procedure completes with the VNC client on the tabletop connecting to the VNC server running on the smartphone, and receiving the first image of the remote UI.
 
-Third-party applications were used on the smartphones, that required rooting the devices.
+The VNC client is implemented by the \texttt{VncControl} class, as shown in figure~\ref{fig:surfaceOverview}, that relies on the VncSharp library for sending input and receiving the remote UI.
+The \texttt{VncControl} is responsible for displaying the replicated UI, and is contained within a \texttt{DeviceControl} object that provides other UI elements.
+When the \texttt{DeviceControl} object detects a contact on the replicated UI, it forwards it to the \texttt{VncControl} object, that relays it further to the smartphone.
+The server responds with an updated image of the smartphone's screen, that the \texttt{VncControl} displays on the tabletop.
+
+The VNC server on the smartphones relies currently on third-party applications.
+The reason for this was to avoid developing software that would be tied to a certain platform.
+It permitted to develop an prototype that can support all types of smartphones, given that they run a VNC server.
+
+However, due to limitations implemented by the manufacturers, installing the VNC applications required rooting the devices.
+Rooting a smartphone is a procedure that allows the user to obtain full access rights on the system, though with the implication that the device warranty becomes void.
+Thus, it cannot be expected of users that they will perform this procedure, and this approach would be problematic in a real-world scenario.
+However, this setup was satisfying for the purpose of the proof-of-concept.
+
+[VNC IS NOT ADAPTED TO THIS SITUATION; IT IS TOO SLOW]
 
 %%%%%%%%%%%%%%
 %% SURFACE %%
