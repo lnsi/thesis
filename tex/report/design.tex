@@ -11,6 +11,13 @@ A user-centered design approach was followed, in the purpose of understanding th
 This process was supported by methodological tools described in Designing Interactive Systems \citep{Benyon:2010}.
 Brainstorming, scenarios, storyboards and low-fidelity prototypes were used, and a study involving end users was carried out, the results of which informed the final design.
 
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.8\textwidth]{images/tideHands}
+    \caption{The TIDE prototype.}
+    \label{fig:tideHands}
+\end{figure}
+
 The process was focused on producing a \emph{consistent} design.
 This concept was used in an effort to build an intuitive system, i.e.\ a system that users can understand without the need for conscious reasoning.
 Consistency can apply to various aspects of a system design.
@@ -45,15 +52,15 @@ The final design of the TIDE prototype is presented in section~\ref{sec:design}.
 The initial design constraints are provided by the parameters that are already known.
 First, the system integrates smartphones to tabletops.
 Second, the system uses UI replication to extend the smartphone UI to the tabletop.
-Figure \ref{fig:useCase} describes the primary use case.
+%Figure \ref{fig:useCase} describes the primary use case.
 In this section, additional design constraints are derived from an analysis of the devices, and the context of use is investigated through the use of scenarios.
 
-\begin{figure}[htb]
-  \centering
-    \includegraphics[width=0.9\textwidth]{images/useCase}
-    \caption{Main use case.}
-    \label{fig:useCase}
-\end{figure}
+%\begin{figure}[htb]
+%  \centering
+%    \includegraphics[width=0.9\textwidth]{images/useCase}
+%    \caption{Main use case.}
+%    \label{fig:useCase}
+%\end{figure}
 
 %Most users own a computing device with personal data and applications that are tailored to their needs.
 %Those personal devices are becoming smaller and more mobile, with devices such as tablet and handheld computers.
@@ -399,47 +406,57 @@ Additionally, the surface UI should include controls that implement the function
 Various interaction techniques can be used to invoke application level commands.
 % as shown in figures~\ref{fig:strat1} to \ref{fig:strat4}.
 While working with paper prototypes to generate ideas, it became apparent that some interaction techniques could be regrouped into categories that could be consistently implemented for each of the previously defined commands.
-This realization lead to the definition of five interaction strategies.
+This realization lead to the definition of five \emph{interaction strategies}, presented in figure~\ref{strategies}.
 There is a sixth category, that regroups design suggestions that are not part of any consistent strategy.
 
 \begin{enumerate}
-\item{\emph{Action Tabs} are traditional buttons/tabs that implement functionalities (figure~\ref{fig:strat1}).}
-\item{The \emph{Action Bar} can be compared to a virtual touchpad, it includes a manipulation area and buttons (figure~\ref{fig:strat2}).}
+\item{\emph{Action Tabs} are traditional buttons/tabs that implement functionalities.}
+\item{The \emph{Action Bar} can be compared to a virtual touchpad, it includes a manipulation area and buttons.}
 \item{\emph{Window Toggle} refers to using a switch to toggle the window between inactive and active states. In its inactive state, the window is made manipulable as a common digital picture.}
-\item{The \emph{Active Border} is a digital frame around the application window used for manipulation (figure~\ref{fig:strat3}).}
-\item{\emph{Active Corners} is a strategy similar to Active Border, with the difference that the border's corners implement specific functionalities (figure~\ref{fig:strat4}).}
+\item{The \emph{Active Border} is a digital frame around the application window used for manipulation.}
+\item{\emph{Active Corners} is a strategy similar to Active Border, with the difference that the border's corners implement specific functionalities.}
 \item{\emph{Other} regroups suggestions that do not fit with any specific strategy.}
 \end{enumerate}
 
-\begin{figure}[ht]
-\begin{minipage}[b]{0.5\linewidth}
+%\begin{figure}[ht]
+%\begin{minipage}[b]{0.5\linewidth}
+%\centering
+%\includegraphics[width=0.6\linewidth]{images/strat1}
+%\caption{action tabs prototype}
+%\label{fig:strat1}
+%\end{minipage}
+%\hspace{0.5cm}
+%\begin{minipage}[b]{0.5\linewidth}
+%\centering
+%\includegraphics[width=0.6\linewidth]{images/strat2}
+%\caption{action bar prototype}
+%\label{fig:strat2}
+%\end{minipage}
+%\hfill\\
+%\begin{minipage}[b]{0.5\linewidth}
+%\centering
+%\includegraphics[width=0.6\linewidth]{images/strat3}
+%\caption{active border prototype}
+%\label{fig:strat3}
+%\end{minipage}
+%\hspace{0.5cm}
+%\begin{minipage}[b]{0.5\linewidth}
+%\centering
+%\includegraphics[width=0.6\linewidth]{images/strat4}
+%\caption{active corners prototype}
+%\label{fig:strat4}
+%\end{minipage}
+%\end{figure}
+
+\begin{figure}[htb]
 \centering
-\includegraphics[width=0.6\linewidth]{images/strat1}
-\caption{action tabs prototype}
-\label{fig:strat1}
-\end{minipage}
-\hspace{0.5cm}
-\begin{minipage}[b]{0.5\linewidth}
-\centering
-\includegraphics[width=0.6\linewidth]{images/strat2}
-\caption{action bar prototype}
-\label{fig:strat2}
-\end{minipage}
-\hfill\\
-\begin{minipage}[b]{0.5\linewidth}
-\centering
-\includegraphics[width=0.6\linewidth]{images/strat3}
-\caption{active border prototype}
-\label{fig:strat3}
-\end{minipage}
-\hspace{0.5cm}
-\begin{minipage}[b]{0.5\linewidth}
-\centering
-\includegraphics[width=0.6\linewidth]{images/strat4}
-\caption{active corners prototype}
-\label{fig:strat4}
-\end{minipage}
+%\begin{center}
+\includegraphics[width=1\linewidth]{images/strategies}
+\caption{Interaction strategies.}
+\label{strategies}
+%\end{center}
 \end{figure}
+
 
 \subsection{Involving users}
 
