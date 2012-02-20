@@ -13,45 +13,46 @@ A level-1 auxiliary file: study.aux
 A level-1 auxiliary file: studyform.aux
 Database file #1: ../references.bib
 Warning--empty booktitle in Baur:2012:virtualprojection
-You've used 42 entries,
+Warning--empty journal in Esbensen:2010:pourimages
+You've used 47 entries,
             2773 wiz_defined-function locations,
-            923 strings with 14559 characters,
-and the built_in function-call counts, 22751 in all, are:
-= -- 2243
-> -- 1161
-< -- 45
-+ -- 399
-- -- 354
-* -- 1764
-:= -- 3412
-add.period$ -- 226
-call.type$ -- 42
-change.case$ -- 240
-chr.to.int$ -- 39
-cite$ -- 85
-duplicate$ -- 1035
-empty$ -- 1801
-format.name$ -- 408
-if$ -- 4981
+            953 strings with 15696 characters,
+and the built_in function-call counts, 25036 in all, are:
+= -- 2448
+> -- 1302
+< -- 48
++ -- 446
+- -- 396
+* -- 1940
+:= -- 3766
+add.period$ -- 245
+call.type$ -- 47
+change.case$ -- 269
+chr.to.int$ -- 44
+cite$ -- 96
+duplicate$ -- 1148
+empty$ -- 1984
+format.name$ -- 459
+if$ -- 5467
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 34
-newline$ -- 300
-num.names$ -- 174
-pop$ -- 461
+missing$ -- 38
+newline$ -- 328
+num.names$ -- 194
+pop$ -- 521
 preamble$ -- 1
-purify$ -- 200
+purify$ -- 224
 quote$ -- 0
-skip$ -- 826
+skip$ -- 912
 stack$ -- 0
-substring$ -- 864
-swap$ -- 233
-text.length$ -- 23
+substring$ -- 898
+swap$ -- 246
+text.length$ -- 24
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 447
-warning$ -- 1
-while$ -- 194
+type$ -- 502
+warning$ -- 2
+while$ -- 212
 width$ -- 0
-write$ -- 753
-(There was 1 warning)
+write$ -- 824
+(There were 2 warnings)

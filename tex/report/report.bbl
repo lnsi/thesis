@@ -1,4 +1,4 @@
-\begin{thebibliography}{42}
+\begin{thebibliography}{47}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -67,6 +67,22 @@ David Benyon.
 \newblock Addison Wesley, 2010.
 \newblock URL \url{http://books.google.com/books?id=P923PwAACAAJ}.
 
+\bibitem[Berglund and Thomassen(2011)]{Berglund:2011:nai}
+Thomas Berglund and Michael Thomassen.
+\newblock Non-anonymous user interaction on tabletop displays.
+\newblock Master's thesis, IT University of Copenhagen, Denmark, 2011.
+
+\bibitem[Chehimi and Rukzio(2010)]{Chehimi:2010:throwphotos}
+Fadi Chehimi and Enrico Rukzio.
+\newblock Throw your photos: an intuitive approach for sharing between mobile
+  phones and interactive tables.
+\newblock In \emph{Proceedings of the 12th ACM international conference adjunct
+  papers on Ubiquitous computing}, Ubicomp '10, pages 443--444, New York, NY,
+  USA, 2010. ACM.
+\newblock ISBN 978-1-4503-0283-8.
+\newblock \doi{10.1145/1864431.1864479}.
+\newblock URL \url{http://doi.acm.org/10.1145/1864431.1864479}.
+
 \bibitem[Clifton et~al.(2011)Clifton, Mazalek, Sanford, R\'{e}bola, Lee, and
   Powell]{Clifton:2010:sketchtop}
 Paul Clifton, Ali Mazalek, Jon Sanford, Claudia R\'{e}bola, Seunghyun Lee, and
@@ -79,15 +95,11 @@ Paul Clifton, Ali Mazalek, Jon Sanford, Claudia R\'{e}bola, Seunghyun Lee, and
 \newblock \doi{http://doi.acm.org/10.1145/1935701.1935778}.
 \newblock URL \url{http://doi.acm.org/10.1145/1935701.1935778}.
 
-\bibitem[Dietz and Leigh(2001)]{Dietz:2001:diamondtouch}
-Paul Dietz and Darren Leigh.
-\newblock Diamondtouch: a multi-user touch technology.
-\newblock In \emph{Proceedings of the 14th annual ACM symposium on User
-  interface software and technology}, UIST '01, pages 219--226, New York, NY,
-  USA, 2001. ACM.
-\newblock ISBN 1-58113-438-X.
-\newblock \doi{http://doi.acm.org/10.1145/502348.502389}.
-\newblock URL \url{http://doi.acm.org/10.1145/502348.502389}.
+\bibitem[Echtler and Klinker(2008)]{Echtler:2008:tracking}
+Florian Echtler and Gudrun Klinker.
+\newblock Tracking mobile phones on interactive tabletops.
+\newblock In \emph{2nd Workshop on Mobile and Embedded Interactive Systems},
+  MEIS'08, September 2008.
 
 \bibitem[Edwards et~al.(2009)Edwards, Newman, Sedivy, and
   Smith]{Edwards:2009:obje}
@@ -99,6 +111,12 @@ W.~Keith Edwards, Mark~W. Newman, Jana~Z. Sedivy, and Trevor~F. Smith.
 \newblock ISSN 1073-0516.
 \newblock \doi{http://doi.acm.org/10.1145/1502800.1502803}.
 \newblock URL \url{http://doi.acm.org/10.1145/1502800.1502803}.
+
+\bibitem[Esbensen et~al.(2010)Esbensen, Matthiesen, and
+  Petersen]{Esbensen:2010:pourimages}
+Morten Esbensen, Stina Matthiesen, and Lise~M. Petersen.
+\newblock Pour images - an interactive system for sharing images.
+\newblock 2010.
 
 \bibitem[Geller(2006)]{Geller:2006:exhibits}
 T.~Geller.
@@ -265,6 +283,24 @@ Robert~W. Scheifler and Jim Gettys.
 \newblock ISSN 0730-0301.
 \newblock \doi{http://doi.acm.org/10.1145/22949.24053}.
 \newblock URL \url{http://doi.acm.org/10.1145/22949.24053}.
+
+\bibitem[Schmidt et~al.(2010)Schmidt, Chehimi, Rukzio, and
+  Gellersen]{Schmidt:2010:phonetouch}
+Dominik Schmidt, Fadi Chehimi, Enrico Rukzio, and Hans Gellersen.
+\newblock Phonetouch: a technique for direct phone interaction on surfaces.
+\newblock In \emph{Proceedings of the 23nd annual ACM symposium on User
+  interface software and technology}, UIST '10, pages 13--16, New York, NY,
+  USA, 2010. ACM.
+\newblock ISBN 978-1-4503-0271-5.
+\newblock \doi{http://doi.acm.org/10.1145/1866029.1866034}.
+\newblock URL \url{http://doi.acm.org/10.1145/1866029.1866034}.
+
+\bibitem[Sch{\"o}ning et~al.(2008)Sch{\"o}ning, Rohs, and
+  Kr{\"u}ger]{Schoning:2008:phoneflash}
+J.~Sch{\"o}ning, M.~Rohs, and A.~Kr{\"u}ger.
+\newblock Using mobile phones to spontaneously authenticate and interact with
+  multi-touch surfaces.
+\newblock In \emph{Proc. PPD '08}, 2008.
 
 \bibitem[Scott et~al.(2005)Scott, Sharp, Madhavapeddy, and
   Upton]{Scott:2005:visualauth}

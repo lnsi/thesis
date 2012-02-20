@@ -13,22 +13,20 @@ Brainstorming, scenarios, storyboards and low-fidelity prototypes were used, and
 
 \begin{figure}[htb]
   \centering
-    \includegraphics[width=0.8\textwidth]{images/tideHands}
+    \includegraphics[width=0.8\textwidth]{images/tide314}
     \caption{The TIDE prototype.}
     \label{fig:tideHands}
 \end{figure}
 
-The process was focused on producing a \emph{consistent} design.
-This concept was used in an effort to build an intuitive system, i.e.\ a system that users can understand without the need for conscious reasoning.
-Consistency can apply to various aspects of a system design.
-In the present case, the following were found to be the most relevant.
-The design should aim at being consistent with (1) the user background and (2) the physicality of the devices.
-The user background is a broad notion that includes any prior knowledge or experience that is relevant to the current system, and that the designer can derive from the design analysis.
-In the present case, for example, the system is aimed at smartphone users, so it can be expected of the end-user some prior experience with a smartphone.
-The physicality of the devices refers to the implications that the form of the devices have on the user's expectations.
-For example, the table form implies that a user will expect to be able to place an object on it.
-If one of the devices had wheels, the user will expect it to be able to roll.
+The process was focused on designing for learnability and ease of use, the goal being to build an intuitive system, i.e.\ a system that users can understand without the need for conscious reasoning.
 
+To reach this goal, the design principle of conceptual consistency was used, as defined by \cite{Benyon:2010}.
+In this particular case, consistency was used in relation to two important aspects.
+First, given that all the users of the system are logically also smartphone users, the final system should provide a user experience that is as much as possible consistent with the smartphone experience.
+Second, the system should provide a user interaction that is consistent with the implications that the form of the devices have on the user's expectations.
+In particular, the interaction should be consistent with the form of the table, e.g.\ various objects could be placed on the tabletop during an application session.
+\\
+\linebreak
 Due to time constraints, it was decided to limit the focus of this work to one interaction metaphor: \emph{UI replication}.
 This metaphor was chosen among the possibilities enumerated in Chapter~\ref{relatedwork}, for the following reasons.
 First, UI replication allows for a strong consistency between the experience on the smartphone and the one on the tabletop.
@@ -143,9 +141,17 @@ Modern smartphones typically include touch-based screens, as well as physical bu
 Understanding the situations in which the system will be used is a step towards the elicitation of solution requirements.
 The scenarios that were used to help define those situations are included in appendix \ref{scenarios}.
 
-There are four general cases, depending on the location (public/private) and the users (single/multiple).
-However, it is unclear if a location can be private when multiple users are present.
-Without taking into account the nature of the relationship between the users, this configuration is an impossibility, and thus not addressed in this analysis.
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.8\textwidth]{images/scenarios}
+    \caption{The different situations in which the system can be used.}
+    \label{fig:scenarios}
+\end{figure}
+
+As shown in figure~\ref{fig:scenarios}, the scenario depends on the level of privacy of the location (public/private) and the amount of involved users (single/multiple).
+
+There are four combinations, however the situation with multiple users in a private location is not addressed here.
+The reason for this is that it can be argumented that no location can be private is multiple persons are present.
 
 \subsubsection{Single user on a public tabletop}
 
@@ -209,7 +215,7 @@ Due to the lack of space on the table, the users remove their devices, but keep 
 
 This situation was derived from a scenario involving a user whose office desk is a tabletop.
 
-The motivation for using the system is that it is a tool that the user interacts with daily, to support various activities related to the daily routine.
+The motivation for using the system is that it is a tool that the user interacts with daily, to support various activities related to the work routine.
 
 The tabletop being private, it can be configured so as to provide extended functionalities.
 Examples of extended functionalities are: the pairing procedure can be made automatic, data can be shared between the devices.
@@ -224,10 +230,9 @@ Examples of extended functionalities are: the pairing procedure can be made auto
 \section{Solution requirements}
 \label{sec:requirements}
 
-There are four aspects to the system, that each relate to a specific challenge within device composition.
-For each of those aspects, requirements were derived from the analysis of the application context.
-Some requirements were left out, that were considered out of scope for the present work.
-The requirements that were deemed essential to solving the thesis problem are formulated in this section.
+Based on the analysis of the application context, the following requirements were derived.
+Only the requirements that were relevant to the problem at hand were included.
+They are divided into four categories, that each correspond to a different aspect of the system: the pairing procedure, the UI replication, the surface UI and the use of the smartphone as tangible UI.
 
 \subsection{Pairing}
 
@@ -299,7 +304,7 @@ It should fulfill the following requirements:
 
 \subsection{Tangible UI}
 
-The tangible UI is the set of features that are used by physically interacting with the smartphone.
+The tangible UI involve using the smartphone as a controlling device for specific application features.
 It should fulfill the following requirements:
 
 \begin{enumerate}[{RD}-1]
@@ -317,14 +322,23 @@ It should fulfill the following requirements:
 \section{Designing the user interaction}
 \label{sec:interaction}
 
-This section focuses on the design of the surface UI, which comprises the UI elements that provide control over the replicated UI on the tabletop.
+This section focuses exclusively on the design of the surface UI, which comprises the UI elements that provide control over the replicated UI on the tabletop.
+As for the other system aspects, decisions were taken early in the process, that removed the need for a detailed design process.
 
-It was decided to focus exclusively on touch-based interaction in the design of the surface UI, for the following reasons.
-First, it is consistent with the physicality of tabletops, who rely on touch-based input to provide an appealing experience to all types of users.
-Second, it is consistent with the smartphone experience, which also relies on touch-based input.
-Lastly, the presence of other input peripherals cannot be expected, so relying on touch-based input will ensure that the system is compatible with any setup.
+First, it was decided that the pairing procedure would rely on available solutions, as the focus of the thesis is not to contribute within this particular field.
 
-The steps followed to design the surface UI were: (1) the generation of ideas, (2) the definition of \emph{interaction strategies}and (3) a study involving end-users to identify the most intuitive interaction techniques.
+Second, given that UI replication had already been decided upon, no design effort would be required for this system component.
+VNC was chosen as a protocol for UI replication, due to its stability and availability on most platforms.
+
+Lastly, it was decided that the smartphone would be used as a tangible UI only to trigger the pairing procedure.
+This decision was based on a careful analysis of the context of use and oral feedback gathered from the prototyping sessions, that showed that users might be reticent to leave their smartphones on the table for fear of being robbed, or to drag the device across the table for fear of damaging it.
+\\
+\linebreak
+The only input technique considered in the design of the surface UI is touch-based interaction.
+The reason for this is that it is strongly consistent with both the smartphone experience and the tabletop experience, that both rely on touch-based interaction.
+Moreover, the presence of other input peripherals cannot be expected, so relying on touch-based input will ensure that the system is usable in any setup.
+
+The steps followed to design the surface UI were: (1) the generation of ideas, (2) the definition of \emph{interaction strategies} and (3) a study involving end-users to identify the most intuitive interaction techniques.
 
 %The pairing procedure does not introduce anything new to the field. There are known solutions to this challenge, which are described in section \ref{}.
 %The remote UI replicates the UI of the personal device on the tabletop, and does not require any supplementary design.
@@ -376,19 +390,21 @@ Figure \ref{paperProt} shows some prototypes and a working session.
 \subsection{Defining interaction strategies}
 \label{sec:strategies}
 
-The concepts of \emph{actions} and \emph{commands} are used to refer to the different interaction strategies.
+The concepts of \emph{actions} and \emph{commands} are used to refer to the different aspects of the user interaction.
 They are inspired by the work done by Wobbrock et al. on defining hand gestures for interactive surfaces, \citep{Wobbrock:2009:gestures}.
 
-Human computer interaction can be modeled as a simple cause-effect relationship.
-The user wishes the computer to execute a command.
-To achieve that, s/he performs an action to provide input.
-In the case of a touch-based interactive surface, the action is typically a hand gesture.
-The action is the cause, the command is the effect, and together they form a single interaction between user and machine.
+A command is an \emph{effect} that the user wants to obtain, such as rotating a picture on a tabletop display.
+An action is the \emph{cause} of an effect.
+For example, using two fingers and performing a rotating gesture.
+On a tabletop display, actions are typically hand gestures.
+
+%Human computer interaction can be modeled as a simple cause-effect relationship.
+%An action is a cause, a command is an effect, and together they form a single interaction between user and machine.
 
 \subsubsection{Commands}
 
-The following six basic commands are identified as interaction primitives for the surface UI.
-They are directly derived from the requirements formulated in section~\ref{sec:requirements}.
+Based on the requirements formulated in section~\ref{sec:requirements} for the surface UI, the following six commands are identified.
+They are the \emph{interaction primitives} for the surface UI, i.e.\ the commands that must be implemented by the surface UI, to allow the user full control over the replicated UI.
 
 \begin{enumerate}
 \item{\emph{Dragging} the replicated UI across the interactive surface.}
@@ -396,18 +412,24 @@ They are directly derived from the requirements formulated in section~\ref{sec:r
 \item{\emph{Resizing} the replicated UI across the interactive surface.}
 \item{\emph{Minimizing} the replicated UI, and restoring it.}
 \item{\emph{Hiding} the content of the replicated UI.}
-\item{\emph{Exiting} the application.}
+\item{\emph{Closing} the replicated UI.}
 \end{enumerate}
 
 Additionally, the surface UI should include controls that implement the functionalities provided by the physical buttons present on the smartphone.
 
 \subsubsection{Actions}
 
-Various interaction techniques can be used to invoke application level commands.
-% as shown in figures~\ref{fig:strat1} to \ref{fig:strat4}.
-While working with paper prototypes to generate ideas, it became apparent that some interaction techniques could be regrouped into categories that could be consistently implemented for each of the previously defined commands.
-This realization lead to the definition of five \emph{interaction strategies}, presented in figure~\ref{strategies}.
-There is a sixth category, that regroups design suggestions that are not part of any consistent strategy.
+To invoke the commands that are defined above, a user needs to perform actions.
+Various interaction techniques can be used to define these actions.
+Figure~\ref{strategies} shows five \emph{interaction strategies} that were identified while working with paper prototypes.
+Each strategy can be consistently implemented for all six interaction primitives.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=1\linewidth]{images/strategies}
+\caption{Interaction strategies.}
+\label{strategies}
+\end{figure}
 
 \begin{enumerate}
 \item{\emph{Action Tabs} are traditional buttons/tabs that implement functionalities.}
@@ -415,8 +437,10 @@ There is a sixth category, that regroups design suggestions that are not part of
 \item{\emph{Window Toggle} refers to using a switch to toggle the window between inactive and active states. In its inactive state, the window is made manipulable as a common digital picture.}
 \item{The \emph{Active Border} is a digital frame around the application window used for manipulation.}
 \item{\emph{Active Corners} is a strategy similar to Active Border, with the difference that the border's corners implement specific functionalities.}
-\item{\emph{Other} regroups suggestions that do not fit with any specific strategy.}
 \end{enumerate}
+
+Beside these five interaction strategies, an additional category was used, that regrouped interaction techniques that did not correspond to any of the strategies.
+This category is called \emph{Other}, and is discussed further.
 
 %\begin{figure}[ht]
 %\begin{minipage}[b]{0.5\linewidth}
@@ -448,16 +472,6 @@ There is a sixth category, that regroups design suggestions that are not part of
 %\end{minipage}
 %\end{figure}
 
-\begin{figure}[htb]
-\centering
-%\begin{center}
-\includegraphics[width=1\linewidth]{images/strategies}
-\caption{Interaction strategies.}
-\label{strategies}
-%\end{center}
-\end{figure}
-
-
 \subsection{Involving users}
 
 To discover which of the defined interaction strategies were most intuitive, an experiment was carried out, that involved end users.
@@ -468,17 +482,17 @@ The parameters of the experiment are the commands, also referred to as \emph{int
 The interaction primitives are central system features.
 For each primitive, the participants were asked to express an open-ended \emph{user suggestion}, then to \emph{rank} the interaction strategies.
 
+\subsubsection{Experiment}
+
 \begin{figure}[htb]
   \centering
     \includegraphics[width=0.8\textwidth]{images/studyScreenshot}
-  \caption{Experimenting with prototypes.}
-  \label{studyScreenshot}
+  \caption{Designing the surface UI with paper prototypes.}
+  \label{fig:studyScreenshot}
 \end{figure}
 
-\subsubsection{Experiment}
-
 Twelve participants were recruited on a voluntary basis.
-A session involves one participant and one designer.
+A session involves one participant and the designer, as shown in figure~\ref{fig:studyScreenshot}.
 The participant sits next to the Microsoft Surface tabletop \citep{ms}, and is presented with an iPhone \citep{iphone}, but both devices are off.
 On the tabletop are paper prototypes, that are to be used as representations of UI elements throughout the session.
 The designer leads the experiment by reading instructions from a script (included in appendix~\ref{app:study}) and answering the participant's questions.
@@ -506,19 +520,17 @@ Each phase is dedicated to an interaction primitive, and they have the same stru
 %This phase occurs first and is meant as an example to the participant, describing the common structure.
 %At the end of this phase, a slide animation is used to describe all six primitives to the user.
 
-For each command, there are six possible actions.
-However, it was decided that presenting a user with six options to rank would be overwhelming.
-The volunteers were therefore split into two groups, each evaluating a subset of the interaction strategies.
-The repartition is shown in table~\ref{groups}.
-
-\begin{figure}[htb]
-  \centering
-    \includegraphics[scale=1]{images/groups}
-  \caption{The repartition of the evaluated interaction strategies between the two groups of participants. The strategies are 1)~Action Tabs 2)~Action Bar 3)~Window Toggle 4)~Active Border 5)~Active Corners 6)~Other.}
-  \label{groups}
-\end{figure}
-
-%Figure \ref{studyScreenshot} shows a typical experiment session.
+%For each command, there are six possible actions.
+%However, it was decided that presenting a user with six options to rank would be overwhelming.
+%The volunteers were therefore split into two groups, each evaluating a subset of the interaction strategies.
+%The repartition is shown in table~\ref{groups}.
+%
+%\begin{figure}[htb]
+%  \centering
+%    \includegraphics[scale=1]{images/groups}
+%  \caption{The repartition of the evaluated interaction strategies between the two groups of participants. The strategies are 1)~Action Tabs 2)~Action Bar 3)~Window Toggle 4)~Active Border 5)~Active Corners 6)~Other.}
+%  \label{groups}
+%\end{figure}
 
 \subsubsection{Data processing}
 
@@ -553,7 +565,7 @@ User suggestions were not limited to one per primitive, so the processed data wa
 
 It is possible to divide the primitives into two groups.
 The first half: dragging, rotating, resizing; have a concrete visual signification.
-The second half: minimizing, hiding, exiting; are more abstract.
+The second half: minimizing, hiding, closing; are more abstract.
 
 For the first three primitives, there is a strong coherence in the choice of the participants.
 The favored strategies are the active border, the action bar and active corners.
@@ -565,7 +577,8 @@ To understand this, it is necessary to look at the actual suggestions.
 The favored strategies for minimizing were double tapping on the action bar and double tapping on the active border.
 For hiding, the favored strategy was double tapping on the active border.
 It is thus obvious that it is the double tap that participants have a preference for, possibly because it is a common technique in many other application contexts, as well as a quick and easy one.
-
+\\
+\linebreak
 It is not possible to analyze the scores of the sixth category as a whole, as it does not represent a consistent strategy, but more a patchwork of various suggestions. They are:
 \begin{enumerate}
 \item Drag by holding a finger on a specific tab, and using another finger to tap a destination target to move the window to.
@@ -573,13 +586,14 @@ It is not possible to analyze the scores of the sixth category as a whole, as it
 \item Resize by pulling the window apart with both whole hands.
 \item Minimize by dragging the window to the bottom of the surface.
 \item Hide by placing and holding a full hand on the window.
-\item Exit by dragging the window to a specific location on the surface.
+\item Close by dragging the window to a specific location on the surface.
 \end{enumerate}
 Suggestions 4 and 6 are similar, and they are the only ones that scored above 0.6.
 This suggests that moving the window off screen is a natural way to remove focus from the application.
 Interestingly, this correlates with the analysis of the user suggestions.
-\\
-\linebreak
+
+\subsubsection{User suggestions}
+
 The user suggestions were multiple and heterogeneous, but data processing revealed a clear tendency in three situations.
 
 In the case of dragging, half of the participants suggested using one or more fingers to touch within the replicated UI, and perform a drag gesture.
@@ -591,16 +605,17 @@ In the case of resizing, 8 out of 12 participants suggested grabbing the sides o
 This shows that the gesture is very intuitive, and that implementing it would definitely add to the usability of the system.
 
 The third consensus was for minimizing, where 7 out of 12 participants suggested dragging the window offscreen (or to a specific location along the surface edge).
-The same suggestion reoccurred for the primitives hiding and exiting, though with less decisiveness.
+The same suggestion reoccurred for the primitives hiding and closing, though with less decisiveness.
 Once again, it shows that the gesture is an intuitive one.
 Moreover, it is consistent with the action of removing a real piece of paper from the center of a table.
-%, and the act of minimizing, hiding or exiting the display extension application.
+%, and the act of minimizing, hiding or closing the display extension application.
 %Moving the application out of focus seems like a good solution, and using a simple dragging gesture is a natural way of doing it.
 
 \section{Final Design of TIDE}
 \label{sec:design}
 
-The design decisions reported in this section were derived from the user-centered analysis, with focus on design consistency, and relate to the requirements defined in section~\ref{sec:requirements}.
+Based on the design analysis and in particular the feedback from the user experiment, the following design decisions were taken.
+They relate to the requirements defined in section~\ref{sec:requirements}.
 %In the continued effort to build an intuitive system, that provides a spontaneous user interaction, special focus was given to the design consistency, and in particular:
 %\begin{itemize}
 %\item The design should be consistent with itself. If the features are coherent, the user will be able to derive one from the other.
@@ -645,20 +660,18 @@ It is a virtual replication of the physical body of the smartphone, to provide c
 \item Minimizing the replicated UI can be done by: (1) resizing the surface UI down, (2) dragging the surface UI off an edge of the table, (3) double tapping the surface UI or (4) placing a full hand on the surface UI.
 When minimized, the surface UI appears as an icon on the tabletop, and can be restored by tapping a button on said icon.
 \item Hiding the replicated UI is done by minimizing the surface UI, see DC-3.
-\item Exiting the application can be done by: (1) closing the minimized surface UI, (2) dragging the surface UI to a corner of the tabletop or (3) pressing and holding a finger on the active border.
+\item Closing the replicated UI can be done by: (1) closing the minimized surface UI, (2) dragging the surface UI to a corner of the tabletop or (3) pressing and holding a finger on the active border.
 \item The functionalities provided by the smartphone's physical buttons can be accessed by tapping virtual replications of these buttons on the surface UI.
 \end{enumerate}
 
 \subsection{Tangible UI}
 
-Based on a careful analysis of the context of use, supported by oral feedback gathered from the prototyping sessions, a decision was taken to limit the use of the smartphone as a tangible UI.
-The main reason supporting this decision is the realization that users might be reticent to leave their smartphones on the table for fear of being robbed, or to drag the device across the table for fear of damaging it.
-The physical device is therefore only involved in the pairing procedure.
+As mentioned in section~\ref{sec:interaction}, the use of the smartphone as a tangible UI is limited to triggering the pairing procedure.
 
 \begin{enumerate}[{DD}-1]
 \item The pairing procedure is triggered by placing the smartphone on the table.
-\item Requirement cancelled.
-\item Requirement cancelled.
+\item Not addressed.
+\item Not addressed.
 \item The replicated UI is active on the tabletop independently of the smartphone, as default.
 \end{enumerate}
 

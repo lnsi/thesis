@@ -10,15 +10,6 @@
 \chapter{Introduction}
 \label{introduction}
 
-\begin{figure}[b!]
-  \centering
-    \includegraphics[width=0.6\textwidth]{images/tide3P}
-  \caption{People viewing information on a smartphone.}
-  \label{tide}
-\end{figure}
-
-\section{Background and motivation}
-
 Modern smartphones are able to support most users' daily computing tasks.
 They fit in a pocket, which makes them ultra mobile, and they offer good storage capacities as well as all-around connectivity.
 This tendency implies that users have access to personal data and applications at all times.
@@ -31,14 +22,14 @@ Tabletop computers, on the other hand, are ideal in social contexts.
 They bring computing to a very common piece of furniture, the table.
 As such, they present a horizontal interactive surface around which multiple users can regroup, to share a common experience, or to conduct parallel activities.
 They have been used extensively in museums and galleries, as documented by \cite{Geller:2006:exhibits}, who notes that tabletops encourage a collaborative atmosphere, and that they provide a tactile experience that reaches even the less computer literate.
-Tabletops provide a touch-based experience that is fundamentally different from the traditional desktop metaphor.
+As shown in figure~\ref{fig:visitors}, tabletops provide a touch-based experience that is fundamentally different from the traditional desktop metaphor.
 A number of HCI studies show that this experience is a more natural one for the non-technical user, because it removes the mouse-and-keyboard abstraction layer and generates a more direct interaction.
 
 \begin{figure}[htb]
   \centering
     \includegraphics[width=0.4\textwidth]{images/visitors}
-  \caption{People using an interactive tabletop\\exhibit at the Asia Society Museum.}
-  \label{visitors}
+  \caption{People using an interactive tabletop exhibit at the Asia Society Museum.\\Source: T. Geller. Interactive tabletop exhibits in museums and galleries. \emph{Computer Graphics and Applications}, 2006.}
+  \label{fig:visitors}
 \end{figure}
 
 The first interactive tabletop displays were designed for individual use.
@@ -63,7 +54,6 @@ They are an ideal platform for spontaneous use and multi-user interactions, and 
 %The main advantage of such solutions is that they can detect not only fingers, but also visual markers and other objects.
 %Microsoft has perfected this technology in the latest Surface with PixelSense \citep{pixelsense}, where the individual pixels can detect what touches the screen, thus removing the need for cameras.
 %PQ Labs \citep{pq} produces side vision overlays that can provide multi-touch detection to any type of screen, though without the possibility for object detection.
-
 State-of-the-art smartphones boast screen resolutions up to 1280 by 720 pixels, that exceed the naked eye's ability to distinguish separate pixels.
 %This implies beautiful graphics with profound and rich colors.
 However, a smartphone screen is too small to provide a satisfying user experience in the presence of multiple users, and when viewing dense content such as text or high-quality images.
@@ -74,34 +64,44 @@ An example of graphically dense content is a text of more than a few paragraphs.
 The default view of an online blog or a pdf document on a smartphone is too small for a user to be able to discern single words.
 Depending on one's eyesight, it usually takes 2 to 4 zooming gestures to enlarge the text to a size that is conveniently readable.
 At this point, the user generally tilts the phone to a landscape orientation, to give the paragraphs a more natural length.
-There is only space for 5 to 10 lines of text on the screen, which implies that the user uses successive pan gestures to update the content as s/he reads.
-Compared to the casual experience of reading a newspaper article or a book, this seems like a lot of trouble.
+There is only space for 5 to 10 lines of text on the screen, which implies the use of successive pan gestures to update the content as the user reads on.
+Compared to the casual experience provided by a newspaper or a book, this seems like a lot of trouble.
 
 Maps are also graphically dense.
 They present a lot of different informations, such as topography, street names and sights, on limited space.
 To be able to read a street name on a smartphone maps application, the user needs to zoom in on the relevant part of the map.
 The result is that the user can only view a very limited area.
-To be able to relate this area to, for example, his/her own location, the user must use a combination of pan and zoom out gestures that can be cumbersome.
+To be able to relate this area to, for example, another location, the user must use a combination of pan and zoom out gestures that can be cumbersome.
 In certain cases, the area of interest is simply too vast to be viewed on a smartphone screen.
 
+Viewing pictures on a smartphone is another experience that is constrained by the screen size.
 Modern smartphones play the role of point-and-shoot cameras, due to the fact that we carry them with us at all times, and that they take pictures of high quality.
-However, image viewing on a handheld device presents serious limitations.
+However, viewing the resulting images on the device presents serious limitations.
 Beside the fact that the screen is too small to do pictures justice, it makes showing them to someone else a frustrating experience.
 Ideally, showing pictures to a friend implies both persons looking at the pictures together, to allow for commenting.
 This is hardly possible with a smartphone.
 A typical scenario is that the user finds a picture that he wants to show, then hands his phone to the friend, then the friend hands the phone back to the user, who chooses the next picture, and so on.
-This process is cumbersome, and another example of the need for smartphones to be able to integrate with larger displays such as tabletops.
+This process is cumbersome at best.
 
-In the above mentioned cases, the smartphone provides all the necessary resources, with the exception of a large enough display.
-This work focuses on these situations in which the smartphone experience would benefit from additional screen space.
-\\
-\linebreak
+Even though smartphones provide multiple opportunities, the aforementioned examples show that their small screen size can be frustrating at times.
+This work focuses on addressing these situations in which using a smartphone would be easier with a larger screen.
+The solution proposed is to make smartphones able to spontaneously integrate with larger displays that are available in the environment.
+In particular, the idea is to be able to walk up to a tabletop computer, and with a few easy steps to combine it with one's smartphone.
+The result of this, shown in figure~\ref{fig:tide}, is that the screen of the smartphone is displayed on the tabletop, where it can be enlarged, and conveniently be viewed by multiple users simultaneously.
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.6\textwidth]{images/tide456}
+  \caption{People viewing information on a smartphone.}
+  \label{fig:tide}
+\end{figure}
+
 %It does so by suggesting a \emph{device composition} approach, that integrates smartphones and tabletops.
 %Tabletops are a solution to this problem for several reasons.
 %They provide the needed display space, and a touch-based interaction that comes naturally to the typical smartphone user.
 %Moreover, they are designed for collocated collaboration, which brings an interesting new dimension to the scenarios discussed above.
 %Examples of the possibilities include consulting a map to show a location to a friend, reading and editing a document with a colleague, playing a multiplayer game, or viewing and sharing pictures between smartphones.
-A way to address this challenge is by using \emph{device composition}, a research approach that can be traced back to the work on smart space technologies and systems such as Augmented Surfaces \citep{Rekimoto:1999:augmentedsurfaces}, \mbox{i-LAND} \citep{Streitz:1999:iland} and the Interactive Workspaces \citep{Johanson:2002:iroom}.
+To realize this vision, \emph{device composition} can be used, a research approach that can be traced back to the work on smart space technologies and systems such as Augmented Surfaces \citep{Rekimoto:1999:augmentedsurfaces}, \mbox{i-LAND} \citep{Streitz:1999:iland} and the Interactive Workspaces \citep{Johanson:2002:iroom}.
 Smart rooms were designed as closed computing environments, so recent efforts have been invested in developing for a more ad-hoc type of device composition, with projects such as Obje \citep{Edwards:2009:obje}, Platform Composition \citep{Pering:2009:platformcomp} and CompUTE \citep{Bardram:2010:compute}.
 
 Tabletops are a central device in the aforementioned smart rooms, and a recurring element within device composition.
@@ -161,7 +161,9 @@ In their recent work on Virtual Projection (VP), \cite{Baur:2012:virtualprojecti
 
 \section{Problem statement}
 
-This thesis addresses the problem of using \emph{consistent} design to build a composite device between a smartphone and a tabletop computer, that allows for \emph{spontaneous interaction}.
+This thesis addresses the problem of 
+%using \emph{consistent} 
+designing a composite device between a smartphone and a tabletop computer that allows for \emph{spontaneous interaction}, by focusing on the learnability and ease of use of the system.
 \\
 \linebreak
 It does so by answering the following research questions:
@@ -178,7 +180,7 @@ To solve the problem at hand, the following research methods were used.
 \linebreak
 To place the present work within its research context, 
 a comprehensive literary review was made of the prior work related to device composition and surface computing.
-In particular, the following aspects of device composition were investigated: main approaches, tabletop systems and applications, pairing, UI distribution, user interaction.
+In particular, the following aspects of device composition were investigated: background, systems integrating smartphones to tabletops, pairing, UI distribution, user interaction.
 The resulting study is presented in Chapter~\ref{relatedwork}.
 
 Following a user-centered approach, a solution design was completed.
@@ -189,7 +191,7 @@ With the support of a study based on low-fidelity prototypes and the involvement
 The design process is reported in Chapter~\ref{design}
 
 In order to demonstrate the feasibility of the suggested solution, a proof of concept was realized, in the form of an application prototype implemented on the Microsoft Surface tabletop computer, an iPhone 4 and a HTC Legend phone.
-The implementation was focused on the user interaction, in the aim of showing that consistent design can lead to an easy user experience.
+The implementation was focused on the user interaction, in the aim of showing that the resulting system is easy to learn and easy to use.
 The system is described in Chapter~\ref{system}.
 
 An evaluation of the design was conducted by way of a usability study, that involved the following steps.
@@ -226,7 +228,7 @@ The physicality of the design implies taking into consideration the form factor 
 \item The final contribution is the evaluation of the application design.
 It shows that consistency and physicality allow the design of a device that is easy to use for all types of users.
 Furthermore, it shows that it is a good idea to implement several interaction techniques for a same feature, in order to reach users with different background.
-Finally, the evaluation confirms that there is a need for a system that allows users to extend their smartphone screen space to a larger display.
+Finally, the evaluation confirms that there is a need for a system that allows users to extend their smartphone screen space to a larger display. [=USEFULNESS]
 
 \end{enumerate}
 
