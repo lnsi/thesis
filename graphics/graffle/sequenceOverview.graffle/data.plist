@@ -51,7 +51,7 @@
 	<key>Creator</key>
 	<string>Leo Sicard</string>
 	<key>DisplayScale</key>
-	<string>1 0/72 in = 1 0/72 in</string>
+	<string>1 0/72 in = 1.0000 in</string>
 	<key>ExportShapes</key>
 	<array>
 		<dict>
@@ -2787,7 +2787,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{27, 360}, {522, 198}}</string>
+			<string>{{27, 360}, {513, 198}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -2820,6 +2820,8 @@
 			<dict>
 				<key>Align</key>
 				<integer>0</integer>
+				<key>Pad</key>
+				<integer>3</integer>
 				<key>Text</key>
 				<string>{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf320
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
@@ -2827,6 +2829,8 @@
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
 \f0\b\fs20 \cf0 LOOP}</string>
+				<key>VerticalPad</key>
+				<integer>2</integer>
 			</dict>
 			<key>TextPlacement</key>
 			<integer>0</integer>
@@ -2892,7 +2896,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2012-02-18 12:07:04 +0000</string>
+	<string>2012-02-21 09:33:44 +0000</string>
 	<key>Modifier</key>
 	<string>Leo Sicard</string>
 	<key>NotesVisible</key>
@@ -2987,7 +2991,7 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-76, 0}, {711.20001, 576}}</string>
+		<string>{{-70, 108}, {700, 576}}</string>
 		<key>Zoom</key>
 		<real>1.25</real>
 		<key>ZoomValues</key>

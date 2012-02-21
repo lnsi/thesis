@@ -254,12 +254,29 @@ It should fulfill the following requirements:
 %In the case of a trusted setup, it should be possible to bypass any explicit user input.
 %Exiting the application and closing the connection should also be easy, allowing the system to handle short successive sessions.
 
+\subsection{Tracking}
+
+Tracking the location of the smartphone on the tabletop allow to link specific features to the physical device.
+It should fulfill the following requirements:
+
+\begin{enumerate}[{RB}-1]
+\item Placing the smartphone on the tabletop should trigger the pairing procedure.
+\item The replicated UI should be collocated with the smartphone, i.e.\ the replicated UI should be seemingly linked to the device, and should move when the device is moved.
+\item Lifting the smartphone off the table should trigger the application exit.
+\item It should be possible to remove the smartphone, but keep the replicated UI active the tabletop.
+\end{enumerate}
+
+%It is a natural thing to place an object on a table, and tabletops are designed to allow for the integration of physical artifacts.
+%Therefore, it should be possible to use the personal device as a tangible UI.
+%For example, it would seem obvious that placing the device on the tabletop would launch the pairing process, or that lifting it off would interrupt the connection.
+%Furthermore, it should be possible to control the position of the display extension by sliding the personal device on the surface.
+
 \subsection{Replicated UI}
 
 The replicated UI is the interactive mirror image of the smartphone displayed on the tabletop.
 It should fulfill the following requirements:
 
-\begin{enumerate}[{RB}-1]
+\begin{enumerate}[{RC}-1]
 \item The UI of the smartphone should be replicated on the tabletop.
 \item The graphical output from the smartphone should be dynamically relayed to the replicated UI.
 \item The touch-based input from the replicated UI should be dynamically relayed to the smartphone.
@@ -275,7 +292,7 @@ It should fulfill the following requirements:
 The surface UI is the interface on the tabletop that controls the replicated UI.
 It should fulfill the following requirements:
 
-\begin{enumerate}[{RC}-1]
+\begin{enumerate}[{RD}-1]
 \item The surface UI should be easy to use.
 \item The surface UI should allow the user to manipulate the replicated UI, i.e.\ the user should be able to move, rotate and resize the replicated UI across the tabletop display.
 \item The surface UI should allow the user to minimize and restore the replicated UI.
@@ -302,23 +319,6 @@ It should fulfill the following requirements:
 %
 %In a trusted setting, the user should have the possibility to push application widgets from the personal device to the tabletop, outside of the display extension, thus saving space on the latter.
 
-\subsection{Tangible UI}
-
-The tangible UI involve using the smartphone as a controlling device for specific application features.
-It should fulfill the following requirements:
-
-\begin{enumerate}[{RD}-1]
-\item Placing the smartphone on the tabletop should trigger the pairing procedure.
-\item The replicated UI should be collocated with the smartphone, i.e.\ the replicated UI should be seemingly linked to the device, and should move when the device is moved.
-\item Lifting the smartphone off the table should trigger the application exit.
-\item It should be possible to remove the smartphone, but keep the replicated UI active the tabletop.
-\end{enumerate}
-
-%It is a natural thing to place an object on a table, and tabletops are designed to allow for the integration of physical artifacts.
-%Therefore, it should be possible to use the personal device as a tangible UI.
-%For example, it would seem obvious that placing the device on the tabletop would launch the pairing process, or that lifting it off would interrupt the connection.
-%Furthermore, it should be possible to control the position of the display extension by sliding the personal device on the surface.
-
 \section{Designing the user interaction}
 \label{sec:interaction}
 
@@ -328,14 +328,13 @@ As for the other system aspects, decisions were taken early in the process, that
 First, it was decided that the pairing procedure would rely on available solutions, as the focus of the thesis is not to contribute within this particular field.
 
 Second, given that UI replication had already been decided upon, no design effort would be required for this system component.
-VNC was chosen as a protocol for UI replication, due to its stability and availability on most platforms.
+%VNC was chosen as a protocol for UI replication, due to its stability and availability on most platforms.
 
-Lastly, it was decided that the smartphone would be used as a tangible UI only to trigger the pairing procedure.
-This decision was based on a careful analysis of the context of use and oral feedback gathered from the prototyping sessions, that showed that users might be reticent to leave their smartphones on the table for fear of being robbed, or to drag the device across the table for fear of damaging it.
+Lastly, tracking the location of the smartphone is a technical requirement that does not require interaction design. %would only be used to trigger the pairing procedure.
 \\
 \linebreak
 The only input technique considered in the design of the surface UI is touch-based interaction.
-The reason for this is that it is strongly consistent with both the smartphone experience and the tabletop experience, that both rely on touch-based interaction.
+The reason for this is that it is strongly consistent with the smartphone and tabletop experiences, that both rely on touch-based interaction.
 Moreover, the presence of other input peripherals cannot be expected, so relying on touch-based input will ensure that the system is usable in any setup.
 
 The steps followed to design the surface UI were: (1) the generation of ideas, (2) the definition of \emph{interaction strategies} and (3) a study involving end-users to identify the most intuitive interaction techniques.
@@ -625,54 +624,64 @@ They relate to the requirements defined in section~\ref{sec:requirements}.
 
 \subsection{Pairing}
 
+The following design decisions address the requirements RA-1 to RA-4.
+
 \begin{enumerate}[{DA}-1]
-\item Pairing is triggered by placing the smartphone on the tabletop, and based on wireless connectivity.
-\item Device discovery relies on a standard networking protocol such as UPnP \citep{upnp} or Bonjour \citep{bonjour}.
-\item The user must confirm the connection, both on the tabletop and on the smartphone.
-\item See DC-5.
+\item \hfill
+	\begin{enumerate}[{DA-1}a]
+	\item Pairing is triggered by placing the smartphone on the tabletop, for the reason that it is a simple gesture that is consistent with the form of the tabletop.
+	\item Pairing is based on wireless connectivity, in order to provide spontaneity to the interaction.
+	\end{enumerate}
+\item Device discovery relies on a standard networking protocol - in order to make it automatic, and provide spontaneity to the interaction.
+\item The user must confirm the connection, both on the tabletop and on the smartphone, for reasons of security.
+The tabletop should not be allowed to connect to an unknown device without explicit authorization, but the user should also be able to confirm that the smartphone is the correct one.
+\item See DD-5.
+\end{enumerate}
+
+\subsection{Tracking}
+
+The following design decisions address the requirements RB-1 to RB-4.
+
+\begin{enumerate}[{DB}-1]
+\item Smartphones that come in contact with the tabletop are detected, using computer vision and shape recognition.
+\item The location of the smartphones on the tabletop is tracked, using computer vision.
+\item Removal of smartphones are detected using computer vision.
+\item The replicated UI can be made active on the tabletop independently of the smartphone.
 \end{enumerate}
 
 \subsection{Replicated UI}
 
-\begin{enumerate}[{DB}-1]
-\item The smartphone screen is replicated to the tabletop, using a standard rendering-based protocol such as VNC \citep{Richardson:1998:vnc}.
-\item See DB-1.
-\item See DB-1.
-\item See DB-1.
+The following design decisions address the requirements RC-1 to RC-4.
+
+\begin{enumerate}[{DC}-1]
+\item The smartphone screen is replicated to the tabletop, using a standard desktop sharing protocol, for the reason that such protocols are platform independent and stable.
+\item See DC-1.
+\item See DC-1.
+\item See DC-1.
 \end{enumerate}
 
 \subsection{Surface UI}
 
+The following design decisions address the requirements RD-1 to RD-6.
 It was decided to use multiple techniques to activate certain features.
 The reason for this is to benefit from the advantages of all interaction techniques.
-Some are easy to discover, and provide the intuitiveness that is looked for, while others are quicker, and provide an efficiency that is beneficial for the application.
-This is standard practice within software design, a good example being keyboard shortcuts: they can not be easily discovered by a novice user, but are preferred by the expert user for their efficiency.
+Some are easy to discover, and provide the learnability and intuitiveness that is looked for, while others are quicker and easier to use.
+This is standard practice within software design, a good example being keyboard shortcuts, that are not easily discovered by a novice user, but are preferred by the expert user for their efficiency.
 
-\begin{enumerate}[{DC}-1]
-\item The surface UI takes the form of an active border that contains the replicated UI.
+\begin{enumerate}[{DD}-1]
+\item The surface UI takes the form of an active border that contains the replicated UI, based on the user feedback.
 It is a virtual replication of the physical body of the smartphone, to provide consistency in the user experience.
-\item The replicated UI can be manipulated by using touch-based gestures on the surface UI.
-	\begin{enumerate}[{DC-2}a]
+\item The replicated UI can be manipulated by using touch-based gestures on the surface UI, for reasons of consistency with both the smartphone and tabletop experiences.
+	\begin{enumerate}[{DD-2}a]
 	\item Dragging is done by performing a dragging gesture with one or more fingers.
 	\item Rotating is done by: (1) dragging the corner of the surface UI, (2) performing a rotating gesture with two fingers of the same hand or (3) performing a rotating gesture with two hands.
 	\item Resizing is done by: (1) performing a pinching gesture with two fingers of the same hand or (2) performing a resizing gesture with two hands.
 	\end{enumerate}
 \item Minimizing the replicated UI can be done by: (1) resizing the surface UI down, (2) dragging the surface UI off an edge of the table, (3) double tapping the surface UI or (4) placing a full hand on the surface UI.
 When minimized, the surface UI appears as an icon on the tabletop, and can be restored by tapping a button on said icon.
-\item Hiding the replicated UI is done by minimizing the surface UI, see DC-3.
+\item Hiding the replicated UI is done by minimizing the surface UI, based on user feedback, see DC-3.
 \item Closing the replicated UI can be done by: (1) closing the minimized surface UI, (2) dragging the surface UI to a corner of the tabletop or (3) pressing and holding a finger on the active border.
 \item The functionalities provided by the smartphone's physical buttons can be accessed by tapping virtual replications of these buttons on the surface UI.
-\end{enumerate}
-
-\subsection{Tangible UI}
-
-As mentioned in section~\ref{sec:interaction}, the use of the smartphone as a tangible UI is limited to triggering the pairing procedure.
-
-\begin{enumerate}[{DD}-1]
-\item The pairing procedure is triggered by placing the smartphone on the table.
-\item Not addressed.
-\item Not addressed.
-\item The replicated UI is active on the tabletop independently of the smartphone, as default.
 \end{enumerate}
 
 

@@ -44,7 +44,7 @@
 	<key>Creator</key>
 	<string>Leo Sicard</string>
 	<key>DisplayScale</key>
-	<string>1 0/72 in = 1 0/72 in</string>
+	<string>1 0/72 in = 1.0000 in</string>
 	<key>GraphDocumentVersion</key>
 	<integer>8</integer>
 	<key>GraphicsList</key>
@@ -62,8 +62,8 @@
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{501.33334, 364.66666}</string>
-				<string>{502.66669, 454.66666}</string>
+				<string>{504, 342}</string>
+				<string>{504.125, 432}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -93,8 +93,8 @@
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{430, 354.66666}</string>
-				<string>{431, 393.33334}</string>
+				<string>{432, 333}</string>
+				<string>{433, 360}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -124,8 +124,8 @@
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{469.33334, 356}</string>
-				<string>{472.45001, 454.66666}</string>
+				<string>{459, 333}</string>
+				<string>{459.125, 432}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -155,8 +155,8 @@
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{367.33334, 356}</string>
-				<string>{370.45001, 454.66666}</string>
+				<string>{368.5, 333}</string>
+				<string>{368.625, 432}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -186,40 +186,8 @@
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{326.66666, 357.33334}</string>
-				<string>{325.66666, 393.33334}</string>
-				<string>{325.33331, 396}</string>
-			</array>
-			<key>Style</key>
-			<dict>
-				<key>stroke</key>
-				<dict>
-					<key>HeadArrow</key>
-					<string>StickArrow</string>
-					<key>LineType</key>
-					<integer>2</integer>
-					<key>Pattern</key>
-					<integer>1</integer>
-					<key>TailArrow</key>
-					<string>0</string>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>Class</key>
-			<string>LineGraphic</string>
-			<key>ID</key>
-			<integer>60</integer>
-			<key>OrthogonalBarAutomatic</key>
-			<true/>
-			<key>OrthogonalBarPoint</key>
-			<string>{0, 0}</string>
-			<key>OrthogonalBarPosition</key>
-			<real>-1</real>
-			<key>Points</key>
-			<array>
-				<string>{240.66667, 418}</string>
-				<string>{242, 454.80005}</string>
+				<string>{325, 333}</string>
+				<string>{324, 360}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -249,8 +217,8 @@
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{212.66667, 346}</string>
-				<string>{214, 454.80005}</string>
+				<string>{234, 324}</string>
+				<string>{234, 432}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -270,6 +238,11 @@
 		<dict>
 			<key>Class</key>
 			<string>LineGraphic</string>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>28</integer>
+			</dict>
 			<key>ID</key>
 			<integer>54</integer>
 			<key>OrthogonalBarAutomatic</key>
@@ -280,9 +253,9 @@
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{128.66667, 356.66666}</string>
-				<string>{127.66667, 383.33334}</string>
-				<string>{127.33334, 381.60001}</string>
+				<string>{126.125, 333}</string>
+				<string>{126, 351}</string>
+				<string>{126, 351}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -312,8 +285,8 @@
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{102.66666, 356.66666}</string>
-				<string>{101.66666, 455.33334}</string>
+				<string>{99.125, 333}</string>
+				<string>{99, 432}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -343,8 +316,8 @@
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{116, 216}</string>
-				<string>{117, 263.33334}</string>
+				<string>{117, 216}</string>
+				<string>{117.125, 261}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -368,8 +341,8 @@
 			<integer>49</integer>
 			<key>Points</key>
 			<array>
-				<string>{176, 196}</string>
-				<string>{175, 494.39999}</string>
+				<string>{180, 198}</string>
+				<string>{180, 468}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -385,12 +358,14 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>AllowConnections</key>
+			<string>NO</string>
 			<key>Bounds</key>
-			<string>{{370.45001, 68.100616}, {85, 17}}</string>
+			<string>{{369, 91}, {90, 17}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
-			<string>YES</string>
+			<string>Vertical</string>
 			<key>Flow</key>
 			<string>Resize</string>
 			<key>FontInfo</key>
@@ -402,17 +377,10 @@
 			</dict>
 			<key>ID</key>
 			<integer>47</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
 			<dict>
-				<key>fill</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
 				<key>shadow</key>
 				<dict>
 					<key>Draws</key>
@@ -438,16 +406,16 @@
 				<key>VerticalPad</key>
 				<integer>0</integer>
 			</dict>
-			<key>Wrap</key>
-			<string>NO</string>
 		</dict>
 		<dict>
+			<key>AllowConnections</key>
+			<string>NO</string>
 			<key>Bounds</key>
-			<string>{{170.3002, 68.100616}, {105, 17}}</string>
+			<string>{{171, 91}, {108, 17}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
-			<string>YES</string>
+			<string>Vertical</string>
 			<key>Flow</key>
 			<string>Resize</string>
 			<key>FontInfo</key>
@@ -459,17 +427,10 @@
 			</dict>
 			<key>ID</key>
 			<integer>46</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
 			<dict>
-				<key>fill</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
 				<key>shadow</key>
 				<dict>
 					<key>Draws</key>
@@ -495,12 +456,12 @@
 				<key>VerticalPad</key>
 				<integer>0</integer>
 			</dict>
-			<key>Wrap</key>
-			<string>NO</string>
 		</dict>
 		<dict>
+			<key>AllowConnections</key>
+			<string>NO</string>
 			<key>Bounds</key>
-			<string>{{61.999939, 68.100616}, {57, 17}}</string>
+			<string>{{45, 83}, {73, 34}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -516,17 +477,10 @@
 			</dict>
 			<key>ID</key>
 			<integer>45</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
 			<dict>
-				<key>fill</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
 				<key>shadow</key>
 				<dict>
 					<key>Draws</key>
@@ -548,7 +502,8 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs28 \cf0 PAIRING}</string>
+\f0\fs28 \cf0 PAIRING /\
+TRACKING}</string>
 				<key>VerticalPad</key>
 				<integer>0</integer>
 			</dict>
@@ -560,8 +515,6 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>44</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 			<key>OrthogonalBarAutomatic</key>
 			<true/>
 			<key>OrthogonalBarPoint</key>
@@ -570,9 +523,8 @@
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{284.6004, 36.799995}</string>
-				<string>{284.6004, 593.59998}</string>
-				<string>{284.6004, 593.59998}</string>
+				<string>{288, 72}</string>
+				<string>{288, 531}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -596,8 +548,6 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>43</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 			<key>OrthogonalBarAutomatic</key>
 			<true/>
 			<key>OrthogonalBarPoint</key>
@@ -606,9 +556,9 @@
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{160, 36.799999}</string>
-				<string>{160, 593.59998}</string>
-				<string>{160, 593.59998}</string>
+				<string>{162.5, 72}</string>
+				<string>{161.5, 531}</string>
+				<string>{161.5, 531}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -628,16 +578,31 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>AllowConnections</key>
+			<string>NO</string>
 			<key>Bounds</key>
-			<string>{{311.80002, 475.19983}, {202.29999, 40}}</string>
+			<string>{{315, 450}, {198, 45}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>41</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.0941176</string>
+						<key>g</key>
+						<string>0.917647</string>
+						<key>r</key>
+						<string>1</string>
+					</dict>
+				</dict>
+			</dict>
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
@@ -651,18 +616,31 @@ Foundations (WPF)}</string>
 			</dict>
 		</dict>
 		<dict>
+			<key>AllowConnections</key>
+			<string>NO</string>
 			<key>Bounds</key>
-			<string>{{294.40002, 454.80005}, {237.10001, 72}}</string>
+			<string>{{297, 432}, {234, 72}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>40</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
-			<dict/>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.0941176</string>
+						<key>g</key>
+						<string>0.917647</string>
+						<key>r</key>
+						<string>1</string>
+					</dict>
+				</dict>
+			</dict>
 			<key>Text</key>
 			<dict>
 				<key>Align</key>
@@ -681,18 +659,31 @@ Foundations (WPF)}</string>
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>AllowConnections</key>
+			<string>NO</string>
 			<key>Bounds</key>
-			<string>{{45.5, 454.80014}, {106.49994, 72}}</string>
+			<string>{{45, 432}, {108, 72}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>39</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
-			<dict/>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.94902</string>
+						<key>g</key>
+						<string>0.529412</string>
+						<key>r</key>
+						<string>0.356863</string>
+					</dict>
+				</dict>
+			</dict>
 			<key>Text</key>
 			<dict>
 				<key>Align</key>
@@ -709,13 +700,17 @@ Foundations (WPF)}</string>
 			</dict>
 		</dict>
 		<dict>
+			<key>AllowConnections</key>
+			<string>NO</string>
 			<key>Class</key>
 			<string>Group</string>
 			<key>Graphics</key>
 			<array>
 				<dict>
+					<key>AllowConnections</key>
+					<string>NO</string>
 					<key>Bounds</key>
-					<string>{{167.40009, 493.77164}, {61.80632, 20.571428}}</string>
+					<string>{{171, 470.97159}, {54, 20.571438}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
@@ -724,6 +719,18 @@ Foundations (WPF)}</string>
 					<string>Rectangle</string>
 					<key>Style</key>
 					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.67451</string>
+								<key>g</key>
+								<string>0.839216</string>
+								<key>r</key>
+								<string>0.384314</string>
+							</dict>
+						</dict>
 						<key>shadow</key>
 						<dict>
 							<key>Draws</key>
@@ -745,7 +752,7 @@ Foundations (WPF)}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{197.73911, 454.80008}, {76.160919, 72}}</string>
+					<string>{{199.20248, 432}, {70.797523, 72.000031}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
@@ -760,7 +767,20 @@ Foundations (WPF)}</string>
 					<key>Shape</key>
 					<string>Rectangle</string>
 					<key>Style</key>
-					<dict/>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.67451</string>
+								<key>g</key>
+								<string>0.839216</string>
+								<key>r</key>
+								<string>0.384314</string>
+							</dict>
+						</dict>
+					</dict>
 					<key>Text</key>
 					<dict>
 						<key>Align</key>
@@ -782,20 +802,33 @@ Client}</string>
 			</array>
 			<key>ID</key>
 			<integer>34</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 		</dict>
 		<dict>
+			<key>AllowConnections</key>
+			<string>NO</string>
 			<key>Bounds</key>
-			<string>{{167.40009, 393.20001}, {327.3999, 24.799988}}</string>
+			<string>{{297, 360}, {198, 36}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>33</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.0941176</string>
+						<key>g</key>
+						<string>0.917647</string>
+						<key>r</key>
+						<string>1</string>
+					</dict>
+				</dict>
+			</dict>
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
@@ -808,44 +841,68 @@ Client}</string>
 			</dict>
 		</dict>
 		<dict>
+			<key>AllowConnections</key>
+			<string>NO</string>
 			<key>Bounds</key>
-			<string>{{179.20026, 325.80005}, {89.999939, 19.199951}}</string>
+			<string>{{189, 306}, {81, 18}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>32</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
-			<dict/>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.67451</string>
+						<key>g</key>
+						<string>0.839216</string>
+						<key>r</key>
+						<string>0.384314</string>
+					</dict>
+				</dict>
+			</dict>
 			<key>Text</key>
 			<dict>
-				<key>Align</key>
-				<integer>0</integer>
 				<key>Text</key>
 				<string>{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf320
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
 \f0\fs24 \cf0 VncControl}</string>
 			</dict>
 		</dict>
 		<dict>
+			<key>AllowConnections</key>
+			<string>NO</string>
 			<key>Bounds</key>
-			<string>{{404.79999, 308.39993}, {90, 48}}</string>
+			<string>{{405, 297}, {90, 36}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>31</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
-			<dict/>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.0941176</string>
+						<key>g</key>
+						<string>0.917647</string>
+						<key>r</key>
+						<string>1</string>
+					</dict>
+				</dict>
+			</dict>
 			<key>Text</key>
 			<dict>
 				<key>Align</key>
@@ -861,18 +918,31 @@ Control}</string>
 			</dict>
 		</dict>
 		<dict>
+			<key>AllowConnections</key>
+			<string>NO</string>
 			<key>Bounds</key>
-			<string>{{167.4001, 308.39993}, {223.7999, 48}}</string>
+			<string>{{171, 297}, {216, 36}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>30</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
-			<dict/>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.0941176</string>
+						<key>g</key>
+						<string>0.917647</string>
+						<key>r</key>
+						<string>1</string>
+					</dict>
+				</dict>
+			</dict>
 			<key>Text</key>
 			<dict>
 				<key>Align</key>
@@ -885,22 +955,33 @@ Control}</string>
 
 \f0\fs24 \cf0 DeviceControl}</string>
 			</dict>
-			<key>TextPlacement</key>
-			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>AllowConnections</key>
+			<string>NO</string>
 			<key>Bounds</key>
-			<string>{{61.999939, 308.39993}, {90, 48}}</string>
+			<string>{{63, 297}, {90, 36}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>29</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
-			<dict/>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.94902</string>
+						<key>g</key>
+						<string>0.529412</string>
+						<key>r</key>
+						<string>0.356863</string>
+					</dict>
+				</dict>
+			</dict>
 			<key>Text</key>
 			<dict>
 				<key>Align</key>
@@ -915,18 +996,31 @@ Control}</string>
 			</dict>
 		</dict>
 		<dict>
+			<key>AllowConnections</key>
+			<string>NO</string>
 			<key>Bounds</key>
-			<string>{{45.499996, 381.60001}, {468, 48}}</string>
+			<string>{{45, 351}, {468, 54}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>28</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
-			<dict/>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.94902</string>
+						<key>g</key>
+						<string>0.529412</string>
+						<key>r</key>
+						<string>0.356863</string>
+					</dict>
+				</dict>
+			</dict>
 			<key>Text</key>
 			<dict>
 				<key>Align</key>
@@ -941,18 +1035,31 @@ Control}</string>
 			</dict>
 		</dict>
 		<dict>
+			<key>AllowConnections</key>
+			<string>NO</string>
 			<key>Bounds</key>
-			<string>{{45.499996, 284.79965}, {468, 80.125}}</string>
+			<string>{{45, 279}, {468, 63}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>27</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
-			<dict/>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.0941176</string>
+						<key>g</key>
+						<string>0.917647</string>
+						<key>r</key>
+						<string>1</string>
+					</dict>
+				</dict>
+			</dict>
 			<key>Text</key>
 			<dict>
 				<key>Align</key>
@@ -969,14 +1076,14 @@ Control}</string>
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>AllowConnections</key>
+			<string>NO</string>
 			<key>Bounds</key>
-			<string>{{27.5, 262.39935}, {504, 180.80066}}</string>
+			<string>{{27, 261}, {504, 153}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>26</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -997,13 +1104,15 @@ Control}</string>
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>AllowConnections</key>
+			<string>NO</string>
 			<key>Class</key>
 			<string>Group</string>
 			<key>Graphics</key>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{167.4001, 174.17142}, {61.806309, 20.571428}}</string>
+					<string>{{171, 173.97154}, {57.453777, 20.571428}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
@@ -1012,6 +1121,18 @@ Control}</string>
 					<string>Rectangle</string>
 					<key>Style</key>
 					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.67451</string>
+								<key>g</key>
+								<string>0.839216</string>
+								<key>r</key>
+								<string>0.384314</string>
+							</dict>
+						</dict>
 						<key>shadow</key>
 						<dict>
 							<key>Draws</key>
@@ -1033,7 +1154,7 @@ Control}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{197.73911, 135.19987}, {76.160942, 72}}</string>
+					<string>{{199.20245, 135}, {70.797531, 72}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
@@ -1048,7 +1169,20 @@ Control}</string>
 					<key>Shape</key>
 					<string>Rectangle</string>
 					<key>Style</key>
-					<dict/>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.67451</string>
+								<key>g</key>
+								<string>0.839216</string>
+								<key>r</key>
+								<string>0.384314</string>
+							</dict>
+						</dict>
+					</dict>
 					<key>Text</key>
 					<dict>
 						<key>Align</key>
@@ -1070,18 +1204,16 @@ Server}</string>
 			</array>
 			<key>ID</key>
 			<integer>22</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 		</dict>
 		<dict>
+			<key>AllowConnections</key>
+			<string>NO</string>
 			<key>Bounds</key>
-			<string>{{9.5, 244.29932}, {540, 294.9007}}</string>
+			<string>{{9, 243}, {540, 279}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>4</integer>
-			<key>IsLocked</key>
-			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -1104,8 +1236,10 @@ Server}</string>
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>AllowConnections</key>
+			<string>NO</string>
 			<key>Bounds</key>
-			<string>{{9.5, 110.39999}, {281.70001, 105.59994}}</string>
+			<string>{{27, 126}, {252, 90}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -1113,7 +1247,20 @@ Server}</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
-			<dict/>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.94902</string>
+						<key>g</key>
+						<string>0.529412</string>
+						<key>r</key>
+						<string>0.356863</string>
+					</dict>
+				</dict>
+			</dict>
 			<key>Text</key>
 			<dict>
 				<key>Align</key>
@@ -1128,13 +1275,13 @@ Server}</string>
 				<key>VerticalPad</key>
 				<integer>0</integer>
 			</dict>
-			<key>TextPlacement</key>
-			<integer>0</integer>
 		</dict>
 	</array>
 	<key>GridInfo</key>
 	<dict>
 		<key>ShowsGrid</key>
+		<string>YES</string>
+		<key>SnapsToGrid</key>
 		<string>YES</string>
 	</dict>
 	<key>GuidesLocked</key>
@@ -1182,7 +1329,7 @@ Server}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2012-02-17 17:35:32 +0000</string>
+	<string>2012-02-21 08:45:46 +0000</string>
 	<key>Modifier</key>
 	<string>Leo Sicard</string>
 	<key>NotesVisible</key>
@@ -1263,7 +1410,7 @@ Server}</string>
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{246, 4}, {943, 874}}</string>
+		<string>{{2, 4}, {1177, 874}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -1273,11 +1420,11 @@ Server}</string>
 		<key>ShowRuler</key>
 		<true/>
 		<key>Sidebar</key>
-		<true/>
+		<false/>
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-44, 0}, {646.40002, 576}}</string>
+		<string>{{-180, 2.4000001}, {919.20001, 576}}</string>
 		<key>Zoom</key>
 		<real>1.25</real>
 		<key>ZoomValues</key>
@@ -1285,7 +1432,7 @@ Server}</string>
 			<array>
 				<string>Canvas 1</string>
 				<real>1.25</real>
-				<real>1.5</real>
+				<real>2</real>
 			</array>
 		</array>
 	</dict>
