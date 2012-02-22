@@ -48,23 +48,22 @@
 \contentsline {section}{\numberline {4.2}Tracking}{32}{section.4.2}
 \contentsline {section}{\numberline {4.3}Replicated UI}{35}{section.4.3}
 \contentsline {section}{\numberline {4.4}Surface UI}{35}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}}{35}{subsection.4.4.1}
-\contentsline {chapter}{\numberline {5}Evaluation}{37}{chapter.5}
-\contentsline {section}{\numberline {5.1}Experiment}{37}{section.5.1}
-\contentsline {section}{\numberline {5.2}Results}{37}{section.5.2}
-\contentsline {chapter}{\numberline {6}Discussion}{38}{chapter.6}
-\contentsline {chapter}{\numberline {7}Conclusion}{39}{chapter.7}
-\contentsline {chapter}{Bibliography}{40}{chapter.7}
+\contentsline {chapter}{\numberline {5}Evaluation}{38}{chapter.5}
+\contentsline {section}{\numberline {5.1}Experiment}{38}{section.5.1}
+\contentsline {section}{\numberline {5.2}Results}{38}{section.5.2}
+\contentsline {chapter}{\numberline {6}Discussion}{39}{chapter.6}
+\contentsline {chapter}{\numberline {7}Conclusion}{40}{chapter.7}
+\contentsline {chapter}{Bibliography}{41}{chapter.7}
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{\numberline {A}Scenarios}{45}{appendix.A}
-\contentsline {chapter}{\numberline {B}Preliminary usability study - experiment script}{47}{appendix.B}
-\contentsline {section}{\numberline {B.1}Introduction}{47}{section.B.1}
-\contentsline {subsection}{\numberline {B.1.1}Example: Pairing}{48}{subsection.B.1.1}
-\contentsline {section}{\numberline {B.2}Experiment}{49}{section.B.2}
-\contentsline {subsection}{\numberline {B.2.1}Dragging}{49}{subsection.B.2.1}
-\contentsline {subsection}{\numberline {B.2.2}Rotating}{49}{subsection.B.2.2}
-\contentsline {subsection}{\numberline {B.2.3}Resizing}{50}{subsection.B.2.3}
-\contentsline {subsection}{\numberline {B.2.4}Minimizing}{50}{subsection.B.2.4}
-\contentsline {subsection}{\numberline {B.2.5}Hiding}{51}{subsection.B.2.5}
-\contentsline {subsection}{\numberline {B.2.6}Exiting}{51}{subsection.B.2.6}
-\contentsline {chapter}{\numberline {C}Preliminary usability study - result form.}{52}{appendix.C}
+\contentsline {chapter}{\numberline {A}Scenarios}{46}{appendix.A}
+\contentsline {chapter}{\numberline {B}Preliminary usability study - experiment script}{48}{appendix.B}
+\contentsline {section}{\numberline {B.1}Introduction}{48}{section.B.1}
+\contentsline {subsection}{\numberline {B.1.1}Example: Pairing}{49}{subsection.B.1.1}
+\contentsline {section}{\numberline {B.2}Experiment}{50}{section.B.2}
+\contentsline {subsection}{\numberline {B.2.1}Dragging}{50}{subsection.B.2.1}
+\contentsline {subsection}{\numberline {B.2.2}Rotating}{50}{subsection.B.2.2}
+\contentsline {subsection}{\numberline {B.2.3}Resizing}{51}{subsection.B.2.3}
+\contentsline {subsection}{\numberline {B.2.4}Minimizing}{51}{subsection.B.2.4}
+\contentsline {subsection}{\numberline {B.2.5}Hiding}{52}{subsection.B.2.5}
+\contentsline {subsection}{\numberline {B.2.6}Exiting}{52}{subsection.B.2.6}
+\contentsline {chapter}{\numberline {C}Preliminary usability study - result form.}{53}{appendix.C}

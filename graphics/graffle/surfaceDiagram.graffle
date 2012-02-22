@@ -14,7 +14,7 @@
 	<key>BackgroundGraphic</key>
 	<dict>
 		<key>Bounds</key>
-		<string>{{0, 0}, {806, 536}}</string>
+		<string>{{0, 0}, {805.89001, 536.28998}}</string>
 		<key>Class</key>
 		<string>SolidGraphic</string>
 		<key>FontInfo</key>
@@ -61,6 +61,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>170</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{405, 243}</string>
@@ -90,6 +92,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>169</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{405, 216}</string>
@@ -111,6 +115,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>168</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{342, 126}</string>
@@ -132,6 +138,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>167</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{630, 162}</string>
@@ -172,6 +180,8 @@
 			</dict>
 			<key>ID</key>
 			<integer>166</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{630, 162}</string>
@@ -193,6 +203,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>165</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{630, 126}</string>
@@ -222,6 +234,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>164</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{630, 126}</string>
@@ -250,6 +264,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>163</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{468, 126}</string>
@@ -273,6 +289,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>162</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{638, 207}</string>
@@ -302,6 +320,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>161</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{621, 207}</string>
@@ -324,6 +344,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>160</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{639, 54}</string>
@@ -353,6 +375,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>159</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{621, 54}</string>
@@ -376,6 +400,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>158</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{558, 90}</string>
@@ -404,6 +430,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>157</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{405, 90}</string>
@@ -433,6 +461,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>156</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{405, 54}</string>
@@ -454,6 +484,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>155</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{315, 45}</string>
@@ -475,6 +507,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>154</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{162, 45}</string>
@@ -496,9 +530,11 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>151</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
-				<string>{405, 341.66666}</string>
+				<string>{405, 342}</string>
 				<string>{504, 342}</string>
 			</array>
 			<key>Style</key>
@@ -516,7 +552,7 @@
 				<key>ID</key>
 				<integer>150</integer>
 				<key>Position</key>
-				<real>0.65432059764862061</real>
+				<real>0.78571426868438721</real>
 			</dict>
 		</dict>
 		<dict>
@@ -524,9 +560,11 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>150</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
-				<string>{405, 324}</string>
+				<string>{405, 309}</string>
 				<string>{405, 351}</string>
 			</array>
 			<key>Style</key>
@@ -547,10 +585,12 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>149</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{180, 270}</string>
-				<string>{342, 270}</string>
+				<string>{333, 270}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -568,6 +608,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>148</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{99, 297}</string>
@@ -590,6 +632,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>147</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{99, 216}</string>
@@ -622,6 +666,8 @@
 			</dict>
 			<key>ID</key>
 			<integer>113</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -664,6 +710,8 @@ ControlRestored}</string>
 			</dict>
 			<key>ID</key>
 			<integer>112</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -706,6 +754,8 @@ ControlMinimized}</string>
 			</dict>
 			<key>ID</key>
 			<integer>111</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -786,6 +836,8 @@ ControlManipulated}</string>
 			</array>
 			<key>ID</key>
 			<integer>109</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 		</dict>
 		<dict>
 			<key>AllowConnections</key>
@@ -840,6 +892,8 @@ ControlManipulated}</string>
 			</array>
 			<key>ID</key>
 			<integer>107</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 		</dict>
 		<dict>
 			<key>AllowConnections</key>
@@ -894,6 +948,8 @@ ControlManipulated}</string>
 			</array>
 			<key>ID</key>
 			<integer>105</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 		</dict>
 		<dict>
 			<key>AllowConnections</key>
@@ -948,6 +1004,8 @@ ControlManipulated}</string>
 			</array>
 			<key>ID</key>
 			<integer>33</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 		</dict>
 		<dict>
 			<key>AllowConnections</key>
@@ -1106,6 +1164,8 @@ RelayRightClick()}</string>
 			</array>
 			<key>ID</key>
 			<integer>90</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 		</dict>
 		<dict>
 			<key>AllowConnections</key>
@@ -1211,6 +1271,8 @@ RelayRightClick()}</string>
 			</array>
 			<key>ID</key>
 			<integer>86</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 		</dict>
 		<dict>
 			<key>AllowConnections</key>
@@ -1363,6 +1425,8 @@ OnCloseButtonClick()}</string>
 			</array>
 			<key>ID</key>
 			<integer>82</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 		</dict>
 		<dict>
 			<key>AllowConnections</key>
@@ -1520,6 +1584,8 @@ OnContactPressHold()}</string>
 			</array>
 			<key>ID</key>
 			<integer>78</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 		</dict>
 		<dict>
 			<key>AllowConnections</key>
@@ -1574,6 +1640,8 @@ OnContactPressHold()}</string>
 			</array>
 			<key>ID</key>
 			<integer>74</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 		</dict>
 		<dict>
 			<key>AllowConnections</key>
@@ -1618,7 +1686,7 @@ OnContactPressHold()}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
 
-\f0\b\fs20 \cf0 MainSV}</string>
+\f0\b\fs20 \cf0 MainScatterView}</string>
 						<key>VerticalPad</key>
 						<integer>0</integer>
 					</dict>
@@ -1628,6 +1696,8 @@ OnContactPressHold()}</string>
 			</array>
 			<key>ID</key>
 			<integer>70</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 		</dict>
 		<dict>
 			<key>AllowConnections</key>
@@ -1672,7 +1742,7 @@ OnContactPressHold()}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
 
-\f0\b\fs20 \cf0 MainWindow}</string>
+\f0\b\fs20 \cf0 TideWindow}</string>
 						<key>VerticalPad</key>
 						<integer>0</integer>
 					</dict>
@@ -1791,6 +1861,8 @@ RemoveDevice()}</string>
 			</array>
 			<key>ID</key>
 			<integer>65</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 		</dict>
 		<dict>
 			<key>AllowConnections</key>
@@ -1801,7 +1873,7 @@ RemoveDevice()}</string>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{342, 261}, {126, 24}}</string>
+					<string>{{333, 261}, {144, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1845,7 +1917,7 @@ iDevice}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{342, 285}, {126, 36}}</string>
+					<string>{{333, 285}, {144, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1898,6 +1970,8 @@ miniControl() : MiniControl}</string>
 			</array>
 			<key>ID</key>
 			<integer>61</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 		</dict>
 		<dict>
 			<key>AllowConnections</key>
@@ -2006,6 +2080,8 @@ OnBackButtonClick()}</string>
 			</array>
 			<key>ID</key>
 			<integer>57</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 		</dict>
 		<dict>
 			<key>AllowConnections</key>
@@ -2112,6 +2188,8 @@ OnHomeButtonClick()}</string>
 			</array>
 			<key>ID</key>
 			<integer>53</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 		</dict>
 		<dict>
 			<key>AllowConnections</key>
@@ -2263,6 +2341,8 @@ OnHomeButtonClick()}</string>
 			</array>
 			<key>ID</key>
 			<integer>28</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -2271,6 +2351,8 @@ OnHomeButtonClick()}</string>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>171</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -2312,8 +2394,6 @@ OnHomeButtonClick()}</string>
 	<key>GridInfo</key>
 	<dict>
 		<key>ShowsGrid</key>
-		<string>YES</string>
-		<key>SnapsToGrid</key>
 		<string>YES</string>
 	</dict>
 	<key>GuidesLocked</key>
@@ -2361,7 +2441,7 @@ OnHomeButtonClick()}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2012-02-18 16:01:39 +0000</string>
+	<string>2012-02-21 20:26:08 +0000</string>
 	<key>Modifier</key>
 	<string>Leo Sicard</string>
 	<key>NotesVisible</key>
@@ -2397,7 +2477,7 @@ OnHomeButtonClick()}</string>
 		<key>NSPaperSize</key>
 		<array>
 			<string>coded</string>
-			<string>BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU1ZhbHVlAISECE5TT2JqZWN0AIWEASqEhAx7X05TU2l6ZT1mZn2WgUoDgVMChg==</string>
+			<string>BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU1ZhbHVlAISECE5TT2JqZWN0AIWEASqEhAx7X05TU2l6ZT1mZn2Wg/Z4UkSDj9IURIY=</string>
 		</array>
 		<key>NSPrintReverseOrientation</key>
 		<array>
@@ -2447,7 +2527,7 @@ OnHomeButtonClick()}</string>
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{1, 4}, {1191, 874}}</string>
+		<string>{{40, 279}, {1191, 874}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -2461,14 +2541,14 @@ OnHomeButtonClick()}</string>
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-68, -20}, {941.59998, 576}}</string>
+		<string>{{9.333333, 0}, {784.66669, 480}}</string>
 		<key>Zoom</key>
-		<real>1.25</real>
+		<real>1.5</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
 				<string>Canvas 1</string>
-				<real>1.25</real>
+				<real>1.5</real>
 				<real>2</real>
 			</array>
 		</array>
