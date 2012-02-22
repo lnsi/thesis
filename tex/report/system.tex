@@ -204,6 +204,13 @@ However, the tracking of smartphone devices during the application session was d
 This decision was based on oral feedback gathered during the prototyping sessions, that pointed towards a lack of usefulness.
 Users expressed that they would be reticent to leave their smartphones on the table for fear of being robbed, or to drag the device across the table for fear of damaging it.
 
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.8\textwidth]{images/tideControls}
+    \caption{TIDE main UI elements.}
+    \label{fig:tideControls}
+\end{figure}
+
 %%%%%%%%%%%%%%%%
 %% REPLICATION %%
 %%%%%%%%%%%%%%%%
@@ -220,10 +227,15 @@ It was chosen for the reason that it is stable and platform independent.
 
 %The pairing procedure completes with the VNC client on the tabletop connecting to the VNC server running on the smartphone, and receiving the first image of the remote UI.
 
-On the tabletop, the VNC client is integrated to the MS application using the VncSharp library.
-It is implemented by the \texttt{VncControl} class, as shown in figure~\ref{fig:surfaceDiagram}, and uses VncSharp methods to communicate with the server.
-The \texttt{VncControl} is responsible for displaying the replicated UI, and is contained within a \texttt{DeviceControl} object that provides other UI elements.
-When the \texttt{DeviceControl} object detects a contact on the replicated UI, it forwards it to the \texttt{VncControl} object, that relays it further to the smartphone.
+On the tabletop, the VNC client is integrated to the MS application using a \texttt{VncControl} object.
+The \texttt{VncControl} is a surface user control that is contained within a \texttt{DeviceControl} object that provides other UI elements, as shown in figure \ref{fig:tideControls}.
+The \texttt{DeviceControl} object monitors all contacts, in order to detect the user inputs that are destined to the replicated UI.
+This is done by checking if the coordinates of the contact are within the image displayed by the \texttt{VncControl}.
+When such a contact is detected, it is forwarded to the \texttt{VncControl} object, that relays it further to the smartphone.
+
+The \texttt{VncControl} uses the VncSharp library to communicate with the VNC server on the smartphone.
+VncSharp provides methods to transmit mouse and keyboard events.
+%Mouse events consist of coordinates a contact type (\texttt{ContactDown, ContactUp and ContactChanged}), and they are used for all touch inputs on the replicated UI.
 The server responds with an updated image of the smartphone's screen, that the \texttt{VncControl} displays on the tabletop.
 
 On the smartphones, the VNC server relies currently on third-party applications.
@@ -245,29 +257,29 @@ To realize the design decisions DD-1 to DD-6, TIDE is implemented using the MS S
     \label{fig:surfaceDiagram}
 \end{figure}
 
-Figure~\ref{fig:surfaceDiagram} is a class diagram of the TIDE surface UI implementation.
-As mentioned for the tracking component, the \texttt{TideWindow} is the main application window; it contains all other UI elements and is responsible for most of the application logic.
-The implementation is based on the Presentation layer of the Surface SDK, and makes use of the \texttt{ScatterView} control (\texttt{MainScatterView}), to display UI elements that can be manipulated.
-The \texttt{MainScatterView} uses \texttt{ScatterViewItem} controls to assign move, rotate and resize capabilities to other UI elements.
+Figure~\ref{fig:tideControls} shows the main elements that form the TIDE user interface.
+As mentioned for the tracking component, the \texttt{TideWindow} is the main application window.
+It contains all other UI elements and is responsible for most of the application logic.
+The \texttt{DeviceControl} contains the replicated UI of a connected smartphone, and provides the main surface UI elements to the user.
+The \texttt{MinimizedControl} is the minimized version of the \texttt{DeviceControl}.
 
-When a smartphone is detected, the \texttt{Tracker} object creates a virtual device.
-A virtual device consists of an device object that implements the \texttt{IDevice} interface and two user controls: the \texttt{DeviceControl}, that contains the replicated UI and displays the virtual device to the user, and a \texttt{MinimizedControl} used when the replicated UI is minimized.
+Figure~\ref{fig:surfaceDiagram} is a class diagram of the TIDE surface UI implementation.
+The implementation is based on the Presentation layer of the Surface SDK, and makes use of the \texttt{ScatterView} control (\texttt{MainScatterView}), to display UI elements that can be manipulated.
+The \texttt{MainScatterView} uses \texttt{ScatterViewItem} controls to assign move, rotate and resize capabilities to other controls.
+
+When a smartphone is detected, the \texttt{Tracker} object creates a virtual device object that implements the \texttt{IDevice} interface.
+The virtual device then creates two user controls: the \texttt{DeviceControl} and \texttt{MinimizedControl} objects.
 
 Upon creation, the \texttt{DeviceControl} object gets specific visualization features from the \texttt{IDevice} object.
 For example, an \texttt{iPhone} object provides a \texttt{SetSkin()} method to show the appropriate visualization, and a \texttt{OnHomebuttonClick()} that implements the effect of a button that is specific to the device.
 
 The \texttt{DeviceControl} object is displayed on the \texttt{TideWindow}, it can be freely moved, rotated and resized.
-However, it monitors all touch inputs, and forwards to the \texttt{VncControl} all inputs that are destined to the replicated UI, i.e.\ whose coordinates are within the \texttt{remoteUI} image displayed by the \texttt{VncControl}.
+%However, it monitors all touch inputs, and forwards to the \texttt{VncControl} all inputs that are destined to the replicated UI, i.e.\ whose coordinates are within the \texttt{remoteUI} image displayed by the \texttt{VncControl}.
 
 The \texttt{DeviceControl} and \texttt{MinimizedControl} objects raise events to notify the \texttt{TideWindow} when they are being minimized, restored or closed.
 The event \texttt{ControlManipulated} is used by the \texttt{TideWindow} to monitor the position of the \texttt{DeviceControl} and activate relevant features, such as the minimization when the control is dragged to an edge.
 
-\texttt{Dialog} objects are also used to obtain explicit user confirmation when establishing the connection and when disconnecting the device.
+\texttt{Dialog} objects are used to obtain explicit user confirmation when establishing the connection and when disconnecting the device.
 
-\begin{figure}[htb]
-  \centering
-    \includegraphics[width=0.8\textwidth]{images/tideControls}
-    \caption{TIDE main UI elements.}
-    \label{fig:tideControls}
-\end{figure}
+
 
