@@ -11,3 +11,7 @@ requirements:
 - what about security? responsiveness?
 
 security and privacy issues?
+
+Mistakes in usability study:
+- i should have asked users to explain their choice of a favorite interaction technique.
+- I forgot some techniques in the form about the favorites.
