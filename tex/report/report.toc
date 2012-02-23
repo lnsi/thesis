@@ -1,93 +1,95 @@
-\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
-\contentsline {section}{\numberline {1.1}Problem statement}{6}{section.1.1}
-\contentsline {section}{\numberline {1.2}Research methods}{7}{section.1.2}
-\contentsline {section}{\numberline {1.3}Contributions}{7}{section.1.3}
-\contentsline {chapter}{\numberline {2}Related Work}{9}{chapter.2}
-\contentsline {section}{\numberline {2.1}Device composition}{9}{section.2.1}
-\contentsline {section}{\numberline {2.2}Integrating smartphones to tabletops}{10}{section.2.2}
-\contentsline {section}{\numberline {2.3}Pairing}{11}{section.2.3}
-\contentsline {section}{\numberline {2.4}UI distribution}{11}{section.2.4}
-\contentsline {section}{\numberline {2.5}User interaction}{13}{section.2.5}
-\contentsline {chapter}{\numberline {3}Design}{14}{chapter.3}
-\contentsline {section}{\numberline {3.1}Understanding the application context}{15}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}The devices}{15}{subsection.3.1.1}
-\contentsline {subsubsection}{A tabletop is\dots }{15}{section*.5}
-\contentsline {subsubsection}{A smartphone is\dots }{16}{section*.6}
-\contentsline {subsection}{\numberline {3.1.2}The situations}{16}{subsection.3.1.2}
-\contentsline {subsubsection}{Single user on a public tabletop}{17}{section*.8}
-\contentsline {subsubsection}{Multiple users on a public tabletop}{17}{section*.9}
-\contentsline {subsubsection}{Single user on a private tabletop}{18}{section*.10}
-\contentsline {section}{\numberline {3.2}Solution requirements}{18}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Pairing}{18}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Tracking}{18}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Replicated UI}{19}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Surface UI}{19}{subsection.3.2.4}
-\contentsline {section}{\numberline {3.3}Designing the user interaction}{19}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Generating ideas}{20}{subsection.3.3.1}
-\contentsline {subsubsection}{Storyboards}{20}{section*.11}
-\contentsline {subsubsection}{Low fidelity prototypes}{20}{section*.12}
-\contentsline {subsection}{\numberline {3.3.2}Defining interaction strategies}{20}{subsection.3.3.2}
-\contentsline {subsubsection}{Commands}{21}{section*.14}
-\contentsline {subsubsection}{Actions}{21}{section*.15}
-\contentsline {subsection}{\numberline {3.3.3}Involving users}{23}{subsection.3.3.3}
-\contentsline {subsubsection}{Experiment}{23}{section*.17}
-\contentsline {subsubsection}{Data processing}{24}{section*.19}
-\contentsline {subsubsection}{Result Analysis}{25}{section*.21}
-\contentsline {subsubsection}{User suggestions}{26}{section*.22}
-\contentsline {section}{\numberline {3.4}Final Design of TIDE}{26}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Pairing}{26}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Tracking}{27}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Replicated UI}{27}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Surface UI}{27}{subsection.3.4.4}
-\contentsline {chapter}{\numberline {4}The TIDE prototype}{29}{chapter.4}
-\contentsline {subsubsection}{System interaction}{30}{section*.24}
-\contentsline {section}{\numberline {4.1}Pairing}{30}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Trigger}{31}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Discovery}{32}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Connection}{32}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Tracking}{32}{section.4.2}
-\contentsline {section}{\numberline {4.3}Replicated UI}{35}{section.4.3}
-\contentsline {section}{\numberline {4.4}Surface UI}{36}{section.4.4}
-\contentsline {chapter}{\numberline {5}Evaluation}{38}{chapter.5}
-\contentsline {section}{\numberline {5.1}Parameters}{38}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Variables}{38}{subsection.5.1.1}
-\contentsline {section}{\numberline {5.2}Methods}{39}{section.5.2}
-\contentsline {section}{\numberline {5.3}Experiment}{39}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Participants}{39}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Apparatus}{39}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Procedure}{40}{subsection.5.3.3}
-\contentsline {subsubsection}{Discovering TIDE}{40}{section*.31}
-\contentsline {subsubsection}{Testing TIDE}{41}{section*.32}
-\contentsline {subsubsection}{Answering questions about TIDE}{41}{section*.33}
-\contentsline {subsection}{\numberline {5.3.4}Data}{41}{subsection.5.3.4}
-\contentsline {section}{\numberline {5.4}Results}{41}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Learnability}{42}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Ease of use}{43}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Usefulness}{44}{subsection.5.4.3}
-\contentsline {chapter}{\numberline {6}Discussion}{46}{chapter.6}
-\contentsline {section}{\numberline {6.1}Usability}{46}{section.6.1}
-\contentsline {section}{\numberline {6.2}Usefulness}{46}{section.6.2}
-\contentsline {chapter}{\numberline {7}Conclusion}{47}{chapter.7}
-\contentsline {chapter}{Bibliography}{48}{chapter.7}
-\setcounter {tocdepth}{0}
-\contentsline {chapter}{\numberline {A}Scenarios}{53}{appendix.A}
-\contentsline {chapter}{\numberline {B}Design experiment - script}{55}{appendix.B}
-\contentsline {section}{\numberline {B.1}Introduction}{55}{section.B.1}
-\contentsline {subsection}{\numberline {B.1.1}Example: Pairing}{56}{subsection.B.1.1}
-\contentsline {section}{\numberline {B.2}Experiment}{56}{section.B.2}
-\contentsline {subsection}{\numberline {B.2.1}Dragging}{56}{subsection.B.2.1}
-\contentsline {subsection}{\numberline {B.2.2}Rotating}{57}{subsection.B.2.2}
-\contentsline {subsection}{\numberline {B.2.3}Resizing}{58}{subsection.B.2.3}
-\contentsline {subsection}{\numberline {B.2.4}Minimizing}{58}{subsection.B.2.4}
-\contentsline {subsection}{\numberline {B.2.5}Hiding}{59}{subsection.B.2.5}
-\contentsline {subsection}{\numberline {B.2.6}Exiting}{59}{subsection.B.2.6}
-\contentsline {chapter}{\numberline {C}Design experiment - result form.}{60}{appendix.C}
-\contentsline {chapter}{\numberline {D}TIDE evaluation - user experiment script}{61}{appendix.D}
-\contentsline {section}{\numberline {D.1}Discovering Tide (10 min)}{62}{section.D.1}
-\contentsline {subsection}{\numberline {D.1.1}Free exploration}{62}{subsection.D.1.1}
-\contentsline {subsection}{\numberline {D.1.2}Features (designer fills out EF1)}{62}{subsection.D.1.2}
-\contentsline {section}{\numberline {D.2}Using Tide (10 min)}{62}{section.D.2}
-\contentsline {subsection}{\numberline {D.2.1}Gaming}{62}{subsection.D.2.1}
-\contentsline {subsection}{\numberline {D.2.2}Browsing}{63}{subsection.D.2.2}
-\contentsline {section}{\numberline {D.3}Questionnaire (10 min)}{63}{section.D.3}
-\contentsline {chapter}{\numberline {E}TIDE evaluation - online forms}{64}{appendix.E}
+\contentsline {chapter}{Contents}{4}{section*.1}
+\contentsline {chapter}{\chapternumberline {1}Introduction}{7}{chapter.1}
+\contentsline {section}{\numberline {1.1}Problem statement}{10}{section.1.1}
+\contentsline {section}{\numberline {1.2}Research methods}{11}{section.1.2}
+\contentsline {section}{\numberline {1.3}Contributions}{11}{section.1.3}
+\contentsline {chapter}{\chapternumberline {2}Related Work}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}Device composition}{13}{section.2.1}
+\contentsline {section}{\numberline {2.2}Integrating smartphones to tabletops}{14}{section.2.2}
+\contentsline {section}{\numberline {2.3}Pairing}{15}{section.2.3}
+\contentsline {section}{\numberline {2.4}UI distribution}{15}{section.2.4}
+\contentsline {section}{\numberline {2.5}User interaction}{17}{section.2.5}
+\contentsline {chapter}{\chapternumberline {3}Design}{19}{chapter.3}
+\contentsline {section}{\numberline {3.1}Understanding the application context}{20}{section.3.1}
+\contentsline {subsection}{The devices}{20}{section*.2}
+\contentsline {subsubsection}{A tabletop is\dots }{20}{section*.3}
+\contentsline {subsubsection}{A smartphone is\dots }{21}{section*.4}
+\contentsline {subsection}{The situations}{21}{section*.5}
+\contentsline {subsubsection}{Single user on a public tabletop}{22}{section*.6}
+\contentsline {subsubsection}{Multiple users on a public tabletop}{22}{section*.7}
+\contentsline {subsubsection}{Single user on a private tabletop}{23}{section*.8}
+\contentsline {section}{\numberline {3.2}Solution requirements}{23}{section.3.2}
+\contentsline {subsection}{Pairing}{23}{section*.9}
+\contentsline {subsection}{Tracking}{23}{section*.10}
+\contentsline {subsection}{Replicated UI}{24}{section*.11}
+\contentsline {subsection}{Surface UI}{24}{section*.12}
+\contentsline {section}{\numberline {3.3}Designing the user interaction}{25}{section.3.3}
+\contentsline {subsection}{Generating ideas}{25}{section*.13}
+\contentsline {subsubsection}{Storyboards}{25}{section*.14}
+\contentsline {subsubsection}{Low fidelity prototypes}{26}{section*.15}
+\contentsline {subsection}{Defining interaction strategies}{26}{section*.16}
+\contentsline {subsubsection}{Commands}{26}{section*.17}
+\contentsline {subsubsection}{Actions}{27}{section*.18}
+\contentsline {subsection}{Involving users}{28}{section*.19}
+\contentsline {subsubsection}{Experiment}{28}{section*.20}
+\contentsline {subsubsection}{Data processing}{29}{section*.21}
+\contentsline {subsubsection}{Result Analysis}{30}{section*.22}
+\contentsline {subsubsection}{User suggestions}{31}{section*.23}
+\contentsline {section}{\numberline {3.4}Final Design of TIDE}{31}{section.3.4}
+\contentsline {subsection}{Pairing}{32}{section*.24}
+\contentsline {subsection}{Tracking}{32}{section*.25}
+\contentsline {subsection}{Replicated UI}{32}{section*.26}
+\contentsline {subsection}{Surface UI}{33}{section*.27}
+\contentsline {chapter}{\chapternumberline {4}The TIDE prototype}{35}{chapter.4}
+\contentsline {subsubsection}{System interaction}{36}{section*.28}
+\contentsline {section}{\numberline {4.1}Pairing}{36}{section.4.1}
+\contentsline {subsection}{Trigger}{37}{section*.29}
+\contentsline {subsection}{Discovery}{38}{section*.30}
+\contentsline {subsection}{Connection}{38}{section*.31}
+\contentsline {section}{\numberline {4.2}Tracking}{38}{section.4.2}
+\contentsline {section}{\numberline {4.3}Replicated UI}{41}{section.4.3}
+\contentsline {section}{\numberline {4.4}Surface UI}{42}{section.4.4}
+\contentsline {chapter}{\chapternumberline {5}Evaluation}{45}{chapter.5}
+\contentsline {section}{\numberline {5.1}Parameters}{45}{section.5.1}
+\contentsline {subsection}{Variables}{45}{section*.32}
+\contentsline {section}{\numberline {5.2}Methods}{46}{section.5.2}
+\contentsline {section}{\numberline {5.3}Experiment}{46}{section.5.3}
+\contentsline {subsection}{Participants}{46}{section*.33}
+\contentsline {subsection}{Apparatus}{46}{section*.34}
+\contentsline {subsection}{Procedure}{47}{section*.35}
+\contentsline {subsubsection}{Discovering TIDE}{47}{section*.36}
+\contentsline {subsubsection}{Testing TIDE}{48}{section*.37}
+\contentsline {subsubsection}{Answering questions about TIDE}{48}{section*.38}
+\contentsline {subsection}{Data}{48}{section*.39}
+\contentsline {section}{\numberline {5.4}Results}{48}{section.5.4}
+\contentsline {subsection}{Learnability}{49}{section*.40}
+\contentsline {subsection}{Ease of use}{50}{section*.41}
+\contentsline {subsection}{Usefulness}{51}{section*.42}
+\contentsline {chapter}{\chapternumberline {6}Discussion}{53}{chapter.6}
+\contentsline {section}{\numberline {6.1}Usability}{53}{section.6.1}
+\contentsline {section}{\numberline {6.2}Usefulness}{53}{section.6.2}
+\contentsline {chapter}{\chapternumberline {7}Conclusion}{55}{chapter.7}
+\contentsline {chapter}{Bibliography}{56}{chapter.7}
+\contentsline {chapter}{Bibliography}{57}{section*.44}
+\changetocdepth {0}
+\contentsline {appendix}{\chapternumberline {A}Scenarios}{63}{appendix.A}
+\contentsline {appendix}{\chapternumberline {B}Design experiment - script}{65}{appendix.B}
+\contentsline {section}{\numberline {B.1}Introduction}{65}{section.B.1}
+\contentsline {subsection}{Example: Pairing}{66}{section*.48}
+\contentsline {section}{\numberline {B.2}Experiment}{66}{section.B.2}
+\contentsline {subsection}{Dragging}{66}{section*.49}
+\contentsline {subsection}{Rotating}{67}{section*.50}
+\contentsline {subsection}{Resizing}{68}{section*.51}
+\contentsline {subsection}{Minimizing}{68}{section*.52}
+\contentsline {subsection}{Hiding}{69}{section*.53}
+\contentsline {subsection}{Exiting}{69}{section*.54}
+\contentsline {appendix}{\chapternumberline {C}Design experiment - result form.}{71}{appendix.C}
+\contentsline {appendix}{\chapternumberline {D}TIDE evaluation - user experiment script}{73}{appendix.D}
+\contentsline {section}{\numberline {D.1}Discovering Tide (10 min)}{74}{section.D.1}
+\contentsline {subsection}{Free exploration}{74}{section*.55}
+\contentsline {subsection}{Features (designer fills out EF1)}{74}{section*.56}
+\contentsline {section}{\numberline {D.2}Using Tide (10 min)}{74}{section.D.2}
+\contentsline {subsection}{Gaming}{74}{section*.57}
+\contentsline {subsection}{Browsing}{75}{section*.58}
+\contentsline {section}{\numberline {D.3}Questionnaire (10 min)}{75}{section.D.3}
+\contentsline {appendix}{\chapternumberline {E}TIDE evaluation - online forms}{77}{appendix.E}
