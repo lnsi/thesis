@@ -14,7 +14,7 @@
 	<key>BackgroundGraphic</key>
 	<dict>
 		<key>Bounds</key>
-		<string>{{0, 0}, {805.89001, 536.28998}}</string>
+		<string>{{0, 0}, {806, 536}}</string>
 		<key>Class</key>
 		<string>SolidGraphic</string>
 		<key>ID</key>
@@ -44,7 +44,7 @@
 	<key>Creator</key>
 	<string>Leo Sicard</string>
 	<key>DisplayScale</key>
-	<string>1 0/72 in = 1 0/72 in</string>
+	<string>1 0/72 in = 1.0000 in</string>
 	<key>GraphDocumentVersion</key>
 	<integer>8</integer>
 	<key>GraphicsList</key>
@@ -81,7 +81,7 @@
 					<key>HeadArrow</key>
 					<string>FilledArrow</string>
 					<key>HeadScale</key>
-					<real>0.5</real>
+					<real>1.0000001192092896</real>
 					<key>TailArrow</key>
 					<string>0</string>
 					<key>TailScale</key>
@@ -105,7 +105,7 @@
 			<key>Points</key>
 			<array>
 				<string>{353, 323}</string>
-				<string>{282.5, 264.73996}</string>
+				<string>{298.40128, 278}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -114,16 +114,16 @@
 					<key>Color</key>
 					<dict>
 						<key>b</key>
-						<string>0.803922</string>
+						<string>0.94902</string>
 						<key>g</key>
-						<string>0.133333</string>
+						<string>0.529412</string>
 						<key>r</key>
-						<string>0.0941176</string>
+						<string>0.356863</string>
 					</dict>
 					<key>HeadArrow</key>
 					<string>FilledArrow</string>
 					<key>HeadScale</key>
-					<real>0.5</real>
+					<real>1.0000001192092896</real>
 					<key>TailArrow</key>
 					<string>0</string>
 					<key>TailScale</key>
@@ -138,6 +138,18 @@
 			<string>{{349.89001, 313.61011}, {89.554993, 25.048742}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Color</key>
+				<dict>
+					<key>b</key>
+					<string>0.94902</string>
+					<key>g</key>
+					<string>0.529412</string>
+					<key>r</key>
+					<string>0.356863</string>
+				</dict>
+			</dict>
 			<key>ID</key>
 			<integer>20</integer>
 			<key>Shape</key>
@@ -160,7 +172,7 @@
 				<key>Text</key>
 				<string>{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf320
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;\red24\green34\blue205;}
+{\colortbl;\red255\green255\blue255;\red91\green135\blue242;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
 \f0\fs28 \cf2 VncControl}</string>
@@ -325,11 +337,11 @@ Control}</string>
 					<key>Color</key>
 					<dict>
 						<key>b</key>
-						<string>0.803922</string>
+						<string>0.94902</string>
 						<key>g</key>
-						<string>0.133333</string>
+						<string>0.529412</string>
 						<key>r</key>
-						<string>0.0941176</string>
+						<string>0.356863</string>
 					</dict>
 					<key>Width</key>
 					<real>5</real>
@@ -605,7 +617,7 @@ Control}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2012-02-21 21:25:15 +0000</string>
+	<string>2012-02-24 10:40:29 +0000</string>
 	<key>Modifier</key>
 	<string>Leo Sicard</string>
 	<key>NotesVisible</key>
@@ -641,7 +653,7 @@ Control}</string>
 		<key>NSPaperSize</key>
 		<array>
 			<string>coded</string>
-			<string>BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU1ZhbHVlAISECE5TT2JqZWN0AIWEASqEhAx7X05TU2l6ZT1mZn2Wg/Z4UkSDj9IURIY=</string>
+			<string>BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU1ZhbHVlAISECE5TT2JqZWN0AIWEASqEhAx7X05TU2l6ZT1mZn2WgUoDgVMChg==</string>
 		</array>
 		<key>NSPrintReverseOrientation</key>
 		<array>
@@ -691,7 +703,7 @@ Control}</string>
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{31, 62}, {1458, 1097}}</string>
+		<string>{{0, 4}, {1458, 874}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -705,7 +717,7 @@ Control}</string>
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-2, 16}, {661.5, 471.5}}</string>
+		<string>{{-2, 16}, {654.5, 352.5}}</string>
 		<key>Zoom</key>
 		<real>2</real>
 		<key>ZoomValues</key>

@@ -234,11 +234,17 @@ Based on the analysis of the application context, the following requirements wer
 Only the requirements that were relevant to the problem at hand were included.
 They are divided into four categories, that each correspond to a different aspect of the system: the pairing procedure, the UI replication, the surface UI and the use of the smartphone as tangible UI.
 
+However, the following fundamental requirement is not attached to any category, as it relates to several system aspects:
+\begin{enumerate}[{R}-1]
+\item \emph{The system should support multiple simultaneous devices.}
+\end{enumerate}
+
 \subsection{Pairing}
 
 The pairing procedure is responsible for device discovery and connection.
 It should fulfill the following requirements:
 
+\label{RA}
 \begin{enumerate}[{RA}-1]
 \item Pairing the devices should be easy and quick.
 \item Discovery between the devices should be automatic.
@@ -259,6 +265,7 @@ It should fulfill the following requirements:
 Tracking the location of the smartphone on the tabletop allow to link specific features to the physical device.
 It should fulfill the following requirements:
 
+\label{RB}
 \begin{enumerate}[{RB}-1]
 \item Placing the smartphone on the tabletop should trigger the pairing procedure.
 \item The replicated UI should be collocated with the smartphone, i.e.\ the replicated UI should be seemingly linked to the device, and should move when the device is moved.
@@ -276,6 +283,7 @@ It should fulfill the following requirements:
 The replicated UI is the interactive mirror image of the smartphone displayed on the tabletop.
 It should fulfill the following requirements:
 
+\label{RC}
 \begin{enumerate}[{RC}-1]
 \item The UI of the smartphone should be replicated on the tabletop.
 \item The graphical output from the smartphone should be dynamically relayed to the replicated UI.
@@ -292,6 +300,7 @@ It should fulfill the following requirements:
 The surface UI is the interface on the tabletop that controls the replicated UI.
 It should fulfill the following requirements:
 
+\label{RD}
 \begin{enumerate}[{RD}-1]
 \item The surface UI should be easy to use.
 \item The surface UI should allow the user to manipulate the replicated UI, i.e.\ the user should be able to move, rotate and resize the replicated UI across the tabletop display.
@@ -621,17 +630,37 @@ They relate to the requirements defined in section~\ref{sec:requirements}.
 %\item The design should be consistent with the user background. In the present case, the user already has some expertise with a smartphone. Therefore, the design should be consistent with the touch-based interaction that is provided on most smartphones.
 %\item The design should be consistent with the physicality of the devices. In particular, the tabletop form has implications on the user's expectations.
 %\end{itemize}
+\\
+\linebreak
+The requirement \emph{R-1 The system should support multiple simultaneous devices} will be fulfilled by the design decision:
+\begin{enumerate}[{D}-1]
+\item the system will be implemented with focus on loose coupling between the main application session classes and the objects handling individual devices, in order to support simultaneous devices, as shown in figure~\ref{fig:sq2phones}. 
+\end{enumerate}
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.7\linewidth]{images/sq2phones}
+  \caption{(A) Pairing second device (B) Simultaneous devices}
+  \label{fig:sq2phones}
+\end{figure}
 
 \subsection{Pairing}
 
-The following design decisions address the requirements RA-1 to RA-4.
+The following design decisions address the requirements RA-1 to RA-4 (see p.~\pageref{RA}).
 
 \begin{enumerate}[{DA}-1]
 \item \hfill
 	\begin{enumerate}[{DA-1}a]
-	\item Pairing is triggered by placing the smartphone on the tabletop, for the reason that it is a simple gesture that is consistent with the form of the tabletop.
+	\item Pairing is triggered by placing the smartphone on the tabletop, as shown in figure~\ref{fig:sqPair}, for the reason that it is a simple gesture that is consistent with the form of the tabletop.
 	\item Pairing is based on wireless connectivity, in order to provide spontaneity to the interaction.
 	\end{enumerate}
+	
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.7\linewidth]{images/sqPair}
+  \caption{(A) Device in hand, (B) Device detected, (C) Device connected}
+  \label{fig:sqPair}
+\end{figure}
+
 \item Device discovery relies on a standard networking protocol - in order to make it automatic, and provide spontaneity to the interaction.
 \item The user must confirm the connection, both on the tabletop and on the smartphone, for reasons of security.
 The tabletop should not be allowed to connect to an unknown device without explicit authorization, but the user should also be able to confirm that the smartphone is the correct one.
@@ -640,8 +669,9 @@ The tabletop should not be allowed to connect to an unknown device without expli
 
 \subsection{Tracking}
 
-The following design decisions address the requirements RB-1 to RB-4.
+The following design decisions address the requirements RB-1 to RB-4 (see p.~\pageref{RB}).
 
+\label{DB}
 \begin{enumerate}[{DB}-1]
 \item Smartphones that come in contact with the tabletop are detected, using computer vision and shape recognition.
 \item The location of the smartphones on the tabletop is tracked, using computer vision.
@@ -649,9 +679,10 @@ The following design decisions address the requirements RB-1 to RB-4.
 \item The replicated UI can be made active on the tabletop independently of the smartphone.
 \end{enumerate}
 
+\clearpage
 \subsection{Replicated UI}
 
-The following design decisions address the requirements RC-1 to RC-4.
+The following design decisions address the requirements RC-1 to RC-4 (see p.~\pageref{RC}).
 
 \begin{enumerate}[{DC}-1]
 \item The smartphone screen is replicated to the tabletop, using a standard desktop sharing protocol, for the reason that such protocols are platform independent and stable.
@@ -662,11 +693,14 @@ The following design decisions address the requirements RC-1 to RC-4.
 
 \subsection{Surface UI}
 
-The following design decisions address the requirements RD-1 to RD-6.
+The following design decisions address the requirements RD-1 to RD-6 (see p.~\pageref{RD}).
 It was decided to use multiple techniques to activate certain features.
 The reason for this is to benefit from the advantages of all interaction techniques.
 Some are easy to discover, and provide the learnability and intuitiveness that is looked for, while others are quicker and easier to use.
 This is standard practice within software design, a good example being keyboard shortcuts, that are not easily discovered by a novice user, but are preferred by the expert user for their efficiency.
+
+%\defaultlists
+\label{DD}
 
 \begin{enumerate}[{DD}-1]
 \item The surface UI takes the form of an active border that contains the replicated UI, based on the user feedback.
@@ -674,14 +708,84 @@ It is a virtual replication of the physical body of the smartphone, to provide c
 \item The replicated UI can be manipulated by using touch-based gestures on the surface UI, for reasons of consistency with both the smartphone and tabletop experiences.
 	\begin{enumerate}[{DD-2}a]
 	\item Dragging is done by performing a dragging gesture with one or more fingers.
-	\item Rotating is done by: (1) dragging the corner of the surface UI, (2) performing a rotating gesture with two fingers of the same hand or (3) performing a rotating gesture with two hands.
-	\item Resizing is done by: (1) performing a pinching gesture with two fingers of the same hand or (2) performing a resizing gesture with two hands.
+	\item Rotating is done by:
+		\begin{enumerate}[1{.}]
+		\item dragging the corner of the surface UI, as shown in figure~\ref{fig:sq1f},
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.7\linewidth]{images/sq1f}
+  \caption{(A,B,C) Rotating using 1 finger.}
+  \label{fig:sq1f}
+\end{figure}
+
+		\item performing a rotating gesture with two fingers of the same hand, as shown in figure~\ref{fig:sq2f1h},
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.7\linewidth]{images/sq2f1h}
+  \caption{(A,B,C) Rotating using 2 fingers of the same hand.}
+  \label{fig:sq2f1h}
+\end{figure}
+
+		\item performing a rotating gesture with two hands.
+		\end{enumerate}
+	\item Resizing is done by:
+		\begin{enumerate}[1{.}]
+		\item performing a pinching gesture with two fingers of the same hand,
+		\item performing a resizing gesture with two hands, as shown in figure~\ref{fig:sqResize}.
+		
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.7\linewidth]{images/sqResize}
+  \caption{(A,B,C) Resizing down using both hands.}
+  \label{fig:sqResize}
+\end{figure}
+		
+		\end{enumerate}
 	\end{enumerate}
-\item Minimizing the replicated UI can be done by: (1) resizing the surface UI down, (2) dragging the surface UI off an edge of the table, (3) double tapping the surface UI or (4) placing a full hand on the surface UI.
+\item Minimizing the replicated UI can be done by:
+	\begin{enumerate}[1{.}]
+	\item resizing the surface UI down,
+	\item dragging the surface UI off an edge of the table, as shown in figure~\ref{fig:sqMin2},
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.7\linewidth]{images/sqMin2}
+  \caption{(A,B,C) Minimizing by dragging off the edge.}
+  \label{fig:sqMin2}
+\end{figure}
+	
+	\item double tapping the surface UI, as shown in figure~\ref{fig:sqMin1},
+	\item placing a full hand on the surface UI, as shown in figure~\ref{fig:sqMin1}.
+	\end{enumerate}
+	
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.7\linewidth]{images/sqMin1}
+  \caption{(A) Minimized state, (B) Double tap, (C) Whole hand tap.}
+  \label{fig:sqMin1}
+\end{figure}
+
 When minimized, the surface UI appears as an icon on the tabletop, and can be restored by tapping a button on said icon.
 \item Hiding the replicated UI is done by minimizing the surface UI, based on user feedback, see DC-3.
-\item Closing the replicated UI can be done by: (1) closing the minimized surface UI, (2) dragging the surface UI to a corner of the tabletop or (3) pressing and holding a finger on the active border.
+\item Closing the replicated UI is shown in figure~\ref{fig:sqClose}, it can be done by:
+	\begin{enumerate}[1{.}]
+	\item closing the minimized surface UI,
+	\item dragging the surface UI to a corner of the tabletop,
+	\item pressing and holding a finger on the active border.
+	\end{enumerate}
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.7\linewidth]{images/sqClose}
+  \caption{(A) Minimize then close, (B) Close by dragging to a corner, (C) Press and hold to close.}
+  \label{fig:sqClose}
+\end{figure}
+
 \item The functionalities provided by the smartphone's physical buttons can be accessed by tapping virtual replications of these buttons on the surface UI.
 \end{enumerate}
+
+\firmlists
 
 
