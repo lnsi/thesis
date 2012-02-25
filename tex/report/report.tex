@@ -3,10 +3,11 @@
 \usepackage{geometry}
 \geometry{a4paper}
 %\usepackage[parfill]{parskip}%Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}
+\usepackage[pdftex]{graphicx}
 \usepackage{amssymb}
 \usepackage{epstopdf}
 \usepackage{natbib}
+%\usepackage{ltxfront}
 \usepackage{tocvsec2}
 \usepackage[hang,footnotesize,bf]{caption}
 \usepackage[pdftex,bookmarks=true]{hyperref}
@@ -18,28 +19,50 @@
 %Interacting with Smartphones on Tabletop Computers
 %Combining Smartphones and Tabletops: Interaction Design
 
-\title{TIDE: Using Device Composition on Tabletop Computers to Extend the Smartphone Experience.
-}
-\author{Master Thesis by Leo Sicard\\\emph{lnsi@itu.dk}}
-\date{March 2012}
+\title{\Huge TIDE: Using Device Composition on Tabletop Computers to Extend the Smartphone Experience.}
+\author{\textbf{Master Thesis}\\by\\Leo Sicard\\(091181-lnsi)\\
+\\
+\textbf{Supervisor:}\\Professor Jakob E Bardram\\
+\\}
+\date{March 1st, 2012\\IT University of Copenhagen, Denmark}
 
 \begin{document}
 
-
-%\thispagestyle{empty}
-%\pagestyle{empty}
-%\frontmatter
-%\include{frontmatter/titlepage}
-%\include{frontmatter/abstract}
-%\pagestyle{empty}
 \maketitle
-\clearpage
+
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.8\textwidth]{images/tide314}
+\end{figure}
+
+\pagestyle{empty}
+
+%\clearpage
 
 %\newpage
 %\thispagestyle{empty}
 %\mbox{}
 
 %\thispagestyle{empty}
+\clearpage
+
+\newpage
+\mbox{}
+\clearpage
+
+\hfill
+\linebreak
+\hfill
+\linebreak
+\hfill
+\linebreak
+\hfill
+\linebreak
+\hfill
+\linebreak
+\hfill
+\linebreak
 
 \begin{abstract}
 Tabletop displays are now appearing in public spaces.
@@ -55,47 +78,71 @@ The design process shows that by following a human-centered approach and using i
 The implementation of TIDE demonstrates that it is feasible to build this type of system on standard hardware and many standard platforms.
 Moreover, TIDE supports multiple simultaneous smartphones, and uses computer vision to track the location of the devices on the display.
 The evaluation of TIDE, in the form of a participant-based usability study, shows that the system is highly learnable, easy to use, and useful in context.
-
-
 \end{abstract}
 
 \clearpage
-%\pagestyle{empty}
 
-%\newpage
-%\thispagestyle{empty}
-%\mbox{}
-%
-%\thispagestyle{empty}
+\newpage
+\mbox{}
+\clearpage
+
+\hfill
+\linebreak
+\hfill
+\linebreak
+\hfill
+\linebreak
+\hfill
+\linebreak
+\hfill
+\linebreak
+\hfill
+\linebreak
 
 \renewcommand{\abstractname}{Acknowledgements}
 
 \begin{abstract}
+I give my sincere thanks to:
+\tightlists
+\begin{itemize}[-]
 
-Pr. Jakob Bardram for teaching me how to write a thesis
-Juan David Hincapi\'{e} Ramos for 
-Aur\'{e}lien Tabard
-Sebastian B\"{u}ttrich
-Mads Tofte
-PitLab
-experiment volunteers.
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+\item Professor Jakob E. Bardram, for supervising this thesis project,
+
+\item Aur\'{e}lien Tabard for the good advice and continuous support throughout this process,
+
+\item Juan David Hincapi\'{e} Ramos for the original idea, for advising me and giving me confidence,
+
+\item Sebastian B\"{u}ttrich and the PITLab (Pervasive Interaction Technology Lab) for providing the hardware and working space,
+
+\item Mads Frost for taking and fixing pictures,
+
+\item Marie Choe Tarp for drawing,
+
+\item Ane Tarp and Jakob Borg for proofreading,
+
+\item the researchers and students associated with the PITLab for the support and helpful comments,
+
+\item and last but not least, all the people who gracefully volunteered to participate in the user experiments.
+
+\end{itemize}
 \end{abstract}
 
 \clearpage
 
-%\newpage
-%\setcounter{page}{0}
-%\thispagestyle{empty}
-%\mbox{}
+\newpage
+\mbox{}
+\clearpage
 
-%\pagenumbering{arabic}
-
-\maxtocdepth{subsection}
+\pagenumbering{arabic}
+\pagestyle{headings}
+\maxtocdepth{section}
 \tableofcontents
 %\listoffigures
 
+\clearpage
+
 \firmlists
+
 
 \include{introduction}
 \include{relatedwork}
@@ -107,7 +154,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
 
 %\cleardoublepage
 %\chapter*{Bibliography}
-\addcontentsline{toc}{chapter}{Bibliography}
+%\addcontentsline{toc}{chapter}{Bibliography}
 
 \bibliographystyle{plainnat} %abbrv,ieeetr
 \bibliography{../references}

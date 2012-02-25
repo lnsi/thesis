@@ -1,29 +1,74 @@
 \chapter{Discussion}
 \label{discussion}
 
+This thesis addressed the problem of building a composite device between a smartphone and a tabletop, by focusing on designing a system that would enable the user to spontaneously interact with it.
+This approach implied addressing two types of challenges.
+The first one relates to the design of the user interaction, and is presented in section~\ref{disc:ui}.
+The second consists of the technical system aspects, and is presented in section~\ref{disc:technical}.
+
+\section{User interaction in context}
+\label{disc:ui}
 
 
+To achieve that, one of the design strategy that was followed was to design a system that was consistent with the opportunities and constraints that are implied by the characteristics of tabletops.
 
-However, due to limitations implemented by the manufacturers, installing the VNC applications required rooting the devices.
-Rooting a smartphone is a procedure that allows the user to obtain full access rights on the system, though with the implication that the device warranty becomes void.
-Thus, it cannot be expected of users that they will perform this procedure, and this approach would be problematic in a real-world scenario.
-However, this setup was satisfying for the purpose of the proof-of-concept.
+This lead to the realization that the social nature of tabletops have precedence over many other user concerns.
+Due to the form of their interactive surface, i.e.\ horizontal and approachable from all angles, tabletops are social artifacts,  but also very public.
+%The difference is a small one, though significant.
+The social aspect implies that they are ideal for situations where multiple users that know each other perform an activity together.
+Examples of such social situations include a work meeting, a groups of friends in a bar or a family in their home.
+The public aspect, however, addresses the fact that their display is open for all to see, and thus a constraint to any form of private use.
+The implications include that a person alone would be reticent to use a tabletop for anything more private than looking at a map, and that two strangers would be reticent to share a tabletop to perform parallel activities.
+Tabletops seem thus better fitted for prolonged interactions in trusted or semi-trusted environments, such as in a home, a workplace, or among friends.
+The most relevant implication for a system such as TIDE is a limitation of the contexts in which the application would prove useful.
 
-[VNC IS NOT ADAPTED TO THIS SITUATION; IT IS TOO SLOW]
+On a more interactional level, it proved interesting to witness that end users were able to quickly learn the touch-based shape manipulation techniques that are specific to tabletops.
+Examples of those are rotating and resizing UI elements.
+Even though those manipulations are not conventionally supported on smartphones, whose small screen size makes them irrelevant, the directness of the touch interaction is such that users were able to discover them almost instinctively.
+This confirms the idea that the tabletop experience is one that appeals even to the less computer literate.
+This work investigated the idea that interaction techniques could be discovered, that would be familiar to the user, due to their consistency with normal table interaction.
+The main example is the action of minimizing or closing the application by moving the window to the edge (or corner), similar to the way one would remove a real document from a table.
+However, the evaluation did not confirm this idea, and showed that the users were generally very conscious of not interacting with a normal table.
+When having to improvise, they would use knowledge related to computers in general, and to common touch-based devices such as smartphones in particular, before relying on the obvious table-like aspect of the device.
+A good example of this behavior is that users would ask before putting a cup or a book down on the table.
 
+%Relying on a design that was consistent with the devices involved proved a fruitful strategy in the case of the smartphone.
+%The system users can be expected to be experienced with smartphones, given that they are themselves smartphone users.
+%This known user background was used in the design of the composite device to make it usable.
 
+%the design process was focused on the early involvement of end users
 
-\section{Usability}
+Due to the early involvement of users in the design process, it was possible to determine which interaction techniques were most familiar to them.
+Users with different backgrounds would naturally prefer different techniques.
+The decision to implement several techniques to activate the same action feature proved to be a simple, but efficient way of targeting several types of users at once, thus improving the system's learnability and ease of use.
 
-Implementing same functionality with several parallel interaction techniques is a good choice because it will augment the number of situations in which a user will obtain the desired effect intuitively on his first try, without referring to any manual.
+\section{Technical challenges}
+\label{disc:technical}
 
-%%%
+VNC \citep{Richardson:1998:vnc} was chosen to enable UI replication between the devices.
+This decision allowed the quick development of a functioning prototype that supports various smartphone models.
+However, VNC comes with a set of limitations, the most relevant being its lack of responsiveness.
+VNC was designed to remotely access the UI of a desktop computer.
+Its architecture includes a server, that is located on the remote computer, and implements most of the application logic.
+The server is thus accessed by a lightweight client that is only responsible for transmitting inputs, and receiving the updated UI copies.
+This architecture is not suited to the configuration investigated by this work.
+VNC requires the server to run on the smartphone whose resources are limited, while the tabletop only runs a small client.
+The result was a system whose replicated UI was only poorly responsive.
+The benefit of a well-known system like VNC is that it is available on most platforms, and could be for example installed both on the iPhone and on the HTC Legend.
+However, this work confirms that the rendering-based protocol it uses is too heavy for a smartphone to handle.
+%FUTURE WORK:
+For a real-world deployment, another technical solution would have to be used, to implement a responsive UI replication.
+This challenge is being addressed by current research, with projects such as XICE \citep{Arthur:2011:xice}, which is a programming framework that allows a more flexible form of UI distribution for the annexation of displays by nomadic users.
 
-learn by doing, stumble by accident on features
+Another shortcoming of VNC is that it constrains the configuration to UI replication, and its pixel-based protocol generates a replicated UI that can difficultly be adapted to various display sizes and resolutions.
+This work has revealed a range of use cases that could be addressed by this type of composite device, but for which UI replication is not sufficient.
+An example is the possibility of transferring whole applications or processes to the tabletop, while keeping the smartphone independent.
 
-\section{Usefulness}
-
-tabletops are NOT private
+This project demonstrated that computer vision could be used to track the position of smartphones on a tabletop display.
+However, it also showed that this approach has some limitations.
+In short, smartphones can only be detected if the system ``sees'' them---e.g.\ in the case of an infrared based system, black phones are invisible---and if the application ``knows'' them, i.e.\ the features specific to the phone must be encoded in the application.
+Moreover, visual tracking does not allow the identification of a specific device.
+It seems that the upcoming NFC technologies (Near Field Communication) would allow a more efficient way of detecting and identifying mobile devices, though they would not solve the problem of precisely tracking their location on the display.
 
 
 %%%%%%%%%%%%%%%%%%
@@ -31,3 +76,20 @@ tabletops are NOT private
 %%%%%%%%%%%%%%%%%%
 \chapter{Conclusion}
 \label{conclusion}
+
+This thesis addressed the limitations that are induced by the small screen size of smartphones, when used to display graphically intense content and in social situations.
+The approach followed was to use \emph{device composition} to build a system that would integrate a smartphone to a tabletop, and provide a \emph{spontaneous user interaction} to novice users.
+This approach was inspired by related research efforts that addressed the issue of enabling nomadic users to annex the large displays that are available in the environment \citep{Want:2002:personalserver}, \citep{Arthur:2011:xice}, \citep{Baur:2012:virtualprojection}.
+
+The solution presented is a composite device called \emph{TIDE (Tabletop Interactive Display Extension)}, that replicates the UI of a smartphone to a tabletop display.
+TIDE was designed based on a user-centered approach that focused on discovering the interaction techniques that are familiar to most end users, in order to create a touch-based user interface that seems intuitive to the user.
+
+The implementation of the prototype runs on the Microsoft Surface tabletop computer and supports multiple simultaneous smartphones.
+TIDE includes a visual tracking mechanism that is used to detect smartphone devices and track their location on the display during the application session.
+The UI replication is based on VNC \citep{Richardson:1998:vnc}, which allows the system to support most smartphone models, but otherwise proved to be unable to provide sufficient responsiveness for the replicated UI.
+
+TIDE was evaluated by way of a participant-based usability study whose results showed that the system is highly learnable and easy to use.
+The evaluation also revealed that the system is useful to perform specific activities such as reading documents and looking at pictures, though only in trusted and semi-trusted environments.
+
+
+

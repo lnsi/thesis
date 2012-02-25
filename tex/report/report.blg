@@ -11,48 +11,49 @@ The style file: plainnat.bst
 A level-1 auxiliary file: scenarios.aux
 A level-1 auxiliary file: study.aux
 A level-1 auxiliary file: studyform.aux
+A level-1 auxiliary file: evalscript.aux
 Database file #1: ../references.bib
 Warning--empty booktitle in Baur:2012:virtualprojection
 Warning--empty journal in Esbensen:2010:pourimages
-You've used 47 entries,
+You've used 46 entries,
             2773 wiz_defined-function locations,
-            953 strings with 15696 characters,
-and the built_in function-call counts, 25036 in all, are:
-= -- 2448
-> -- 1302
+            949 strings with 15513 characters,
+and the built_in function-call counts, 24593 in all, are:
+= -- 2414
+> -- 1272
 < -- 48
-+ -- 446
-- -- 396
-* -- 1940
-:= -- 3766
-add.period$ -- 245
-call.type$ -- 47
-change.case$ -- 269
-chr.to.int$ -- 44
-cite$ -- 96
-duplicate$ -- 1148
-empty$ -- 1984
-format.name$ -- 459
-if$ -- 5467
++ -- 436
+- -- 387
+* -- 1905
+:= -- 3699
+add.period$ -- 242
+call.type$ -- 46
+change.case$ -- 263
+chr.to.int$ -- 43
+cite$ -- 94
+duplicate$ -- 1124
+empty$ -- 1943
+format.name$ -- 449
+if$ -- 5373
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 38
-newline$ -- 328
-num.names$ -- 194
-pop$ -- 521
+missing$ -- 37
+newline$ -- 323
+num.names$ -- 190
+pop$ -- 505
 preamble$ -- 1
-purify$ -- 224
+purify$ -- 219
 quote$ -- 0
-skip$ -- 912
+skip$ -- 897
 stack$ -- 0
-substring$ -- 898
-swap$ -- 246
+substring$ -- 896
+swap$ -- 244
 text.length$ -- 24
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 502
+type$ -- 491
 warning$ -- 2
-while$ -- 212
+while$ -- 209
 width$ -- 0
-write$ -- 824
+write$ -- 812
 (There were 2 warnings)
