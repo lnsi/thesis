@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  24 FEB 2012 20:50
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  25 FEB 2012 00:24
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -685,10 +685,7 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 {/usr/local/texlive/2010/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
-]
-Missing character: There is no Ž in font cmr10!
-Missing character: There is no Ÿ in font cmr10!
- [3
+] [3
 
 ]
 (./report.toc
@@ -708,7 +705,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--27
 
  []
 
-<images/visitors.jpg, id=206, 672.5125pt x 784.9325pt>
+<images/visitors.jpg, id=207, 672.5125pt x 784.9325pt>
 File: images/visitors.jpg Graphic file (type jpg)
 
 <use images/visitors.jpg> [7]
@@ -1222,22 +1219,22 @@ G copy)>] [87 <./images/evalform2e.png (PNG copy)>]
 \tf@toc=\write5
 \openout5 = `report.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 126.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 126.
  (./report.aux
 (./introduction.aux) (./relatedwork.aux) (./design.aux) (./system.aux)
 (./evaluation.aux) (./conclusion.aux) (./scenarios.aux) (./study.aux)
 (./studyform.aux) (./evalscript.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 126.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D9D1BD484AD396CA98B01B408A5E30A0;786.
  ) 
 Here is how much of TeX's memory you used:
- 10794 strings out of 493747
- 159282 string characters out of 3143546
+ 10795 strings out of 493747
+ 159297 string characters out of 3143546
  282671 words of memory out of 3000000
- 13482 multiletter control sequences out of 15000+200000
- 16929 words of font info for 63 fonts, out of 3000000 for 9000
+ 13483 multiletter control sequences out of 15000+200000
+ 17275 words of font info for 64 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  46i,11n,39p,1175b,597s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -1255,7 +1252,7 @@ e/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2
 010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/201
 0/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (87 pages, 15890777 bytes).
+Output written on report.pdf (87 pages, 15891268 bytes).
 PDF statistics:
  1383 PDF objects out of 1440 (max. 8388607)
  1122 compressed objects within 12 object streams
