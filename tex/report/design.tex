@@ -5,7 +5,7 @@
 \chapter{Design}
 \label{design}
 
-This chapter presents the design process that was conducted to build a composite device that integrates smartphones to tabletops and provide a spontaneous user interaction.
+This chapter reports the design process for building a composite device that integrates smartphones to tabletops and provides a spontaneous user interaction.
 
 A user-centered design approach was followed, in the purpose of understanding the system's context of use, and identifying the interaction techniques that would make for an intuitive application.
 This process was supported by methodological tools described in Designing Interactive Systems \citep{Benyon:2010}.
@@ -18,26 +18,27 @@ Brainstorming, scenarios, storyboards and low-fidelity prototypes were used, and
     \label{fig:tideHands}
 \end{figure}
 
-The process was focused on designing for learnability and ease of use, the goal being to build an intuitive system, i.e.\ a system that users can understand without the need for conscious reasoning.
+The focus of the design was on learnability and ease of use.
+The goal was to build an intuitive system, i.e.\ a system that users understand without conscious reasoning.
 
-To reach this goal, the design principle of conceptual consistency was used, as defined by \cite{Benyon:2010}.
+To reach this goal, the design principle of conceptual consistency, as defined by \cite{Benyon:2010}, was used.
 In this particular case, consistency was used in relation to two important aspects.
-First, given that all the users of the system are logically also smartphone users, the final system should provide a user experience that is as much as possible consistent with the smartphone experience.
-Second, the system should provide a user interaction that is consistent with the implications that the form of the devices have on the user's expectations.
+First; given that all the users of the system are smartphone users, the final system should provide a user experience that is as consistent possible with the smartphone experience.
+Second; the user interaction should be consistent with the implications that the devices' form have on the user's expectations.
 In particular, the interaction should be consistent with the form of the table, e.g.\ various objects could be placed on the tabletop during an application session.
 \\
 \linebreak
-Due to time constraints, it was decided to limit the focus of this work to one interaction metaphor: \emph{UI replication}.
-This metaphor was chosen among the possibilities enumerated in Chapter~\ref{relatedwork}, for the following reasons.
-First, UI replication allows for a strong consistency between the experience on the smartphone and the one on the tabletop.
-Second, UI replication implies that the smartphone's application logic stays unchanged, and allow the development effort to be focused on the tabletop.
-Third, for the same reason as above, the implementation can be made to support different types of smartphones.
+It was decided to limit the focus of this work to one interaction metaphor: \emph{UI replication}.
+This metaphor was chosen among the different possibilities enumerated in Chapter~\ref{relatedwork}, for the following reasons.
+Firstly, UI replication allows for a strong consistency between the experience on the smartphone and the experience on the tabletop.
+Secondly, UI replication implies that the smartphone's application logic stays unchanged, and allows for the development effort to be focused on the tabletop.
+Thirdly, for the same reason as mentioned above, the implementation can be made to support different types of smartphones.
 
-Thus, the system is designed so as to present the user with a mirrored image of the smartphone UI on the tabletop.
+Thus, the system is designed to present the user with a mirrored image of the smartphone UI on the tabletop.
 This is referred to as the \emph{replicated UI}.
-It is interactive, relaying touch input and graphical output between smartphone and tabletop.
+It is interactive, relaying touch input and graphical output between the smartphone and the tabletop.
 The replicated UI is controlled by the \emph{surface UI}.
-The surface UI consists of elements that allow the manipulation of the replicated UI on the tabletop.
+The surface UI consists of elements that allow for manipulation of the replicated UI on the tabletop.
 \\
 \linebreak
 An analysis of the context of use is presented in section~\ref{sec:context}, from which solution requirements are derived in section~\ref{sec:requirements}.
@@ -47,9 +48,7 @@ The final design of the TIDE prototype is presented in section~\ref{sec:design}.
 \section{Understanding the application context}
 \label{sec:context}
 
-The initial design constraints are provided by the parameters that are already known.
-First, the system integrates smartphones to tabletops.
-Second, the system uses UI replication to extend the smartphone UI to the tabletop.
+Some initial design constraints are already known; the system integrates smartphones to tabletops, and the system uses UI replication to extend the smartphone UI to the tabletop.
 %Figure \ref{fig:useCase} describes the primary use case.
 In this section, additional design constraints are derived from an analysis of the devices, and the context of use is investigated through the use of scenarios.
 
@@ -89,20 +88,20 @@ It can be expected to have dedicated power supply and network connection.
 Users approach it to use it, and leave when they are finished.
 Thus, the interaction flow is likely to be interrupted, taking the form of short successive sessions.
 The nature of the location has an impact on the user interaction, and should be considered.
-Examples are a conference room, a public lobby, a mall, an individual office, a living room in a family house.
+Examples are a conference room, a public lobby, a mall, an individual office, a living room in a family house, etc.
 %The main implication is that tabletops seem to naturally fit in public spaces, where they are shared among multiple users.
 %This tendency is accentuated by the price factor, that makes a private person not likely to buy such a device for private use.
 %The system should handle public use, characterized by short anonymous sessions and an often interrupted interaction flow.
 
 \item[\ldots a shared device.] 
 When located in a public space, the tabletop is shared among multiple users.
-Depending on the context, the relationship between the users varies (friends, colleagues, strangers, etc), and with it the level of trust.
+Depending on the context and the relationship between the users (friends, colleagues, strangers, etc), the level of trust varies.
 
 \item[\ldots an interactive surface.] 
-It typically offers a large graphical output, and a range of input techniques that allow user interaction.
+It typically offers a large graphical output, and a range of input techniques that allow for user interaction.
 Most tabletops support multitouch-based input.
 %This introduces a new kind of interaction model, more intuitive, that the system should be based upon.
-Some tabletop models support computer-vision techniques that allow the integration of tangible objects to the interaction.
+Some tabletop models support computer-vision techniques that allow for the integration of tangible objects to the interaction.
 %This project reports on the possibilities to use a personal device as a tangible control integrated to the tabletop.
 
 \end{description}
@@ -112,7 +111,7 @@ Some tabletop models support computer-vision techniques that allow the integrati
 \begin{description}
 
 \item[\ldots a computer.] 
-It provides the computing resources necessary to allow a user to store personal data and install/use applications, as well as connectivity.
+It provides the computing resources necessary to allow a user to connect, store personal data and install/use applications.
 It runs on a mobile operating system that supports software applications.
 %The system should allow the user to access his/her applications and personal data.
 
@@ -150,15 +149,14 @@ The scenarios that were used to help define those situations are included in app
 
 As shown in figure~\ref{fig:scenarios}, the scenario depends on the level of privacy of the location (public/private) and the amount of involved users (single/multiple).
 
-There are four combinations, however the situation with multiple users in a private location is not addressed here.
-The reason for this is that it can be argumented that no location can be private is multiple persons are present.
+There are four combinations, however the situation with multiple users in a private location is not addressed here, for the reason that the tabletop cannot be considered private if multiple users are present.
 
-\subsubsection{Single user on a public tabletop}
+\subsubsection{Single user with a public tabletop}
 
-This situation was derived from a scenario involving a user sitting alone at an interactive table in a coffee shop.
+This situation was derived from a scenario involving a person sitting alone at an interactive table in a coffee shop.
 
 In this environment, the motivation for using the system is an activity that involves graphically intense content, such as 
-internet browsing, reading, consulting a map.
+internet browsing, reading, consulting a map, etc.
 To start using the system, the user pairs the smartphone with the tabletop.
 The process is quick and easy, but not completely automatic.
 The user must explicitly allow the connection to be established.
@@ -171,7 +169,7 @@ Via the surface UI, the user can minimize and hide the replicated UI, as well as
 The smartphone itself is involved in the interaction.
 Placing it on the table triggers the pairing process.
 During the interaction, the replicated UI is collocated with the device, and moves together with it.
-Lifting the smartphone off the table closes the connection.
+Lifting the smartphone off the table ends the connection.
 
 %It should be possible for the user to wirelessly pair his/her personal device with a public tabletop computer.
 %This implies that the devices are both connected to the local wireless networks, that they are able to detect each other and discover each other's identity on the network.
@@ -195,11 +193,11 @@ Lifting the smartphone off the table closes the connection.
 %\item{the application can be exited by lifting the mobile device off the table.}
 %\end{itemize}
 
-\subsubsection{Multiple users on a public tabletop}
+\subsubsection{Multiple users with a public tabletop}
 
-This situation was derived from a scenario involving some work colleagues having a meeting in a conference room equipped with an interactive tabletop.
-It can be argumented that such an environment is only partly public, being only accessible to the company's employee.
-However, in an effort to produce a design as generic as possible, and for the sake of simplicity, the tabletop is considered as a public device.
+This situation was derived from a scenario involving some work colleagues having a meeting in a conference room, equipped with an interactive tabletop.
+It can be argumented that such an environment is only partly public, being only accessible to the people working in the company.
+However, in an effort to produce a design as generic as possible, and for the sake of simplicity, the tabletop is here considered a public device.
 
 The motivation to use the system in this context is to view, comment and possibly edit digital data in a collaborative meeting.
 
@@ -211,14 +209,14 @@ Due to the lack of space on the table, the users remove their devices, but keep 
 %Devices vary in terms of software and hardware specifications.
 %Some parameters that are especially important here are the programming platform, as well as the display resolution.
 
-\subsubsection{Single user on a private tabletop}
+\subsubsection{Single user with a private tabletop}
 
 This situation was derived from a scenario involving a user whose office desk is a tabletop.
 
 The motivation for using the system is that it is a tool that the user interacts with daily, to support various activities related to the work routine.
 
-The tabletop being private, it can be configured so as to provide extended functionalities.
-Examples of extended functionalities are: the pairing procedure can be made automatic, data can be shared between the devices.
+The tabletop being private, can be configured to provide extended functionalities.
+Examples of extended functionalities are: the pairing procedure can be made automatic and data can be shared between the devices.
 
 %Some suggested functionalities are:
 %\begin{itemize}
@@ -250,7 +248,7 @@ It should fulfill the following requirements:
 \item Discovery between the devices should be automatic.
 \item Establishing the connection should require explicit confirmation from the user.
 %\item Automatic pairing should be an available option in trusted setups.
-\item Exiting the application should be easy and quick.
+\item Closing the application should be easy and quick.
 \end{enumerate}
 
 %Connecting a personal device to a tabletop should be a quick and easy process.
@@ -262,7 +260,7 @@ It should fulfill the following requirements:
 
 \subsection{Tracking}
 
-Tracking the location of the smartphone on the tabletop allow to link specific features to the physical device.
+Tracking the location of the smartphone on the tabletop allows to link specific features to the physical device.
 It should fulfill the following requirements:
 
 \label{RB}
@@ -270,7 +268,7 @@ It should fulfill the following requirements:
 \item Placing the smartphone on the tabletop should trigger the pairing procedure.
 \item The replicated UI should be collocated with the smartphone, i.e.\ the replicated UI should be seemingly linked to the device, and should move when the device is moved.
 \item Lifting the smartphone off the table should trigger the application exit.
-\item It should be possible to remove the smartphone, but keep the replicated UI active the tabletop.
+\item It should be possible to remove the smartphone, but keep the replicated UI active on the tabletop.
 \end{enumerate}
 
 %It is a natural thing to place an object on a table, and tabletops are designed to allow for the integration of physical artifacts.
@@ -288,7 +286,7 @@ It should fulfill the following requirements:
 \item The UI of the smartphone should be replicated on the tabletop.
 \item The graphical output from the smartphone should be dynamically relayed to the replicated UI.
 \item The touch-based input from the replicated UI should be dynamically relayed to the smartphone.
-\item The responsiveness of the replicated UI should be under 1 second, to provide a satisfying user interaction.
+\item The responsiveness of the replicated UI should be under 1 second, for the user experience to be satisfactory.
 \end{enumerate}
 
 %At the core of the system is the display extension.
@@ -307,7 +305,7 @@ It should fulfill the following requirements:
 \item The surface UI should allow the user to minimize and restore the replicated UI.
 \item The surface UI should allow the user to hide the replicated UI.
 \item The surface UI should allow the user to exit the application.
-\item The surface UI should include controls that implement the functionalities provided by the physical buttons present on the smartphone.
+\item The surface UI should include controls that implement the functionalities provided by the physical buttons on the smartphone.
 \end{enumerate}
 
 
@@ -331,10 +329,12 @@ It should fulfill the following requirements:
 \section{Designing the user interaction}
 \label{sec:interaction}
 
-This section focuses exclusively on the design of the surface UI, which comprises the UI elements that provide control over the replicated UI on the tabletop.
-As for the other system aspects, decisions were taken early in the process, that removed the need for a detailed design process.
+This section focuses on the design of the surface UI, which comprises the UI elements that provide control over the replicated UI on the tabletop.
+%As for the other system aspects, decisions were taken early in the process, that removed the need for a detailed design process.
+The other system aspects did not require a detailed design process, for the following reasons.
 
-First, it was decided that the pairing procedure would rely on available solutions, as the focus of the thesis is not to contribute within this particular field.
+First, it was decided that the pairing procedure should rely on already available solutions.
+%as the focus of the thesis is not to contribute within this particular field.
 
 Second, given that UI replication had already been decided upon, no design effort would be required for this system component.
 %VNC was chosen as a protocol for UI replication, due to its stability and availability on most platforms.
@@ -342,11 +342,12 @@ Second, given that UI replication had already been decided upon, no design effor
 Lastly, tracking the location of the smartphone is a technical requirement that does not require interaction design. %would only be used to trigger the pairing procedure.
 \\
 \linebreak
-The only input technique considered in the design of the surface UI is touch-based interaction.
-The reason for this is that it is strongly consistent with the smartphone and tabletop experiences, that both rely on touch-based interaction.
-Moreover, the presence of other input peripherals cannot be expected, so relying on touch-based input will ensure that the system is usable in any setup.
+The input technique considered in the design of the surface UI is touch-based interaction.
+The reason for this is that it is strongly consistent with the smartphone and tabletop experiences.
+Both rely on touch-based interaction.
+Moreover, the presence of other input peripherals cannot be expected, thus relying on touch-based input will ensure the system is usable in any setup.
 
-The steps followed to design the surface UI were: (1) the generation of ideas, (2) the definition of \emph{interaction strategies} and (3) a study involving end-users to identify the most intuitive interaction techniques.
+The steps followed to design the surface UI were; (1) The generation of ideas, (2) The definition of \emph{interaction strategies} and (3) A study involving end-users to identify the interaction techniques that they find the most familiar.
 
 %The pairing procedure does not introduce anything new to the field. There are known solutions to this challenge, which are described in section \ref{}.
 %The remote UI replicates the UI of the personal device on the tabletop, and does not require any supplementary design.
@@ -357,23 +358,24 @@ The steps followed to design the surface UI were: (1) the generation of ideas, (
 
 The generation of ideas is an important part of the design process.
 Benyon refers to it as envisionment \citep{Benyon:2010}, which he defines as the process of externalizing design thoughts.
-The techniques that were used to permit this process are brainstorming, sketching, storyboarding and prototyping.
+The techniques that were used for this process are brainstorming, sketching, storyboarding and prototyping.
 
 \subsubsection{Storyboards}
 
 The scenarios mentioned in section~\ref{sec:scenarios} are used as a base for the making of storyboards.
-Storyboarding helps getting a feeling for the general flow of the interaction with the system.
+Storyboarding helps finding the general flow of the system interaction.
 It also gives a visual dimension to the definition of the different system features, and raises new design issues.
-Putting orally expressed ideas on the paper is often a first test of their validity.
+%Putting orally expressed ideas on the paper is often a first test of their validity.
 
-For example, several system features were described in the initial scenarios as being the effect of a tap on a button.
-When storyboarding, it became obvious that having too many UI buttons would be cumbersome, which lead to the consideration of other interaction techniques, such as touch gestures.
-Similarly, the issue of the location and size of the replicated UI on application launch became first apparent on a storyboard.
+As an example, several system features were described in the initial scenarios as being the result of a tap on a button.
+When storyboarding, it became obvious that having too many UI buttons would crowd the user interface.
+This caused consideration of other interaction techniques, such as touch gestures.
+Similarly, the issue of the location and size of the replicated UI on application launch first became apparent on a storyboard.
 
 \subsubsection{Low fidelity prototypes}
 
 Paper prototypes were used to aid the process of generating and evaluating as many design solutions as possible.
-Screenshots of the iPhone UI \citep{iphone} were printed out in various sizes, and used on a normal table to simulate interaction with the replicated UI.
+Screenshots of the iPhone UI \citep{iphone} were printed in various sizes, and used on a normal table to simulate interaction with the replicated UI.
 Figure \ref{paperProt} shows some prototypes and a working session.
 
 \begin{figure}[htb]
@@ -398,7 +400,7 @@ Figure \ref{paperProt} shows some prototypes and a working session.
 \subsection{Defining interaction strategies}
 \label{sec:strategies}
 
-The concepts of \emph{actions} and \emph{commands} are used to refer to the different aspects of the user interaction.
+The terms of \emph{actions} and \emph{commands} were used to refer to the different aspects of the user interaction.
 They are inspired by the work done by Wobbrock et al. on defining hand gestures for interactive surfaces, \citep{Wobbrock:2009:gestures}.
 
 A command is an \emph{effect} that the user wants to obtain, such as rotating a picture on a tabletop display.
@@ -411,8 +413,8 @@ On a tabletop display, actions are typically hand gestures.
 
 \subsubsection{Commands}
 
-Based on the requirements formulated in section~\ref{sec:requirements} for the surface UI, the following six commands are identified.
-They are the \emph{interaction primitives} for the surface UI, i.e.\ the commands that must be implemented by the surface UI, to allow the user full control over the replicated UI.
+Based on the requirements formulated in section~\ref{sec:requirements} for the surface UI, the following six commands were identified.
+They are the \emph{interaction primitives} for the surface UI, i.e.\ the commands that must be implemented by the surface UI, to allow the user full control of the replicated UI.
 
 \begin{enumerate}
 \item{\emph{Dragging} the replicated UI across the interactive surface.}
@@ -423,7 +425,7 @@ They are the \emph{interaction primitives} for the surface UI, i.e.\ the command
 \item{\emph{Closing} the replicated UI.}
 \end{enumerate}
 
-Additionally, the surface UI should include controls that implement the functionalities provided by the physical buttons present on the smartphone.
+Additionally, the surface UI should include controls that implement the functionalities provided by the physical buttons on the smartphone.
 
 \subsubsection{Actions}
 
@@ -448,7 +450,7 @@ Each strategy can be consistently implemented for all six interaction primitives
 \end{enumerate}
 
 Beside these five interaction strategies, an additional category was used, that regrouped interaction techniques that did not correspond to any of the strategies.
-This category is called \emph{Other}, and is discussed further.
+This category is called \emph{Other}, and is discussed on page~\pageref{other}.
 
 %\begin{figure}[ht]
 %\begin{minipage}[b]{0.5\linewidth}
@@ -487,8 +489,8 @@ The experiment took the form of cooperative design sessions, where users engaged
 
 The parameters of the experiment are the commands, also referred to as \emph{interaction primitives}, and the actions, also referred to as \emph{interaction strategies}, defined in section~\ref{sec:strategies}.
 
-The interaction primitives are central system features.
-For each primitive, the participants were asked to express an open-ended \emph{user suggestion}, then to \emph{rank} the interaction strategies.
+%The interaction primitives are central system features.
+%For each primitive, the participants were asked to express an open-ended \emph{user suggestion}, then to \emph{rank} the interaction strategies.
 
 \subsubsection{Experiment}
 
@@ -500,28 +502,28 @@ For each primitive, the participants were asked to express an open-ended \emph{u
 \end{figure}
 
 Twelve participants were recruited on a voluntary basis.
-A session involves one participant and the designer, as shown in figure~\ref{fig:studyScreenshot}.
-The participant sits next to the Microsoft Surface tabletop \citep{ms}, and is presented with an iPhone \citep{iphone}, but both devices are off.
-On the tabletop are paper prototypes, that are to be used as representations of UI elements throughout the session.
-The designer leads the experiment by reading instructions from a script (included in appendix~\ref{app:study}) and answering the participant's questions.
+A session involved one participant and the designer, as shown in figure~\ref{fig:studyScreenshot}.
+The participant sat next to the Microsoft Surface tabletop \citep{ms}, and was presented with an iPhone \citep{iphone}, but both devices were turned off.
+On the tabletop were paper prototypes, that were to be used as representations of UI elements throughout the session.
+The designer lead the experiment by reading instructions from a script (included in appendix~\ref{app:study}) and answering the participant's questions.
 \\
 \linebreak
-As an introduction, the following things are explained to the participant:
+As an introduction, the following things were explained to the participant:
 \begin{itemize}
-\item the purpose of the experiment,
-\item the purpose of the application,
-\item the tasks that the participant will perform,
-\item the principles of working with paper prototypes.
+\item The purpose of the experiment
+\item The purpose of the application
+\item The tasks that the participant will perform
+\item The principles of working with paper prototypes
 \end{itemize}
 \hfill
 \linebreak
-The session revolves around a task that the participant is asked to perform using the prototyped application.
-The task is to write an email, and it requires the user to go through six phases.
-Each phase is dedicated to an interaction primitive, and they have the same structure, which is as follows:
+The session revolved around a task that the participant was asked to perform using the prototyped application.
+The task was to write an email, and it required the user to go through six phases.
+Each phase was dedicated to an interaction primitive, and they had the same structure, which is as follows:
 \begin{enumerate}
-\item the primitive is explained to the participant in terms of a command to the application,
-\item the user is asked to express an open-ended suggestion, i.e.\ suggest an action that s/he would perform to obtain the desired effect, and to demonstrate the action using the prototypes,
-\item the designer describes action suggestions, that the user is asked to try out and rank by order of preference.
+\item The primitive was explained to the participant in terms of a command to the application.
+\item The user was asked to express an open-ended suggestion, i.e.\ suggest an action that s/he would perform to obtain the desired effect, and to demonstrate the action using the prototypes,
+\item The designer described action suggestions, that the user was asked to try out and rank by order of preference.
 \end{enumerate}
 
 %There is a seventh phase focusing on the pairing procedure.
@@ -543,17 +545,19 @@ Each phase is dedicated to an interaction primitive, and they have the same stru
 \subsubsection{Data processing}
 
 Participant answers were gathered in a form such as the one included in appendix~\ref{app:studyForm}.
-The form is a matrix where an entry corresponds to a pair (primitive,strategy).
-Those entries contain the position from first (highest) to third (lowest), that was given by the user for using the suggested strategy for implementing the primitive.
-After processing all answers, each entry contains 6 positions.
-In order to obtain a numeric score for each entry, a weighted average was calculated, giving a weight of 3 to a first position, a weight of 1 to a second position, and a weight of 0 to a third position.
-Finally, the results were normalized to a [0-1] interval, where a 1 signifies that the entry was awarded a first position by all participants, and a 0 signifies that all participants ranked this entry third.
+The form is a matrix where an entry corresponds to a pair (primitive, strategy).
+The entries contain the position from first (highest) to third (lowest), that was given by the user for using the suggested strategy for implementing the primitive.
+After processing all answers, each entry contained six positions.
+In order to obtain a numeric score for each entry, a weighted average was calculated.
+A weight of 3 was given to a first position, a weight of 1 to a second position, and a weight of 0 to a third position.
+Finally, the results were normalized to a [0-1] interval, where a 1 meant that the entry was awarded a first position by all participants, and a 0 meant that all participants ranked the entry third.
 Figure~\ref{resultMatrix} summarizes the normalized scores, with colored cells containing values above 0.6.
 This is considered a superior score, because it can only be obtained if half of the participants awarded the first position.
 %The same results are presented in the form of charts in figure~\ref{primitives}.
 
 The experiment data also included the user suggestions, gathered separately on paper.
-User suggestions were not limited to one per primitive, so the processed data was a disparate list of suggestions that each had a counter variable indicating how many users independently expressed said suggestion.
+User suggestions were not limited to one per primitive.
+Thus, the processed data was a disparate list of suggestions that each had a counter variable indicating how many users independently expressed said suggestion.
 
 \begin{figure}[htb]
   \centering
@@ -572,13 +576,14 @@ User suggestions were not limited to one per primitive, so the processed data wa
 \subsubsection{Result Analysis}
 
 It is possible to divide the primitives into two groups.
-The first half: dragging, rotating, resizing; have a concrete visual signification.
-The second half: minimizing, hiding, closing; are more abstract.
+The first half---dragging, rotating, resizing---have a concrete visual signification.
+The second half---minimizing, hiding, closing---are more abstract.
 
 For the first three primitives, there is a strong coherence in the choice of the participants.
 The favored strategies are the active border, the action bar and active corners.
 All three require the user to interact with an area directly around the window in order to manipulate it and modify its position, orientation or size.
-This interaction strategy is similar to the current standard for manipulating pictures on interactive screens, with the difference that in the present case, the replicated UI is logically avoided because of its role as IO relay between the tabletop and the smartphone.
+This interaction technique is similar to the current standard for manipulating pictures on interactive screens.
+However in the present case, the replicated UI is logically avoided because of its role as IO relay between the tabletop and the smartphone.
 
 For the last three primitives, the action bar and active border continue to score high, even though there is no apparent relation between the visual aspect of the strategy and the effect implied by the command.
 To understand this, it is necessary to look at the actual suggestions.
@@ -587,9 +592,9 @@ For hiding, the favored strategy was double tapping on the active border.
 It is thus obvious that it is the double tap that participants have a preference for, possibly because it is a common technique in many other application contexts, as well as a quick and easy one.
 \\
 \linebreak
-It is not possible to analyze the scores of the sixth category as a whole, as it does not represent a consistent strategy, but more a patchwork of various suggestions. They are:
+\label{other} It is not possible to analyze the scores of the sixth category as a whole, as it does not represent a consistent strategy, but more a patchwork of various suggestions. They are:
 \begin{enumerate}
-\item Drag by holding a finger on a specific tab, and using another finger to tap a destination target to move the window to.
+\item Drag by holding a finger on a specific tab, and using another finger to tap a destination target to move the window.
 \item Rotate by performing a one finger dragging gesture on a corner of the window.
 \item Resize by pulling the window apart with both whole hands.
 \item Minimize by dragging the window to the bottom of the surface.
@@ -597,7 +602,7 @@ It is not possible to analyze the scores of the sixth category as a whole, as it
 \item Close by dragging the window to a specific location on the surface.
 \end{enumerate}
 Suggestions 4 and 6 are similar, and they are the only ones that scored above 0.6.
-This suggests that moving the window off screen is a natural way to remove focus from the application.
+This suggests that moving the window off screen; is a natural way to remove focus from the application.
 Interestingly, this correlates with the analysis of the user suggestions.
 
 \subsubsection{User suggestions}
@@ -605,7 +610,7 @@ Interestingly, this correlates with the analysis of the user suggestions.
 The user suggestions were multiple and heterogeneous, but data processing revealed a clear tendency in three situations.
 
 In the case of dragging, half of the participants suggested using one or more fingers to touch within the replicated UI, and perform a drag gesture.
-This is interesting, because it is an obvious conflict for the developer, i.e.\ any touch inside the replicated UI is forwarded to the smartphone, and can logically not be interpreted by the surface UI.
+This is interesting, because it is an obvious conflict for the developer, i.e.\ any touch inside the replicated UI is forwarded to the smartphone, and logically can not be interpreted by the surface UI.
 It must be noted that dragging was the first primitive, and it can therefore be assumed that the participants did not yet have a full understanding of the application concept.
 However, this result shows what the ideal system should be able to do: interpret the intention of the user.
 
@@ -634,7 +639,7 @@ They relate to the requirements defined in section~\ref{sec:requirements}.
 \linebreak
 The requirement \emph{R-1 The system should support multiple simultaneous devices} will be fulfilled by the design decision:
 \begin{enumerate}[{D}-1]
-\item the system will be implemented with focus on loose coupling between the main application session classes and the objects handling individual devices, in order to support simultaneous devices, as shown in figure~\ref{fig:sq2phones}. 
+\item The system will be implemented with focus on loose coupling between the main application session classes and the objects handling individual devices, in order to support simultaneous devices, as shown in figure~\ref{fig:sq2phones}. 
 \end{enumerate}
 \begin{figure}[htb]
   \centering
@@ -657,7 +662,7 @@ The following design decisions address the requirements RA-1 to RA-4 (see p.~\pa
 \begin{figure}[htb]
   \centering
     \includegraphics[width=0.7\linewidth]{images/sqPair}
-  \caption{(A) Device in hand, (B) Device detected, (C) Device connected}
+  \caption{(A) Device in hand (B) Device detected (C) Device connected}
   \label{fig:sqPair}
 \end{figure}
 
@@ -679,7 +684,6 @@ The following design decisions address the requirements RB-1 to RB-4 (see p.~\pa
 \item The replicated UI can be made active on the tabletop independently of the smartphone.
 \end{enumerate}
 
-\clearpage
 \subsection{Replicated UI}
 
 The following design decisions address the requirements RC-1 to RC-4 (see p.~\pageref{RC}).
@@ -708,9 +712,9 @@ It is a virtual replication of the physical body of the smartphone, to provide c
 \item The replicated UI can be manipulated by using touch-based gestures on the surface UI, for reasons of consistency with both the smartphone and tabletop experiences.
 	\begin{enumerate}[{DD-2}a]
 	\item Dragging is done by performing a dragging gesture with one or more fingers.
-	\item Rotating is done by:
+	\item Rotating is done by
 		\begin{enumerate}[1{.}]
-		\item dragging the corner of the surface UI, as shown in figure~\ref{fig:sq1f},
+		\item Dragging the corner of the surface UI, as shown in figure~\ref{fig:sq1f}
 
 \begin{figure}[htb]
   \centering
@@ -719,7 +723,7 @@ It is a virtual replication of the physical body of the smartphone, to provide c
   \label{fig:sq1f}
 \end{figure}
 
-		\item performing a rotating gesture with two fingers of the same hand, as shown in figure~\ref{fig:sq2f1h},
+		\item Performing a rotating gesture with two fingers of the same hand, as shown in figure~\ref{fig:sq2f1h}
 
 \begin{figure}[htb]
   \centering
@@ -728,12 +732,12 @@ It is a virtual replication of the physical body of the smartphone, to provide c
   \label{fig:sq2f1h}
 \end{figure}
 
-		\item performing a rotating gesture with two hands.
+		\item Performing a rotating gesture with two hands
 		\end{enumerate}
-	\item Resizing is done by:
+	\item Resizing is done by
 		\begin{enumerate}[1{.}]
-		\item performing a pinching gesture with two fingers of the same hand,
-		\item performing a resizing gesture with two hands, as shown in figure~\ref{fig:sqResize}.
+		\item Performing a pinching gesture with two fingers of the same hand
+		\item Performing a resizing gesture with two hands, as shown in figure~\ref{fig:sqResize}
 		
 \begin{figure}[htb]
   \centering
@@ -744,10 +748,10 @@ It is a virtual replication of the physical body of the smartphone, to provide c
 		
 		\end{enumerate}
 	\end{enumerate}
-\item Minimizing the replicated UI can be done by:
+\item Minimizing the replicated UI can be done by
 	\begin{enumerate}[1{.}]
-	\item resizing the surface UI down,
-	\item dragging the surface UI off an edge of the table, as shown in figure~\ref{fig:sqMin2},
+	\item Resizing the surface UI down
+	\item Dragging the surface UI off an edge of the table, as shown in figure~\ref{fig:sqMin2}
 
 \begin{figure}[htb]
   \centering
@@ -756,34 +760,34 @@ It is a virtual replication of the physical body of the smartphone, to provide c
   \label{fig:sqMin2}
 \end{figure}
 	
-	\item double tapping the surface UI, as shown in figure~\ref{fig:sqMin1},
-	\item placing a full hand on the surface UI, as shown in figure~\ref{fig:sqMin1}.
+	\item Double tapping the surface UI, as shown in figure~\ref{fig:sqMin1}
+	\item Placing a full hand on the surface UI, as shown in figure~\ref{fig:sqMin1}
 	\end{enumerate}
 	
 \begin{figure}[htb]
   \centering
     \includegraphics[width=0.7\linewidth]{images/sqMin1}
-  \caption{(A) Minimized state, (B) Double tap, (C) Whole hand tap.}
+  \caption{(A) Minimized state (B) Double tap (C) Whole hand tap}
   \label{fig:sqMin1}
 \end{figure}
 
-When minimized, the surface UI appears as an icon on the tabletop, and can be restored by tapping a button on said icon.
+When minimized, the surface UI appears as an icon on the tabletop, and can be restored by tapping a button.
 \item Hiding the replicated UI is done by minimizing the surface UI, based on user feedback, see DC-3.
-\item Closing the replicated UI is shown in figure~\ref{fig:sqClose}, it can be done by:
+\item Closing the replicated UI is shown in figure~\ref{fig:sqClose}, it can be done by
 	\begin{enumerate}[1{.}]
-	\item closing the minimized surface UI,
-	\item dragging the surface UI to a corner of the tabletop,
-	\item pressing and holding a finger on the active border.
+	\item Closing the minimized surface UI
+	\item Dragging the surface UI to a corner of the tabletop
+	\item Pressing and holding a finger on the active border
 	\end{enumerate}
 
 \begin{figure}[htb]
   \centering
     \includegraphics[width=0.7\linewidth]{images/sqClose}
-  \caption{(A) Minimize then close, (B) Close by dragging to a corner, (C) Press and hold to close.}
+  \caption{(A) Minimize then close (B) Close by dragging to a corner (C) Press and hold to close}
   \label{fig:sqClose}
 \end{figure}
 
-\item The functionalities provided by the smartphone's physical buttons can be accessed by tapping virtual replications of these buttons on the surface UI.
+\item The functionalities provided by the smartphone's physical buttons can be accessed by tapping virtual replications of the buttons on the surface UI.
 \end{enumerate}
 
 \firmlists
