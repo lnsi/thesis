@@ -6,11 +6,12 @@ This approach implied addressing two types of challenges.
 The first one relates to the design of the user interaction, and is presented in section~\ref{disc:ui}.
 The second consists of the technical system aspects, and is presented in section~\ref{disc:technical}.
 
+Section~\ref{sec:fw} regroups a few considerations about how this work could be extended.
+
 \section{User interaction in context}
 \label{disc:ui}
 
-
-To achieve that, one of the design strategy that was followed was to design a system that was consistent with the opportunities and constraints that are implied by the characteristics of tabletops.
+To build TIDE, one of the design strategy that was followed was to design a system that was consistent with the opportunities and constraints that are implied by the characteristics of tabletops.
 
 This lead to the realization that the social nature of tabletops have precedence over many other user concerns.
 Due to the form of their interactive surface, i.e.\ horizontal and approachable from all angles, tabletops are social artifacts,  but also very public.
@@ -30,7 +31,7 @@ This work investigated the idea that interaction techniques could be discovered,
 The main example is the action of minimizing or closing the application by moving the window to the edge (or corner), similar to the way one would remove a real document from a table.
 However, the evaluation did not confirm this idea, and showed that the users were generally very conscious of not interacting with a normal table.
 When having to improvise, they would use knowledge related to computers in general, and to common touch-based devices such as smartphones in particular, before relying on the obvious table-like aspect of the device.
-A good example of this behavior is that users would ask before putting a cup or a book down on the table.
+A good example of this behavior is that users would ask before putting a cup or a book down on the tabletop.
 
 %Relying on a design that was consistent with the devices involved proved a fruitful strategy in the case of the smartphone.
 %The system users can be expected to be experienced with smartphones, given that they are themselves smartphone users.
@@ -45,6 +46,12 @@ The decision to implement several techniques to activate the same action feature
 \section{Technical challenges}
 \label{disc:technical}
 
+TIDE uses hard-coded IP addresses to connect the devices.
+As mentioned in this report, networking protocols can be used, to allow for automatic device discovery.
+However, these protocols work under the assumption that the involved devices are connected to the same local network.
+This is an important limitation to the form of spontaneous device interaction that this thesis investigated.
+A real-world example is that smartphones are often connected to mobile networks, and not to local networks.
+
 VNC \citep{Richardson:1998:vnc} was chosen to enable UI replication between the devices.
 This decision allowed the quick development of a functioning prototype that supports various smartphone models.
 However, VNC comes with a set of limitations, the most relevant being its lack of responsiveness.
@@ -57,8 +64,6 @@ The result was a system whose replicated UI was only poorly responsive.
 The benefit of a well-known system like VNC is that it is available on most platforms, and could be for example installed both on the iPhone and on the HTC Legend.
 However, this work confirms that the rendering-based protocol it uses is too heavy for a smartphone to handle.
 %FUTURE WORK:
-For a real-world deployment, another technical solution would have to be used, to implement a responsive UI replication.
-This challenge is being addressed by current research, with projects such as XICE \citep{Arthur:2011:xice}, which is a programming framework that allows a more flexible form of UI distribution for the annexation of displays by nomadic users.
 
 Another shortcoming of VNC is that it constrains the configuration to UI replication, and its pixel-based protocol generates a replicated UI that can difficultly be adapted to various display sizes and resolutions.
 This work has revealed a range of use cases that could be addressed by this type of composite device, but for which UI replication is not sufficient.
@@ -68,8 +73,31 @@ This project demonstrated that computer vision could be used to track the positi
 However, it also showed that this approach has some limitations.
 In short, smartphones can only be detected if the system ``sees'' them---e.g.\ in the case of an infrared based system, black phones are invisible---and if the application ``knows'' them, i.e.\ the features specific to the phone must be encoded in the application.
 Moreover, visual tracking does not allow the identification of a specific device.
-It seems that the upcoming NFC technologies (Near Field Communication) would allow a more efficient way of detecting and identifying mobile devices, though they would not solve the problem of precisely tracking their location on the display.
 
+
+\section{Future work}
+\label{sec:fw}
+
+Based on the lessons learned from this project, the following should be taken into consideration, should this work be built upon.
+
+When designing TIDE, the focus was on UI replication.
+However, this basic interaction metaphor has serious limitations.
+During the development process, application uses that require a deeper integration between the devices were often discussed.
+Examples include transferring application processes from a smartphone to a tabletop, using the tabletop as a bridge to allow for data sharing between smartphones, and adapting the remote UI to better benefit of the available display resources.
+This approach has potential.
+It would require implementing a dedicated component on the mobile device, and using an adapted technology for the UI distribution.
+
+For this reason and the ones discussed above, VNC should be replaced by another technology to support the UI distribution between devices.
+This challenge is being addressed by current research, with projects whose focus is on the development of comprehensive technologies dedicated to UI distribution between display devices.
+Examples include Substance \citep{Gjerlufsen:2011:substance} and XICE \citep{Arthur:2011:xice}.
+XICE is a programming framework for the development of applications that support the annexation of displays by nomadic users.
+%It focuses on a more flexible form of UI distribution based on the transmission of scene-graph instructions for local display updates.
+
+The detection, identification and tracking of the mobile devices is an important challenge of this type of system.
+As discussed above, using computer vision to track specific object features presents limitations.
+It seems that the upcoming NFC technologies (Near Field Communication) would allow a more efficient way of detecting and identifying mobile devices, though they would not solve the problem of precisely tracking their location on the display.
+An approach that is easier is to use visual tags.
+Combined with computer vision, they allow detection, tracking and even identification of the devices.
 
 %%%%%%%%%%%%%%%%%%
 %%% CONCLUSION %%%

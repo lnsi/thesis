@@ -67,6 +67,7 @@
 \contentsline {chapter}{\chapternumberline {6}Discussion}{55}{chapter.6}
 \contentsline {section}{\numberline {6.1}User interaction in context}{55}{section.6.1}
 \contentsline {section}{\numberline {6.2}Technical challenges}{56}{section.6.2}
+\contentsline {section}{\numberline {6.3}Future work}{57}{section.6.3}
 \contentsline {chapter}{\chapternumberline {7}Conclusion}{59}{chapter.7}
 \contentsline {chapter}{Bibliography}{61}{section*.20}
 \changetocdepth {0}

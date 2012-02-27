@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  27 FEB 2012 18:08
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  27 FEB 2012 22:28
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -988,7 +988,7 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.70 ...ernumberline {7}Conclusion}{59}{chapter.7}
+l.70 ...berline {6.3}Future work}{57}{section.6.3}
                                                    [1
 
 ])pdfTeX warning (ext4): destination with the same identifier (name{page.2}) ha
@@ -1004,7 +1004,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--27
 
  []
 
-<images/visitors.jpg, id=167, 672.5125pt x 784.9325pt>
+<images/visitors.jpg, id=169, 672.5125pt x 784.9325pt>
 File: images/visitors.jpg Graphic file (type jpg)
 
 <use images/visitors.jpg>
@@ -1027,7 +1027,7 @@ l.62
                    \relax 
 l.76 
       [4 <./images/visitors.jpg>]
-<images/tide456.jpg, id=192, 2977.1225pt x 2144.01pt>
+<images/tide456.jpg, id=194, 2977.1225pt x 2144.01pt>
 File: images/tide456.jpg Graphic file (type jpg)
  <use images/tide456.jpg>pdfTeX warning (ext4): destination with the same ident
 ifier (name{page.5}) has been already used, duplicate ignored
@@ -1067,7 +1067,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 209--219
 
  []
 
-[7] <images/paperprot2.jpg, id=243, 2007.5pt x 1332.98pt>
+[7] <images/paperprot2.jpg, id=245, 2007.5pt x 1332.98pt>
 File: images/paperprot2.jpg Graphic file (type jpg)
 
 <use images/paperprot2.jpg>
@@ -1080,7 +1080,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 261--268
 
  []
 
-<images/368.jpg, id=255, 3228.06pt x 1756.5625pt>
+<images/368.jpg, id=257, 3228.06pt x 1756.5625pt>
 File: images/368.jpg Graphic file (type jpg)
  <use images/368.jpg>
 Underfull \vbox (badness 3000) has occurred while \output is active []
@@ -1131,7 +1131,7 @@ Overfull \hbox (3.03796pt too wide) in paragraph at lines 101--106
  table-tops sup-port multitouch-
  []
 
-<images/marietable.jpg, id=423, 1789.68625pt x 1016.79875pt>
+<images/marietable.jpg, id=425, 1789.68625pt x 1016.79875pt>
 File: images/marietable.jpg Graphic file (type jpg)
 
 <use images/marietable.jpg> [19] [20 <./images/marietable.jpg>] [21]
@@ -1152,11 +1152,11 @@ converted-to.pdf images/paperProtDouble.eps>
 (epstopdf)             \includegraphics on input line 391.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/paperProtDouble-eps-converted-to.pdf, id=479, 433.62pt x 161.60374pt>
+<images/paperProtDouble-eps-converted-to.pdf, id=481, 433.62pt x 161.60374pt>
 File: images/paperProtDouble-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/paperProtDouble-eps-converted-to.pdf> [23]
-<images/strategies.png, id=495, 457.71pt x 346.896pt>
+<images/strategies.png, id=497, 457.71pt x 346.896pt>
 File: images/strategies.png Graphic file (type png)
 
 <use images/strategies.png> [24 <./images/paperProtDouble-eps-converted-to.pdf>
@@ -1164,7 +1164,7 @@ File: images/strategies.png Graphic file (type png)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25 <./images/strategies.png (PNG copy)>]
-<images/studyScreenshot.png, id=532, 1240.635pt x 806.01125pt>
+<images/studyScreenshot.png, id=534, 1240.635pt x 806.01125pt>
 File: images/studyScreenshot.png Graphic file (type png)
 
 <use images/studyScreenshot.png>
@@ -1184,7 +1184,7 @@ verted-to.pdf images/resultMatrix.eps>
 (epstopdf)             \includegraphics on input line 572.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/resultMatrix-eps-converted-to.pdf, id=542, 407.5225pt x 121.45375pt>
+<images/resultMatrix-eps-converted-to.pdf, id=544, 407.5225pt x 121.45375pt>
 File: images/resultMatrix-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/resultMatrix-eps-converted-to.pdf> [27]
@@ -1200,31 +1200,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 638--649
 
  []
 
-<images/sq2phones.jpg, id=569, 352.1958pt x 118.2819pt>
+<images/sq2phones.jpg, id=571, 352.1958pt x 118.2819pt>
 File: images/sq2phones.jpg Graphic file (type jpg)
 
 <use images/sq2phones.jpg> [29 <./images/sq2phones.jpg>]
-<images/sqPair.jpg, id=579, 370.2633pt x 118.2819pt>
+<images/sqPair.jpg, id=581, 370.2633pt x 118.2819pt>
 File: images/sqPair.jpg Graphic file (type jpg)
  <use images/sqPair.jpg>
-[30 <./images/sqPair.jpg>] <images/sq1f.jpg, id=602, 370.2633pt x 117.3183pt>
+[30 <./images/sqPair.jpg>] <images/sq1f.jpg, id=604, 370.2633pt x 117.3183pt>
 File: images/sq1f.jpg Graphic file (type jpg)
 
-<use images/sq1f.jpg> <images/sq2f1h.jpg, id=604, 370.2633pt x 117.3183pt>
+<use images/sq1f.jpg> <images/sq2f1h.jpg, id=606, 370.2633pt x 117.3183pt>
 File: images/sq2f1h.jpg Graphic file (type jpg)
 
-<use images/sq2f1h.jpg> <images/sqResize.jpg, id=606, 370.2633pt x 117.3183pt>
+<use images/sq2f1h.jpg> <images/sqResize.jpg, id=608, 370.2633pt x 117.3183pt>
 File: images/sqResize.jpg Graphic file (type jpg)
 
 <use images/sqResize.jpg> [31 <./images/sq1f.jpg>]
-<images/sqMin2.jpg, id=629, 370.2633pt x 117.3183pt>
+<images/sqMin2.jpg, id=631, 370.2633pt x 117.3183pt>
 File: images/sqMin2.jpg Graphic file (type jpg)
  <use images/sqMin2.jpg>
-<images/sqMin1.jpg, id=632, 370.2633pt x 117.3183pt>
+<images/sqMin1.jpg, id=634, 370.2633pt x 117.3183pt>
 File: images/sqMin1.jpg Graphic file (type jpg)
  <use images/sqMin1.jpg>
 [32 <./images/sq2f1h.jpg> <./images/sqResize.jpg> <./images/sqMin2.jpg>]
-<images/sqClose.jpg, id=650, 370.2633pt x 117.3183pt>
+<images/sqClose.jpg, id=652, 370.2633pt x 117.3183pt>
 File: images/sqClose.jpg Graphic file (type jpg)
  <use images/sqClose.jpg>) [33 <./images/sqMin1.jpg> <./images/sqClose.jpg>]
 \openout2 = `system.aux'.
@@ -1245,7 +1245,7 @@ erted-to.pdf images/overviewNew.eps>
 (epstopdf)             \includegraphics on input line 31.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/overviewNew-eps-converted-to.pdf, id=663, 564.1075pt x 446.66875pt>
+<images/overviewNew-eps-converted-to.pdf, id=665, 564.1075pt x 446.66875pt>
 File: images/overviewNew-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/overviewNew-eps-converted-to.pdf>
@@ -1264,7 +1264,7 @@ df>
 (epstopdf)             \includegraphics on input line 72.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/sequenceOverview-eps-converted-to.pdf, id=695, 527.9725pt x 687.56876pt
+<images/sequenceOverview-eps-converted-to.pdf, id=697, 527.9725pt x 687.56876pt
 >
 File: images/sequenceOverview-eps-converted-to.pdf Graphic file (type pdf)
  <use images/sequenceOverview-eps-converted-to.pdf>
@@ -1274,7 +1274,7 @@ Underfull \vbox (badness 2762) has occurred while \output is active []
 Underfull \vbox (badness 8038) has occurred while \output is active []
 
  [37 <./images/sequenceOverview-eps-converted-to.pdf>] [38]
-<images/msRaw.png, id=769, 86.724pt x 90.3375pt>
+<images/msRaw.png, id=771, 86.724pt x 90.3375pt>
 File: images/msRaw.png Graphic file (type png)
  <use images/msRaw.png>
 Package epstopdf Info: Source file: <images/trackingDiagram.eps>
@@ -1289,7 +1289,7 @@ converted-to.pdf images/trackingDiagram.eps>
 (epstopdf)             \includegraphics on input line 178.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/trackingDiagram-eps-converted-to.pdf, id=771, 537.00626pt x 330.23375pt
+<images/trackingDiagram-eps-converted-to.pdf, id=773, 537.00626pt x 330.23375pt
 >
 File: images/trackingDiagram-eps-converted-to.pdf Graphic file (type pdf)
  <use images/trackingDiagram-eps-converted-to.pdf>
@@ -1308,7 +1308,7 @@ verted-to.pdf images/tideControls.eps>
 (epstopdf)             \includegraphics on input line 229.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/tideControls-eps-converted-to.pdf, id=825, 602.25pt x 411.5375pt>
+<images/tideControls-eps-converted-to.pdf, id=827, 602.25pt x 411.5375pt>
 File: images/tideControls-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/tideControls-eps-converted-to.pdf> [41 <./images/tideControls-eps-c
@@ -1325,7 +1325,7 @@ onverted-to.pdf images/surfaceDiagram.eps>
 (epstopdf)             \includegraphics on input line 262.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/surfaceDiagram-eps-converted-to.pdf, id=849, 627.34375pt x 387.4475pt>
+<images/surfaceDiagram-eps-converted-to.pdf, id=851, 627.34375pt x 387.4475pt>
 File: images/surfaceDiagram-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/surfaceDiagram-eps-converted-to.pdf> [42 <./images/surfaceDiagram-e
@@ -1341,7 +1341,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--44
 
  []
 
-[45] <images/tideandrea.jpg, id=914, 4639.3325pt x 2043.635pt>
+[45] <images/tideandrea.jpg, id=916, 4639.3325pt x 2043.635pt>
 File: images/tideandrea.jpg Graphic file (type jpg)
 
 <use images/tideandrea.jpg> [46] [47 <./images/tideandrea.jpg>] [48]
@@ -1359,7 +1359,7 @@ Package epstopdf Info: Source file: <images/evalagree.eps>
 ted-to.pdf images/evalagree.eps>
 (epstopdf)             \includegraphics on input line 188.
 Package epstopdf Info: Output file is already uptodate.
-<images/evalagree-eps-converted-to.pdf, id=939, 486.81876pt x 100.375pt>
+<images/evalagree-eps-converted-to.pdf, id=941, 486.81876pt x 100.375pt>
 File: images/evalagree-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/evalagree-eps-converted-to.pdf>
@@ -1374,7 +1374,7 @@ ted-to.pdf images/evaldisco.eps>
 (epstopdf)             \includegraphics on input line 207.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/evaldisco-eps-converted-to.pdf, id=941, 323.2075pt x 216.81pt>
+<images/evaldisco-eps-converted-to.pdf, id=943, 323.2075pt x 216.81pt>
 File: images/evaldisco-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/evaldisco-eps-converted-to.pdf> [49
@@ -1394,7 +1394,7 @@ ted-to.pdf images/evalfavor.eps>
 (epstopdf)             \includegraphics on input line 243.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/evalfavor-eps-converted-to.pdf, id=963, 323.2075pt x 173.64874pt>
+<images/evalfavor-eps-converted-to.pdf, id=965, 323.2075pt x 173.64874pt>
 File: images/evalfavor-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/evalfavor-eps-converted-to.pdf> [51 <./images/evalfavor-eps-convert
@@ -1410,7 +1410,7 @@ erted-to.pdf images/evalcontext.eps>
 (epstopdf)             \includegraphics on input line 271.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/evalcontext-eps-converted-to.pdf, id=977, 412.54124pt x 171.64125pt>
+<images/evalcontext-eps-converted-to.pdf, id=979, 412.54124pt x 171.64125pt>
 File: images/evalcontext-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/evalcontext-eps-converted-to.pdf> [52 <./images/evalcontext-eps-con
@@ -1569,7 +1569,7 @@ ted-to.pdf images/studyForm.eps>
 (epstopdf)             \includegraphics on input line 6.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/studyForm-eps-converted-to.pdf, id=1168, 717.68124pt x 339.2675pt>
+<images/studyForm-eps-converted-to.pdf, id=1172, 717.68124pt x 339.2675pt>
 File: images/studyForm-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/studyForm-eps-converted-to.pdf>) [77 <./images/studyForm-eps-conver
@@ -1601,27 +1601,27 @@ Underfull \vbox (badness 1521) has occurred while \output is active []
  [79]
 [80] [81] [82
 
-] <images/evalform1.png, id=1235, 144.54pt x 255.354pt>
+] <images/evalform1.png, id=1239, 144.54pt x 255.354pt>
 File: images/evalform1.png Graphic file (type png)
 
 <use images/evalform1.png>
-<images/evalform2a.png, id=1236, 144.54pt x 255.354pt>
+<images/evalform2a.png, id=1240, 144.54pt x 255.354pt>
 File: images/evalform2a.png Graphic file (type png)
 
 <use images/evalform2a.png>
-<images/evalform2b.png, id=1237, 144.54pt x 255.354pt>
+<images/evalform2b.png, id=1241, 144.54pt x 255.354pt>
 File: images/evalform2b.png Graphic file (type png)
 
 <use images/evalform2b.png>
-<images/evalform2c.png, id=1238, 144.54pt x 255.354pt>
+<images/evalform2c.png, id=1242, 144.54pt x 255.354pt>
 File: images/evalform2c.png Graphic file (type png)
 
 <use images/evalform2c.png>
-<images/evalform2d.png, id=1239, 144.54pt x 255.354pt>
+<images/evalform2d.png, id=1243, 144.54pt x 255.354pt>
 File: images/evalform2d.png Graphic file (type png)
 
 <use images/evalform2d.png>
-<images/evalform2e.png, id=1240, 144.54pt x 255.354pt>
+<images/evalform2e.png, id=1244, 144.54pt x 255.354pt>
 File: images/evalform2e.png Graphic file (type png)
 
 <use images/evalform2e.png>) [83] [84 <./images/evalform1.png (PNG copy)>]
@@ -1642,10 +1642,10 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 0F49A699451F0FFEA9D2F6D165A01D4F;784.
  ) 
 Here is how much of TeX's memory you used:
- 10804 strings out of 493747
- 159388 string characters out of 3143546
- 284074 words of memory out of 3000000
- 13484 multiletter control sequences out of 15000+200000
+ 10806 strings out of 493747
+ 159407 string characters out of 3143546
+ 284130 words of memory out of 3000000
+ 13485 multiletter control sequences out of 15000+200000
  15729 words of font info for 58 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  46i,11n,39p,536b,594s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1664,10 +1664,10 @@ e/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2
 010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/201
 0/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (95 pages, 16111086 bytes).
+Output written on report.pdf (95 pages, 16112764 bytes).
 PDF statistics:
- 1400 PDF objects out of 1440 (max. 8388607)
- 1133 compressed objects within 12 object streams
- 366 named destinations out of 1000 (max. 500000)
+ 1405 PDF objects out of 1440 (max. 8388607)
+ 1138 compressed objects within 12 object streams
+ 367 named destinations out of 1000 (max. 500000)
  301 words of extra memory for PDF output out of 10000 (max. 10000000)
 
