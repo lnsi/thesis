@@ -39,7 +39,7 @@
 \contentsline {subsection}{Pairing}{29}{section*.24}
 \contentsline {subsection}{Tracking}{30}{section*.25}
 \contentsline {subsection}{Replicated UI}{30}{section*.26}
-\contentsline {subsection}{Surface UI}{30}{section*.27}
+\contentsline {subsection}{Surface UI}{31}{section*.27}
 \contentsline {chapter}{\chapternumberline {4}The TIDE prototype}{35}{chapter.4}
 \contentsline {subsubsection}{System interaction}{36}{section*.28}
 \contentsline {section}{\numberline {4.1}Pairing}{37}{section.4.1}
@@ -82,7 +82,7 @@
 \contentsline {subsection}{Resizing}{71}{section*.51}
 \contentsline {subsection}{Minimizing}{72}{section*.52}
 \contentsline {subsection}{Hiding}{72}{section*.53}
-\contentsline {subsection}{Exiting}{73}{section*.54}
+\contentsline {subsection}{Closing}{73}{section*.54}
 \contentsline {appendix}{\chapternumberline {D}Design - experiment form}{75}{appendix.D}
 \contentsline {appendix}{\chapternumberline {E}Evaluation - experiment script}{77}{appendix.E}
 \contentsline {section}{\numberline {E.1}Discovering Tide (10 min)}{78}{section.E.1}

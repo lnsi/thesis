@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  26 FEB 2012 22:25
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  27 FEB 2012 10:48
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1160,16 +1160,12 @@ File: images/paperProtDouble-eps-converted-to.pdf Graphic file (type pdf)
 File: images/strategies.png Graphic file (type png)
 
 <use images/strategies.png> [24 <./images/paperProtDouble-eps-converted-to.pdf>
-] <images/studyScreenshot.png, id=515, 1240.635pt x 806.01125pt>
+] [25 <./images/strategies.png (PNG copy)>]
+<images/studyScreenshot.png, id=530, 1240.635pt x 806.01125pt>
 File: images/studyScreenshot.png Graphic file (type png)
 
-<use images/studyScreenshot.png> [25 <./images/strategies.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 504--513
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 518--524
+<use images/studyScreenshot.png>
+Underfull \hbox (badness 10000) in paragraph at lines 517--523
 
  []
 
@@ -1202,32 +1198,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 630--641
 <images/sq2phones.jpg, id=567, 352.1958pt x 118.2819pt>
 File: images/sq2phones.jpg Graphic file (type jpg)
 
-<use images/sq2phones.jpg>
-<images/sqPair.jpg, id=570, 370.2633pt x 118.2819pt>
+<use images/sq2phones.jpg> [29 <./images/sq2phones.jpg>]
+<images/sqPair.jpg, id=580, 370.2633pt x 118.2819pt>
 File: images/sqPair.jpg Graphic file (type jpg)
  <use images/sqPair.jpg>
-[29 <./images/sq2phones.jpg>] [30 <./images/sqPair.jpg>]
-<images/sq1f.jpg, id=604, 370.2633pt x 117.3183pt>
+[30 <./images/sqPair.jpg>] <images/sq1f.jpg, id=603, 370.2633pt x 117.3183pt>
 File: images/sq1f.jpg Graphic file (type jpg)
- <use images/sq1f.jpg>
-<images/sq2f1h.jpg, id=606, 370.2633pt x 117.3183pt>
+
+<use images/sq1f.jpg> <images/sq2f1h.jpg, id=605, 370.2633pt x 117.3183pt>
 File: images/sq2f1h.jpg Graphic file (type jpg)
- <use images/sq2f1h.jpg>
-<images/sqResize.jpg, id=608, 370.2633pt x 117.3183pt>
+
+<use images/sq2f1h.jpg> <images/sqResize.jpg, id=607, 370.2633pt x 117.3183pt>
 File: images/sqResize.jpg Graphic file (type jpg)
 
-<use images/sqResize.jpg> <images/sqMin2.jpg, id=610, 370.2633pt x 117.3183pt>
+<use images/sqResize.jpg> [31 <./images/sq1f.jpg> <./images/sq2f1h.jpg>]
+<images/sqMin2.jpg, id=625, 370.2633pt x 117.3183pt>
 File: images/sqMin2.jpg Graphic file (type jpg)
-
-<use images/sqMin2.jpg> [31 <./images/sq1f.jpg> <./images/sq2f1h.jpg>]
-<images/sqMin1.jpg, id=632, 370.2633pt x 117.3183pt>
+ <use images/sqMin2.jpg>
+<images/sqMin1.jpg, id=628, 370.2633pt x 117.3183pt>
 File: images/sqMin1.jpg Graphic file (type jpg)
  <use images/sqMin1.jpg>
-<images/sqClose.jpg, id=634, 370.2633pt x 117.3183pt>
+[32 <./images/sqResize.jpg> <./images/sqMin2.jpg> <./images/sqMin1.jpg>]
+<images/sqClose.jpg, id=645, 370.2633pt x 117.3183pt>
 File: images/sqClose.jpg Graphic file (type jpg)
- <use images/sqClose.jpg>
-[32 <./images/sqResize.jpg> <./images/sqMin2.jpg> <./images/sqMin1.jpg>])
-[33 <./images/sqClose.jpg>]
+ <use images/sqClose.jpg>) [33 <./images/sqClose.jpg>]
 \openout2 = `system.aux'.
 
  (./system.tex [34
@@ -1463,8 +1457,87 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--8
 
 
 
-] [70] [71] [72])
-[73]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 46--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--72
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--87
+
+ []
+
+[70]
+Underfull \hbox (badness 10000) in paragraph at lines 104--112
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--112
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--138
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--138
+
+ []
+
+[71]
+Underfull \hbox (badness 10000) in paragraph at lines 157--166
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--166
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--192
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--192
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--219
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--219
+
+ []
+
+[72]) [73]
 \openout2 = `studyform.aux'.
 
  (./studyform.tex [74
@@ -1550,19 +1623,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 232.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 232.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 3707B89FEFE253B1DD019E698F4FCBA3;784.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
  10800 strings out of 493747
  159181 string characters out of 3143546
- 284038 words of memory out of 3000000
+ 284014 words of memory out of 3000000
  13482 multiletter control sequences out of 15000+200000
  15382 words of font info for 57 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 46i,11n,39p,536b,594s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,11n,39p,536b,629s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
@@ -1577,7 +1646,7 @@ e/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 /2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/
 2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/20
 10/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (93 pages, 16097188 bytes).
+Output written on report.pdf (93 pages, 16097425 bytes).
 PDF statistics:
  1386 PDF objects out of 1440 (max. 8388607)
  1122 compressed objects within 12 object streams
