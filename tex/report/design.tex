@@ -147,9 +147,12 @@ The scenarios that were used to help define those situations are included in app
     \label{fig:scenarios}
 \end{figure}
 
-As shown in figure~\ref{fig:scenarios}, the scenario depends on the level of privacy of the location (public/private) and the amount of involved users (single/multiple).
+Based on the level of privacy of the location (public/private) and the amount of involved users (single/multiple), four situations were identified.
 
-There are four combinations, however the situation with multiple users in a private location is not addressed here, for the reason that the tabletop cannot be considered private if multiple users are present.
+However, the combination of multiple users in a private location was not addressed, for the reason that no design challenges specific to it were identified.
+The challenges related to the multiply users are addressed by the situation \emph{multiple users with a public tabletop}; and the challenges related to the private aspect are addressed by the situation \emph{single user with a private tabletop}. 
+
+The addressed situations are shown in figure~\ref{fig:scenarios}.
 
 \subsubsection{Single user with a public tabletop}
 
@@ -230,7 +233,7 @@ Examples of extended functionalities are: the pairing procedure can be made auto
 
 Based on the analysis of the application context, the following requirements were derived.
 Only the requirements that were relevant to the problem at hand were included.
-They are divided into four categories, that each correspond to a different aspect of the system: the pairing procedure, the UI replication, the surface UI and the use of the smartphone as tangible UI.
+They are divided into four categories, that each correspond to a different aspect of the system; the pairing procedure, the object tracking, the UI replication, and the surface UI.
 
 However, the following fundamental requirement is not attached to any category, as it relates to several system aspects:
 \begin{enumerate}[{R}-1]
@@ -326,12 +329,9 @@ It should fulfill the following requirements:
 %
 %In a trusted setting, the user should have the possibility to push application widgets from the personal device to the tabletop, outside of the display extension, thus saving space on the latter.
 
-\section{Designing the user interaction}
-\label{sec:interaction}
-
-This section focuses on the design of the surface UI, which comprises the UI elements that provide control over the replicated UI on the tabletop.
+\hfill\\
 %As for the other system aspects, decisions were taken early in the process, that removed the need for a detailed design process.
-The other system aspects did not require a detailed design process, for the following reasons.
+It was agreed early in the process that three out of the four system aspects would not require a detailed design effort, for the following reasons.
 
 First, it was decided that the pairing procedure should rely on already available solutions.
 %as the focus of the thesis is not to contribute within this particular field.
@@ -340,8 +340,16 @@ Second, given that UI replication had already been decided upon, no design effor
 %VNC was chosen as a protocol for UI replication, due to its stability and availability on most platforms.
 
 Lastly, tracking the location of the smartphone is a technical requirement that does not require interaction design. %would only be used to trigger the pairing procedure.
-\\
-\linebreak
+\hfill\\
+\hfill\\
+The surface UI is the system component which supports the main user interaction.
+As such, it poses the main design challenge, addressed hereunder in section~\ref{sec:interaction}.
+
+\section{Designing the user interaction}
+\label{sec:interaction}
+
+This section focuses on the design of the surface UI, which comprises the UI elements that provide control over the replicated UI on the tabletop.
+
 The input technique considered in the design of the surface UI is touch-based interaction.
 The reason for this is that it is strongly consistent with the smartphone and tabletop experiences.
 Both rely on touch-based interaction.

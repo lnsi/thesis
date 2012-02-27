@@ -14,13 +14,13 @@
 \usepackage{enumerate}
 \bibpunct{[}{]}{;}{a}{}{,}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
-
+\setcounter{secnumdepth}{2}
 
 %Interacting with Smartphones on Tabletop Computers
 %Combining Smartphones and Tabletops: Interaction Design
 
 \title{\Huge TIDE: Using Device Composition on Tabletop Computers to Extend the Smartphone Experience.}
-\author{\textbf{Master Thesis}\\by\\Leo Sicard\\(091181-lnsi)\\
+\author{\textbf{Master Thesis}\\by\\Leo Sicard\\(lnsi@itu.dk)\\
 \\
 \textbf{Supervisor:}\\Professor Jakob E Bardram\\
 \\}
@@ -53,7 +53,8 @@
 \large
 \hfill\\
 \hfill\\
-\textbf{Master Thesis}\\by\\Leo Sicard\\(091181-lnsi)\\
+\textbf{Master Thesis}\\by\\Leo Sicard\\
+\emph{lnsi@itu.dk}\\
 \hfill\\
 \hfill\\
 \textbf{Supervisor:}\\Professor Jakob E Bardram\\
@@ -132,10 +133,10 @@ However, the screen size of smartphones is a limitation when viewing graphically
 
 This thesis focuses on extending the smartphone experience to tabletop displays.
 It investigates the use of \emph{device composition} to allow smartphone users to spontaneously annex the display space made available by tabletops.
-In particular, this report presents the design, implementation and evaluation of \emph{TIDE (Tabletop Interactive Display Extension)}: a composite device that integrates a smartphone to a tabletop by way of UI replication, with focus on \emph{spontaneous user interaction}.
+In particular, this report presents the design, implementation and evaluation of \emph{TIDE (Tabletop Interactive Display Extension)}; a composite device that integrates a smartphone to a tabletop by way of UI replication, with focus on \emph{spontaneous user interaction}.
 
 The design process shows that by following a human-centered approach and using interaction techniques that are familiar to most users, the system can be designed to be easy to learn and easy to use.
-The implementation of TIDE demonstrates that it is feasible to build this type of system on standard hardware and many standard platforms.
+The implementation of TIDE demonstrates that it is feasible to build this type of system on standard hardware and standard platforms.
 Moreover, TIDE supports multiple simultaneous smartphones, and uses computer vision to track the location of the devices on the display.
 The evaluation of TIDE, in the form of a participant-based usability study, shows that the system is highly learnable, easy to use, and useful in context.
 \end{abstract}
@@ -160,15 +161,16 @@ The evaluation of TIDE, in the form of a participant-based usability study, show
 \renewcommand{\abstractname}{Acknowledgements}
 
 \begin{abstract}
-I give my sincere thanks to:
+First and foremost, I would like to thank Professor Jakob E. Bardram, for supervising this project and teaching me how to write a thesis.
+
+Next, I thank Dr. Juan David Hincapie-Ramos and Postdoc Aur\'{e}lien Tabard for their involvement as thesis advisors; for the precious council, continuous support, and for giving me confidence.
+In particular, I thank Juan for the idea that initiated this thesis.
+
+Then, I thank all the people who gracefully volunteered to participate in the user experiments.
+
+Finally, I give my thanks to:
 \tightlists
 \begin{itemize}[-]
-
-\item Professor Jakob E. Bardram, for supervising this thesis project,
-
-\item Aur\'{e}lien Tabard for the good advice and continuous support throughout this process,
-
-\item Juan David Hincapi\'{e} Ramos for the original idea, for advising me and giving me confidence,
 
 \item Sebastian B\"{u}ttrich and the PITLab (Pervasive Interaction Technology Lab) for providing the hardware and working space,
 
@@ -178,9 +180,7 @@ I give my sincere thanks to:
 
 \item Ane Tarp and Jakob Borg for proofreading,
 
-\item the researchers and students associated with the PITLab for the support and helpful comments,
-
-\item and last but not least, all the people who gracefully volunteered to participate in the user experiments.
+\item the researchers and students associated with the PITLab for the support and helpful comments.
 
 \end{itemize}
 \end{abstract}

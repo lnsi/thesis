@@ -1,3 +1,5 @@
 ASK JAKOB
 
-intro 3.3: explanations for not designing all system aspects?
+acknowledgements
+
+sqrt(( 9*((5-(58/13))^2) + 3*((4-(58/13))^2) + (1-(58/13))^2 )/13)
