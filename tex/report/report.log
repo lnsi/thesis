@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  27 FEB 2012 22:28
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.9.26)  28 FEB 2012 13:42
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1640,6 +1640,10 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 232.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 232.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 0F49A699451F0FFEA9D2F6D165A01D4F;784.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
  10806 strings out of 493747
@@ -1664,7 +1668,7 @@ e/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2
 010/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/201
 0/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (95 pages, 16112764 bytes).
+Output written on report.pdf (95 pages, 16112771 bytes).
 PDF statistics:
  1405 PDF objects out of 1440 (max. 8388607)
  1138 compressed objects within 12 object streams
