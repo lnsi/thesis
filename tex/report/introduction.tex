@@ -38,7 +38,7 @@ However tabletops have a huge potential for collaboration.
 Thus, a research branch emerged that focused on \emph{smart rooms}; spaces equipped with various cutting-edge computing devices that can interoperate, to support collaborative work for multiple users.
 Tabletops are essential elements of smart rooms, as shown with the InteracTable \citep{Streitz:1999:iland} and the iTable \citep{Johanson:2002:iroom}.
 
-With the emergence of commercial items such as the Microsoft Surface \citeyearpar{ms}, tabletops are gradually appearing in public environments such as museums, meeting rooms, public lobbies, bars and restaurants.
+With the emergence of commercial items such as the Microsoft Surface \citep{ms}, tabletops are gradually appearing in public environments such as museums, meeting rooms, public lobbies, bars and restaurants.
 They are an ideal platform for spontaneous use and multi-user interactions, and provide a touch-based experience that is similar to the one on most smartphones, which makes them easily accessible to the public.\\
 \linebreak
 %%% TECHNICAL REVIEW %%%%
@@ -71,7 +71,7 @@ Maps are graphically dense as well.
 They present a lot of different information, such as topography, street names and sights on limited space.
 To be able to read a street name on a smartphone map application, the user needs to zoom in on the relevant part of the map.
 The result is that the user can only view a very limited area.
-To be able to relate this area to another location, the user must use a combination of pan and zoom out gestures that can be difficult.
+To be able to relate this area to another location, the user must use a combination of pan and zoom gestures that can be difficult.
 In certain cases, the area of interest is simply too vast to be viewed on a smartphone screen.
 
 Viewing pictures on a smartphone is another experience made frustrating by the small screen size.
@@ -87,7 +87,7 @@ Even though smartphones provide multiple opportunities, the aforementioned examp
 This thesis addresses situations where using a smartphone would be easier if it had a larger screen.
 The solution proposed is to make smartphones able to spontaneously integrate with larger displays that are available in the environment.
 In particular, the idea is to be able to walk up to a tabletop computer, and with a few easy steps, combine it with one's smartphone.
-The result, shown in figure~\ref{fig:tide}, is that the screen of the smartphone is displayed on the tabletop, where it can be enlarged, and conveniently be viewed by multiple users simultaneously.
+The result, shown in figure~\ref{fig:tide}, is that the screen of the smartphone is displayed on the tabletop, where it can be enlarged, and conveniently viewed by multiple users simultaneously.
 
 \begin{figure}[htb]
   \centering
@@ -106,7 +106,7 @@ Smart rooms were designed as closed computing environments, so recent efforts ha
 
 Tabletops are a central device in the previously mentioned smart rooms, and a recurring element within device composition.
 They are an ideal platform for collocated collaboration, as shown with systems such as the MemTable \citep{Hunter:2011:memtable} and SketchTop \citep{Clifton:2010:sketchtop}, that are designed to support the work of technical users.
-In recent years, however, tabletops are appearing in public spaces, aiming at engaging common users in a more relaxed form of interaction.
+In recent years, however, tabletops are appearing in public spaces, engaging common users in a more relaxed form of interaction.
 \\
 \linebreak
 Within the context of designing for device composition between smartphones and tabletops, three fundamental challenges must be addressed.
@@ -181,15 +181,15 @@ To solve the problem at hand, the following research methods were used.
 \linebreak
 Placing the present work within its research context, 
 a comprehensive literary review was made of the prior work related to device composition and surface computing.
-In particular, the following aspects of device composition were examined; background, systems integrating smartphones to tabletops, pairing, UI distribution, user interaction.
-The results are presented in Chapter~\ref{relatedwork}.
+In particular, the following aspects of device composition were examined; background, systems integrating smartphones with tabletops, pairing, UI distribution, and user interaction.
+The review is presented in Chapter~\ref{relatedwork}.
 
 Following a user-centered approach, a solution design was completed.
 The process was divided into the following tasks.
 The application's context of use was analyzed based on scenarios and storyboards.
 This analysis lead to the definition of the solution requirements.
 A series of design options were derived from existing approaches to software design for surface computing.
-The design decisions were based on an experiment where end users engaged with low-fidelity prototypes of the system.
+Design decisions were taken, based on an experiment where end users engaged with low-fidelity prototypes of the system.
 The design process, together with the final system design, are presented in Chapter~\ref{design}.
 
 In order to demonstrate the feasibility of the suggested solution, a proof of concept was realized, in the form of an application prototype implemented on the Microsoft Surface tabletop computer, an iPhone 4 and a HTC Legend phone.
@@ -200,23 +200,22 @@ An evaluation of the design was conducted by way of a participant-based usabilit
 The focus of the evaluation was identified, in terms of specific aspects of the system, and the evaluation methods were selected.
 A user experiment was designed, that involved a discovery phase, a guided test and a questionnaire.
 Participants were recruited, and the experiment was carried out.
-Evaluation data was gathered via online forms as well as application logging.
-The experiment data was processed and analyzed, and the results were derived.
+Evaluation data was gathered via online forms, then processed, analyzed, and the results were derived.
 The evaluation process and results are reported in Chapter~\ref{evaluation}.
 
 \section{Contributions}
 
-This report presents the design, implementation and evaluation of a composite device that integrates smartphones to the Microsoft Surface.
+This report presents the design, implementation and evaluation of a composite device that integrates smartphones with the Microsoft Surface.
 There are three major contributions.
 \\
 \linebreak
 The user-centered design process, presented in chapter~\ref{design} shows, that it is feasible to design a system that is immediately accessible to most users, by focusing on providing a \emph{spontaneous user interaction}.
 In order to create an application in which the learning curve is the lowest possible, a lot of focus was given to discover which interaction techniques are familiar to the end users.
-To discover those features that would make the system both easy to learn and easy to use, two strategies that are both based on \emph{design consistency} were followed.
+To discover the features that would make the system both easy to learn and easy to use, two strategies that are both based on \emph{design consistency} were followed.
 The first strategy is to produce a design that is consistent with the smartphone experience.
 The aim being to provide a familiar experience to smartphone users, and to help introduce tabletops, which are novel devices, to non technical users.
 The second strategy is to realize a product where the design is consistent with the physicality of the devices involved.
-Getting inspiration for the tabletop application design from actual tables and from the way people interact with them, the idea was to create an experience that will naturally appeal to end users. 
+Getting inspiration for the tabletop application design from actual tables and from the way people interact with them, the idea is to create an experience that will naturally appeal to end users. 
 
 The design process was based on a careful analysis of the application context, and otherwise focused on how the user will interact with the system.
 In order to discover which interaction techniques are most familiar to smartphone users, several user-centered design techniques were used.
@@ -225,12 +224,12 @@ Figure~\ref{fig:vortex} shows some of the paper prototypes that were used, as we
 
 \begin{figure}[htb]
   \centering
-    \includegraphics[width=0.8\textwidth]{images/paperprot2}
+    \includegraphics[width=0.7\textwidth]{images/paperprot2}
   \caption{Low-fidelity prototypes and an early digital prototype.}
   \label{fig:vortex}
 \end{figure}
 
-By involving end users early in the design process, it could be determined which actions the users will naturally try the first time, they interact with the system.
+By involving end users early in the design process, it could be determined which actions the users would naturally try the first time, they interact with the system.
 Also which actions they would not think about.
 The result is the design of an application that allows the user to walk up to a tabletop, and easily transfer the content of his/her smartphone's screen to the interactive surface for an improvised experience.
 The replicated screen is surrounded by a frame that can be intuitively manipulated to control the size, position and rotation of the remote user interface.
@@ -238,11 +237,11 @@ Multiple interaction techniques were used to ensure that the application feature
 \\
 \linebreak
 The implementation of the proof-of-concept application called \emph{TIDE (Tabletop Interactive Display Extension)} is presented in chapter~\ref{system}.
-It shows that it is feasible to implement a system on the Microsoft Surface that can connect to a smartphone and extend its user interface.
+It shows that it is feasible to implement a system on the Microsoft Surface \citep{ms} that can connect to a smartphone and extend its user interface.
 TIDE works by way of UI replication, it displays a copy of the smartphone's screen on the tabletop, and relays any touch input from the tabletop to the smartphone.
-Multiple simultaneous smartphones can be used, and the currently supported models are iPhone 4 (iOS) and HTC Legend (Google Android).
+Multiple simultaneous smartphones can be used, and the currently supported models are iPhone 4 (iOS \citep{ios}) and HTC Legend (Android \citep{android}).
 However, TIDE was designed to be extended to support other models as well.
-A short descriptive video as well as source code is available online, see appendix~\ref{video}.
+A short descriptive video as well as source code is available online, the link is included in appendix~\ref{video}.
 
 TIDE uses shape recognition to detect smartphones that are in contact with the surface, thus triggering a pairing procedure.
 The connection is established quickly and securely.
@@ -274,7 +273,7 @@ The usability study took the form of an experiment where thirteen volunteers use
 
 \begin{figure}[htb]
   \centering
-    \includegraphics[width=0.8\textwidth]{images/368}
+    \includegraphics[width=0.7\textwidth]{images/368}
   \caption{End users trying the TIDE prototype.}
   \label{fig:368}
 \end{figure}

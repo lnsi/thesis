@@ -16,45 +16,45 @@ A level-1 auxiliary file: evalscript.aux
 Database file #1: ../references.bib
 Warning--empty booktitle in Baur:2012:virtualprojection
 Warning--empty journal in Esbensen:2010:pourimages
-You've used 46 entries,
+You've used 48 entries,
             2773 wiz_defined-function locations,
-            950 strings with 15523 characters,
-and the built_in function-call counts, 24593 in all, are:
-= -- 2414
-> -- 1272
-< -- 48
-+ -- 436
-- -- 387
-* -- 1905
-:= -- 3699
-add.period$ -- 242
-call.type$ -- 46
-change.case$ -- 263
-chr.to.int$ -- 43
-cite$ -- 94
-duplicate$ -- 1124
-empty$ -- 1943
-format.name$ -- 449
-if$ -- 5373
-int.to.chr$ -- 4
+            957 strings with 15612 characters,
+and the built_in function-call counts, 25201 in all, are:
+= -- 2470
+> -- 1292
+< -- 50
++ -- 445
+- -- 393
+* -- 1933
+:= -- 3792
+add.period$ -- 250
+call.type$ -- 48
+change.case$ -- 271
+chr.to.int$ -- 44
+cite$ -- 98
+duplicate$ -- 1154
+empty$ -- 2007
+format.name$ -- 457
+if$ -- 5505
+int.to.chr$ -- 5
 int.to.str$ -- 1
 missing$ -- 37
-newline$ -- 323
-num.names$ -- 190
-pop$ -- 505
+newline$ -- 335
+num.names$ -- 198
+pop$ -- 529
 preamble$ -- 1
-purify$ -- 219
+purify$ -- 225
 quote$ -- 0
-skip$ -- 897
+skip$ -- 920
 stack$ -- 0
-substring$ -- 896
-swap$ -- 244
+substring$ -- 900
+swap$ -- 247
 text.length$ -- 24
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 491
+type$ -- 513
 warning$ -- 2
-while$ -- 209
+while$ -- 215
 width$ -- 0
-write$ -- 812
+write$ -- 840
 (There were 2 warnings)

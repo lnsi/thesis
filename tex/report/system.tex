@@ -20,11 +20,11 @@
 \label{system}
 
 TIDE (Tabletop Interactive Display Extension) is a composite device between smartphones and a tabletop computer.
-It replicates the smartphone's user interface on the tabletop, where it can be manipulated and interacted with.
+It replicates a smartphone's user interface on the tabletop, where it can be manipulated and interacted with.
 The application can handle simultaneous devices.
 %that integrates smartphones to a tabletop by way of UI replication.
-It runs on the Microsoft Surface tabletop computer, referred to as \emph{Surface} in this chapter.
-It currently supports two smartphone models: the iPhone 4 (iOS 5) and the HTC Legend (Google Android 2.1), and can be extended to support other models.
+It runs on the Microsoft Surface tabletop computer \citep{ms}, referred to as \emph{Surface} in this chapter.
+It currently supports two smartphone models: the iPhone 4 (iOS  \citep{ios}) and the HTC Legend (Android  \citep{android}), and can be extended to support other models.
 
 \begin{figure}[htb]
   \centering
@@ -38,7 +38,7 @@ TIDE can be divided into three parts, which together implement the design aspect
 
 The pairing and tracking elements (blue) are presented in sections \ref{sec:pairing} and \ref{sec:tracking}.
 They are both based on shape recognition in order to detect the presence and location of the smartphone on the tabletop.
-To do that, TIDE uses the visual input provided by the Surface camera, and otherwise relies on OpenCV (Open Source Computer Vision) \citeyearpar{opencv}, a library that provides the tools necessary to process images and perform object detection.
+To do that, TIDE uses the visual input provided by the Surface camera, and otherwise relies on OpenCV (Open Source Computer Vision) \citep{opencv}, a library that provides the tools necessary to process images and perform object detection.
 
 Replicating the smartphone's UI (green) is described in section~\ref{sec:replicatedui}.
 It is done with VNC \citep{Richardson:1998:vnc}, a platform-independent system for standard desktop sharing.
@@ -51,7 +51,7 @@ The surface UI is the system aspect that has the most relevance for the user int
 
 \section{System interaction}
 
-Using the system involve a user, a smartphone and a tabletop computer interacting with each other.
+Using the system involves a user, a smartphone and a tabletop computer interacting with each other.
 During a typical session, the interaction revolves around the \emph{surface UI}, which is the interface between all system parts, and is contained by the main application window on the tabletop, the \texttt{TideWindow}.
 Figure~\ref{fig:sequenceOverview} is a sequence diagram that describes this interaction.
 
@@ -70,7 +70,7 @@ On the initiative of the user, the session is terminated, at which point the vir
 \begin{figure}[htb]
   \centering
     \includegraphics[width=0.8\textwidth]{images/sequenceOverview}
-    \caption{TIDE: main interaction diagram.}
+    \caption{TIDE interaction diagram.}
     \label{fig:sequenceOverview}
 \end{figure}
 
@@ -148,7 +148,6 @@ When such a shape is small enough, the Surface interprets it as a finger, and re
 
 Beside fingers, the Surface is designed to natively recognize certain types of 2D visual tags (Byte and Identity tags).
 Such tags can be used to integrate objects to Surface applications.
-
 However, using visual tags in the present case would imply that the system is only usable to users who have applied such a tag to the smartphone.
 To remove as many constraints as possible, and to make the system usable in as many situations as possible, it was decided to use shape recognition.
 
@@ -165,7 +164,7 @@ OpenCV provides algorithms to perform shape analysis and recognition on the raw 
 \end{figure}
 
 Figure~\ref{fig:msRaw} shows the raw Surface input for both smartphones.
-The features that allow TIDE to detect the iPhone 4 are the Apple logo and the camera point in the back of the casing.
+The features that allow TIDE to detect the iPhone 4 are the Apple logo and the camera point on the back of the casing.
 For the HTC Legend, the system looks for the larger silver rectangle formed by the aluminum casing.
 
 Two things can be remarked on.
@@ -180,7 +179,7 @@ This implies that the system must take into considerations that the phone could 
     \label{fig:trackingDiagram}
 \end{figure}
 
-Figure~\ref{fig:trackingDiagram} shows the implementation that allows TIDE to detect specific smartphones, and track their whereabouts on the surface during application sessions.
+Figure~\ref{fig:trackingDiagram} shows the implementation that allows TIDE to detect specific smartphones, and track their location on the surface during application sessions.
 
 The \texttt{TIDEWindow} (\raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {1}}}) is an application-specific instance of a \texttt{SurfaceWindow} control provided by the Surface SDK Presentation layer. 
 It represents the main application window, and comprises most of the application logic.
@@ -223,7 +222,7 @@ On the tabletop, the VNC client is integrated to the Surface application using a
 The \texttt{VncControl} is a surface user control that is contained within a \texttt{DeviceControl} object that provides other UI elements, as shown in figure \ref{fig:tideControls}.
 The \texttt{DeviceControl} object monitors all contacts, in order to detect the user inputs that are destined to the replicated UI.
 This is done by checking if the coordinates of the contact are within the image displayed by the \texttt{VncControl}.
-When such a contact is detected, it is forwarded to the \texttt{VncControl} object, that relays it further to the smartphone.
+When such a contact is detected, it is forwarded to the \texttt{VncControl} object, which relays it further to the smartphone.
 
 \begin{figure}[htb]
   \centering
@@ -232,7 +231,7 @@ When such a contact is detected, it is forwarded to the \texttt{VncControl} obje
     \label{fig:tideControls}
 \end{figure}
 
-The \texttt{VncControl} uses the VncSharp library to communicate with the VNC server on the smartphone.
+The \texttt{VncControl} uses the VncSharp library \citep{vncsharp} to communicate with the VNC server on the smartphone.
 VncSharp provides methods to transmit mouse and keyboard events.
 %Mouse events consist of coordinates a contact type (\texttt{ContactDown, ContactUp and ContactChanged}), and they are used for all touch inputs on the replicated UI.
 The server responds with an updated image of the smartphone's screen, that the \texttt{VncControl} displays on the tabletop.

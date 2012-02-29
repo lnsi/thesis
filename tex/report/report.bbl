@@ -1,4 +1,4 @@
-\begin{thebibliography}{46}
+\begin{thebibliography}{48}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -17,10 +17,16 @@ Apple.
 \newblock \url{https://developer.apple.com/opensource/}, 2012{\natexlab{a}}.
 \newblock (accessed 2/12).
 
-\bibitem[Apple(2012{\natexlab{b}})]{iphone}
+\bibitem[Apple(2012{\natexlab{b}})]{ios}
+Apple.
+\newblock ios.
+\newblock \url{http://www.apple.com/ios/}, 2012{\natexlab{b}}.
+\newblock (accessed 2/12).
+
+\bibitem[Apple(2012{\natexlab{c}})]{iphone}
 Apple.
 \newblock iphone.
-\newblock \url{http://www.apple.com/iphone/}, 2012{\natexlab{b}}.
+\newblock \url{http://www.apple.com/iphone/}, 2012{\natexlab{c}}.
 \newblock (accessed 2/12).
 
 \bibitem[Arthur and Olsen(2011)]{Arthur:2011:xice}
@@ -137,16 +143,22 @@ Tony Gjerlufsen, Clemens~Nylandsted Klokmose, James Eagan, Cl\'{e}ment Pillias,
 \newblock \doi{http://doi.acm.org/10.1145/1979442.1979446}.
 \newblock URL \url{http://doi.acm.org/10.1145/1979442.1979446}.
 
+\bibitem[Google(2012)]{android}
+Google.
+\newblock Android.
+\newblock \url{http://www.android.com/}, 2012.
+\newblock (accessed 2/12).
+
 \bibitem[Gosling et~al.(2000)Gosling, Joy, Steele, and Bracha]{java}
 James Gosling, Bill Joy, Guy Steele, and Gilad Bracha.
 \newblock \emph{Java Language Specification}.
 \newblock The Java Series. Addison-Wesley Longman Publishing Co., Inc., 2nd
   edition edition, 2000.
 
-\bibitem[Holmquist et~al.(2001)Holmquist, Mattern, Schiele, Alahuhta, Beigl5,
+\bibitem[Holmquist et~al.(2001)Holmquist, Mattern, Schiele, Alahuhta, Beigl,
   and Gellersen]{Holmquist:2001:smartits}
 Lars Holmquist, Friedemann Mattern, Bernt Schiele, Petteri Alahuhta, Michael
-  Beigl5, and Hans-W. Gellersen.
+  Beigl, and Hans-Werner Gellersen.
 \newblock Smart-its friends: A technique for users to easily establish
   connections between smart artefacts.
 \newblock In Gregory Abowd, Barry Brumitt, and Steven Shafer, editors,

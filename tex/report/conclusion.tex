@@ -21,13 +21,14 @@ Examples of such social situations include a work meeting, a groups of friends i
 The public aspect, however, addresses the fact that their display is open for all to see, and thus a constraint to any form of private use.
 The implications include that a person alone would be reticent to use a tabletop for anything more private than looking at a map, and that two strangers would be reticent to share a tabletop to perform parallel activities.
 Tabletops seem thus better fitted for prolonged interactions in trusted or semi-trusted environments, such as in a home, a workplace, or among friends.
-The most relevant implication for a system such as TIDE is a limitation of the contexts in which the application would prove useful.
+The most relevant implication for a system such as TIDE is a limitation of the contexts in which the application would be useful.
 
 On a more interactional level, it proved interesting to witness that end users were able to learn the touch-based shape manipulation techniques that are specific to tabletops easily.
 Examples of those are rotating and resizing UI elements.
 Even though those manipulations are not conventionally supported on smartphones, where the small screen size makes them irrelevant, the directness of the touch interaction is such that users were able to discover them instinctively.
 This confirms the idea that the tabletop experience is one that appeals even to the less computer literate.
-This work investigated the idea that interaction techniques could be discovered, that would be familiar to the user, due to their consistency with normal table interaction.
+
+This work suggested the idea that interaction techniques could be discovered, that would be familiar to the user, due to their consistency with normal table interaction.
 The main example is the action of minimizing or closing the application by moving the window to the edge (or corner), similar to the way one would remove a real document from a table.
 However, the evaluation did not confirm this idea, and showed that the users were generally very conscious of not interacting with a normal table.
 When having to improvise, they would use knowledge related to computers in general, and to common touch-based devices such as smartphones in particular, before relying on the obvious table-like aspect of the device.
@@ -49,7 +50,7 @@ The decision to implement several techniques to activate the same action feature
 TIDE uses hard-coded IP addresses to connect the devices.
 As mentioned in this report, networking protocols can be used, to allow for automatic device discovery.
 However, these protocols work under the assumption that the involved devices are connected to the same local network.
-This is an important limitation to the form of spontaneous device interaction that this thesis investigated.
+This is an important limitation to the form of spontaneous device interaction that this thesis focused on.
 An example from the real world is that smartphones are often connected to mobile networks, and not to local networks.
 
 VNC \citep{Richardson:1998:vnc} was chosen to enable UI replication between the devices.
@@ -65,14 +66,14 @@ The benefit of a well-known system like VNC is that it is available on most plat
 However, this work confirms that the rendering-based protocol it uses, is too heavy for a smartphone to handle.
 %FUTURE WORK:
 
-Another shortcoming of VNC is that it constrains the configuration to UI replication, and its pixel-based protocol generates a replicated UI that is difficultl to adapt to various display sizes and resolutions.
+Another shortcoming of VNC is that it constrains the configuration to UI replication, and its pixel-based protocol generates a replicated UI that is difficult to adapt to various display sizes and resolutions.
 This work has revealed a range of use cases that could be addressed by this type of composite device, but for which UI replication is not sufficient.
 An example is the possibility of transferring whole applications or processes to the tabletop, while keeping the smartphone independent.
 
 This project demonstrated that computer vision could be used to track the position of smartphones on a tabletop display.
 However, it also showed that this approach has some limitations.
 In short, smartphones can only be detected if the system ``sees'' them---e.g.\ in the case of an infrared based system, black phones are invisible---and if the application ``knows'' them, i.e.\ the features specific to the phone must be encoded in the application.
-Moreover, visual tracking does not allow the identification of a specific device.
+Moreover, visual tracking of object features does not allow the identification of a specific device.
 
 
 \section{Future work}
@@ -115,7 +116,7 @@ TIDE was designed based on a user-centered approach that focused on discovering 
 
 The implementation of the prototype runs on the Microsoft Surface tabletop computer and supports multiple simultaneous smartphones.
 TIDE includes a visual tracking mechanism that is used to detect smartphone devices and track their location on the display during the application session.
-The UI replication is based on VNC \citep{Richardson:1998:vnc}, which allows the system to support most smartphone models, but otherwise proved to be unable to provide sufficient responsiveness for the replicated UI.
+The UI replication is based on VNC \citep{Richardson:1998:vnc}, which allows the system to support most smartphone models, but otherwise proved unable to provide sufficient responsiveness for the replicated UI.
 
 TIDE was evaluated by way of a participant-based usability study where results showed that the system is highly learnable and easy to use.
 The evaluation also revealed that the system is useful to perform specific activities such as reading documents and looking at pictures, though only in trusted and semi-trusted environments.
