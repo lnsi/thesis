@@ -37,19 +37,19 @@ Figure~\ref{fig:overview} is a component diagram that presents an overview of th
 TIDE can be divided into three parts, which together implement the design aspects formulated in section~\ref{sec:design}, i.e.\ pairing, tracking, replicated UI and surface UI.
 
 The pairing and tracking elements (blue) are presented in sections \ref{sec:pairing} and \ref{sec:tracking}.
-They are both based on shape recognition to detect the presence and location of the smartphone on the tabletop.
-To do that, TIDE uses the visual input provided by the Surface camera, and relies otherwise on OpenCV (Open Source Computer Vision) \citeyearpar{opencv}, a library that provides the tools necessary to process images and perform object detection.
+They are both based on shape recognition in order to detect the presence and location of the smartphone on the tabletop.
+To do that, TIDE uses the visual input provided by the Surface camera, and otherwise relies on OpenCV (Open Source Computer Vision) \citeyearpar{opencv}, a library that provides the tools necessary to process images and perform object detection.
 
 Replicating the smartphone's UI (green) is described in section~\ref{sec:replicatedui}.
-It is done with VNC \citep{Richardson:1998:vnc}, a platform independent system for standard desktop sharing.
+It is done with VNC \citep{Richardson:1998:vnc}, a platform-independent system for standard desktop sharing.
 TIDE includes a VNC client that is based on the VncSharp library \citep{vncsharp}, and that connects over a WiFi connection to a VNC server running on the smartphone.
 
 Section~\ref{sec:surfaceui} presents the surface UI (yellow).
 It was implemented within the .NET framework, using the Surface SDK and WPF (Windows Presentation Foundations).
 It links the other components together in a Surface application, and provides the overall user interface.
-It is the system aspect that has the most relevance for the user interaction, and has therefore received most focus in this implementation.
+The surface UI is the system aspect that has the most relevance for the user interaction, and therefore has received most focus in this implementation.
 
-\subsubsection{System interaction}
+\section{System interaction}
 
 Using the system involve a user, a smartphone and a tabletop computer interacting with each other.
 During a typical session, the interaction revolves around the \emph{surface UI}, which is the interface between all system parts, and is contained by the main application window on the tabletop, the \texttt{TideWindow}.
@@ -57,13 +57,13 @@ Figure~\ref{fig:sequenceOverview} is a sequence diagram that describes this inte
 
 The \emph{user} starts the session by placing the smartphone on the table (\raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {1}}}), where it is detected by the \emph{tracker} component (\raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {2}}}).
 Optionally, the tracker can track the device during the whole application session.
-Upon device detection, a virtual device is created and added to the surface UI, then forwarded to the \emph{VNC client} who is responsible for establishing the connection (\raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {3}}}).
+Upon device detection, a virtual device is created and added to the surface UI, then forwarded to the \emph{VNC client} which is responsible for establishing the connection (\raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {3}}}).
 The VNC client attempts to connect to the \emph{VNC server} running on the smartphone (\raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {4}}}), at which point an explicit authorization from the user is required.
-If the connection is authorized, The server sends the smartphone UI to the client for replication.
+If the connection is authorized, the server sends the smartphone UI to the client for replication.
 
 At this point, the session enters a \emph{loop} where the user interacts with the surface UI for an undefined amount of time.
-The user provides input to the surface UI, a part of which is destined to the replicated UI.
-The VNC client sends the said input to the server, who responds with an new copy of the smartphone screen, that is used by the surface UI to update the replicated UI.
+The user provides input to the surface UI, a part of which is destined for the replicated UI.
+The VNC client sends the said input to the server, which responds with a new copy of the smartphone screen, that is used by the surface UI to update the replicated UI.
 
 On the initiative of the user, the session is terminated, at which point the virtual device is removed from the \texttt{TideWindow}, and the connection is interrupted by the VNC client.
 
@@ -83,19 +83,19 @@ On the initiative of the user, the session is terminated, at which point the vir
 \section{Pairing}
 \label{sec:pairing}
 
-This section describes and explains the implementation steps that were taken based on the design decisions from section~\ref{sec:design} relating to the pairing procedure.
+This section describes and explains the implementation steps that were taken based on the design decisions in section~\ref{sec:design} relating to the pairing procedure.
 
 %In the case of the smartphone, this connection is very likely wireless.
 %Moreover, a VNC server instance should be up and running on the smartphone, for the system to function.
 
-The pairing procedure consists of three steps:
-(1) a \emph{trigger} starts the procedure,
-(2) \emph{discovery} allows the smartphone's local IP address to be made available to the tabletop and
-(3) the \emph{connection} is established, given that the user explicitly authorizes it.
+The pairing procedure consists of three steps
+(1) A \emph{trigger} starts the procedure
+(2) \emph{Discovery} allows the smartphone's local IP address to be made available to the tabletop
+(3) The \emph{connection} is established, given that the user explicitly authorizes it.
 
 \subsection{Trigger}
 
-To realize the design decision:
+To realize the design decision
 \emph{DA-1a Pairing is triggered by placing the smartphone on the tabletop},
 TIDE uses the Surface computer vision to detect when a smartphone is placed on the tabletop.
 
@@ -105,11 +105,11 @@ The implementation details of the smartphone detection and tracking are presente
 
 For the tabletop to discover the local IP address of the smartphone, a straightforward solution is to present a text field to the user in which s/he can enter it.
 However, this approach has several limitations, including an obvious lack of spontaneity.
-Not all smartphone users know where to look in the device's settings to find the IP address, and in any case, it is a process of several steps that would remove the spontaneity that is the overall aim with this prototype.
+Not all smartphone users know where to look in the device's settings to find the IP address, and in any case, it is a process of several steps that hinders the spontaneity, which is the overall aim of this prototype.
 
-Therefore, to realize the design decision:
+Therefore, to realize the design decision
 \emph{DA-2 Device discovery relies on a standard networking protocol},
-TIDE should use an automatized discovery process based on a standard networking protocol such as the ones provided by UPnP \citep{upnp} and Bonjour \citep{bonjour}.
+TIDE should use an automatized discovery process, based on a standard networking protocol, such as the ones provided by UPnP \citep{upnp} and Bonjour \citep{bonjour}.
 
 However, given that the focus of this thesis lies on the user interaction problem, 
 %is not to contribute within this area,
@@ -119,14 +119,14 @@ The system currently functions with IP addresses hardcoded into the TIDE impleme
 
 \subsection{Connection}
 
-The design decision:
+The design decision
 \emph{DA-1b Pairing is based on wireless connectivity},
 does not require any implementation effort, but represents an assumption about device and environment.
 There must be a local area network for the system to function, and both devices must be connected to it.
 The tabletop being in a fixed location, it can use either WiFi or an ethernet cable.
 On the smartphone, WiFi must be used.
 
-To realize the design decision:
+To realize the design decision
 \emph{DA-3 The user must confirm the connection, both on the tabletop and on the smartphone},
 TIDE uses dialogs, that appear successively on the tabletop, then on the smartphone.
 They are described further in section~\ref{sec:surfaceui}.
@@ -138,7 +138,7 @@ They are described further in section~\ref{sec:surfaceui}.
 \section{Tracking}
 \label{sec:tracking}
 
-This section describes and explains the implementation steps that were taken based on the design decisions from section~\ref{sec:design} relating to tracking the location of smartphones on the tabletop.
+This section describes and explains the implementation steps that were taken based on the design decisions in section~\ref{sec:design} relating to tracking the location of smartphones on the tabletop.
 To realize the design decisions DB-1 to DB-3 (see p.~\pageref{DB}), TIDE uses the computer vision provided by the Surface, as well as the OpenCV library.
 
 The Surface uses camera-based vision to detect touch input.
@@ -149,7 +149,7 @@ When such a shape is small enough, the Surface interprets it as a finger, and re
 Beside fingers, the Surface is designed to natively recognize certain types of 2D visual tags (Byte and Identity tags).
 Such tags can be used to integrate objects to Surface applications.
 
-However, using visual tags in the present case would imply that the system only be usable by users that had applied such a tag to the smartphone.
+However, using visual tags in the present case would imply that the system is only usable to users who have applied such a tag to the smartphone.
 To remove as many constraints as possible, and to make the system usable in as many situations as possible, it was decided to use shape recognition.
 
 OpenCV provides algorithms to perform shape analysis and recognition on the raw images that are captured by the Surface system. 
@@ -164,7 +164,7 @@ OpenCV provides algorithms to perform shape analysis and recognition on the raw 
     \label{fig:msRaw}
 \end{figure}
 
-Figure~\ref{fig:msRaw} shows the raw Surface input for both tested smartphones.
+Figure~\ref{fig:msRaw} shows the raw Surface input for both smartphones.
 The features that allow TIDE to detect the iPhone 4 are the Apple logo and the camera point in the back of the casing.
 For the HTC Legend, the system looks for the larger silver rectangle formed by the aluminum casing.
 
@@ -198,7 +198,8 @@ The initial device detection was used in the evaluated prototype, as a trigger f
 
 However, the tracking of smartphone devices during the application session was deactivated for the test sessions.
 This decision was based on feedback gathered during the prototyping sessions, that pointed towards a lack of usefulness.
-Users expressed that they would be reticent to leave their smartphones on the table for fear of being robbed, or to drag the device across the table for fear of damaging it.
+Users expressed that they would not want to leave their smartphones on the table where it could be stolen.
+Some would not want to drag the device across the table because of possible damage.
 
 %%%%%%%%%%%%%%%%
 %% REPLICATION %%
@@ -210,10 +211,10 @@ Users expressed that they would be reticent to leave their smartphones on the ta
 
 This section describes and explains the implementation steps that were taken based on the design decisions from section~\ref{sec:design} relating to the replicated UI.
 
-To realize the design decision: 
+To realize the design decision
 \emph{DC-1 The smartphone screen is replicated to the tabletop using a standard desktop sharing protocol}, 
 it was decided to use VNC \citep{Richardson:1998:vnc}, a standard system that uses a rendering-based protocol to allow desktop sharing between remote computers.
-It works with a network connection between a client and a server, where the client sends input events to the server, who responds by sending a pixel-based copy of its updated screen.
+It works with a network connection between a client and a server, where the client sends input events to the server, which responds by sending a pixel-based copy of its updated screen.
 It was chosen for its stability and library availability on many platforms.
 
 %The pairing procedure completes with the VNC client on the tabletop connecting to the VNC server running on the smartphone, and receiving the first image of the remote UI.
@@ -236,7 +237,7 @@ VncSharp provides methods to transmit mouse and keyboard events.
 %Mouse events consist of coordinates a contact type (\texttt{ContactDown, ContactUp and ContactChanged}), and they are used for all touch inputs on the replicated UI.
 The server responds with an updated image of the smartphone's screen, that the \texttt{VncControl} displays on the tabletop.
 
-On the smartphones, the VNC server relies currently on third-party applications: Veency on iOS, and Droid VNC Server on Android.
+On the smartphones, the VNC server relies currently on third-party applications; Veency on iOS, and Droid VNC Server on Android.
 The reason for this was to allow the easy integration of devices running on different platforms.
 
 
@@ -247,7 +248,7 @@ The reason for this was to allow the easy integration of devices running on diff
 \section{Surface UI}
 \label{sec:surfaceui}
 
-This section describes and explains the implementation steps that were taken based on the design decisions from section~\ref{sec:design} relating to the surface UI.
+This section describes and explains the implementation steps that were taken based on the design decisions in section~\ref{sec:design} relating to the surface UI.
 To realize the design decisions DD-1 to DD-6 (see p.~\pageref{DD}), TIDE is implemented using the Surface SDK, which is itself based on WPF (Windows Presentation Foundations).
 
 The elements from figure~\ref{fig:tideControls} are described below in figure~\ref{fig:surfaceDiagram}, which is a class diagram of the TIDE surface UI implementation.
@@ -265,33 +266,33 @@ The \texttt{MinimizedControl} (\raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {3}
 \end{figure}
 
 The implementation of the surface UI is based on the Presentation layer of the Surface SDK.
-To realize the design decision:
+To realize the design decision
 \emph{DD-2 The replicated UI can be manipulated by using touch-based gestures on the surface UI},
 TIDE uses a \texttt{ScatterView} object called \texttt{MainScatterView}.
 The \texttt{ScatterView} control displays UI elements that can be manipulated, by wrapping them inside \texttt{ScatterViewItem} objects.
 The \texttt{ScatterViewItem} class provides manipulation capabilities to the surface controls, that include move, rotate and resize with one or several fingers.
 However, some of these capabilities are deactivated for specific controls, such as the \texttt{MinimizedControl}, which cannot be resized.
 
-Each virtual device consists of three objects: a \texttt{Device} implementing the \texttt{IDevice} interface, and two surface controls: the \texttt{DeviceControl} and \texttt{MinimizedControl} objects.
+Each virtual device consists of three objects; a \texttt{Device} implementing the \texttt{IDevice} interface, and two surface controls; the \texttt{DeviceControl} and \texttt{MinimizedControl} objects.
 
 Upon creation, the \texttt{DeviceControl} object gets specific visualization features from its \texttt{Device}.
-For example, an \texttt{iPhone} object provides a \texttt{SetSkin()} method to show the appropriate visualization, and a \texttt{OnHomebuttonClick()} that implements the effect of the home button, specific to the iPhone.
+An example being that an \texttt{iPhone} object provides a \texttt{SetSkin()} method to show the appropriate visualization, and \texttt{OnHomebuttonClick()} that implements the effect of the home button, specific to the iPhone.
 
-The \texttt{DeviceControl} monitors all its touch inputs, and reacts differently depending on their location.
+The \texttt{DeviceControl} monitors all its touch inputs, and reacts differently depending on the location.
 If the input is within the \texttt{VncControl} image, it is forwarded to the replicated UI.
 Otherwise, the input is interpreted as a manipulation on the containing \texttt{ScatterViewItem} object.
-The features that are activated by a double tap, press and hold and whole hand tap are also implemented within the \texttt{DeviceControl} class.
+The features that are activated by a double tap, press and hold, and whole hand tap are also implemented within the \texttt{DeviceControl} class.
 
 %The \texttt{DeviceControl} object is displayed on the \texttt{TideWindow}, it can be freely moved, rotated and resized.
 %However, it monitors all touch inputs, and forwards to the \texttt{VncControl} all inputs that are destined to the replicated UI, i.e.\ whose coordinates are within the \texttt{remoteUI} image displayed by the \texttt{VncControl}.
 
-When a \texttt{DeviceControl} is minimized, it raises an event that is handled by the \texttt{TideWindow}, causing the \texttt{DeviceControl} to be hidden and the \texttt{MinimizedControl} to be shown.
+When a \texttt{DeviceControl} is minimized, it raises an event that is handled by the \texttt{TideWindow}, causing the \texttt{DeviceControl} to be hidden, and the \texttt{MinimizedControl} to be shown.
 Similar events are used to handle restoring and closing controls.
 
 An event called \texttt{ControlManipulated} is used by the \texttt{TideWindow} to monitor the position of the \texttt{DeviceControl} and activate the features that depend on position, size or rotation; such as the minimization when the control is dragged to an edge.
 
 Lastly, \texttt{Dialog} objects are used to obtain explicit user confirmation when establishing the connection and when disconnecting the device.
-They are surface controls that are wrapped in \texttt{ScatterViewItem} objects, but whose manipulation capabilities are deactivated.
+They are surface controls that are wrapped in \texttt{ScatterViewItem} objects, and their manipulation capabilities are deactivated.
 
 
 

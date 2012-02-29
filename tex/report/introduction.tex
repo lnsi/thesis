@@ -210,16 +210,18 @@ This report presents the design, implementation and evaluation of a composite de
 There are three major contributions.
 \\
 \linebreak
-The user-centered design process, presented in chapter~\ref{design}, shows that it is feasible to design a system that is immediately accessible to all types of users, by focusing on providing a \emph{spontaneous user interaction}.
-In particular, to create an application whose learning curve is the lowest possible, a lot of focus is given to discovering which interaction techniques are familiar to the end users.
-To discover those features that will make the system both easy to learn and easy to use, two strategies are followed, that are both based on \emph{design consistency}.
-The first strategy is to produce a design that is consistent with the smartphone experience in general, in order to provide an familiar experience to smartphone users, and thus help introduce tabletops, that are novel devices, to non technical users.
-The second strategy is to realize a product whose design is consistent with the physicality of the devices involved.
-By getting inspiration for the tabletop application design from actual tables and the way people interact with them, the idea is to create an experience that will naturally appeal to end users. 
+The user-centered design process, presented in chapter~\ref{design} shows, that it is feasible to design a system that is immediately accessible to most users, by focusing on providing a \emph{spontaneous user interaction}.
+In order to create an application in which the learning curve is the lowest possible, a lot of focus was given to discover which interaction techniques are familiar to the end users.
+To discover those features that would make the system both easy to learn and easy to use, two strategies that are both based on \emph{design consistency} were followed.
+The first strategy is to produce a design that is consistent with the smartphone experience.
+The aim being to provide a familiar experience to smartphone users, and to help introduce tabletops, which are novel devices, to non technical users.
+The second strategy is to realize a product where the design is consistent with the physicality of the devices involved.
+Getting inspiration for the tabletop application design from actual tables and from the way people interact with them, the idea was to create an experience that will naturally appeal to end users. 
 
-The design process is based on a careful analysis of the application context, and focuses otherwise on how the user will interact with the system.
-To discover which interaction techniques are most familiar to smartphone users, several human-centered design techniques are used, all revolving around the setting up of cooperative design sessions based on low-fidelity prototypes.
-Figure~\ref{fig:vortex} shows some of the paper prototypes that were used, together with an early prototype that was used as inspiration for this work.
+The design process was based on a careful analysis of the application context, and otherwise focused on how the user will interact with the system.
+In order to discover which interaction techniques are most familiar to smartphone users, several user-centered design techniques were used.
+The design techniques revolved around the setting up of cooperative design sessions which were based on low-fidelity prototypes.
+Figure~\ref{fig:vortex} shows some of the paper prototypes that were used, as well as an early prototype that was used as inspiration for this work.
 
 \begin{figure}[htb]
   \centering
@@ -228,27 +230,31 @@ Figure~\ref{fig:vortex} shows some of the paper prototypes that were used, toget
   \label{fig:vortex}
 \end{figure}
 
-By involving end users early in the design process, it can be determined which actions users will naturally try the first time they will interact with the system, and which actions they would not think about.
+By involving end users early in the design process, it could be determined which actions the users will naturally try the first time, they interact with the system.
+Also which actions they would not think about.
 The result is the design of an application that allows the user to walk up to a tabletop, and easily transfer the content of his/her smartphone's screen to the interactive surface for an improvised experience.
 The replicated screen is surrounded by a frame that can be intuitively manipulated to control the size, position and rotation of the remote user interface.
-Multiple interaction interaction techniques are used to ensure that the application features are both easy to discover and efficient.
+Multiple interaction techniques were used to ensure that the application features are both easy to discover and efficient.
 \\
 \linebreak
 The implementation of the proof-of-concept application called \emph{TIDE (Tabletop Interactive Display Extension)} is presented in chapter~\ref{system}.
 It shows that it is feasible to implement a system on the Microsoft Surface that can connect to a smartphone and extend its user interface.
 TIDE works by way of UI replication, it displays a copy of the smartphone's screen on the tabletop, and relays any touch input from the tabletop to the smartphone.
-Multiple simultaneous smartphones can be used, and the currently supported models are an iPhone 4 (iOS) and a HTC Legend (Google Android); but TIDE was designed to be extended to support other models as well.
+Multiple simultaneous smartphones can be used, and the currently supported models are iPhone 4 (iOS) and HTC Legend (Google Android).
+However, TIDE was designed to be extended to support other models as well.
 A short descriptive video as well as source code is available online, see appendix~\ref{video}.
 
-TIDE uses shape recognition to detect smartphones that are in contact with the surface, and trigger a pairing procedure.
-The connection is quickly and securely established, and the smartphone can be easily disconnected and reconnected, enabling the application to support short successive interactions.
-Shape recognition is done by using computer vision algorithms to process and analyze the raw visual input provided by the Microsoft Surface camera-based system, and detect specific device features.
-This technique is also used to track the whereabouts of the smartphones during the application session, enabling the application to know where the devices are, and when they are removed.
+TIDE uses shape recognition to detect smartphones that are in contact with the surface, thus triggering a pairing procedure.
+The connection is established quickly and securely.
+The smartphone can be disconnected and reconnected easily, enabling the application to support short successive interactions.
+Shape recognition is based on computer vision techniques.
+The computer vision algorithms are used to detect specific device features, by processing and analyzing the raw visual input provided by the Microsoft Surface camera-based system.
+This technique is also used to track the location of the smartphones during the application session, enabling the application to know where the devices are, and when they are removed.
 At the core of the system is the replication of the smartphone UI on the tabletop.
-This is done with the VNC protocol \citep{Richardson:1998:vnc}, due to its stability and availability on many platforms.
+The replication is done with the VNC protocol \citep{Richardson:1998:vnc}, due to its stability and availability on many platforms.
 The client is integrated to the TIDE application, while the server relies on a third-party application installed on the smartphone.
 The mirrored UI is referred to as \emph{replicated UI} in the rest of this report.
-It is contained by a visual frame that will be referred to as \emph{surface UI}, and which implements all the UI elements that allow the user to manipulate the replicated UI on the tabletop.
+It is contained by a visual frame that will be referred to as \emph{surface UI}, which implements all the UI elements that allow the user to manipulate the replicated UI on the tabletop.
 %An overview of the TIDE user interface is given in figure~\ref{fig:alone}: user, smartphone, tabletop, surface UI and replicated UI.
 %
 %\begin{figure}[htb]
@@ -258,13 +264,13 @@ It is contained by a visual frame that will be referred to as \emph{surface UI},
 %  \label{fig:alone}
 %\end{figure}
 
-The surface UI has the same visual aspect than the physical casing of the smartphone, to provide a natural user interaction.
-By using the Presentation layer of the Microsoft Surface SDK, it allows the touch-based manipulation of the replicated UI, with features such as moving, rotating, resizing or minimizing.
+The surface UI has the same visual aspect as the physical casing of the smartphone, thus providing a natural user interaction.
+By using the Presentation layer of the Microsoft Surface SDK, the surface UI implements features that allow the replicated UI to be manipulated via touch-based gestures.
 \\
 \linebreak
 The final contribution is the evaluation of the TIDE prototype presented in chapter~\ref{evaluation}, which shows that the user-centered approach lead to the design of a composite device that provides a spontaneous user interaction.
-The system was evaluated by way of a participant-based usability study that confirmed that it was highly learnable, easy to use and useful in specific contexts.
-The usability study took the form of an experiment with thirteen volunteers, during which they used the application, as shown in figure~\ref{fig:368}.
+The system was evaluated by way of a participant-based usability study that confirmed that it is highly learnable, easy to use and useful in specific contexts.
+The usability study took the form of an experiment where thirteen volunteers used the application, as shown in figure~\ref{fig:368}.
 
 \begin{figure}[htb]
   \centering
@@ -273,14 +279,14 @@ The usability study took the form of an experiment with thirteen volunteers, dur
   \label{fig:368}
 \end{figure}
 
-The participants went through an exploratory test, a semi-controlled one, then answered a carefully designed questionnaire. The experiment generated qualified data, whose analysis helped determine which interaction techniques make TIDE easy to learn, which make it easy to use and in which contexts would TIDE be useful.
-The results showed that the touch-based techniques for shape manipulation came naturally to most users.
-For example, the possibility to enlarge the surface UI by touching both sides with two fingers and pulling apart.
-Other techniques that turned out to be familiar to most users were techniques that are part of a common IT knowledge due to the user's cultural background, an example of which is the double tap.
-However, the results did not confirm the idea that the form of the tabletop could inspire interaction techniques that would seem intuitive to the user, such as dragging a UI element to the edge of the table as one would with a real document.
+The participants went through an exploratory test, a semi-controlled one, then answered a carefully designed questionnaire. The experiment generated qualified data, whose analysis helped determine which interaction techniques make TIDE easy to learn, which make it easy to use, and in which contexts TIDE is useful.
+The results show that the touch-based techniques for shape manipulation come naturally to most users.
+An example being the action of enlarging the surface UI by touching both sides with two fingers and pulling apart.
+Other techniques that turned out to be familiar to most users are techniques that are part of common IT knowledge due to the user's cultural background, an example of which is the double tap.
+However, the results do not confirm the idea that the form of the tabletop can inspire interaction techniques that seem intuitive to the user, such as dragging a UI element to the edge of the table as one could with a real document.
 
-Lastly, the participants' answers to the questionnaire showed that the system would be useful to perform specific activities, including browsing internet, looking at pictures and playing games.
-However, users do not feel comfortable using the system in a public environment, which is understandable due to the open aspect of the tabletop display, but a system limitation all the same.
+Lastly, the participants' answers to the questionnaire show that the system is useful when performing specific activities, including browsing internet, looking at pictures and playing games.
+However, users do not feel comfortable using the system in a public environment, due to the open aspect of the tabletop display.
 
 %\section{Thesis overview}
 %

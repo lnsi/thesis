@@ -1,15 +1,42 @@
-\BOOKMARK [0][-]{section*.1}{Contents}{}% 1
+\BOOKMARK [0][-]{section*.3}{Contents}{}% 1
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 2
-\BOOKMARK [0][-]{chapter.2}{Related Work}{}% 3
-\BOOKMARK [0][-]{chapter.3}{Design}{}% 4
-\BOOKMARK [0][-]{chapter.4}{The TIDE prototype}{}% 5
-\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 6
-\BOOKMARK [0][-]{chapter.6}{Discussion}{}% 7
-\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 8
-\BOOKMARK [0][-]{section*.20}{Bibliography}{}% 9
-\BOOKMARK [0][-]{appendix.A}{TIDE video and code}{}% 10
-\BOOKMARK [0][-]{appendix.B}{Design - scenarios}{}% 11
-\BOOKMARK [0][-]{appendix.C}{Design - experiment script}{}% 12
-\BOOKMARK [0][-]{appendix.D}{Design - experiment form}{}% 13
-\BOOKMARK [0][-]{appendix.E}{Evaluation - experiment script}{}% 14
-\BOOKMARK [0][-]{appendix.F}{Evaluation - experiment forms}{}% 15
+\BOOKMARK [1][-]{section.1.1}{Problem statement}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.2}{Research methods}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.3}{Contributions}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Related Work}{}% 6
+\BOOKMARK [1][-]{section.2.1}{Device composition}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{Integrating smartphones with tabletops}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.3}{Pairing}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.4}{UI distribution}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.5}{User interaction}{chapter.2}% 11
+\BOOKMARK [0][-]{chapter.3}{Design}{}% 12
+\BOOKMARK [1][-]{section.3.1}{Understanding the application context}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.2}{Solution requirements}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.3}{Designing the user interaction}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.4}{Final design of TIDE}{chapter.3}% 16
+\BOOKMARK [0][-]{chapter.4}{The TIDE prototype}{}% 17
+\BOOKMARK [1][-]{section.4.1}{System interaction}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.2}{Pairing}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.3}{Tracking}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.4}{Replicated UI}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.5}{Surface UI}{chapter.4}% 22
+\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 23
+\BOOKMARK [1][-]{section.5.1}{Parameters}{chapter.5}% 24
+\BOOKMARK [1][-]{section.5.2}{Methods}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.3}{Experiment}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.4}{Results}{chapter.5}% 27
+\BOOKMARK [0][-]{chapter.6}{Discussion}{}% 28
+\BOOKMARK [1][-]{section.6.1}{User interaction in context}{chapter.6}% 29
+\BOOKMARK [1][-]{section.6.2}{Technical challenges}{chapter.6}% 30
+\BOOKMARK [1][-]{section.6.3}{Future work}{chapter.6}% 31
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 32
+\BOOKMARK [0][-]{section*.21}{Bibliography}{}% 33
+\BOOKMARK [-1][-]{section*.23}{Appendices}{}% 34
+\BOOKMARK [0][-]{appendix.A}{TIDE video and code}{section*.23}% 35
+\BOOKMARK [0][-]{appendix.B}{Design - scenarios}{section*.23}% 36
+\BOOKMARK [0][-]{appendix.C}{Design experiment}{section*.23}% 37
+\BOOKMARK [1][-]{section.C.1}{Experiment script}{appendix.C}% 38
+\BOOKMARK [1][-]{section.C.2}{Experiment form}{appendix.C}% 39
+\BOOKMARK [0][-]{appendix.D}{Evaluation of TIDE}{section*.23}% 40
+\BOOKMARK [1][-]{section.D.1}{Experiment script}{appendix.D}% 41
+\BOOKMARK [1][-]{section.D.2}{Experiment forms}{appendix.D}% 42

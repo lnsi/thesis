@@ -1,31 +1,31 @@
 \chapter{Discussion}
 \label{discussion}
 
-This thesis addressed the problem of building a composite device between a smartphone and a tabletop, by focusing on designing a system that would enable the user to spontaneously interact with it.
+This thesis addressed the problem of building a composite device between a smartphone and a tabletop, while focusing on designing a system, that would enable the user to spontaneously interact with it.
 This approach implied addressing two types of challenges.
 The first one relates to the design of the user interaction, and is presented in section~\ref{disc:ui}.
 The second consists of the technical system aspects, and is presented in section~\ref{disc:technical}.
 
-Section~\ref{sec:fw} regroups a few considerations about how this work could be extended.
+Section~\ref{sec:fw} regroups a few considerations of how this work could be extended.
 
 \section{User interaction in context}
 \label{disc:ui}
 
-To build TIDE, one of the design strategy that was followed was to design a system that was consistent with the opportunities and constraints that are implied by the characteristics of tabletops.
+To build TIDE, one of the design strategies that was followed, was to design a system that was consistent with the opportunities and constraints, that are implied by the characteristics of tabletops.
 
-This lead to the realization that the social nature of tabletops have precedence over many other user concerns.
-Due to the form of their interactive surface, i.e.\ horizontal and approachable from all angles, tabletops are social artifacts,  but also very public.
+This lead to the realization that the social nature of tabletops has precedence over many other user concerns.
+Due to the form of the interactive surface, i.e.\ horizontal and approachable from all angles, tabletops are social artifacts,  but also public.
 %The difference is a small one, though significant.
-The social aspect implies that they are ideal for situations where multiple users that know each other perform an activity together.
+The social aspect implies that tabletops are ideal for situations where multiple users perform an activity together.
 Examples of such social situations include a work meeting, a groups of friends in a bar or a family in their home.
 The public aspect, however, addresses the fact that their display is open for all to see, and thus a constraint to any form of private use.
 The implications include that a person alone would be reticent to use a tabletop for anything more private than looking at a map, and that two strangers would be reticent to share a tabletop to perform parallel activities.
 Tabletops seem thus better fitted for prolonged interactions in trusted or semi-trusted environments, such as in a home, a workplace, or among friends.
 The most relevant implication for a system such as TIDE is a limitation of the contexts in which the application would prove useful.
 
-On a more interactional level, it proved interesting to witness that end users were able to quickly learn the touch-based shape manipulation techniques that are specific to tabletops.
+On a more interactional level, it proved interesting to witness that end users were able to learn the touch-based shape manipulation techniques that are specific to tabletops easily.
 Examples of those are rotating and resizing UI elements.
-Even though those manipulations are not conventionally supported on smartphones, whose small screen size makes them irrelevant, the directness of the touch interaction is such that users were able to discover them almost instinctively.
+Even though those manipulations are not conventionally supported on smartphones, where the small screen size makes them irrelevant, the directness of the touch interaction is such that users were able to discover them instinctively.
 This confirms the idea that the tabletop experience is one that appeals even to the less computer literate.
 This work investigated the idea that interaction techniques could be discovered, that would be familiar to the user, due to their consistency with normal table interaction.
 The main example is the action of minimizing or closing the application by moving the window to the edge (or corner), similar to the way one would remove a real document from a table.
@@ -50,7 +50,7 @@ TIDE uses hard-coded IP addresses to connect the devices.
 As mentioned in this report, networking protocols can be used, to allow for automatic device discovery.
 However, these protocols work under the assumption that the involved devices are connected to the same local network.
 This is an important limitation to the form of spontaneous device interaction that this thesis investigated.
-A real-world example is that smartphones are often connected to mobile networks, and not to local networks.
+An example from the real world is that smartphones are often connected to mobile networks, and not to local networks.
 
 VNC \citep{Richardson:1998:vnc} was chosen to enable UI replication between the devices.
 This decision allowed the quick development of a functioning prototype that supports various smartphone models.
@@ -59,13 +59,13 @@ VNC was designed to remotely access the UI of a desktop computer.
 Its architecture includes a server, that is located on the remote computer, and implements most of the application logic.
 The server is thus accessed by a lightweight client that is only responsible for transmitting inputs, and receiving the updated UI copies.
 This architecture is not suited to the configuration investigated by this work.
-VNC requires the server to run on the smartphone whose resources are limited, while the tabletop only runs a small client.
-The result was a system whose replicated UI was only poorly responsive.
-The benefit of a well-known system like VNC is that it is available on most platforms, and could be for example installed both on the iPhone and on the HTC Legend.
-However, this work confirms that the rendering-based protocol it uses is too heavy for a smartphone to handle.
+VNC requires the server to run on the smartphone where resources are limited, while a light client runs on the tabletop.
+The result is a system where the replicated UI is fairly responsive.
+The benefit of a well-known system like VNC is that it is available on most platforms, and could be installed both on the iPhone and on the HTC Legend.
+However, this work confirms that the rendering-based protocol it uses, is too heavy for a smartphone to handle.
 %FUTURE WORK:
 
-Another shortcoming of VNC is that it constrains the configuration to UI replication, and its pixel-based protocol generates a replicated UI that can difficultly be adapted to various display sizes and resolutions.
+Another shortcoming of VNC is that it constrains the configuration to UI replication, and its pixel-based protocol generates a replicated UI that is difficultl to adapt to various display sizes and resolutions.
 This work has revealed a range of use cases that could be addressed by this type of composite device, but for which UI replication is not sufficient.
 An example is the possibility of transferring whole applications or processes to the tabletop, while keeping the smartphone independent.
 
@@ -88,7 +88,7 @@ This approach has potential.
 It would require implementing a dedicated component on the mobile device, and using an adapted technology for the UI distribution.
 
 For this reason and the ones discussed above, VNC should be replaced by another technology to support the UI distribution between devices.
-This challenge is being addressed by current research, with projects whose focus is on the development of comprehensive technologies dedicated to UI distribution between display devices.
+This challenge is being addressed by current research, with projects where the focus is on the development of comprehensive technologies dedicated to UI distribution between display devices.
 Examples include Substance \citep{Gjerlufsen:2011:substance} and XICE \citep{Arthur:2011:xice}.
 XICE is a programming framework for the development of applications that support the annexation of displays by nomadic users.
 %It focuses on a more flexible form of UI distribution based on the transmission of scene-graph instructions for local display updates.
@@ -96,8 +96,9 @@ XICE is a programming framework for the development of applications that support
 The detection, identification and tracking of the mobile devices is an important challenge of this type of system.
 As discussed above, using computer vision to track specific object features presents limitations.
 It seems that the upcoming NFC technologies (Near Field Communication) would allow a more efficient way of detecting and identifying mobile devices, though they would not solve the problem of precisely tracking their location on the display.
-An approach that is easier is to use visual tags.
+An approach that is easier to use is visual tags.
 Combined with computer vision, they allow detection, tracking and even identification of the devices.
+They present however the drawback that they must be applied to the devices, due to the fact that no current smartphones are equipped with them initially.
 
 %%%%%%%%%%%%%%%%%%
 %%% CONCLUSION %%%
@@ -116,7 +117,7 @@ The implementation of the prototype runs on the Microsoft Surface tabletop compu
 TIDE includes a visual tracking mechanism that is used to detect smartphone devices and track their location on the display during the application session.
 The UI replication is based on VNC \citep{Richardson:1998:vnc}, which allows the system to support most smartphone models, but otherwise proved to be unable to provide sufficient responsiveness for the replicated UI.
 
-TIDE was evaluated by way of a participant-based usability study whose results showed that the system is highly learnable and easy to use.
+TIDE was evaluated by way of a participant-based usability study where results showed that the system is highly learnable and easy to use.
 The evaluation also revealed that the system is useful to perform specific activities such as reading documents and looking at pictures, though only in trusted and semi-trusted environments.
 
 

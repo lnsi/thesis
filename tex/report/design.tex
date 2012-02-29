@@ -448,7 +448,7 @@ Each strategy can be consistently implemented for all six interaction primitives
 \caption{Interaction strategies.}
 \label{strategies}
 \end{figure}
-
+\hfill\\
 \begin{enumerate}
 \item{\emph{Action Tabs} are traditional buttons/tabs that implement functionalities.}
 \item{The \emph{Action Bar} can be compared to a virtual touchpad, it includes a manipulation area and buttons.}
@@ -632,7 +632,8 @@ Moreover, it is consistent with the action of removing a real piece of paper fro
 %, and the act of minimizing, hiding or closing the display extension application.
 %Moving the application out of focus seems like a good solution, and using a simple dragging gesture is a natural way of doing it.
 
-\section{Final Design of TIDE}
+\clearpage
+\section{Final design of TIDE}
 \label{sec:design}
 
 Based on the design analysis and in particular the feedback from the user experiment, the following design decisions were taken.
@@ -664,9 +665,7 @@ The following design decisions address the requirements RA-1 to RA-4 (see p.~\pa
 \item \hfill
 	\begin{enumerate}[{DA-1}a]
 	\item Pairing is triggered by placing the smartphone on the tabletop, as shown in figure~\ref{fig:sqPair}, for the reason that it is a simple gesture that is consistent with the form of the tabletop.
-	\item Pairing is based on wireless connectivity, in order to provide spontaneity to the interaction.
-	\end{enumerate}
-	
+
 \begin{figure}[htb]
   \centering
     \includegraphics[width=0.7\linewidth]{images/sqPair}
@@ -674,6 +673,8 @@ The following design decisions address the requirements RA-1 to RA-4 (see p.~\pa
   \label{fig:sqPair}
 \end{figure}
 
+	\item Pairing is based on wireless connectivity, in order to provide spontaneity to the interaction.
+	\end{enumerate}
 \item Device discovery relies on a standard networking protocol - in order to make it automatic, and provide spontaneity to the interaction.
 \item The user must confirm the connection, both on the tabletop and on the smartphone, for reasons of security.
 The tabletop should not be allowed to connect to an unknown device without explicit authorization, but the user should also be able to confirm that the smartphone is the correct one.
@@ -711,9 +712,9 @@ The reason for this is to benefit from the advantages of all interaction techniq
 Some are easy to discover, and provide the learnability and intuitiveness that is looked for, while others are quicker and easier to use.
 This is standard practice within software design, a good example being keyboard shortcuts, that are not easily discovered by a novice user, but are preferred by the expert user for their efficiency.
 
-%\defaultlists
-\label{DD}
+\clearpage
 
+\label{DD}
 \begin{enumerate}[{DD}-1]
 \item The surface UI takes the form of an active border that contains the replicated UI, based on the user feedback.
 It is a virtual replication of the physical body of the smartphone, to provide consistency in the user experience.
@@ -742,12 +743,15 @@ It is a virtual replication of the physical body of the smartphone, to provide c
 
 		\item Performing a rotating gesture with two hands
 		\end{enumerate}
+\clearpage
+
+
 	\item Resizing is done by
 		\begin{enumerate}[1{.}]
 		\item Performing a pinching gesture with two fingers of the same hand
 		\item Performing a resizing gesture with two hands, as shown in figure~\ref{fig:sqResize}
 		
-\begin{figure}[htb]
+\begin{figure}[h!]
   \centering
     \includegraphics[width=0.7\linewidth]{images/sqResize}
   \caption{(A,B,C) Resizing down using both hands.}

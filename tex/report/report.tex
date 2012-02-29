@@ -19,21 +19,22 @@
 %Interacting with Smartphones on Tabletop Computers
 %Combining Smartphones and Tabletops: Interaction Design
 
-\title{\Huge TIDE: Using Device Composition on Tabletop Computers to Extend the Smartphone Experience.}
-\author{\textbf{Master Thesis}\\by\\Leo Sicard\\(lnsi@itu.dk)\\
-\\
-\textbf{Supervisor:}\\Professor Jakob E Bardram\\
-\\}
-\date{March 1st, 2012\\IT University of Copenhagen, Denmark}
+%\title{\Huge TIDE: Using Device Composition on Tabletop Computers to Extend the Smartphone Experience.}
+%\author{\textbf{Master Thesis}\\by\\Leo Sicard\\(lnsi@itu.dk)\\
+%\\
+%\textbf{Supervisor:}\\Professor Jakob E Bardram\\
+%\\}
+%\date{March 1st, 2012\\IT University of Copenhagen, Denmark}
 
 \begin{document}
 
-%\maketitle
-%\begin{figure}[h!]
-%  \centering
-%    \includegraphics[width=0.8\textwidth]{images/tide314}
-%\end{figure}
-%\clearpage
+
+% CHECK EVRYTHING FOR:
+% use of italic
+% tempus
+% 'integrate with'
+% numbers in letters
+% layout
 
 \pagestyle{empty}
 
@@ -43,7 +44,7 @@
 \hfill\\
 \hfill\\
 
-\Huge TIDE: Using Device Composition on Tabletop Computers to Extend the Smartphone Experience.
+\Huge TIDE - Using Device Composition on Tabletop Computers to Extend the Smartphone Experience
 \hfill\\
 \hfill\\
 \begin{figure}[h!]
@@ -57,7 +58,7 @@
 \emph{lnsi@itu.dk}\\
 \hfill\\
 \hfill\\
-\textbf{Supervisor:}\\Professor Jakob E Bardram\\
+\textbf{Supervisor}\\Professor Jakob E.\ Bardram\\
 \hfill\\
 \hfill\\
 \hfill\\
@@ -125,21 +126,29 @@ www.itu.dk\\
 \hfill\\
 \hfill\\
 
-\begin{abstract}
-Tabletop displays are now appearing in public spaces.
-They present a horizontal interactive surface that is ideal in social situations, and they support a touch-based experience which appeals to all users.
-Modern smartphones are able to support most users' daily computing tasks, and their mobility bring spontaneity to the computer interaction.
-However, the screen size of smartphones is a limitation when viewing graphically intense content and in situations with multiple users.
+%\begin{abstract}
+
+\pagenumbering{roman}
+
+
+\subsection*{Abstract}
+\addcontentsline{toc}{subsection}{Abstract}
+
+Tabletop displays are appearing more frequently in public spaces.
+They provide a horizontal interactive surface which is ideal in social situations. They support a touch-based experience which appeals to most users.
+Modern smartphones are able to support most users' daily computing tasks, and we carry them with us at all times.
+This mobility enables improvised computer interaction.
+However, the screen size of smartphones is a limitation both when viewing graphically intense content, and in situations with multiple users.
 
 This thesis focuses on extending the smartphone experience to tabletop displays.
-It investigates the use of \emph{device composition} to allow smartphone users to spontaneously annex the display space made available by tabletops.
-In particular, this report presents the design, implementation and evaluation of \emph{TIDE (Tabletop Interactive Display Extension)}; a composite device that integrates a smartphone to a tabletop by way of UI replication, with focus on \emph{spontaneous user interaction}.
+It examines the use of \emph{device composition} to allow smartphone users to spontaneously annex the display space made available by tabletops.
+In particular, this report presents the design, implementation and evaluation of \emph{TIDE (Tabletop Interactive Display Extension)}; a composite device that integrates a smartphone to a tabletop by way of UI replication, and with focus on \emph{spontaneous user interaction}.
 
-The design process shows that by following a human-centered approach and using interaction techniques that are familiar to most users, the system can be designed to be easy to learn and easy to use.
+The design of TIDE shows that by following a user-centered approach and focusing on interaction techniques that are familiar to the end users, the system can be designed to be easy to learn and easy to use.
 The implementation of TIDE demonstrates that it is feasible to build this type of system on standard hardware and standard platforms.
 Moreover, TIDE supports multiple simultaneous smartphones, and uses computer vision to track the location of the devices on the display.
 The evaluation of TIDE, in the form of a participant-based usability study, shows that the system is highly learnable, easy to use, and useful in context.
-\end{abstract}
+%\end{abstract}
 
 \clearpage
 
@@ -158,12 +167,16 @@ The evaluation of TIDE, in the form of a participant-based usability study, show
 \hfill\\
 \hfill\\
 
-\renewcommand{\abstractname}{Acknowledgements}
+%\renewcommand{\abstractname}{Acknowledgements}
 
-\begin{abstract}
-First and foremost, I would like to thank Professor Jakob E. Bardram, for supervising this project and teaching me how to write a thesis.
+%\begin{abstract}
 
-Next, I thank Postdoc Aur\'{e}lien Tabard and Dr. Juan David Hincapie-Ramos for their involvement as thesis advisors; for the precious council, continuous support, and for giving me confidence.
+\subsection*{Acknowledgements}
+\addcontentsline{toc}{subsection}{Acknowledgements}
+
+First and foremost, I would like to thank Professor Jakob E.\ Bardram, for supervising this project and teaching me how to write a thesis.
+
+Next, I thank Postdoc Aur\'{e}lien Tabard and Dr.\ Juan David Hincapie-Ramos for their involvement as thesis advisors; for the precious council, continuous support, and for giving me confidence.
 In particular, I thank Juan for the idea that initiated this thesis.
 
 Then, I thank all the people who gracefully volunteered to participate in the user experiments.
@@ -172,18 +185,18 @@ Finally, I give my thanks to:
 \tightlists
 \begin{itemize}[-]
 
-\item Sebastian B\"{u}ttrich and the PITLab (Pervasive Interaction Technology Lab) for providing the hardware and working space,
+\item Sebastian B\"{u}ttrich and the PITLab (Pervasive Interaction Technology Lab) for providing the hardware and working space.
 
-\item the researchers and students associated with the PITLab for the support and helpful comments,
+\item The researchers and students associated with the PITLab for the support and helpful comments.
 
-\item Mads Frost for taking and fixing pictures,
-
-\item Marie Choe Tarp for drawing,
+\item Mads Frost for taking and fixing pictures.
 
 \item Ane Tarp and Jakob Borg for proofreading.
 
+\item Marie Choe Tarp for drawing.
+
 \end{itemize}
-\end{abstract}
+%\end{abstract}
 
 \clearpage
 
@@ -193,14 +206,13 @@ Finally, I give my thanks to:
 
 \pagenumbering{arabic}
 \pagestyle{headings}
-\maxtocdepth{section}
+\maxtocdepth{subsection}
 \tableofcontents
 %\listoffigures
 
 \clearpage
 
 \firmlists
-
 
 \include{introduction}
 \include{relatedwork}
@@ -218,10 +230,8 @@ Finally, I give my thanks to:
 \bibliography{../references}
 
 %\cleardoublepage
-%\part*{Appendices}
-%\addcontentsline{toc}{part}{Appendices}
 
-\settocdepth{chapter}
+\settocdepth{section}
 
 \include{video}
 \include{scenarios}
