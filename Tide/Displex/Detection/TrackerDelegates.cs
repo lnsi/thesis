@@ -9,7 +9,7 @@ namespace Displex.Detection
 
     public delegate void DeviceAdded(object sender, TrackerEventArgs e);
     public delegate void DeviceUpdated(object sender, TrackerEventArgs e);
-    public delegate void DeviceRemoved(object sender, TrackerEventArgs e);
+    public delegate void DeviceRemovedEvent(object sender, TrackerEventArgs e);
 
     public class TrackerEventArgs : EventArgs
     {

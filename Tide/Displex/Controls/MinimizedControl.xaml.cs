@@ -21,9 +21,9 @@ namespace Displex.Controls
     /// <summary>
     /// Interaction logic for MinimizedControl.xaml
     /// </summary>
-    public partial class MinimizedControl : SurfaceUserControl
+    public partial class MinimizedControl : UserControl
     {
-        public virtual event DeviceRemoved Disconnected;
+        public virtual event DeviceRemovedEvent Disconnected;
         public virtual event ControlRestored Restored;
 
         protected IDevice device { get; set; }
@@ -103,7 +103,7 @@ namespace Displex.Controls
         }
     }
 
-    public delegate void ControlMinimized(object sender, MinimizeEventArgs e);
+    public delegate void ControlMinimizedEvent(object sender, MinimizeEventArgs e);
     public delegate void ControlRestored(object sender, MinimizeEventArgs e);
 
     public class MinimizeEventArgs : EventArgs

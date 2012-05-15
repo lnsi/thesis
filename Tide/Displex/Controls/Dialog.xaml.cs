@@ -20,7 +20,7 @@ namespace Displex.Controls
     /// <summary>
     /// Interaction logic for Dialog.xaml
     /// </summary>
-    public partial class Dialog : SurfaceUserControl
+    public partial class Dialog : UserControl
     {
         /// <summary>
         /// The event generated after accepting questions.

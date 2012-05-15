@@ -1,0 +1,21 @@
+﻿<s:SurfaceUserControl x:Class="Displex.Controls.DeviceControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    xmlns:vnc="clr-namespace:VncSharp;assembly=VncSharp"
+    xmlns:local="clr-namespace:Displex" 
+    xmlns:Microsoft_Surface_Presentation_Generic="clr-namespace:Microsoft.Surface.Presentation.Generic;assembly=Microsoft.Surface.Presentation.Generic" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <s:SurfaceUserControl.Resources>
+        <!--<local:PercentageConverter x:Key="PercentageConverter"/>-->
+    </s:SurfaceUserControl.Resources>
+
+    <!-- LAYOUT IS SET PROGRAMMATICALLY WITH METHOD SETSKIN() IN DEVICE IMPLEMENTATION-->
+    <Grid x:Name="MainGrid" d:IsHidden="True" Opacity="1">
+        <Grid.Background>
+            <ImageBrush x:Name="MainBg"/>
+        </Grid.Background>
+        <vnc:RemoteDesktopWPF x:Name="rdfWPF" VerticalAlignment="Bottom"/>
+        <Grid x:Name="Footer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+     </Grid>
+
+</s:SurfaceUserControl>

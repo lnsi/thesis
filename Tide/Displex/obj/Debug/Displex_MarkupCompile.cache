@@ -4,15 +4,17 @@
 winexe
 C#
 .cs
-C:\LeoThesis\thesis\Tide\Displex\obj\Debug\
+C:\Users\jhincapie\Desktop\TIDE\Tide\Displex\obj\Debug\
 Displex
 none
 false
 DEBUG;TRACE
-C:\LeoThesis\thesis\Tide\Displex\App.xaml
-4-1376717536
+C:\Users\jhincapie\Desktop\TIDE\Tide\Displex\App.xaml
+5-1109092177
 2-1369897525
-17-160453700
-181373495996
-Controls\DeviceControl.xaml;Controls\Dialog.xaml;Controls\MinimizedControl.xaml;MainWindow.xaml;
+181434623443
+21-1084961240
+Controls\DeviceControl.xaml;Controls\Dialog.xaml;Controls\MinimizedControl.xaml;Controls\UserControl1.xaml;MainWindow.xaml;
+
+True
 

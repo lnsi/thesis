@@ -110,7 +110,7 @@
       					<ControlTemplate.Triggers>
       						<MultiTrigger>
       							<MultiTrigger.Conditions>
-      								<Condition Property="IsActive" Value="True"/>
+      								<!--<Condition Property="IsActive" Value="True"/>-->
       								<Condition Property="ShowsActivationEffects" Value="False"/>
       							</MultiTrigger.Conditions>
       							<MultiTrigger.ExitActions>

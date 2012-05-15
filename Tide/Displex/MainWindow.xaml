@@ -6,24 +6,24 @@
     xmlns:local="clr-namespace:Displex"
     xmlns:controls="clr-namespace:Displex.Controls"             
     Title="Displex" Loaded="SurfaceWindow_Loaded">
-    <s:SurfaceWindow.Resources>
+  <s:SurfaceWindow.Resources>
     <ImageBrush x:Key="WindowBackground" Stretch="Fill" Opacity="1" ImageSource="pack://application:,,,/Resources/WindowBackground2.png"/>
-        <Storyboard x:Key="showDialog">
-            <DoubleAnimation From="0" To="1" Duration="0:0:0.4" Storyboard.TargetProperty="Opacity" />
-            <PointAnimation By="120,0" Duration="0:0:0.4" Storyboard.TargetProperty="Center" />
-        </Storyboard>
-        <Storyboard x:Key="showDialogLeft">
-            <DoubleAnimation From="0" To="1" Duration="0:0:0.4" Storyboard.TargetProperty="Opacity" />
-            <PointAnimation By="-120,0" Duration="0:0:0.4" Storyboard.TargetProperty="Center" />
-        </Storyboard>
-        <Storyboard x:Key="hideDialog">
-            <DoubleAnimation To="0" Duration="0:0:0.4" Storyboard.TargetProperty="Opacity" />
-        </Storyboard>
-    </s:SurfaceWindow.Resources>
-    <Grid Background="{StaticResource WindowBackground}" >
-        <s:ScatterView Name="MainSV">
+    <Storyboard x:Key="showDialog">
+      <DoubleAnimation From="0" To="1" Duration="0:0:0.4" Storyboard.TargetProperty="Opacity" />
+      <PointAnimation By="120,0" Duration="0:0:0.4" Storyboard.TargetProperty="Center" />
+    </Storyboard>
+    <Storyboard x:Key="showDialogLeft">
+      <DoubleAnimation From="0" To="1" Duration="0:0:0.4" Storyboard.TargetProperty="Opacity" />
+      <PointAnimation By="-120,0" Duration="0:0:0.4" Storyboard.TargetProperty="Center" />
+    </Storyboard>
+    <Storyboard x:Key="hideDialog">
+      <DoubleAnimation To="0" Duration="0:0:0.4" Storyboard.TargetProperty="Opacity" />
+    </Storyboard>
+  </s:SurfaceWindow.Resources>
+  <Grid Background="{StaticResource WindowBackground}" >
+    <s:ScatterView Name="MainSV">
 
-            <!--<Grid Width="1024" Height="768">
+      <!--<Grid Width="1024" Height="768">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.05*" />
             <RowDefinition Height="0.9*" />
@@ -46,7 +46,7 @@
         <s:SurfaceButton Background="Red" Grid.Column="2" Grid.Row="2"></s:SurfaceButton>
 
     </Grid>-->
-        </s:ScatterView>
-    </Grid>
+    </s:ScatterView>
+  </Grid>
 
 </s:SurfaceWindow>

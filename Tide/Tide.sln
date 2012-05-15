@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomAttract", "CustomAttract\CustomAttract.csproj", "{D640B918-EF14-46C4-A586-339313EE69F4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VncSharpExampleCS", "VncSharpExampleCS\VncSharpExampleCS.csproj", "{E36FC4D2-4E6C-4905-8FD8-D604F9772F3A}"

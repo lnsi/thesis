@@ -15,7 +15,7 @@ namespace Displex.Detection
     {
         public virtual event DeviceAdded DeviceAdded;
         public virtual event DeviceUpdated DeviceUpdated;
-        public virtual event DeviceRemoved DeviceRemoved;
+        public virtual event DeviceRemovedEvent DeviceRemoved;
 
         private ObservableCollection<IDevice> knownDevices;
         private IphoneTracker iphoneTracker;

@@ -28,3 +28,14 @@ C:\LeoThesis\thesis\Tide\VncSharpExampleCS\obj\Debug\VncSharpExampleCS.Propertie
 C:\LeoThesis\thesis\Tide\VncSharpExampleCS\obj\Debug\VncSharpExampleCS.csproj.GenerateResource.Cache
 C:\LeoThesis\thesis\Tide\VncSharpExampleCS\obj\Debug\VncSharpExampleCS.exe
 C:\LeoThesis\thesis\Tide\VncSharpExampleCS\obj\Debug\VncSharpExampleCS.pdb
+C:\Users\jhincapie\Desktop\TIDE\Tide\VncSharpExampleCS\bin\Debug\VncSharpExampleCS.exe
+C:\Users\jhincapie\Desktop\TIDE\Tide\VncSharpExampleCS\bin\Debug\VncSharpExampleCS.pdb
+C:\Users\jhincapie\Desktop\TIDE\Tide\VncSharpExampleCS\bin\Debug\VncSharp.dll
+C:\Users\jhincapie\Desktop\TIDE\Tide\VncSharpExampleCS\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jhincapie\Desktop\TIDE\Tide\VncSharpExampleCS\obj\Debug\VncSharp.ConnectDialog.resources
+C:\Users\jhincapie\Desktop\TIDE\Tide\VncSharpExampleCS\obj\Debug\VncSharpExampleCS.form.resources
+C:\Users\jhincapie\Desktop\TIDE\Tide\VncSharpExampleCS\obj\Debug\VncSharpExampleCS.Properties.Resources.resources
+C:\Users\jhincapie\Desktop\TIDE\Tide\VncSharpExampleCS\obj\Debug\ResGen.read.1.tlog
+C:\Users\jhincapie\Desktop\TIDE\Tide\VncSharpExampleCS\obj\Debug\ResGen.write.1.tlog
+C:\Users\jhincapie\Desktop\TIDE\Tide\VncSharpExampleCS\obj\Debug\VncSharpExampleCS.exe
+C:\Users\jhincapie\Desktop\TIDE\Tide\VncSharpExampleCS\obj\Debug\VncSharpExampleCS.pdb
