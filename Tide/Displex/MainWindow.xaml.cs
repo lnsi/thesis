@@ -253,27 +253,17 @@ namespace Displex
 
     void svi_ManipulationCompleted(object sender, System.Windows.Input.ManipulationCompletedEventArgs e)
     {
-      //Console.WriteLine("logging test: ");
-      //Console.WriteLine("rotation: " + e.RotationalChange);
-      //Console.WriteLine("horizontal: " + e.HorizontalChange + ", h: " + h);
-      //Console.WriteLine("vertical: " + e.VerticalChange + ", v: " + v);
-      //Console.WriteLine("scale: " + e.ScaleFactor);
-
-      if (e.HorizontalChange > 30 || e.VerticalChange > 30)
+      if (e.TotalManipulation.Translation.X > 30 || e.TotalManipulation.Translation.Y > 30)
       {
-        string h = e.HorizontalChange.ToString().Remove(e.HorizontalChange.ToString().IndexOf("."));
-        string v = e.VerticalChange.ToString().Remove(e.VerticalChange.ToString().IndexOf("."));
-        Logger.Log("drag", String.Concat("gesture h:", h, " v:", v));
+        Logger.Log("drag", String.Concat("gesture h:", e.TotalManipulation.Translation.X, " v:", e.TotalManipulation.Translation.Y));
       }
-      if (e.RotationalChange > 3)
+      if (e.TotalManipulation.Rotation > 3)
       {
-        string r = e.RotationalChange.ToString().Remove(e.RotationalChange.ToString().IndexOf("."));
-        Logger.Log("rotate", String.Concat("gesture r:", r));
+        Logger.Log("rotate", String.Concat("gesture r:", e.TotalManipulation.Rotation));
       }
-      if (e.ScaleFactor != 1)
+      if (e.TotalManipulation.Scale.Length != 1)
       {
-        string scale = e.ScaleFactor.ToString().Length > 5 ? e.ScaleFactor.ToString().Remove(5) : e.ScaleFactor.ToString();
-        Logger.Log("resize", String.Concat("gesture ", scale));
+        Logger.Log("resize", String.Concat("gesture ", e.TotalManipulation.Scale.Length));
       }
     }
 

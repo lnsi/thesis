@@ -54,6 +54,56 @@ namespace Displex.Controls
 
     private DateTime lastTapTime = DateTime.Now;
 
+    public void _ContactTap(object sender, TouchEventArgs e)
+    {
+      //base.OnContactTapGesture(e);
+      if (!e.Device.GetIsFingerRecognized())
+        return;
+
+      if (IsMetaContact(e))
+      {
+        DateTime now = DateTime.Now;
+        if (now.Subtract(lastTapTime).Seconds < 1 && now.Subtract(lastTapTime).Milliseconds < 300)
+        {
+          if (maximized)
+          {
+            removeRotateButtons();
+            Demaximized(this, new RoutedEventArgs());
+            e.Handled = true;
+          }
+          else
+          {
+            Minimized(this, new MinimizeEventArgs(device, MinimizeEventType.Minimized, e.Device.GetPosition(this)));
+            Logger.Log("minimize", "double tap");
+            e.Handled = true;
+          }
+        }
+        lastTapTime = DateTime.Now;
+        return;
+      }
+
+      //Point touchPoint = MapPosition(e.GetPosition(rdfWPF.ImageRDF));
+      //rdfWPF.ContactDown(touchPoint);
+      //rdfWPF.ContactUp(touchPoint);
+      //Console.WriteLine("ContactTap({0:00.00}, {1:00.00})", touchPoint.X, touchPoint.Y);
+      //e.Handled = true;
+    }
+
+    public void _ContactHold(object sender, TouchEventArgs e)
+    {
+      if (!e.Device.GetIsFingerRecognized() || maximized)
+        return;
+
+      if (IsMetaContact(e))
+      {
+        //Minimized(this, new MinimizeEventArgs(device, MinimizeEventType.Minimized, e.Contact.GetPosition(null)));
+        Disconnected(this, new TrackerEventArgs(device, TrackerEventType.Removed));
+        Logger.Log("exit", "press and hold");
+      }
+
+      e.Handled = true;
+    }
+
     public void _TouchDown(object sender, TouchEventArgs e)
     {
       Console.WriteLine();
