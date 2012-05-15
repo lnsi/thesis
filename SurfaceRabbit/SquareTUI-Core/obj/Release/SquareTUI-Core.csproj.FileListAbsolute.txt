@@ -1,9 +1,0 @@
-C:\Users\PITlab\Desktop\SurfaceRabbit\SquareTUI-Core\bin\Release\SquareTUI-Core.dll.config
-C:\Users\PITlab\Desktop\SurfaceRabbit\SquareTUI-Core\bin\Release\SquareTUI-Core.dll
-C:\Users\PITlab\Desktop\SurfaceRabbit\SquareTUI-Core\bin\Release\SquareTUI-Core.pdb
-C:\Users\PITlab\Desktop\SurfaceRabbit\SquareTUI-Core\bin\Release\Emgu.CV.dll
-C:\Users\PITlab\Desktop\SurfaceRabbit\SquareTUI-Core\bin\Release\Emgu.Util.dll
-C:\Users\PITlab\Desktop\SurfaceRabbit\SquareTUI-Core\bin\Release\zlib.net.dll
-C:\Users\PITlab\Desktop\SurfaceRabbit\SquareTUI-Core\obj\Release\ResolveAssemblyReference.cache
-C:\Users\PITlab\Desktop\SurfaceRabbit\SquareTUI-Core\obj\Release\SquareTUI-Core.dll
-C:\Users\PITlab\Desktop\SurfaceRabbit\SquareTUI-Core\obj\Release\SquareTUI-Core.pdb
