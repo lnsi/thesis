@@ -10,6 +10,7 @@ using System.Windows.Controls;
 using System.Windows;
 using Microsoft.Surface.Presentation.Controls;
 using Displex.Controls;
+using Displex.Properties;
 
 namespace Displex.Detection
 {
@@ -42,10 +43,9 @@ namespace Displex.Detection
             return height;
         }
 
-        private string ip = "10.1.1.199";
         public string Ip()
         {
-            return ip;
+          return Settings.Default.iPhoneIP;
         }
 
         public bool IsSameDevice(IDevice device)

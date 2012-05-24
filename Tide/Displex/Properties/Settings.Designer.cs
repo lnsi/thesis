@@ -22,5 +22,14 @@ namespace Displex.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("192.168.0.100")]
+        public string iPhoneIP {
+            get {
+                return ((string)(this["iPhoneIP"]));
+            }
+        }
     }
 }
