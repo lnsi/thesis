@@ -509,3 +509,11 @@ Logging session 00 - user LS - 2/7/2012 10:56:17 AM
 40946.4577043866,rotate,gesture r:85,00
 40946.4577239468,minimize,off edge,00
 40946.4578015393,exit,minimized button,00
+
+Logging session 00 - user test - 25/05/2012 2:48:49 PM
+41054.6172348727,minimize,blob touch,00
+41054.6177643056,minimize,blob touch,00
+41054.6183006597,minimize,blob touch,00
+41054.6184268634,minimize,blob touch,00
+41054.6190219329,minimize,blob touch,00
+41054.6190358912,exit,minimized button,00

@@ -8,6 +8,7 @@ using System.Drawing.Imaging;
 using Emgu.CV;
 using Emgu.CV.Structure;
 using System.Collections.ObjectModel;
+using Microsoft.Surface.Core;
 
 namespace Displex.Detection
 {
@@ -18,15 +19,15 @@ namespace Displex.Detection
         public virtual event DeviceRemovedEvent DeviceRemoved;
 
         private ObservableCollection<IDevice> knownDevices;
-        private IphoneTracker iphoneTracker;
+        private IPhoneTracker iphoneTracker;
         private LegendTracker legendTracker;
         private ColorPalette pal;
         public bool TrackingDisabled;
 
-        public Tracker() 
+        public Tracker()
         {
             knownDevices = new ObservableCollection<IDevice>();
-            iphoneTracker = new IphoneTracker();
+            iphoneTracker = new IPhoneTracker();
             legendTracker = new LegendTracker();
             Console.WriteLine("tracker instantiated");
         }
@@ -48,25 +49,11 @@ namespace Displex.Detection
             if (DeviceRemoved != null)
                 DeviceRemoved(this, new TrackerEventArgs(device, TrackerEventType.Removed));
         }
-        
-        public void ProcessImage(Bitmap bitmap)
-        {
-            Convert8bppBMPToGrayscale(bitmap);
-            PerformDetection(new Image<Gray, byte>(bitmap));
-            //PerformOneTimeDetection(new Image<Gray, byte>(bitmap));
-        }
 
-        private void Convert8bppBMPToGrayscale(Bitmap bmp)
+        public void ProcessImage(byte[] image, ImageMetrics metrics, bool saveFrame)
         {
-            if (pal == null) // pal is defined at module level as --- ColorPalette pal;
-            {
-                pal = bmp.Palette;
-                for (int i = 0; i < 256; i++)
-                {
-                    pal.Entries[i] = System.Drawing.Color.FromArgb(i, i, i);
-                }
-            }
-            bmp.Palette = pal;
+            PerformDetection(new Image<Gray, byte>(metrics.Width, metrics.Height) { Bytes = image }, saveFrame);
+            //PerformOneTimeDetection(new Image<Gray, byte>(bitmap));
         }
 
         /// <summary>
@@ -84,12 +71,12 @@ namespace Displex.Detection
             IList<IDevice> foundDevices = new List<IDevice>();
 
             // each specific type of device must be tracked independently with specific implementation
-            List<Iphone> foundIphones = iphoneTracker.FindIphoneDevices(contours);
+            List<IPhone> foundIphones = iphoneTracker.FindIphoneDevices(contours);
             if (foundIphones != null)
             {
-                foreach (Iphone i in foundIphones)
+                foreach (IPhone i in foundIphones)
                     foundDevices.Add(i);
-            }  
+            }
 
             if (foundDevices.Count == 0)
             {
@@ -99,9 +86,9 @@ namespace Displex.Detection
             {
                 foreach (IDevice device in foundDevices)
                 {
-                    OnDeviceAdded(device); 
+                    OnDeviceAdded(device);
                 }
-            TrackingDisabled = true;
+                TrackingDisabled = true;
             }
         }
 
@@ -109,8 +96,10 @@ namespace Displex.Detection
         /// process image to continuously track all present devices
         /// </summary>
         /// <param name="gray"></param>
-        private void PerformDetection(Image<Gray, Byte> gray)
+        private void PerformDetection(Image<Gray, Byte> gray, bool saveFrame)
         {
+            if (saveFrame)
+                gray.Save(@"C:\Users\surface\Desktop\capture.jpg");
             gray = gray.ThresholdBinary(new Gray(30), new Gray(255));
 
             Contour<System.Drawing.Point> contours = gray.FindContours(Emgu.CV.CvEnum.CHAIN_APPROX_METHOD.CV_CHAIN_APPROX_SIMPLE,
@@ -121,10 +110,10 @@ namespace Displex.Detection
             IList<IDevice> foundDevices = new List<IDevice>();
 
             // each specific type of device must be tracked independently with specific implementation
-            List<Iphone> foundIphones = iphoneTracker.FindIphoneDevices(contours);
+            List<IPhone> foundIphones = iphoneTracker.FindIphoneDevices(contours);
             if (foundIphones != null)
             {
-                foreach (Iphone i in foundIphones)
+                foreach (IPhone i in foundIphones)
                     foundDevices.Add(i);
             }
 
@@ -145,7 +134,7 @@ namespace Displex.Detection
             {
                 bool isNew = true;
                 foreach (IDevice cD in knownDevices)
-                {        
+                {
                     // a found device is identified as a current device
                     if (fD.IsSameDevice(cD))
                     {
@@ -157,14 +146,14 @@ namespace Displex.Detection
                         cD.UpdatePosition();
                         OnDeviceUpdated(cD);
                         //Console.WriteLine("device updated");
-                    }          
+                    }
                 }
                 // a found device is identified as a new device
                 if (isNew)
                 {
                     devicesToBeAdded.Add(fD);
                 }
-            }    
+            }
             // attempt removing lost devices
             //for (int i = 0; i < notToBeRemoved.Length; i++)
             //{
@@ -191,10 +180,10 @@ namespace Displex.Detection
         }
 
         private void TrackDevice(IDevice device)
-        {       
-//            Console.WriteLine("orientation: " + device.Orientation);
+        {
+            //            Console.WriteLine("orientation: " + device.Orientation);
             //mainWindow.showDisplex(device);
-            
+
             // connect only once
             //if (!isConnected)
             //{

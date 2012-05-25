@@ -47,6 +47,7 @@
 
     </Grid>-->
     </s:ScatterView>
-  </Grid>
+        <s:SurfaceButton Content="Save Image" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="SurfaceButton_Click" Width="150" Height="50"/>
+    </Grid>
 
 </s:SurfaceWindow>

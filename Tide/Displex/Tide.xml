@@ -11,12 +11,9 @@ instructions.
   <Application>
     <Title>Tide</Title>
     <Description>Tide prototype</Description>
-    <ExecutableFile>C:\LeoThesis\thesis\Tide\Displex\bin\Debug\Displex.exe</ExecutableFile>
+    <ExecutableFile>C:\SurfaceApps\TIDE\thesis\Tide\Displex\bin\Debug\Displex.exe</ExecutableFile>
     <Arguments></Arguments>
-    <IconImageFile>C:\LeoThesis\thesis\Tide\Displex\Resources\icon.png</IconImageFile>
-    <Preview>
-      <PreviewImageFile>C:\LeoThesis\thesis\Tide\Displex\Resources\iconPreview.png</PreviewImageFile>
-    </Preview>
+    <IconImageFile>C:\SurfaceApps\TIDE\thesis\Tide\Displex\Resources\icon.png</IconImageFile>
     <Tags>
       <!--
       If your application uses tagged objects, please uncomment this section to register the tags with the Shell. 

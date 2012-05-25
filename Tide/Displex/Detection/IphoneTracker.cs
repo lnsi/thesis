@@ -5,14 +5,15 @@ using System.Text;
 using System.Drawing;
 using Emgu.CV;
 using Emgu.CV.Structure;
+using Displex.Properties;
 
 namespace Displex.Detection
 {
-     public class IphoneTracker
+     public class IPhoneTracker
      {
-         public List<Iphone> FindIphoneDevices(Contour<Point> contours)
+         public List<IPhone> FindIphoneDevices(Contour<Point> contours)
          {
-            List<Iphone> FoundDevices = new List<Iphone>();
+            List<IPhone> FoundDevices = new List<IPhone>();
 
             if (contours == null)
                 return null;
@@ -25,7 +26,7 @@ namespace Displex.Detection
             {
                 //Console.WriteLine("potential APPLE: {0}", contours.Area);
                 // look for the Apple logo
-                if (contours.Area >= 200 && contours.Area <= 250)
+                if (contours.Area >= Settings.Default.iPhoneAppleMin && contours.Area <= Settings.Default.iPhoneAppleMax)
                 {
                     apple = new CircleF(
                       new PointF(contours.BoundingRectangle.Left + contours.BoundingRectangle.Width / 2,
@@ -38,7 +39,7 @@ namespace Displex.Detection
                     {
                         //Console.WriteLine("potential camera: {0}", contours.Area);
                         // look for the camera lens
-                        if (contours.Area >= 20 && contours.Area <= 35)
+                        if (contours.Area >= Settings.Default.iPhoneCameraMin && contours.Area <= Settings.Default.iPhoneCameraMax)
                         {
                             camera = new CircleF(
                                 new PointF(contours.BoundingRectangle.Left + contours.BoundingRectangle.Width / 2,
@@ -47,9 +48,9 @@ namespace Displex.Detection
 
                             // check distance between apple and camera
                             double dist = Euclidean(apple.Center, camera.Center);
-                            if (dist >= 35 && dist <= 40)
+                            if (dist >= Settings.Default.iPhoneEuclideanDistanceMin && dist <= Settings.Default.iPhoneEuclideanDistanceMax)
                             {
-                                FoundDevices.Add(new Iphone(apple, camera));
+                                FoundDevices.Add(new IPhone(apple, camera));
                                 //Console.WriteLine("found iphone");
                             }
                         }

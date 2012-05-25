@@ -14,7 +14,7 @@ using Displex.Properties;
 
 namespace Displex.Detection
 {
-    public class Iphone : IDevice
+    public class IPhone : IDevice
     {
 
         #region IDevice Members
@@ -105,7 +105,7 @@ namespace Displex.Detection
         private const int centersNr = 5, orientationsNr = 5;
 
         // Constructor
-        public Iphone(CircleF apple, CircleF camera)
+        public IPhone(CircleF apple, CircleF camera)
         {
             Control = new DeviceControl(this);
             MinControl = new MinimizedControl(this);

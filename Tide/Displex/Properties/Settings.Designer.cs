@@ -25,10 +25,64 @@ namespace Displex.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("192.168.0.100")]
+        [global::System.Configuration.DefaultSettingValueAttribute("192.168.0.104")]
         public string iPhoneIP {
             get {
                 return ((string)(this["iPhoneIP"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public int iPhoneAppleMin {
+            get {
+                return ((int)(this["iPhoneAppleMin"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("250")]
+        public int iPhoneAppleMax {
+            get {
+                return ((int)(this["iPhoneAppleMax"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("20")]
+        public int iPhoneCameraMin {
+            get {
+                return ((int)(this["iPhoneCameraMin"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("35")]
+        public int iPhoneCameraMax {
+            get {
+                return ((int)(this["iPhoneCameraMax"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("55")]
+        public int iPhoneEuclideanDistanceMin {
+            get {
+                return ((int)(this["iPhoneEuclideanDistanceMin"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("65")]
+        public int iPhoneEuclideanDistanceMax {
+            get {
+                return ((int)(this["iPhoneEuclideanDistanceMax"]));
             }
         }
     }

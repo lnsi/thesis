@@ -71,10 +71,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft SDKs\Surface\v2.0\Reference Assemblies\Microsoft.Surface.Presentation.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Surface.Presentation.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft SDKs\Surface\v2.0\Reference Assemblies\Microsoft.Surface.Presentation.Design.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Surface.Presentation.Generic, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft SDKs\Surface\v2.0\Reference Assemblies\Microsoft.Surface.Presentation.Generic.dll</HintPath>
@@ -126,8 +122,8 @@
     <Compile Include="Detection\Legend.cs" />
     <Compile Include="Detection\LegendTracker.cs" />
     <Compile Include="Detection\IDevice.cs" />
-    <Compile Include="Detection\Iphone.cs" />
-    <Compile Include="Detection\IphoneTracker.cs" />
+    <Compile Include="Detection\IPhone.cs" />
+    <Compile Include="Detection\IPhoneTracker.cs" />
     <Compile Include="Detection\Tracker.cs" />
     <Compile Include="Detection\TrackerDelegates.cs" />
     <Compile Include="Controls\DeviceControl.xaml.cs">
@@ -164,6 +160,15 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="opencv_core231.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_imgproc231.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tbb.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Resources\homeButton.png" />
     <Resource Include="Resources\buttonClose.png" />
     <Resource Include="Resources\buttonRestore.png" />

@@ -55,7 +55,7 @@ namespace Displex
     private void InitializeSurfaceInput()
     {
       hwnd = new System.Windows.Interop.WindowInteropHelper(this).Handle;
-      touchTarget = new Microsoft.Surface.Core.TouchTarget(hwnd, EventThreadChoice.OnBackgroundThread);
+      touchTarget = new Microsoft.Surface.Core.TouchTarget(hwnd, EventThreadChoice.OnCurrentThread);
       touchTarget.EnableInput();
 
       tracker = new Tracker();
@@ -531,16 +531,8 @@ namespace Displex
 
         DisableRawImage();
 
-        GCHandle h = GCHandle.Alloc(normalizedImage, GCHandleType.Pinned);
-        IntPtr ptr = h.AddrOfPinnedObject();
-        Bitmap bitmap = new Bitmap(imageMetrics.Width,
-                              imageMetrics.Height,
-                              imageMetrics.Stride,
-                              System.Drawing.Imaging.PixelFormat.Format8bppIndexed,
-                              ptr);
-
-
-        tracker.ProcessImage(bitmap);
+        tracker.ProcessImage(normalizedImage, imageMetrics, captureFrame);
+        captureFrame = false;
 
         imageAvailable = false;
         EnableRawImage();
@@ -570,6 +562,12 @@ namespace Displex
         return new System.Windows.Point(p.X, 700);
       }
       else return p;
+    }
+
+    private bool captureFrame = false;
+    private void SurfaceButton_Click(object sender, RoutedEventArgs e)
+    {
+        captureFrame = true;
     }
   }
 }
